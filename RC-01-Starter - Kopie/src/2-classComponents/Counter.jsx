@@ -13,11 +13,20 @@ import {Component} from 'react'
 class Counter extends Component{
     constructor(props){
         super(props)
-        this.state={sayac:0, baslik:'Sayaç ile Events Konusu'}
+
+
+        // state' başlangıç değeri atadık
+        this.state={sayac:props.count || 0, baslik:'Counter ile Events Konusu'}
 
     }
 
-    arttir(){this.setState({sayac:this.state.sayac+1})}
+    arttir(){
+        this.setState({sayac:this.state.sayac+1}) // sayac arttırma
+        this.setState({baslik:'Guten Tag'})   // baslık değiştirme
+
+    
+    }
+
 
 
     //! burada arrow func kullandığımız için return altında bind etmeye gerek kalmadı. (this.bind sildik)... halbuki arttırda this.bind yapmıştık 

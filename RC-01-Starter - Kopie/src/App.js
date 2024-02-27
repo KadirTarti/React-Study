@@ -14,6 +14,7 @@ const App = () => {
     {/* <Events/> */}
     {/* <Hooks/> */}
     <Counter/>
+    <Counter count={20}/>
     
     
     
