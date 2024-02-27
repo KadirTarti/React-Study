@@ -19,6 +19,7 @@
 //* =============================================================
 
 import { useState } from "react"
+import Events from '../1-events-hookintro/Events'
 
 
 const Hooks = () => {
@@ -123,6 +124,11 @@ const arttir =()=>{
 
 
     <button onClick={()=>setKisi({...kisi,yas:22})} style={{backgroundColor: 'lightCoral', fontSize:'20px'}} className='btn m-4 p-4'>YAŞ Değiştir</button>
+
+
+    {/* {toggle? <Events/> : ''}   veya & işareti ile şöyle yazarız:  */}
+    {/* Toggle true ise Events componentini goster aksi takdirde gosterme. Alttakini yorumdan çıkarmak istersek app.js teki events companentini yoruma almalıyız... */}
+    {toggle  && <Events/>}
 
 
 
