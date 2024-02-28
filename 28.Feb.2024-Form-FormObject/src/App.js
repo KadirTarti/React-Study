@@ -4,15 +4,17 @@
 import React from 'react'
 // import Form from './form/Form'
 import "bootstrap/dist/css/bootstrap.min.css";
-import FormObject from './form/FormObject';
+import MouseKeyboard from './form/MauseKeyboard';
+// import FormObject from './form/FormObject';
 
 const App = () => {
   return (
     <div>
 
     {/* <Form/> */}
-    <FormObject/>
-    
+    {/* <FormObject/> */}
+    <MouseKeyboard/>
+        
     </div>
   )
 }
