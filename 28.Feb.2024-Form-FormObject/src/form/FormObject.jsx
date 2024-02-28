@@ -42,19 +42,18 @@ const FormObject = () => {
         </div>
 
         <div className="mb-3">
-          <label className="form-label" htmlFor="country">
-            COUNTRY: <span className="text-success"></span>
+          <label className="form-label">
+            EMAIL: <span className="fw-bold">{}</span>
           </label>
-          <select
-            // onChange={(e) => setCountry(e.target.value)}
-            className="form-select"
-          >
-            <option selected>COUNTRIES</option>
-            <option value="Türkiye">TURKEY</option>
-            <option value="Almanya">GERMANY</option>
-            <option value="Amerika">USA</option>
-          </select>
+          <input
+            type="email"
+            className="form-control"
+            // value={email}
+            id="email"
+            name="email"
+          />
         </div>
+        
         <button type="submit" className="btn btn-primary">
           GÖNDER (submit)
         </button>
