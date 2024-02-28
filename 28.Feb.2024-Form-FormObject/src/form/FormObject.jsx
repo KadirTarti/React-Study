@@ -16,7 +16,13 @@ const FormObject = () => {
   }
 
   const getDataBase = (e) => {
-    e.preventDefault()
+    e.preventDefault();
+    alert(`isim: ${isim}
+           email: ${email}`
+    )
+
+    // state'i silmek için:
+    setPerson({isim: '', password: '', email: ''})
 
   };
 
@@ -36,7 +42,7 @@ const FormObject = () => {
             id="isim"
             type="text"
             onInput={handlePerson}
-            // value={isim} 
+            value={isim} 
           />
         </div>
 
@@ -49,7 +55,7 @@ const FormObject = () => {
             id="password" //! hepsine id verdiğimiz için handlePerson içinde event.target.id ile her birini yakalayabiliriz
             type="password"
             onChange={handlePerson}
-            // value={pass}
+            value={password}
           />
         </div>
 
@@ -61,7 +67,7 @@ const FormObject = () => {
             type="email"
             className="form-control"
             onChange={handlePerson}
-            // value={email}
+            value={email}
             id="email"
             name="email"
           />
