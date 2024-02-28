@@ -3,12 +3,12 @@
 
 import React from 'react'
 import Form from './form/Form'
+import "bootstrap/dist/css/bootstrap.min.css";
 
 const App = () => {
   return (
     <div>
 
-    app
     <Form/>
     
     </div>
