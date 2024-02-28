@@ -105,6 +105,8 @@ const arttir =()=>{
     <h1 className='text-danger'>useState</h1>
     <h2>Count: {sayac}</h2>
     <button onClick={arttir} className='btn btn-success'>ARTTIR</button>
+
+    <button onClick={()=> sayac>0 && setSayac(sayac-1)} className='btn btn-info'>AZALT</button>
     
 
 
