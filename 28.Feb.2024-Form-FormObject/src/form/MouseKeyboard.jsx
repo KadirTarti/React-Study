@@ -6,6 +6,8 @@ const MouseKeyboard = () => {
   const [xEkseni, setXekseni] = useState(0);
   const [yEkseni, setYekseni] = useState(0);
 
+  const [inputData, setInputData] = useState('')
+
   const mouseEvent =(e)=>{
     // console.log(e.pageX);
     setXekseni(e.pageX)
@@ -14,6 +16,15 @@ const MouseKeyboard = () => {
   }
 
 
+
+  const keyboardEvent =(e)=>{
+    if(e.keyCode >= 48 && e.keyCode <= 57) {
+      alert ('tebrikler! rakam girdiniz')
+    } else {
+      alert ('hatalı giriş!!  ->  lütfen bir rakam girin')
+    }
+    
+  }
 
   return (
     <div className="container text-center mt-4 d-flex flex-column align-items-center" onMouseMove={mouseEvent}>
@@ -40,13 +51,14 @@ const MouseKeyboard = () => {
       <div>
         <h2 className="text-primary mt-4">
           Keyboard-Clipboard Events{" "}
-          <span className="text-primary">{}</span>
+          <span className="text-warning">{inputData}</span>
         </h2>
 
         <input
           type="text"
           className="form-control"
-          onKeyDown={}
+          onChange={(e)=> setInputData(e.target.value)}
+          onKeyDown= {keyboardEvent}
         />
       </div>
       {/* <div
