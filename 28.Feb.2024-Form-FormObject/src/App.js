@@ -4,7 +4,7 @@
 import React from 'react'
 // import Form from './form/Form'
 import "bootstrap/dist/css/bootstrap.min.css";
-import MouseKeyboard from './form/MauseKeyboard';
+import MouseKeyboard from './form/MouseKeyboard';
 // import FormObject from './form/FormObject';
 
 const App = () => {
@@ -14,7 +14,7 @@ const App = () => {
     {/* <Form/> */}
     {/* <FormObject/> */}
     <MouseKeyboard/>
-        
+
     </div>
   )
 }
