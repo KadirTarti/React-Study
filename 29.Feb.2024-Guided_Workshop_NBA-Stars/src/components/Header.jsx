@@ -1,6 +1,7 @@
 import { useState } from 'react'
 import logo from '../assets/nba-logo.png'
 import {data} from '../helper/data'
+import PlayerCard from './PlayerCard';
 
 const Header = () => {
   const [query, setQuery] = useState('');
@@ -35,8 +36,11 @@ const Header = () => {
     placeholder='Search Player...' />
     
     <div>
+
         {filteredPlayers.map(player => (
-          <div key={player.id}>{player.name}</div>
+          <div key={player.id}>
+          {/* <PlayerCard/> */}
+          {player.name}</div>
         ))}
       </div>
  
