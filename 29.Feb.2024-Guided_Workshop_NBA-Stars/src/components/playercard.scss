@@ -1,0 +1,9 @@
+.card-img-top {
+    width: 287px;
+    height: 370px;
+    object-fit: cover; /* Resmin orijinal en boy oranını korurken, belirtilen boyutlara sığdırmak için kullanılır. */   
+}
+
+.card{
+    background-color: white;
+}

@@ -1,15 +1,13 @@
 import React from 'react'
-import Card from './Card'
+import PlayerCard from './PlayerCard'
 import {data} from '../helper/data'
+import './cardcontainer.scss'
 
 const CardContainer = () => {
   return (
-    <div className='container border border-danger'>
-    {data.map((player, index) =>(
-        <Card key={index} player={player}/>
-    ))}
-
-    {/* <Card/> */}
+    <div className='container mt-4 mb-4 border border-danger d-flex flex-wrap'>
+    {data.map((item)=> <PlayerCard{...item}/> )}
+    
     
     </div>
   )

@@ -5,6 +5,7 @@ const Header = () => {
     <div className='text-center mt-4'>
     <img   src={logo} alt="" />
     <h1 className='mt-4'>NBA Legends</h1>
+    <input type="text" placeholder='Search Player...' />
     </div>
   )
 }
