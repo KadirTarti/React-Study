@@ -4,6 +4,7 @@ import './App.css';
 import React from 'react'
 import '../node_modules/bootstrap/dist/css/bootstrap.min.css';
 import Header from './components/Header';
+import CardContainer from './components/CardContainer';
 
 const App = () => {
   return (
@@ -11,6 +12,7 @@ const App = () => {
     
     
     <Header/>    
+    <CardContainer/>
     
     </div>
   )
