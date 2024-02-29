@@ -5,7 +5,7 @@ import './cardcontainer.scss'
 
 const CardContainer = () => {
   return (
-    <div className='container mt-4 mb-4 border border-danger d-flex flex-wrap'>
+    <div className='container mt-4 mb-4 d-flex flex-wrap'>
     {data.map((item)=> <PlayerCard{...item}/> )}
     
     

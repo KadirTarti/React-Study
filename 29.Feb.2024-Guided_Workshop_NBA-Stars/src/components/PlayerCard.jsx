@@ -25,7 +25,13 @@ const PlayerCard = (props) => {
               </div>
           </div>
         <div className="card-back">
-          <ul className='d-flex justify-content-center align-items-center'>{statistics}</ul>
+          <ul className='list-group list-group-flush align-items-start'>
+            <li className='list-group-item'>🏀{statistics[0]}</li>
+            <li className='list-group-item'>🏀{statistics[1]}</li>
+            <li className='list-group-item'>🏀{statistics[2]}</li>
+            <li className='list-group-item'>🏀{statistics[3]}</li>
+          </ul>
+          <h5 className='mt-4'>{name}</h5>
         </div>
         </div>
       </div>    
