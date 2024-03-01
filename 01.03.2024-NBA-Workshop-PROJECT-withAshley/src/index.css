@@ -16,13 +16,24 @@ body{
     max-width: 280px; 
     /* max-widt ekran küçülünce küçülmesi için */
 }
+.player-card:hover {
+    cursor: pointer;
+    box-shadow: 3px 3px 20px 10px black;
+}
+
+.player-card:hover .player-img {
+    transform: scale(0.95); 
+}
+
 
 
 
 /*& player card img styling */
 .player-img {
     height: 350px;
+    transition: transform 0.5s;
 }
+
 
 
 .card-container{
