@@ -23,7 +23,7 @@ const CardContainer = () => {
         {/* search e isim girince filtreleme: */}
           {data.filter((a)=>a.name.toLowerCase().includes(search.trim().toLowerCase())).map((player, index) => {
             return (
-              <Col key={index} md={6} lg={4} xl={3}>
+              <Col className='h6' key={index} md={6} lg={4} xl={3}>
                 {/* <PlayerCard player = {player}></PlayerCard> */}
                 <PlayerCard {...player}></PlayerCard>
               </Col>

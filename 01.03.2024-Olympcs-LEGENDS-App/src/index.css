@@ -5,19 +5,19 @@
 }
 
 body{
-    background-color: lightslategrey;
+    background-color: #1c166e;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 
 }
 
 .logo{
-    width: 350px !important;
+    width: 150px !important;
 }
 
 /*& player card component styling */
 .player-card {
     height: 400px;
-    max-width: 280px; 
+    max-width: 280px;
     /* max-widt ekran küçülünce küçülmesi için */
 }
 .player-card:hover {
@@ -44,3 +44,6 @@ body{
     background-image: url('assets/container-bg.jpg');
 }
 
+.btn{
+    margin: 2rem 2rem 0 0 !important;
+}

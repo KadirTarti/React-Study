@@ -16,8 +16,8 @@ const PlayerCard = ({name, img, statistics, link}) => {
       ) : (
         <ul className="m-auto">
           {statistics.map((item, i) => (
-            <li key={i} className="h5 text-start list-unstyled">
-              {i === 0 ? "🎥" : i === 1 ? "🔆" : i === 2 ? "💁" : "🌠"}
+            <li key={i} className="h6 text-start list-unstyled">
+              {i === 0 ? "🎥" : i === 1 ? "⏲️" : i === 2 ? "🔎" : "🖊️"}
               {item}
             </li>
           ))}
@@ -28,9 +28,9 @@ const PlayerCard = ({name, img, statistics, link}) => {
               href={link}
               target="_blank"
               // rel="noopener noreferrer"
-              className="btn btn-warning"
+              className="btn btn-warning m-auto"
             >
-              Go to Imdb
+              Go to IMDb
             </a>
         </ul>
       )}

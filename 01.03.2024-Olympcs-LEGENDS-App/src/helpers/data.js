@@ -1,6 +1,6 @@
 export const data = [
     {
-      name: "The Shawshank Redemption",
+      name: "Shawshank Redemption",
       img: "https://i.ebayimg.com/images/g/4goAAOSwMyBe7hnQ/s-l1200.webp",
       statistics: [
         "Director: Frank Darabont",
@@ -30,7 +30,7 @@ export const data = [
         "Imdb Raiting: 9.1/10 (28K)",
         "Writers: Denis Villeneuve, Jon Spaihts, Frank Herbert",
       ],
-      link: 'https://www.imdb.com/title/tt0068646/?ref_=sr_t_3'
+      link: 'https://www.imdb.com/title/tt15239678/?ref_=sr_t_3'
     },
     {
       name: "12th Fail",
@@ -41,7 +41,7 @@ export const data = [
         "Imdb Raiting: 9.1/10 (100K)",
         "Writers: Vidhu Vinod Chopra, Jaskunwar Kohli, Anurag Pathak",
       ],
-      link: 'https://www.imdb.com/title/tt0068646/?ref_=sr_t_4'
+      link: 'https://www.imdb.com/title/tt23849204/?ref_=sr_t_4'
     },
     {
       name: "The Dark Knight",
@@ -52,83 +52,83 @@ export const data = [
         "Imdb Raiting: 9/10 (2.8M)",
         "Writers: Jonathan Nolan, Christopher Nolan, David S. Goyer",
       ],
-      link: 'https://www.imdb.com/title/tt0068646/?ref_=sr_t_5'
+      link: 'https://www.imdb.com/title/tt0468569/?ref_=sr_t_5'
     },
     {
-      name: "Karl Malone",
-      img: "https://i.pinimg.com/564x/49/76/10/497610981fdbe0158ba09b5c8418d87d--nba-players-basketball-players.jpg",
+      name: "Schindler's List",
+      img: "https://cineprog.de/images/Breite_400px_RGB/p_73841.jpg",
       statistics: [
-        "Director: Francis Ford Coppola",
-        "Year: 1972",
-        "Imdb Raiting: 9.2/10 (2M)",
-        "Writers: Mario Puzo, Francis Ford Coppola",
+        "Director: Steven Spielberg",
+        "Year: 1993",
+        "Imdb Raiting: 9/10 (1.4M)",
+        "Writers: Thomas Keneally, Steven Zaillian",
       ],
-      link: 'https://www.imdb.com/title/tt0068646/?ref_=sr_t_6'
+      link: 'https://www.imdb.com/title/tt0108052/?ref_=sr_t_6'
     },
     {
-      name: "Hakeem Olajuwon",
-      img: "https://cdn.artphotolimited.com/images/60913d60bd40b85323893a87/1000x1000/hakeem-olajuwon-von-den-houston-rockets.jpg",
+      name: "The Lord of the Rings",
+      img: "https://m.media-amazon.com/images/M/MV5BNDgwY2YyNjctZTMxZC00ZTRlLThhN2QtMTAwYjUyODcyZDYxXkEyXkFqcGdeQXVyMTA0MTM5NjI2._V1_FMjpg_UX1000_.jpg",
       statistics: [
-        "Director: Francis Ford Coppola",
-        "Year: 1972",
-        "Imdb Raiting: 9.2/10 (2M)",
-        "Writers: Mario Puzo, Francis Ford Coppola",
+        "Director: Peter Jackson",
+        "Year: 2003",
+        "Imdb Raiting: 9/10 (2M)",
+        "Writers: J.R.R. TolkienFran WalshPhilippa Boyens",
       ],
-      link: 'https://www.imdb.com/title/tt0068646/?ref_=sr_t_7'
+      link: 'https://www.imdb.com/title/tt0167260/?ref_=sr_t_7'
     },
     {
-      name: "Shaquille O'Neal",
-      img: "https://staticg.sportskeeda.com/editor/2018/10/6bb16-15398694878129-800.jpg",
+      name: "12 Angry Men",
+      img: "https://upload.wikimedia.org/wikipedia/commons/b/b5/12_Angry_Men_%281957_film_poster%29.jpg",
       statistics: [
-        "Director: Francis Ford Coppola",
-        "Year: 1972",
-        "Imdb Raiting: 9.2/10 (2M)",
-        "Writers: Mario Puzo, Francis Ford Coppola",
+        "Director: Sidney Lumet",
+        "Year: 1957",
+        "Imdb Raiting: 9/10 (856K)",
+        "Writer: Reginald Rose",
       ],
-      link: 'https://www.imdb.com/title/tt0068646/?ref_=sr_t_8'
+      link: 'https://www.imdb.com/title/tt0050083/?ref_=sr_t_9'
     },
     {
-      name: "Scottie Pippen",
-      img: "https://basketballforever.com/wp-content/uploads/2020/04/Scottie-Pippen-Chicago-Bulls.jpg",
+      name: "Pulp Fiction",
+      img: "https://m.media-amazon.com/images/M/MV5BNGNhMDIzZTUtNTBlZi00MTRlLWFjM2ItYzViMjE3YzI5MjljXkEyXkFqcGdeQXVyNzkwMjQ5NzM@._V1_.jpg",
       statistics: [
-        "Director: Francis Ford Coppola",
-        "Year: 1972",
-        "Imdb Raiting: 9.2/10 (2M)",
-        "Writers: Mario Puzo, Francis Ford Coppola",
+        "Director: Quentin Tarantino",
+        "Year: 1994",
+        "Imdb Raiting: 8.9/10 (2.2M)",
+        "Writers: Quentin Tarantino, Roger Avary",
       ],
-      link: 'https://www.imdb.com/title/tt0068646/?ref_=sr_t_9'
+      link: 'https://www.imdb.com/title/tt0110912/?ref_=sr_t_10'
     },
     {
-      name: "Patrick Ewing",
-      img: "https://cdn.britannica.com/37/231237-050-0CB78D66/Patrick-Ewing-New-York-Knicks-1986.jpg",
+      name: "Inception",
+      img: "https://m.media-amazon.com/images/M/MV5BMjAxMzY3NjcxNF5BMl5BanBnXkFtZTcwNTI5OTM0Mw@@._V1_.jpg",
       statistics: [
-        "Director: Francis Ford Coppola",
-        "Year: 1972",
-        "Imdb Raiting: 9.2/10 (2M)",
-        "Writers: Mario Puzo, Francis Ford Coppola",
+        "Director: Christopher Nolan",
+        "Year: 2012",
+        "Imdb Raiting: 8.8/10 (2.5M)",
+        "Writer: Christopher Nolan",
       ],
-      link: 'https://www.imdb.com/title/tt0068646/?ref_=sr_t_10'
+      link: 'https://www.imdb.com/title/tt1375666/?ref_=sr_t_12'
     },
     {
-      name: "Kobe Bryant",
-      img: "https://upload.wikimedia.org/wikipedia/commons/9/96/Kobe_Bryant_8.jpg",
+      name: "Fight Club",
+      img: "https://m.media-amazon.com/images/M/MV5BMmEzNTkxYjQtZTc0MC00YTVjLTg5ZTEtZWMwOWVlYzY0NWIwXkEyXkFqcGdeQXVyNzkwMjQ5NzM@._V1_.jpg",
       statistics: [
-        "Director: Francis Ford Coppola",
-        "Year: 1972",
-        "Imdb Raiting: 9.2/10 (2M)",
-        "Writers: Mario Puzo, Francis Ford Coppola",
+        "Director: David Fincher",
+        "Year: 1999",
+        "Imdb Raiting: 8.8/10 (2.3M)",
+        "Writers: MChuck Palahniuk, Jim Uhls",
       ],
-      link: 'https://www.imdb.com/title/tt0068646/?ref_=sr_t_11'
+      link: 'https://www.imdb.com/title/tt0137523/?ref_=sr_t_13'
     },
     {
-      name: "Charles Barkley",
-      img: "https://freshairarchive.org/sites/default/files/styles/square_800/public/2021-08/CharlesBarkley.jpg?itok=lkOGUQ2t",
+      name: "Forrest Gump",
+      img: "https://m.media-amazon.com/images/M/MV5BNWIwODRlZTUtY2U3ZS00Yzg1LWJhNzYtMmZiYmEyNmU1NjMzXkEyXkFqcGdeQXVyMTQxNzMzNDI@._V1_FMjpg_UX1000_.jpg",
       statistics: [
-        "Director: Francis Ford Coppola",
-        "Year: 1972",
-        "Imdb Raiting: 9.2/10 (2M)",
-        "Writers: Mario Puzo, Francis Ford Coppola",
+        "Director: Robert Zemeckis",
+        "Year: 1994",
+        "Imdb Raiting: 8.8/10 (2.2M)",
+        "Writers: Winston Groom, Eric Roth",
       ],
-      link: 'https://www.imdb.com/title/tt0068646/?ref_=sr_t_12'
+      link: 'https://www.imdb.com/title/tt0109830/?ref_=sr_t_14'
     },
   ];
