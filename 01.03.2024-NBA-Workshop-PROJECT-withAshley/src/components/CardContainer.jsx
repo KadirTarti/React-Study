@@ -5,8 +5,10 @@ import PlayerCard from "./PlayerCard";
 
 const CardContainer = () => {
     const [search, setSearch] = useState('')
-    let dizi=data;
-    dizi=dizi.filter((a)=>a.name.includes(search))
+    // let dizi=data;
+
+    //& 1.yol
+    // dizi=dizi.filter((a)=>a.name.includes(search))
 
   return (
     <>
@@ -17,7 +19,9 @@ const CardContainer = () => {
 
       <Container className="card-container p-3 rounded-4 my-4">
         <Row className="g-3">
-          {dizi.map((player, index) => {
+
+        {/* search e isim girince filtreleme: */}
+          {data.filter((a)=>a.name.toLowerCase().includes(search.trim().toLowerCase())).map((player, index) => {
             return (
               <Col key={index} md={6} lg={4} xl={3}>
                 {/* <PlayerCard player = {player}></PlayerCard> */}
