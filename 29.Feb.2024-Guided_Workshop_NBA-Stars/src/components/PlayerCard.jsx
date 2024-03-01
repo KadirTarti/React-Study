@@ -2,10 +2,8 @@ import React, { useState } from 'react'
 import './playercard.scss';
 
 
-const PlayerCard = (props) => {
+const PlayerCard = ({name, img, statistics}) => {
   
-  const {name, img, statistics} = props
-
     const [isFlipped, setIsFlipped] = useState(false);
 
     const handleClick = ()=>{
@@ -31,7 +29,7 @@ const PlayerCard = (props) => {
             <li className='list-group-item'>🏀{statistics[2]}</li>
             <li className='list-group-item'>🏀{statistics[3]}</li>
           </ul>
-          <h5 className='mt-4'>{name}</h5>
+          <h5 className='list-name mt-4'>{name}</h5>
         </div>
         </div>
       </div>    
