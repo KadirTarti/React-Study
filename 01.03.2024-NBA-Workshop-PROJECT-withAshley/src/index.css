@@ -1,0 +1,31 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    background-color: lightslategray;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+
+}
+
+/*& player card component styling */
+.player-card {
+    height: 400px;
+    max-width: 280px; 
+    /* max-widt ekran küçülünce küçülmesi için */
+}
+
+
+
+/*& player card img styling */
+.player-img {
+    height: 350px;
+}
+
+
+.card-container{
+    background-image: url('https://p4.wallpaperbetter.com/wallpaper/661/973/110/cool-nba-logo-wallpaper-preview.jpg');
+}
+
