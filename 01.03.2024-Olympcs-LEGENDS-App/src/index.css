@@ -5,9 +5,13 @@
 }
 
 body{
-    background-color: lightslategray;
+    background-color: lightslategrey;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 
+}
+
+.logo{
+    width: 350px !important;
 }
 
 /*& player card component styling */
@@ -37,6 +41,6 @@ body{
 
 
 .card-container{
-    background-image: url('https://p4.wallpaperbetter.com/wallpaper/661/973/110/cool-nba-logo-wallpaper-preview.jpg');
+    background-image: url('assets/container-bg.jpg');
 }
 

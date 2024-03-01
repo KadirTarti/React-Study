@@ -1,13 +1,13 @@
 import React from 'react'
 import { Container, Image, } from 'react-bootstrap'
-import logo from '../assets/nba-logo.png'
+import logo from '../assets/movie-bg2.png'
 
 const Header = () => {
   return (
     <Container>
 
-        <Image src={logo} width='200px'/>
-        <h1 className='my-2 font-monospace display-4 fw-bold'>NBA Legends</h1>
+        <Image className='logo' src={logo} width='200px'/>
+        <h1 className='my-2 font-monospace fw-bold'>The Best Movies of Recent Times </h1>
             
     </Container>
   )
