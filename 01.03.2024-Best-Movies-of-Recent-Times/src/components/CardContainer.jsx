@@ -12,7 +12,7 @@ const CardContainer = () => {
 
   return (
     <>
-      <Form.Control className='w-50 m-auto' type="search" placeholder="Search Player" 
+      <Form.Control className='w-50 m-auto' type="search" placeholder="Search Movie" 
         onChange={(e)=>setSearch(e.target.value)}
 
       />
