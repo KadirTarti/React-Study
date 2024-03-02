@@ -8,7 +8,7 @@ const Header = () => {
     <h1 className='text-danger'>Todo App</h1>
     <InputGroup className="mb-3">
         <Form.Control
-          placeholder="Recipient's username"
+          placeholder="Enter new todo..."
           aria-label="Recipient's username"
           aria-describedby="basic-addon2"
         />
