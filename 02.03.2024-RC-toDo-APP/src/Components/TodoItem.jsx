@@ -6,7 +6,7 @@ function TodoItem({ task, deleteTask, toggleCompleted }) {
      }
      
      return (
-     <div className="todo-item">
+     <div className="todo-item m-1">
      <input 
      type="checkbox"
      checked={task.completed}
