@@ -1,0 +1,26 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    background: url('https://www.ionos.fr/digitalguide/fileadmin/DigitalGuide/Teaser/graphdatenbank-t.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.input{
+    border-radius: 10px;
+    border: 2px solid black;
+    width: 100%;
+
+}
+
+.btn-danger{
+    float: right;
+}
+
+.h1{
+    text-shadow: 2px 2px 2px  black;
+}

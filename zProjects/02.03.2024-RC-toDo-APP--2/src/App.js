@@ -1,15 +1,16 @@
+import '../node_modules/bootstrap/dist/css/bootstrap.min.css'
 import './App.css';
-//! burada kullanılacak tüm sayfalar üste import edilmek ZORUNDA!
 
 
 import React from 'react'
+import TodoList from './TodoList';
 
 const App = () => {
   return (
     <div>
     
     
-    App    
+    <TodoList/>
     
     
     </div>
