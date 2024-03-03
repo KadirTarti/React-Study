@@ -1,4 +1,5 @@
 import React, { useState } from 'react'
+import logo from './todo-logo.jpg'
 
 
 const TodoList = () => {
@@ -25,6 +26,7 @@ const TodoList = () => {
 
   return (
     <div className='container text-align-center'>
+    <img className='mt-5' src={logo} width='20%' alt="" />
     <h1 className='h1 m-5 text-center text-danger'> Todo List</h1>
         <div className="col col-12 col-md-6 mx-auto mb-3">
             <div className="input-grop">
