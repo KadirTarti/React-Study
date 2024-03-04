@@ -13,7 +13,9 @@ const TodoList = () => {
 
     function handleSubmit(e){
         e.preventDefault()
-        if(inputValue.trim() !== '') {
+        if(inputValue.trim() == '') {
+            alert('Please write something')
+        } else {
             setTodos([...todos, inputValue])
             setInputValue('')
         }
