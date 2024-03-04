@@ -6,6 +6,7 @@ const TodoList = () => {
 
     const [todos, setTodos] = useState([]);
     const [inputValue, setInputValue] = useState('');
+    const [selectedTodo, setSelectedTodo] = useState(null);
 
     function handleChange(e){
         setInputValue(e.target.value)
@@ -14,18 +15,22 @@ const TodoList = () => {
     function handleSubmit(e){
         e.preventDefault()
         if(inputValue.trim() == '') {
-            alert('Please write something')
+            alert('Please try to add something after writing it...')
         } else {
             setTodos([...todos, inputValue])
             setInputValue('')
         }
     }
 
+
+    
     const handleDelete = (index) => {
         const newTodos = [...todos];
         newTodos.splice(index, 1);
         setTodos(newTodos);
     }
+
+    
 
 
   return (
