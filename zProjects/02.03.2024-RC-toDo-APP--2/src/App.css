@@ -4,8 +4,13 @@
     box-sizing: border-box;
 }
 
+.header{
+    display: flex;
+    justify-content: center;
+}
+
 body{
-    background: url('to-do-bg1.jpg');
+    background: url('assets/to-do-bg1.jpg');
     width: 100%;
     height: 100%;
     background-repeat: no-repeat;
@@ -25,4 +30,8 @@ body{
 
 .h1{
     text-shadow: 2px 2px 2px  black;
+}
+
+.col{
+    justify-content: center;
 }

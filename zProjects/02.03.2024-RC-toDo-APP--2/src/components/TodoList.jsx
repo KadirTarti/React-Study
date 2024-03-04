@@ -1,5 +1,5 @@
 import React, { useState } from 'react'
-import logo from './todo-logo.jpg'
+
 
 
 const TodoList = () => {
@@ -26,13 +26,11 @@ const TodoList = () => {
 
   return (
     <div className='container text-align-center'>
-    <img className='mt-5' src={logo} width='20%' alt="" />
-    <h1 className='h1 m-5 text-center text-danger'> Todo List</h1>
-        <div className="col col-12 col-md-6 mx-auto mb-3">
-            <div className="input-grop">
+        <div className="col col-12 col-md-6 d-flex mx-auto mb-3">
+            
             <form onSubmit={handleSubmit}>
-                <input className='input h4 w-75 p-2' type="text" value={inputValue} onChange={handleChange} placeholder='Enter new Todo'/>
-                <button className='input-group-text w-25 bg-success btn btn-primary mb-2 p-2' type="submit">Add Todo</button>
+                <input className='h4 p-2' type="text" value={inputValue} onChange={handleChange} placeholder='Enter new Todo'/>
+                <button className='bg-success mb-2 p-2' type="submit">Add Todo</button>
             </form>
 
             <ul className="list-group d-flex">
@@ -43,7 +41,7 @@ const TodoList = () => {
                 </li>
             ))}
             </ul>
-            </div>
+            
         </div>
     </div>
   )
