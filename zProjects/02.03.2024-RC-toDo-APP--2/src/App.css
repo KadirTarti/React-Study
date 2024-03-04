@@ -10,11 +10,15 @@
 }
 
 body{
-    background: url('assets/to-do-bg1.jpg');
+    background: url('assets/todo-bg2.jpg');
     width: 100%;
     height: 100%;
     background-repeat: no-repeat;
     background-size: cover;
+}
+
+.container{
+    margin-top: 6rem;
 }
 
 .input{
@@ -46,7 +50,7 @@ body{
     margin-bottom: 15px;
     flex:2;
     font-weight: 600;
-    font-size: 1.2rem;
+    font-size: 1.5rem;
 }
 
 form{
