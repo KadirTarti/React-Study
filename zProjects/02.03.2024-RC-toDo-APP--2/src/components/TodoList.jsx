@@ -27,10 +27,10 @@ const TodoList = () => {
   return (
     <div className='container text-align-center'>
         <div className="col col-12 col-md-6 d-flex mx-auto mb-3">
-            
+            <div className="form-div">
             <form onSubmit={handleSubmit}>
-                <input className='h4 p-2' type="text" value={inputValue} onChange={handleChange} placeholder='Enter new Todo'/>
-                <button className='bg-success mb-2 p-2' type="submit">Add Todo</button>
+                <input className='input-area h4 p-2' type="text" value={inputValue} onChange={handleChange} placeholder='Enter new Todo'/>
+                <button className='add-btn bg-success text-light mb-2 p-2' type="submit">Add Todo</button>
             </form>
 
             <ul className="list-group d-flex">
@@ -41,7 +41,7 @@ const TodoList = () => {
                 </li>
             ))}
             </ul>
-            
+            </div>
         </div>
     </div>
   )

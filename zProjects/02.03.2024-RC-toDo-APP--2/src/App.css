@@ -32,6 +32,33 @@ body{
     text-shadow: 2px 2px 2px  black;
 }
 
+.input-area{
+    border-radius: 15px 0px 0 15px;
+    height: 4rem;
+    flex: 5;
+    margin-right: 5px;
+}
+
+.add-btn{
+    border-radius: 0px 15px 15px 0px;
+    padding-bottom: 15px;
+    height: 4rem;
+    margin-bottom: 15px;
+    flex:2;
+    font-weight: 600;
+    font-size: 1.2rem;
+}
+
+form{
+    width: 100%;
+    display: flex;
+}
+
 .col{
     justify-content: center;
+    height: 5rem;
+}
+
+.form-div{
+    width: 100%;
 }
