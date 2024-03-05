@@ -4,7 +4,26 @@ const GorevleriGoster = ({todos, setTodos}) => {
   console.log(todos);
 
   const deleteTodo=(rmv)=>{
-    setTodos(todos.filter((i)=>i.id!==rmv))
+    // 1.yol
+    // todos = todos.filter((i)=>i.id!==rmv)
+    // setTodos(todos)
+    // localStorage.setItem('gorevler', JSON.stringify(todos))
+
+    // 2.yol
+    localStorage.setItem(
+      'gorevler',
+      JSON.stringify(todos.filter((i)=>i.id!==rmv)));   // localstorage gönderme
+      
+      setTodos(JSON.parse(localStorage.getItem('gorevler')));
+  }
+
+
+  const styleStorage =(x)=> {
+    localStorage.setItem(
+      'gorevler',
+      JSON.stringify(
+      todos.map((a) => a.id===x.id ? {...a, isDone:!a.isDone }:a)));
+    setTodos(JSON.parse(localStorage.getItem('gorevler')))
   }
 
 
@@ -14,7 +33,8 @@ const GorevleriGoster = ({todos, setTodos}) => {
       {todos.map((x) =>{
         return(
           <div className= {x.isDone ? 'done' : 'gorev'}
-          onDoubleClick={()=> setTodos(todos.map((a) => a.id===x.id ? {...a, isDone:!a.isDone }:a))}
+          onDoubleClick={()=>styleStorage(x)}
+          // onDoubleClick={()=> setTodos(todos.map((a) => a.id===x.id ? {...a, isDone:!a.isDone }:a))}
           >
             <h3>{x.text} <FaTimesCircle style={{color:'red'}}
             onClick={()=>deleteTodo(x.id)}
