@@ -36,7 +36,7 @@ const GorevleriGoster = ({todos, setTodos}) => {
           onDoubleClick={()=>styleStorage(x)}
           // onDoubleClick={()=> setTodos(todos.map((a) => a.id===x.id ? {...a, isDone:!a.isDone }:a))}
           >
-            <h3>{x.text} <FaTimesCircle style={{color:'red'}}
+            <h3>{x.text} <FaTimesCircle style={{color:'darkRed'}}
             onClick={()=>deleteTodo(x.id)}
 
             /> </h3>
