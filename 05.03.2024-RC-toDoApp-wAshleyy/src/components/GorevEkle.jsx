@@ -1,6 +1,29 @@
+import { useState } from "react";
 
-const GorevEkle = () => {
- 
+const GorevEkle = ({todos, setTodos}) => {
+  const [texT, setText] = useState('')
+  const [day, setDay] = useState('')
+  const [display, setDisplay] = useState(true)
+
+
+
+  const handleSubmit = (e) => {
+    e.preventDefault();  // submit normalde inputu temizliyor ama e.prevent default nedeniyle bu temizlik gerçekleşmedi
+    
+    const id = Math.ceil(Math.random() * 100) + 6
+    
+    // setTodos([...todos, {id:7, text:texT, day:day, isDone:false}])
+
+    const newTodos = {id:id, text:texT, day:day, isDone:false};
+    setTodos([newTodos, ...todos])
+
+    // inputu boşaltmak için:
+    setText('')
+    setDay('')
+
+
+
+  }
 
   return (
     <div>
@@ -8,20 +31,23 @@ const GorevEkle = () => {
         <h1>TO DO APP</h1>
         <button
           className="btn"
-        
+          style={{background: display ? "green" : "purple"}}
+          onClick = {()=>setDisplay(!display)}
+      
         >
-         CLOSE ADD TASK BAR
+        {display ? "CLOSE" : 'SHOW'} "Add-Task Bar"
         </button>
       </header>
 
-      
-        <form >
+        {display && <form onSubmit={handleSubmit}>
           <div className="form-control">
             <label htmlFor="text">Task</label>
             <input
               id="text"
               type="text"
               name="text"
+              onChange={(e)=>setText(e.target.value)}
+              value={texT}
             />
 
           </div>
@@ -30,8 +56,9 @@ const GorevEkle = () => {
             <input
               id="day"
               type="datetime-local"
-            
+              onChange={(e)=>setDay(e.target.value)}
               name="day"
+              value={day}
             
             />
           </div>
@@ -40,7 +67,11 @@ const GorevEkle = () => {
               SUBMİT
             </button>
           </div>
-        </form>
+        </form>} 
+        {/* display true ise form göster, değilse birşey yapma (yani gösterme) dedik. Turnary ile bunu && ile de yapabiliyoruz. : ve sonrasını silip ? yerine && yazıyoruz */}
+
+
+        
     
     </div>
   );

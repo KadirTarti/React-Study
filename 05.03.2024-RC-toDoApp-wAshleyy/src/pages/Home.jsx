@@ -12,7 +12,7 @@ const Home = () => {
  
   return (
     <div>
-      {/* <GorevEkle/> */}
+      <GorevEkle todos={todos} setTodos={setTodos}/>
       <GorevleriGoster todos={todos} setTodos={setTodos}/>
     </div>
   );
