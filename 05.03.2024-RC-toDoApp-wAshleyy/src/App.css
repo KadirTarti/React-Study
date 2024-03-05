@@ -14,10 +14,11 @@ body {
   height: 100vh;
   font-family: "Poppins", sans-serif;
   background-image: url('img/todo-bg1.png');
+  /* background-color: #7A9D96; */
   background-repeat: no-repeat;
   background-size: cover;
   /* background-image: linear-gradient(to top, #d9afd9 0%, #97d9e1 100%); */
-
+ 
 }
 .container {
   background-image: url(img/container-bg1.png);
@@ -25,7 +26,7 @@ body {
   background-size: cover;
   margin: 2rem auto;
   max-width: 600px;
-  box-shadow: 1px 5px 20px 10px white;
+  box-shadow: 0px 2px 10px 5px white;
   padding: 2rem;
   border-radius: 10px 80px;
   color: white;
@@ -101,4 +102,11 @@ body {
   display: flex;
   align-items: center;
   justify-content: space-between;
+}
+
+.footer{
+  text-align: center;
+  margin-top: 3rem;
+  font-family: roboto;
+  font-size: 0.9rem;
 }

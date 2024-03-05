@@ -77,7 +77,6 @@ const GorevEkle = ({todos, setTodos}) => {
         {/* display true ise form göster, değilse birşey yapma (yani gösterme) dedik. Turnary ile bunu && ile de yapabiliyoruz. : ve sonrasını silip ? yerine && yazıyoruz */}
 
 
-        
     
     </div>
   );
