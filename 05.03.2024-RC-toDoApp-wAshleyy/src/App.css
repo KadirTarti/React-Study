@@ -1,35 +1,47 @@
 @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400&display=swap");
+@import url('https://fonts.googleapis.com/css2?family=Protest+Revolution&display=swap');
 
 * {
   box-sizing: border-box;
   margin: 0;
-  padding: 0;
+  font-family: "Protest Revolution", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  font-size: 1.2rem;
 }
 
 body {
   height: 100vh;
   font-family: "Poppins", sans-serif;
-  background-image: url('img/todo-bg.png');
+  background-image: url('img/todo-bg1.png');
   background-repeat: no-repeat;
   background-size: cover;
   /* background-image: linear-gradient(to top, #d9afd9 0%, #97d9e1 100%); */
 
 }
 .container {
-  background-image: linear-gradient(
-    to bottom right,
-    rgb(119, 119, 119),
-    rgb(228, 228, 228)
-  );
-  margin: 3rem auto;
+  background-image: url(img/container-bg1.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+  margin: 2rem auto;
   max-width: 600px;
+  box-shadow: 1px 5px 20px 10px white;
   padding: 2rem;
-  border-radius: 5px;
+  border-radius: 10px 80px;
+  color: white;
+  opacity: 0.85;
 }
 
 .header {
   text-align: center;
-  margin: 1rem;
+  margin: 0.5rem;
+  font-size: 2rem;
+}
+
+.header h1{
+  font-size: 3rem;
+  margin-bottom: 1rem;
+  font-weight: 700;
 }
 
 .btn {
@@ -37,7 +49,7 @@ body {
   cursor: pointer;
   color: #fff;
   font-weight: 700;
-  font-size: 15px;
+  font-size: 1.2rem;
   padding: 1rem;
   box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
   border-radius: 5px;
@@ -56,12 +68,15 @@ body {
   font-size: 17px;
   border-radius: 5px;
   border: none;
+  
 }
 
 .btn-submit {
   width: 100%;
-  background-color: purple;
+  background-color: #161748;
   margin: 2rem 0;
+  border-radius: 10px;
+  border: 3px solid white;
 }
 
 .gorev {
@@ -70,6 +85,7 @@ body {
   margin: 5px;
   padding: 10px 20px;
   cursor: pointer;
+  color: black;
 }
 
 .done {
