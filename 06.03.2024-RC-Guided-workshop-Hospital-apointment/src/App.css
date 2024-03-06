@@ -13,7 +13,7 @@
 body {
   height: 100vh;
   font-family: "Poppins", sans-serif;
-  background-image: url('img/todo-bg1.png');
+  /* background-image: url('img/todo-bg1.png'); */
   /* background-color: #7A9D96; */
   background-repeat: no-repeat;
   background-size: cover;
@@ -21,7 +21,7 @@ body {
  
 }
 .container {
-  background-image: url(img/container-bg1.png);
+  /* background-image: url(img/container-bg1.png); */
   background-repeat: no-repeat;
   background-size: cover;
   margin: 2rem auto;
