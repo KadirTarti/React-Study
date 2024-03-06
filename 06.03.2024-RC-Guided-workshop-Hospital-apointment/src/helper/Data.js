@@ -1,4 +1,21 @@
-const Data = [
+export const Doctors = [
+  {
+    doktor: "DR Ayse Okur",
+    image: 'Ayse.png'
+  },{
+    doktor: "DR Fatma Adil",
+    image: 'Fatma.png'
+  },
+  {
+    doktor: "DR Oya Başar",
+    image: 'Oya.png'
+  },{
+    doktor: "DR Ahmet Bilen",
+    image: 'Ahmet.png'
+  }
+]
+
+export const Data = [
   {
     id: 1,
     text: "Yavuz Selim",
@@ -53,4 +70,3 @@ const Data = [
 
   },
 ];
-export default Data;
