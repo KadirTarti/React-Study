@@ -1,8 +1,21 @@
 import React from 'react'
+import Data from '../helper/Data'
 
-const HastaListe = () => {
+const HastaListe = ({h1, setH1}) => {
+  console.log(h1);
   return (
-    <div>HastaListe</div>
+    <div>
+     <h2>Doktorlar</h2>
+      <ul className='card'>
+        {Data.map((doktor) => (
+          <li className='dr-card' 
+              key={doktor.id}>
+          <div>{doktor.text}</div>
+          <img src={doktor.img} alt="" />
+          </li>
+        ))}
+      </ul>
+      </div>
   )
 }
 
