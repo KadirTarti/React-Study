@@ -1,14 +1,27 @@
 import { useState } from "react";
-import d1 from '../images/Ayse.png'
-import d2 from '../images/Fatma.png'
-import d3 from '../images/Oya.png'
-import d4 from '../images/ahmet.png'
 import Data from '../helper/Data'
+
+function Doctor (props) {
+  const {img, name}= props
+  return (
+    <div className='doctor-container'>
+          <div className='img-container'>
+          <img src={img} alt={name} />
+          </div>
+          <div className='doctor-name'>
+            <span>{name}</span>
+          </div>
+        </div>
+  )
+}
+
 
 const GorevEkle = ({todos, setTodos}) => {
   const [texT, setText] = useState('')
   const [day, setDay] = useState('')
   const [display, setDisplay] = useState(true)
+
+
 
 
 
@@ -40,11 +53,22 @@ const GorevEkle = ({todos, setTodos}) => {
     <div>
       <header className="header">
         <h1>HOSPITAL</h1>
+      
 
-        <button className='d-resim'>
-          <p>{Data.doktor}</p>
+      <div className='doctor-list'>
+        {Data.map((doc, index)=>{
+          return <Doctor img={`images/${doc.image}`} name={doc.doktor} />
+        })
+        }
+      </div>
+        {/* {Data.map((doctor)=> (
+          <button key={doctor.id} className='d-resim'>
+             {doctor.doktor}
           <img src={d1} alt="" />
         </button>
+        ))}
+
+        
         <button className='d-resim'>
           <img src={d2} alt="" />
         </button>
@@ -53,7 +77,7 @@ const GorevEkle = ({todos, setTodos}) => {
           </button>
           <button className='d-resim'>
           <img src={d4} alt="" />
-        </button>
+        </button> */}
 
 
         <div>

@@ -5,6 +5,7 @@ const Data = [
     day: "Dec 12th at 2:30pm",
     bittiMi: false,
     doktor: "DR Ayse Okur",
+    image: 'Ayse.png'
   },
   {
     id: 2,
@@ -12,6 +13,8 @@ const Data = [
     day: "Dec 13th at 1:30pm",
     bittiMi: true,
     doktor: "DR Fatma Adil",
+    image: 'Fatma.png'
+
   },
   {
     id: 3,
@@ -19,6 +22,8 @@ const Data = [
     day: "Dec 14th at 3:00pm",
     bittiMi: false,
     doktor: "DR Oya Başar",
+    image: 'Oya.png'
+
   },
   {
     id: 4,
@@ -26,6 +31,8 @@ const Data = [
     day: "Dec 12th at 2:30pm",
     bittiMi: false,
     doktor: "DR Ahmet Bilen",
+    image: 'Ahmet.png'
+
   },
   {
     id: 5,
@@ -33,6 +40,8 @@ const Data = [
     day: "Dec 13th at 1:30pm",
     bittiMi: true,
     doktor: "DR Ahmet Bilen",
+    image: 'Ahmet.png'
+
   },
   {
     id: 6,
@@ -40,6 +49,8 @@ const Data = [
     day: "Dec 14th at 3:00pm",
     bittiMi: false,
     doktor: "DR Oya Başar",
+    image: 'Oya.png'
+
   },
 ];
 export default Data;
