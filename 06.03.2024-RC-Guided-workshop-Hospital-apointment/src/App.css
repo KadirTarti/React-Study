@@ -40,3 +40,20 @@
   flex-wrap: wrap;
   gap: 1rem;
 }
+
+.Hastalar-container {
+  display: flex;
+  flex-direction: column;
+}
+
+.HastaItem {
+  display: flex;
+  flex-direction: column;
+  gap: .3rem;
+  margin-top: 10px;
+  border: 1px solid silver;
+}
+
+.HastaItem:hover {
+  cursor: pointer;
+}

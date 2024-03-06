@@ -1,4 +1,4 @@
-export const Doctors = [
+export const DoktorData = [
   {
     doktor: "DR Ayse Okur",
     image: 'Ayse.png'
@@ -15,7 +15,7 @@ export const Doctors = [
   }
 ]
 
-export const Data = [
+export const TotalData = [
   {
     id: 1,
     text: "Yavuz Selim",
@@ -28,7 +28,7 @@ export const Data = [
     id: 2,
     text: "Mihrimah Sultan",
     day: "Dec 13th at 1:30pm",
-    bittiMi: true,
+    bittiMi: false,
     doktor: "DR Fatma Adil",
     image: 'Fatma.png'
 
@@ -55,7 +55,7 @@ export const Data = [
     id: 5,
     text: "Haluk Yilmaz",
     day: "Dec 13th at 1:30pm",
-    bittiMi: true,
+    bittiMi: false,
     doktor: "DR Ahmet Bilen",
     image: 'Ahmet.png'
 

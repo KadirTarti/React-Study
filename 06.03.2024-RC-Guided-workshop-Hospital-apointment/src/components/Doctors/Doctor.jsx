@@ -1,7 +1,7 @@
 export function Doctor(props) {
-    const { img, name } = props;
+    const { img, name, filterByDoctor } = props;
     return (
-      <div className="doctor-container">
+      <div onClick={() => filterByDoctor(name)} className="doctor-container">
         <div className="img-container">
           <img src={img} alt={name} />
         </div>
