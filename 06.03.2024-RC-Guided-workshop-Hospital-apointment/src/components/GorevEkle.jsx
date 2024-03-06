@@ -1,4 +1,9 @@
 import { useState } from "react";
+import d1 from '../images/Ayse.png'
+import d2 from '../images/Fatma.png'
+import d3 from '../images/Oya.png'
+import d4 from '../images/ahmet.png'
+import Data from '../helper/Data'
 
 const GorevEkle = ({todos, setTodos}) => {
   const [texT, setText] = useState('')
@@ -34,15 +39,32 @@ const GorevEkle = ({todos, setTodos}) => {
   return (
     <div>
       <header className="header">
-        <h1>TO DO APP</h1>
+        <h1>HOSPITAL</h1>
+
+        <button className='d-resim'>
+          <p>{Data.doktor}</p>
+          <img src={d1} alt="" />
+        </button>
+        <button className='d-resim'>
+          <img src={d2} alt="" />
+        </button>
+          <button className='d-resim'>
+          <img src={d3} alt="" />
+          </button>
+          <button className='d-resim'>
+          <img src={d4} alt="" />
+        </button>
+
+
+        <div>
         <button
           className="btn"
           style={{background: display ? "#393f4d" : "#cd5554"}}
           onClick = {()=>setDisplay(!display)}
-      
         >
         {display ? "CLOSE" : 'SHOW  '} "Add-Task Bar"
         </button>
+        </div>
       </header>
 
         {display && <form onSubmit={handleSubmit}>

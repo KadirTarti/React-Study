@@ -25,7 +25,6 @@ body {
   background-repeat: no-repeat;
   background-size: cover;
   margin: 2rem auto;
-  max-width: 600px;
   box-shadow: 0px 2px 10px 5px white;
   padding: 2rem;
   border-radius: 10px 80px;
@@ -82,8 +81,8 @@ body {
 }
 
 .gorev {
-  background: #f4f4f4;
-  background:#CAE4DB;
+  background-image: url(img/inputs-bg.jpg);
+  background-size: cover;
   margin: 5px;
   padding: 10px 20px;
   cursor: pointer;
@@ -93,8 +92,9 @@ body {
 .done {
   border-left: 10px solid rgb(102, 18, 77);
   text-decoration: line-through;
-  background-color: darkgrey;
+  background-color: lightseagreen;
   padding: 10px 20px;
+  color: blue;
 
 }
 
@@ -109,4 +109,9 @@ body {
   margin-top: 3rem;
   font-family: roboto;
   font-size: 0.9rem;
+}
+
+.d-resim img{
+  width: 300px;
+  height: 200px;
 }
