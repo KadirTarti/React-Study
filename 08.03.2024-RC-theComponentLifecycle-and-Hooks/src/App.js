@@ -3,8 +3,10 @@ import './App.css';
 
 
 import React, { useState } from 'react';
-import LifeCycleMethods from './components/LifeCycleMethods';
+// import LifeCycleMethods from './components/LifeCycleMethods';
 import "bootstrap/dist/css/bootstrap.min.css";
+import Clock from './components/Clock';
+import UseEffectAxiosFetch from './components/UseEffectAxiosFetch';
 
 function App () {
 
@@ -13,8 +15,11 @@ function App () {
     <div className='container text-center mt-4'>
     <button className='btn btn-danger' onClick={()=>setShow(!show)}>SHOW</button>
 
-    {show && <LifeCycleMethods/>}
-    <LifeCycleMethods/>
+    {/* {show && <LifeCycleMethods/>} */}
+    
+    {/* {show && <Clock />} */}
+
+    <UseEffectAxiosFetch/>
 
 
     </div>
