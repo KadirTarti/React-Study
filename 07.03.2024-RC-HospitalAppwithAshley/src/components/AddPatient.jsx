@@ -11,7 +11,7 @@ const AddPatient = ({ hastalar, setHastalar, doctors }) => {
       ...hastalar,
       {
         id: uuid(),
-        patientName: hastaName,
+        patientName: hastaName, 
         day: date,
         isDone: false,
         myDoctor: doctors[0].doctorName,
