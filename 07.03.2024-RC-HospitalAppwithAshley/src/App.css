@@ -12,7 +12,8 @@ h1 {
   font-weight: 900;
   font-size: 3rem;
   margin-bottom: 30px;
-  text-shadow: 1px 1px 7px red;
+  text-shadow: 1px 1px 5px red;
+  text-align: center;
 }
 body {
   font-family: "Poppins", sans-serif;
@@ -86,10 +87,10 @@ body {
   display: flex;
   justify-content: space-between;
 
-  background-image: url("images/task.png");
+  background-image: url("images/task1.png");
   background-repeat: no-repeat;
   background-size: cover;
-
+  border: 4px solid darkslategrey ;
   background-position: center center;
   margin: 5px;
   padding: 10px 40px;
@@ -99,21 +100,21 @@ body {
   color: darkgreen;
 }
 .falseStyle h3 {
-  color: #152bbb;
+  color: #b63400;
 }
 /*! data daki isDone kısmı true iken görünecek stil */
 .trueStil {
   display: flex;
   justify-content: space-between;
-  border-left: 10px solid #2037b9;
-  background-color: darkslategrey;
+  border-left: 10px solid rgb(215, 148, 148);
+  background-color: rgb(95, 133, 133);
   padding: 10px 20px;
 }
 
 .trueStil h3,
 .trueStil h2 {
   text-decoration: line-through;
-  color: rgb(116, 105, 105);
+  color: rgb(101, 69, 69);
 }
 .btn + h4 {
   padding: 10px 20px;
