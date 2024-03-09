@@ -1,69 +1,69 @@
 export const hastaData = [
   {
     id: 1,
-    patientName: "Yavuz Selim",
+    patientName: "Marques Pralino",
     day: "Dec 12th at 2:30pm",
     isDone: false,
-    myDoctor: "DR Ayse Okur",
+    myDoctor: "Dr. Cathrin Pai",
   },
   {
     id: 2,
-    patientName: "Mihrimah Sultan",
+    patientName: "Hannah Arrenkt",
     day: "Dec 13th at 1:30pm",
     isDone: true,
-    myDoctor: "DR Fatma Adil",
+    myDoctor: "Dr. John Cyarne",
   },
   {
     id: 3,
-    patientName: "Fatih Mehmet",
+    patientName: "Işıl Parlak",
     day: "Dec 14th at 3:00pm",
     isDone: false,
-    myDoctor: "DR Oya Başar",
+    myDoctor: "Dr. Tülin Yıldız",
   },
   {
     id: 4,
-    patientName: "İpek Bilir",
+    patientName: "Stefan Knocher",
     day: "Dec 12th at 2:30pm",
     isDone: false,
-    myDoctor: "DR Ahmet Bilen",
+    myDoctor: "Prof. Dr. Hans Klei",
   },
   {
     id: 5,
-    patientName: "Haluk Yilmaz",
+    patientName: "Kathie Steinmeier",
     day: "Dec 13th at 1:30pm",
     isDone: true,
-    myDoctor: "DR Ahmet Bilen",
+    myDoctor: "Prof. Dr. Hans Klei",
   },
   {
     id: 6,
-    patientName: "Ayşe Güler",
+    patientName: "Samet Köseoğlu",
     day: "Dec 14th at 3:00pm",
     isDone: false,
-    myDoctor: "DR Oya Başar",
+    myDoctor: "Dr. Tülin Yıldız",
   },
 ];
 
 export const doctorData = [
   {
     id: 1,
-    doctorName: "DR Ahmet Bilen",
-    doctorImg: "https://i.cnnturk.com/i/cnnturk/75/0x555/54857220f97adb1aa472e5e6",
+    doctorName: "Prof. Dr. Hans Klei",
+    doctorImg: "https://t4.ftcdn.net/jpg/03/20/52/31/360_F_320523164_tx7Rdd7I2XDTvvKfz2oRuRpKOPE5z0ni.jpg",
   },
   {
     id: 2,
-    doctorName: "DR Ayse Okur",
-    doctorImg: "https://i3.posta.com.tr/i/posta/75/750x0/616f757845d2a0b25401f0e1",
+    doctorName: "Dr. Cathrin Pai",
+    doctorImg: "https://img.freepik.com/free-photo/woman-doctor-wearing-lab-coat-with-stethoscope-isolated_1303-29791.jpg",
   },
   {
     id: 3,
-    doctorName: "DR Fatma Adil",
+    doctorName: "Dr. John Cyarne",
     doctorImg:
-      "https://i4.hurimg.com/i/hurriyet/75/0x0/5efd779645d2a04258b8f1cc.jpg",
+      "https://t3.ftcdn.net/jpg/02/60/04/08/360_F_260040863_fYxB1SnrzgJ9AOkcT0hoe7IEFtsPiHAD.jpg",
   },
   {
     id: 4,
-    doctorName: "DR Oya Başar",
+    doctorName: "Dr. Tülin Yıldız",
     doctorImg:
-      "https://im.haberturk.com/2019/09/12/2521591_720f96f71c734286b9c93122b8bbd70c_640x640.jpg",
+      "https://as1.ftcdn.net/v2/jpg/00/84/61/76/1000_F_84617646_8qvrHS1nTDN1TzDlvC0aZx3T661H9yk8.jpg",
   },
 ];

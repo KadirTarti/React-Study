@@ -35,22 +35,22 @@ const Home = () => {
     <div style={{ display: show ? "block" : "flex" }}>
       <div>
         <header>
-          <h1>HOSPITAL</h1>
+          <h1>SCHAFF YALE HOSPITAL</h1>
           <div className="dr">
             {doctors.map((dr) => (
               <div key={dr.id}>
                 <img
                   src={dr.doctorImg}
-                  width="180px"
-                  height="150px"
+                  width="300px"
+                  height="200px"
                   className="btn"
-                  style={{ background: show ? "aqua" : "lightgreen" }}
+                  style={{ background: show ? "#55B4B0" : "#98B4D4", borderRadius:'5px' }}
                   alt=""
                   onClick={() => doctorClick(dr.id)}
                 />
                 <h4
                   style={{
-                    background: show ? "aqua" : "lightgreen",
+                    background: show ? "#55B4B0" : "#98B4D4",
                     borderLeft: `10px solid ${show ? "blue" : "green"}`,
                   }}
                 >

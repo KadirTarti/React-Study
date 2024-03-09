@@ -31,7 +31,7 @@ const PatientList = ({ hastalar, setHastalar,doctors }) => {
               onClick={() =>
                 setHastalar(hastalar.filter((a) => a.id !== patient.id))
               }
-              style={{ color: "red" }}
+              style={{ color: "#BC243C", fontSize: '20px' }}
             />
           </div>
           {/* ) )} */}
