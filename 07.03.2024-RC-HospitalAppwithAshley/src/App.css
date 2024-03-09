@@ -10,7 +10,9 @@
 h1 {
   color: #ed5252;
   font-weight: 900;
+  font-size: 3rem;
   margin-bottom: 30px;
+  text-shadow: 1px 1px 7px red;
 }
 body {
   font-family: "Poppins", sans-serif;
@@ -42,7 +44,7 @@ body {
  
 /* outline: none; */
   padding: 1rem;
-  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.434);
   border-radius: 5px;
 }
 
@@ -58,7 +60,7 @@ body {
   width: 300px;
   margin: 1rem auto;
   padding: 1rem;
-  border: 1px solid #6a0707;
+  border: 2px solid white;
   border-radius: 50px;
 }
 
@@ -84,7 +86,7 @@ body {
   display: flex;
   justify-content: space-between;
 
-  background-image: url("images/task-bg.png");
+  background-image: url("images/task.png");
   background-repeat: no-repeat;
   background-size: cover;
 
@@ -94,7 +96,7 @@ body {
   cursor: pointer;
 }
 .falseStyle h2 {
-  color: green;
+  color: darkgreen;
 }
 .falseStyle h3 {
   color: #152bbb;
@@ -104,14 +106,14 @@ body {
   display: flex;
   justify-content: space-between;
   border-left: 10px solid #2037b9;
-  background-color: #5dd5f9;
+  background-color: darkslategrey;
   padding: 10px 20px;
 }
 
 .trueStil h3,
 .trueStil h2 {
   text-decoration: line-through;
-  color: blue;
+  color: rgb(116, 105, 105);
 }
 .btn + h4 {
   padding: 10px 20px;
