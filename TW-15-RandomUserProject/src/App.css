@@ -15,3 +15,15 @@
     background-color: #f4f4f4;
     font-family: Georgia, 'Times New Roman', Times, serif;
 }
+
+button {
+    margin: 20px auto;
+    color: white;
+    background-color: lightslategray;
+    padding: 15px 30px;
+    border-radius: 10px;
+    font-size: 1.1rem;
+    font-weight: 700;
+    border: 3px solid darkslategrey;
+    outline: none;
+}

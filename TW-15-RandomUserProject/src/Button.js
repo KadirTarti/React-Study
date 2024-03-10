@@ -1,11 +1,12 @@
 import React from 'react'
 
-const Button = () => {
+const Button = ({isActive, clicked}) => {
+
+
+
   return (
     <div>
-    <button>
-    Get User
-    </button>
+    <button onClick={clicked}>Get User</button>
     </div>
   )
 }
