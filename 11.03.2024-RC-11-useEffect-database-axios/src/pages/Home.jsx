@@ -31,10 +31,16 @@ const Home = () => {
 
   }, [])
 
+  //* gönderme - silme vs olayla HOME'da yapılır!!!
+  //! POST (create işlemi yapıyoruz... database'e veri gönderme)
+  const postalaTutorial = async (yeniVeri) => {
+    await axios.post(URL, yeniVeri)
+  }
+
 
   return (
     <>
-      <AddBilgi/>
+      <AddBilgi postalaTutorial={postalaTutorial}/>
       <BilgiList tutorials={tutorials}/>
     </>
   )
