@@ -8,21 +8,18 @@ const AddBilgi = ({postalaTutorial}) => {
   const handleSubmit =(e)=>{
     e.pereventDefault()
 
-
     //! home'da yazığımız fonk buraya getirdik. postalaTutorial. alttakiler sanki burada tanımlanmış gibi oldu.
     // const postalaTutorial = async (yeniVeri) => {
     //   await axios.post(URL, yeniVeri)
     // }
 
-    postalaTutorial({title:title}, {description:desc});
-
+    postalaTutorial({title:title,description:desc});
 
     //&database'e yolla: 
     // axios.post(URL, title:title, description: desc)
     //     .then(response => setTutorials(response));
     //burada url yi setTutorials'ı vs ÇEKEMEYİZ... o nedenle HOME'da yapacağız POST'u
  
-
   }
 
 
@@ -61,7 +58,7 @@ const AddBilgi = ({postalaTutorial}) => {
         </button>
       </form>
     </div>
-  )
-}
+  );
+};
 
 export default AddBilgi

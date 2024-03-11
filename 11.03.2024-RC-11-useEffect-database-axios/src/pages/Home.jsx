@@ -34,7 +34,7 @@ const Home = () => {
 
 
 
-  //* gönderme - silme vs olayla HOME'da yapılır!!!
+  //* gönderme - silme vs olayları HOME'da yapılır!!!
   //! POST (create işlemi yapıyoruz... database'e veri gönderme)
   const postalaTutorial = async(yeniVeri)=> {
     await axios.post(URL, yeniVeri)
@@ -48,6 +48,7 @@ const Home = () => {
 
   const deleteTutorial = async (id)=>{
     await axios.delete(`${URL}${id}/`)
+    getTutorials()
   }
 
 

@@ -30,13 +30,15 @@ const BilgiList = ({tutorials, deleteTutorial}) => {
                 <td>{title}</td>
                 <td>{description} </td>
                 <td className="text-center ">
-                <AiFillDelete type='button' className='text-danger me-4 fs-5'/>  
+                <AiFillDelete type='button' 
+                className='text-danger me-4 fs-5'
+                onClick={()=>deleteTutorial(id)}
+                />  
                 {/* burada size'ı bootstrapfs-5 ile verdim */}
                 
                 <FaEdit type='button' 
                 className='text-success' 
                 size={20}
-                  onClick={()=>deleteTutorial(id)}
                 />
 
                 {/* burada ise size attribute'ü ile verdim */}
