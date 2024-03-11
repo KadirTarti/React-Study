@@ -1,8 +1,9 @@
 import './App.css';
 
-import React from 'react';
+import React, { Fragment } from 'react';
 import Button from './Button';
 import { useState } from 'react';
+import axios from 'axios';
 
 function App () {
 
@@ -14,8 +15,18 @@ function App () {
 
   const onClickHandler =()=>{
     setLoading(true);
-    
-      
+
+    axios.get('https://randomuser.me/api/')
+    .then((response) => {
+          console.log(response.data.results);
+    setUserData(response.data.results)})
+    .catch((error) => {
+      console.log(error);
+      setLoading(true);
+    }).finally(()=>{
+      setLoading(false)
+      setActiveUser(true)
+    })
   }
 
 
@@ -23,9 +34,19 @@ function App () {
   return (
     <div className='App'>
     <h1> Random User Generator</h1>
-    <Button isActive={activeUser} clicked={onClickHandler}/>
+    <Button activeUser={activeUser} onClickHandler={onClickHandler}/>
+    
+      <div className='app-user'>
+        {userData.map((user, index) =>{
+          return (
+            <Fragment key={user.cell}>
+            <img src={user.picture.large} alt="#"/>
+            </Fragment>
+          )})}
+      </div> 
     </div>
   )
+
 }
 
 export default App
