@@ -26,22 +26,35 @@ const Home = () => {
   // useEffect(()=>{
   // axios.get(url).then((res) => setTutorials(res.data))},[])}
 
+
   useEffect(()=>{
     getTutorials()
-
   }, [])
+  // burada fonksiyonu useEffect siz yazsak sonsuz döngü oluşurdu. Bunu kırmak için useEffect kullanılıyor.
+
+
 
   //* gönderme - silme vs olayla HOME'da yapılır!!!
   //! POST (create işlemi yapıyoruz... database'e veri gönderme)
-  const postalaTutorial = async (yeniVeri) => {
+  const postalaTutorial = async(yeniVeri)=> {
     await axios.post(URL, yeniVeri)
+
+//tekrar verilerin güncel halini çekip diziye atmış olduk ve ekran güncellendi
+    getTutorials()
+  }
+
+
+  //! DELETE (database'den silme)
+
+  const deleteTutorial = async (id)=>{
+    await axios.delete(`${URL}${id}/`)
   }
 
 
   return (
     <>
       <AddBilgi postalaTutorial={postalaTutorial}/>
-      <BilgiList tutorials={tutorials}/>
+      <BilgiList tutorials={tutorials} deleteTutorial={deleteTutorial}/>
     </>
   )
 }

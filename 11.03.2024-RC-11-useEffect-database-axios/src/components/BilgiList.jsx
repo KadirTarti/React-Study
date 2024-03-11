@@ -2,9 +2,12 @@ import React from 'react'
 import { AiFillDelete } from "react-icons/ai";
 import { FaEdit } from "react-icons/fa";
 
-const BilgiList = ({tutorials}) => {
+const BilgiList = ({tutorials, deleteTutorial}) => {
 
-  console.log(tutorials);
+  //DELETE
+  // const deleteTutorial = async (id)=>{
+  //   await axios.delete(`${URL}/${id}/`)
+  // }
 
   return (
     <div className="container mt-4">
@@ -30,7 +33,12 @@ const BilgiList = ({tutorials}) => {
                 <AiFillDelete type='button' className='text-danger me-4 fs-5'/>  
                 {/* burada size'ı bootstrapfs-5 ile verdim */}
                 
-                <FaEdit type='button' className='text-success' size={20}/>
+                <FaEdit type='button' 
+                className='text-success' 
+                size={20}
+                  onClick={()=>deleteTutorial(id)}
+                />
+
                 {/* burada ise size attribute'ü ile verdim */}
 
                 </td>

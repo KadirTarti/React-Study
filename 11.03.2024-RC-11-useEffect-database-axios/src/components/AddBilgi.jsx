@@ -14,7 +14,7 @@ const AddBilgi = ({postalaTutorial}) => {
     //   await axios.post(URL, yeniVeri)
     // }
 
-    postalaTutorial({title:title}, {description:desc})
+    postalaTutorial({title:title}, {description:desc});
 
 
     //&database'e yolla: 
