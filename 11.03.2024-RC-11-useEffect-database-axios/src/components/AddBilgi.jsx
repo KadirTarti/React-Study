@@ -6,7 +6,7 @@ const AddBilgi = ({postalaTutorial}) => {
   const [desc, setDesc] = useState('')
 
   const handleSubmit =(e)=>{
-    e.pereventDefault()
+    e.preventDefault()
 
     //! home'da yazığımız fonk buraya getirdik. postalaTutorial. alttakiler sanki burada tanımlanmış gibi oldu.
     // const postalaTutorial = async (yeniVeri) => {

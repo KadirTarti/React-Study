@@ -9,6 +9,8 @@ const BilgiList = ({tutorials, deleteTutorial}) => {
   //   await axios.delete(`${URL}/${id}/`)
   // }
 
+
+  // bootstrapten hareketli bir yapı olan modal kullanacağım için index.html e bootstrap in script etiketini ekledik
   return (
     <div className="container mt-4">
       <table className="table table-striped">
@@ -49,6 +51,8 @@ const BilgiList = ({tutorials, deleteTutorial}) => {
           })}
         </tbody>
       </table>
+
+      {/* Modal etiketi buraya eklenebilir ya da başka comp açılıp oradan çekilir */}
    
     </div>
   )
