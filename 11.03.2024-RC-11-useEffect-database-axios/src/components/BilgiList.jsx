@@ -1,9 +1,11 @@
-import React from 'react'
+import React, { useState } from 'react'
 import { AiFillDelete } from "react-icons/ai";
 import { FaEdit } from "react-icons/fa";
 import EditBilgi from './EditBilgi';
 
 const BilgiList = ({tutorials, deleteTutorial}) => {
+
+  const [item, setItem] = useState('');
 
   //DELETE
   // const deleteTutorial = async (id)=>{
@@ -44,6 +46,7 @@ const BilgiList = ({tutorials, deleteTutorial}) => {
                 size={20}
                 data-bs-toggle="modal" 
                 data-bs-target="#editModal"
+                onClick={()=>setItem({id,title,description})}
                 />
 
                 {/* burada ise size attribute'ü ile verdim */}
@@ -56,7 +59,7 @@ const BilgiList = ({tutorials, deleteTutorial}) => {
       </table>
 
       {/* Modal etiketi buraya da eklenebilir ama BestPrac başka comp açılıp oradan çekilir */}
-     <EditBilgi/>
+     <EditBilgi item={item} setItem={setItem}/>
    
     </div>
   )

@@ -55,7 +55,7 @@ const Home = () => {
   return (
     <>
       <AddBilgi postalaTutorial={postalaTutorial}/>
-      <BilgiList tutorials={tutorials} deleteTutorial={deleteTutorial}/>
+      <BilgiList tutorials={tutorials} deleteTutorial={deleteTutorial} getTutorials={getTutorials}/>
     </>
   )
 }
