@@ -55,7 +55,6 @@ function App () {
     </h1>
   }
 
-
   const activeLinkHandler =(index)=> {
     setActiveLink(index);
   }
@@ -77,7 +76,9 @@ function App () {
             <PhraseGenerator user={user}/>
             <div className='app-icons'>
             {icons.map((icon, index)=>{
-              return <i className={icon} key={index} onMouseEnter={()=> activeLinkHandler(index)}
+              return <i 
+              className={index === 0 ? (userData.length > 0 && userData[0].gender === 'male' ? 'fas fa-user fa-4x' : 'fas fa-star fa-4x') : icon}
+             key={index} onMouseEnter={()=> activeLinkHandler(index)}
               style={activeLink === index ? style : null}>
 
               </i>
