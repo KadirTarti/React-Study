@@ -1,6 +1,7 @@
 import React from 'react'
 import { AiFillDelete } from "react-icons/ai";
 import { FaEdit } from "react-icons/fa";
+import EditBilgi from './EditBilgi';
 
 const BilgiList = ({tutorials, deleteTutorial}) => {
 
@@ -41,6 +42,8 @@ const BilgiList = ({tutorials, deleteTutorial}) => {
                 <FaEdit type='button' 
                 className='text-success' 
                 size={20}
+                data-bs-toggle="modal" 
+                data-bs-target="#editModal"
                 />
 
                 {/* burada ise size attribute'ü ile verdim */}
@@ -52,7 +55,8 @@ const BilgiList = ({tutorials, deleteTutorial}) => {
         </tbody>
       </table>
 
-      {/* Modal etiketi buraya eklenebilir ya da başka comp açılıp oradan çekilir */}
+      {/* Modal etiketi buraya da eklenebilir ama BestPrac başka comp açılıp oradan çekilir */}
+     <EditBilgi/>
    
     </div>
   )
