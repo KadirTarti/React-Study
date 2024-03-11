@@ -1,6 +1,7 @@
 import axios from 'axios';
 import React, { useEffect, useState } from 'react'
 import BilgiList from '../components/BilgiList';
+import AddBilgi from '../components/AddBilgi';
 
 const Home = () => {
 
@@ -33,6 +34,7 @@ const Home = () => {
 
   return (
     <>
+      <AddBilgi/>
       <BilgiList tutorials={tutorials}/>
     </>
   )

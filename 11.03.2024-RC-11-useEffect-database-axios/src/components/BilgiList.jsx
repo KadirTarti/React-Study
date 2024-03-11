@@ -27,8 +27,11 @@ const BilgiList = ({tutorials}) => {
                 <td>{title}</td>
                 <td>{description} </td>
                 <td className="text-center ">
-                <AiFillDelete type='button' className='text-danger me-4 fs-5'/>
+                <AiFillDelete type='button' className='text-danger me-4 fs-5'/>  
+                {/* burada size'ı bootstrapfs-5 ile verdim */}
+                
                 <FaEdit type='button' className='text-warning' size={20}/>
+                {/* burada ise size attribute'ü ile verdim */}
 
                 </td>
               </tr>
