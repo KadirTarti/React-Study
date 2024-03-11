@@ -27,3 +27,39 @@ button {
     border: 3px solid darkslategrey;
     outline: none;
 }
+
+
+.app-user{
+    width: auto;
+    height: auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    
+}
+
+.app-user img{
+    width: 250px;
+    height: 250px;
+    margin: 0.5rem 0;
+    border-radius: 50%;
+    border: 5px solid rgba(19, 28, 212, 0.483);
+}
+
+.app-icons{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.app-icons .fas {
+    margin: 0 2rem;
+    transition: all 0.5s ease;
+    color: rgb(14, 70, 105);
+}
+
+.app-icons .fas:hover{
+    transform: scale(1.1);
+    cursor: pointer;
+}

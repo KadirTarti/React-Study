@@ -1,9 +1,10 @@
 import './App.css';
-
 import React, { Fragment } from 'react';
 import Button from './Button';
 import { useState } from 'react';
 import axios from 'axios';
+import '@fortawesome/fontawesome-free/css/all.css';
+
 
 function App () {
 
@@ -14,6 +15,7 @@ function App () {
   const [activeLink, setActiveLink]=useState(0); //display active link...
 
   const onClickHandler =()=>{
+    setActiveLink(0)
     setLoading(true);
 
     axios.get('https://randomuser.me/api/')
@@ -29,7 +31,38 @@ function App () {
     })
   }
 
+  const icons = [
+    'fas fa-user fa-4x',
+    'fas fa-envelope fa-4x',
+    'fas fa-calendar-alt fa-4x',
+    'fas fa-map-marker fa-4x',
+    'fas fa-phone fa-4x',
+    'fas fa-lock fa-4x',
+  ]
 
+
+  const PhraseGenerator =({user})=>{
+    const phrases = [
+      `Hi, my name is ${user.name.first} ${user.name.last}`,
+      `My email adress is ${user.email}`,
+      `I was born on ${user.dob.date.slice(0,10)}`,
+      `My country is ${user.location.country}`,
+      `My phone number is "${user.phone}"`,
+      `My password is "${user.login.password}"`,
+    ]
+    return <h1>{phrases[activeLink]}
+    
+    </h1>
+  }
+
+
+  const activeLinkHandler =(index)=> {
+    setActiveLink(index);
+  }
+
+  const style = {
+    color: 'darkred',
+  }
 
   return (
     <div className='App'>
@@ -41,6 +74,17 @@ function App () {
           return (
             <Fragment key={user.cell}>
             <img src={user.picture.large} alt="#"/>
+            <PhraseGenerator user={user}/>
+            <div className='app-icons'>
+            {icons.map((icon, index)=>{
+              return <i className={icon} key={index} onMouseEnter={()=> activeLinkHandler(index)}
+              style={activeLink === index ? style : null}>
+
+              </i>
+            })}
+
+
+            </div>
             </Fragment>
           )})}
       </div> 
