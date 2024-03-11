@@ -1,8 +1,13 @@
 import React from 'react'
 
-const BilgiList = () => {
+const BilgiList = ({tutorials}) => {
+
+  console.log(tutorials);
+
   return (
-    <div>BilgiList</div>
+    <div>
+        
+    </div>
   )
 }
 
