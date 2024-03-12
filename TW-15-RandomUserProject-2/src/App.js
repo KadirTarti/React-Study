@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import mailSvg from "./assets/mail.svg";
 import manSvg from "./assets/man.svg";
 import womanSvg from "./assets/woman.svg";
@@ -9,11 +9,69 @@ import phoneSvg from "./assets/phone.svg";
 import padlockSvg from "./assets/padlock.svg";
 import cwSvg from "./assets/cw.svg";
 import Footer from "./components/footer/Footer";
+import axios from "axios";
 
 const url = "https://randomuser.me/api/";
 const defaultImage = "https://randomuser.me/api/portraits/men/75.jpg";
-
+console.log(url);
 function App() {
+  const [userData, setUserData] = useState(null);
+  const [activeLink, setActiveLink] = useState(0);
+  const [addedUsers, setAddedUsers] = useState([]); // Yeni durum: eklenen kullanıcıları tutmak için
+
+  const fetchUserData = () => {
+    axios.get(url).then((response) => {
+      if (response.data.results.length > 0) {
+        setUserData(response.data.results[0]);
+      }
+    });
+  };
+
+  useEffect(() => {
+    fetchUserData();
+  }, []);
+
+  const handleNewUserClick = () => {
+    setActiveLink(0);
+    fetchUserData(); // Reset active link when fetching new user data
+  };
+
+  const handleAddUser = () => {
+    setAddedUsers([...addedUsers, userData]);
+  };
+
+  const activeLinkHandler = (index) => {
+    setActiveLink(index);
+  };
+
+  console.log(userData);
+
+  const icons = (userData) => [
+    {
+      svg: userData.gender === 'male' ? manSvg : womanSvg,
+      key: "name",
+      data: `${userData.name.title}. ${userData.name.first} ${userData.name.last}`,
+    },
+    { svg: mailSvg, key: "mail", data: userData.email },
+    { svg: womanAgeSvg, key: "age", data: userData.dob.age },
+    {
+      svg: mapSvg,
+      key: "street",
+      data: `${userData.location.street.number} ${userData.location.street.name}`,
+    },
+    { svg: padlockSvg, key: "phone number", data: userData.cell },
+  ];
+
+  const IconRenderer = ({ svgIcon, iconIndex }) => (
+    <button className="icon" onMouseEnter={() => setActiveLink(iconIndex)}>
+      <img src={svgIcon.svg} alt={svgIcon.key} id="iconImg" />
+    </button>
+  );
+
+  if (!userData) return null;
+
+  const iconData = icons(userData);
+
   return (
     <main>
       <div className="block bcg-orange">
@@ -21,34 +79,26 @@ function App() {
       </div>
       <div className="block">
         <div className="container">
-          <img src={defaultImage} alt="random user" className="user-img" />
-          <p className="user-title">My ... is</p>
-          <p className="user-value"></p>
+          <img
+            src={userData.picture.large}
+            alt="random user"
+            className="user-img"
+          />
+          <p className="user-title">My {iconData[activeLink].key} is</p>
+          <p className="user-value">{iconData[activeLink].data}</p>
+
           <div className="values-list">
-            <button className="icon" data-label="name">
-              <img src={womanSvg} alt="user" id="iconImg" />
-            </button>
-            <button className="icon" data-label="email">
-              <img src={mailSvg} alt="mail" id="iconImg" />
-            </button>
-            <button className="icon" data-label="age">
-              <img src={womanAgeSvg} alt="age" id="iconImg" />
-            </button>
-            <button className="icon" data-label="street">
-              <img src={mapSvg} alt="map" id="iconImg" />
-            </button>
-            <button className="icon" data-label="phone">
-              <img src={phoneSvg} alt="phone" id="iconImg" />
-            </button>
-            <button className="icon" data-label="password">
-              <img src={padlockSvg} alt="lock" id="iconImg" />
-            </button>
+            {iconData.map((icon, index) => (
+              <IconRenderer svgIcon={icon} iconIndex={index} />
+            ))}
           </div>
+
           <div className="btn-group">
-            <button className="btn" type="button">
+            <button onClick={handleNewUserClick} className="btn" type="button">
               new user
             </button>
-            <button className="btn" type="button">
+
+            <button onClick={handleAddUser} className="btn" type="button">
               add user
             </button>
           </div>
@@ -63,7 +113,14 @@ function App() {
               </tr>
             </thead>
             <tbody>
-              <tr className="body-tr"></tr>
+              {addedUsers.map((user) => (
+                <tr className="body-tr">
+                  <td>{user.name.first} {user.name.last}</td>
+                  <td>{user.email}</td>
+                  <td>{user.cell}</td>
+                  <td>{user.dob.age}</td>
+                </tr>
+              ))}
             </tbody>
           </table>
         </div>

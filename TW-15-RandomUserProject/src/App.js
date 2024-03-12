@@ -4,7 +4,6 @@ import { useState } from "react";
 import axios from "axios";
 import "@fortawesome/fontawesome-free/css/all.css";
 import bootstrap from "../node_modules/bootstrap/dist/css/bootstrap.min.css";
-import userMale from './userm.png'
 
 function App() {
   const [userData, setUserData] = useState([]);
@@ -14,6 +13,7 @@ function App() {
   useEffect(() => {
     fetchUserData();
   }, []);
+
 
   const fetchUserData = () => {
     axios.get("https://randomuser.me/api/").then((response) => {
@@ -29,10 +29,6 @@ function App() {
     "fas fa-phone fa-3x",
     "fas fa-lock fa-3x",
   ];
-
-  const icons2 = [
-    userMale,
-  ]
 
   const calculateAge = (dob) => {
     const age = new Date().getFullYear() - new Date(dob).getFullYear();
@@ -76,11 +72,11 @@ function App() {
 
   return (
     <div className="App">
-      <img
+      {/* <img
         src="https://coursereport-s3-production.global.ssl.fastly.net/uploads/school/logo/1167/original/Clarusway_Logo.png"
         className="logo"
         alt=""
-      />
+      /> */}
 
       <div className="app-user">
         {userData.map((user, index) => {
