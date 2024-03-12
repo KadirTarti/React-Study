@@ -46,9 +46,6 @@ function App() {
     setAddedUsers([...addedUsers, userData]);
   };
 
-  const activeLinkHandler = (index) => {
-    setActiveLink(index);
-  };
 
   console.log(userData);
 
@@ -102,9 +99,15 @@ function App() {
           </div>
 
           <div className="btn-group">
+            
+          {loading ? (
             <button onClick={handleNewUserClick} className="btn" type="button">
+              loading...
+            </button>)
+            : (<button onClick={handleNewUserClick} className="btn" type="button">
               new user
             </button>
+            )}
 
             <button onClick={handleAddUser} className="btn" type="button">
               add user
