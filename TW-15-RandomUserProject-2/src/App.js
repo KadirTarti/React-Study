@@ -18,13 +18,19 @@ function App() {
   const [userData, setUserData] = useState(null);
   const [activeLink, setActiveLink] = useState(0);
   const [addedUsers, setAddedUsers] = useState([]); // Yeni durum: eklenen kullanıcıları tutmak için
+  const [loading, setLoading] = useState(false)
 
   const fetchUserData = () => {
+    setLoading(true)
     axios.get(url).then((response) => {
       if (response.data.results.length > 0) {
         setUserData(response.data.results[0]);
       }
-    });
+      setLoading(true);
+      
+      }).finally(()=>{
+        setLoading(false)      
+    })
   };
 
   useEffect(() => {
@@ -34,7 +40,7 @@ function App() {
   const handleNewUserClick = () => {
     setActiveLink(0);
     fetchUserData(); // Reset active link when fetching new user data
-  };
+  }; 
 
   const handleAddUser = () => {
     setAddedUsers([...addedUsers, userData]);
