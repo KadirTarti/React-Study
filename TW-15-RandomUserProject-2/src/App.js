@@ -12,11 +12,11 @@ import Footer from "./components/footer/Footer";
 import axios from "axios";
 
 const url = "https://randomuser.me/api/";
-const defaultImage = "https://randomuser.me/api/portraits/men/75.jpg";
+// const defaultImage = "https://randomuser.me/api/portraits/men/75.jpg";
 console.log(url);
 function App() {
   const [userData, setUserData] = useState(null);
-  const [activeLink, setActiveLink] = useState(0);
+  const [activeIcon, setActiveIcon] = useState(0);
   const [addedUsers, setAddedUsers] = useState([]); // Yeni durum: eklenen kullanıcıları tutmak için
   const [loading, setLoading] = useState(false)
 
@@ -26,8 +26,6 @@ function App() {
       if (response.data.results.length > 0) {
         setUserData(response.data.results[0]);
       }
-      setLoading(true);
-      
       }).finally(()=>{
         setLoading(false)      
     })
@@ -37,9 +35,9 @@ function App() {
     fetchUserData();
   }, []);
 
-  const handleNewUserClick = () => {
-    setActiveLink(0);
-    fetchUserData(); // Reset active link when fetching new user data
+  const handleNewUser = () => {
+    setActiveIcon(0);
+    fetchUserData(); 
   }; 
 
   const handleAddUser = () => {
@@ -47,28 +45,27 @@ function App() {
   };
 
 
-  console.log(userData);
+  // console.log(userData);
 
-  const icons = (userData) => [
+  const icons = (data) => [
     {
-      svg: userData.gender === 'male' ? manSvg : womanSvg,
+      svg: data.gender === 'male' ? manSvg : womanSvg,
       key: "name",
-      data: `${userData.name.first} ${userData.name.last}`,
+      value: `${data.name.first} ${data.name.last}`,
     },
-    { svg: mailSvg, key: "mail", data: userData.email },
-    { svg:  userData.gender === 'male' ? manAgeSvg : womanAgeSvg, key: "age", data: userData.dob.age },
+    { svg: mailSvg, key: "mail", value: data.email },
+    { svg:  data.gender === 'male' ? manAgeSvg : womanAgeSvg, key: "age", value: data.dob.age },
     {
       svg: mapSvg,
       key: "street",
-      data: `${userData.location.street.number} ${userData.location.street.name}`,
+      value: `${data.location.street.number} ${data.location.street.name}`,
     },
-    { svg: phoneSvg, key: "phone number", data: userData.cell },
-
-    { svg: padlockSvg, key: "password", data: userData.login.password },
+    { svg: phoneSvg, key: "phone number", value: data.cell },
+    { svg: padlockSvg, key: "password", value: data.login.password },
   ];
 
   const IconRenderer = ({ svgIcon, iconIndex }) => (
-    <button className="icon" onMouseEnter={() => setActiveLink(iconIndex)}>
+    <button className="icon" onMouseEnter={() => setActiveIcon(iconIndex)}>
       <img src={svgIcon.svg} alt={svgIcon.key} id="iconImg" />
     </button>
   );
@@ -89,8 +86,8 @@ function App() {
             alt="random user"
             className="user-img"
           />
-          <p className="user-title">My {iconData[activeLink].key} is</p>
-          <p className="user-value">{iconData[activeLink].data}</p>
+          <p className="user-title">My {iconData[activeIcon].key} is</p>
+          <p className="user-value">{iconData[activeIcon].value}</p>
 
           <div className="values-list">
             {iconData.map((icon, index) => (
@@ -101,10 +98,10 @@ function App() {
           <div className="btn-group">
             
           {loading ? (
-            <button onClick={handleNewUserClick} className="btn" type="button">
+            <button onClick={handleNewUser} className="btn" type="button">
               loading...
             </button>)
-            : (<button onClick={handleNewUserClick} className="btn" type="button">
+            : (<button onClick={handleNewUser} className="btn" type="button">
               new user
             </button>
             )}
