@@ -50,16 +50,18 @@ function App() {
     {
       svg: userData.gender === 'male' ? manSvg : womanSvg,
       key: "name",
-      data: `${userData.name.title}. ${userData.name.first} ${userData.name.last}`,
+      data: `${userData.name.first} ${userData.name.last}`,
     },
     { svg: mailSvg, key: "mail", data: userData.email },
-    { svg: womanAgeSvg, key: "age", data: userData.dob.age },
+    { svg:  userData.gender === 'male' ? manAgeSvg : womanAgeSvg, key: "age", data: userData.dob.age },
     {
       svg: mapSvg,
       key: "street",
       data: `${userData.location.street.number} ${userData.location.street.name}`,
     },
-    { svg: padlockSvg, key: "phone number", data: userData.cell },
+    { svg: phoneSvg, key: "phone number", data: userData.cell },
+
+    { svg: padlockSvg, key: "password", data: userData.login.password },
   ];
 
   const IconRenderer = ({ svgIcon, iconIndex }) => (
