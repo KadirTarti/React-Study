@@ -1,14 +1,14 @@
-import React from 'react'
+// import React from 'react'
 
-const Button = ({activeUser, onClickHandler}) => {
+// const Button = ({activeUser, onClickHandler}) => {
 
 
 
-  return (
-    <div>
-    <button onClick={onClickHandler}>{activeUser ? "Get Another User" : 'Get User'} </button>
-    </div>
-  )
-}
+//   return (
+//     <div>
+    
+//     </div>
+//   )
+// }
 
-export default Button
+// export default Button

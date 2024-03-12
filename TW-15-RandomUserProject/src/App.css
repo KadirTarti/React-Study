@@ -5,9 +5,10 @@
 }
 
 .App{
+    background: rgb(255, 202, 29);
     display: flex;
     flex-direction: column;
-    justify-content: center;
+    /* justify-content: center; */
     align-items: center;
     width: 100%;
     height: 100vh;
@@ -30,6 +31,9 @@ button {
 
 
 .app-user{
+    background-color: rgba(210, 218, 220, 0.491);
+    margin: 4rem;
+    margin-bottom: 5rem;
     width: auto;
     height: auto;
     display: flex;
@@ -39,12 +43,26 @@ button {
     
 }
 
+.app-user-top{
+    background-color: rgb(196, 195, 195);
+    padding: 3rem;
+    width: 100%;
+    border-bottom: 2x solid gray;
+    
+}
+
+.logo{
+    width: 100px;
+    margin: 5rem;
+}
+
 .app-user img{
-    width: 250px;
-    height: 250px;
+    width: 150px;
+    height: 150px;
     margin: 0.5rem 0;
     border-radius: 50%;
-    border: 5px solid rgba(19, 28, 212, 0.483);
+    border: 5px solid white;
+    box-shadow:1px 1px 20px 6px black;
 }
 
 .app-icons{
@@ -64,3 +82,6 @@ button {
     cursor: pointer;
 }
 
+.phrases{
+    margin: 20px 0px;
+}
