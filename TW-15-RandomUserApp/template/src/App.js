@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import mailSvg from "./assets/mail.svg";
 import manSvg from "./assets/man.svg";
 import womanSvg from "./assets/woman.svg";
@@ -10,10 +10,33 @@ import padlockSvg from "./assets/padlock.svg";
 import cwSvg from "./assets/cw.svg";
 import Footer from "./components/footer/Footer";
 
-const url = "https://randomuser.me/api/";
-const defaultImage = "https://randomuser.me/api/portraits/men/75.jpg";
 
 function App() {
+  
+  const defaultImage = "https://randomuser.me/api/portraits/men/75.jpg";
+  
+  const [userData, setUserData] = useState(null);
+  const [activeIcon, setActiveIcon] = useState(0);
+  const [addedUsers, setAddedUsers] = useState([]);
+  const [loading, setLoading] = useState(false);
+  
+  const url = "https://randomuser.me/api/";
+  
+  const fetchUserData = () => {
+    setLoading(true)
+    axios.get(url).then((response) => {
+      if (response.data.results.length > 0) {
+        setUserData(response.data.results[0]);
+      }
+    }).finally(()=>{
+      setLoading(false)
+    })
+  };
+
+
+
+
+  
   return (
     <main>
       <div className="block bcg-orange">
