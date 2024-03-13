@@ -1,8 +1,13 @@
 import React from 'react'
+import Slider from '../components/Slider'
+import Buton from '../components/Buton'
 
 const Home = () => {
   return (
-    <div>Home</div>
+    <div>
+      <Slider/>
+      <Buton/>
+    </div>
   )
 }
 
