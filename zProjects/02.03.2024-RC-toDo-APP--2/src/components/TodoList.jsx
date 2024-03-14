@@ -15,11 +15,17 @@ const TodoList = () => {
     function handleSubmit(e){
         e.preventDefault()
         if(inputValue.trim() == '') {
-            alert('Please try to add something after writing it...')
+            alert('please write something')
         } else {
             setTodos([...todos, inputValue])
             setInputValue('')
         }
+    }
+
+    const handleDoubleClick = (index) => {
+        const updatedTodos = [...todos];
+        updatedTodos[index].completed = !updatedTodos[index].completed;
+        setTodos(updatedTodos);
     }
 
 
@@ -47,7 +53,7 @@ const TodoList = () => {
 
             <ul className="list-group d-flex">
             {todos.map((todo, index) =>(
-                <li className="list-group-item list-group-item-warning" key={index}>
+                <li className={`list-group-item ${todo.completed ? 'text-muted text-decoration-line-through' : 'list-group-item-warning'}`} key={index} onDoubleClick={() => handleDoubleClick(index)}>
                 {todo}
                 <button className='input-group-text btn btn-danger' onClick={()=> handleDelete(index)}>Delete</button>
                 </li>

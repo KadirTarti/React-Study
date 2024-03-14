@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import mailSvg from "./assets/mail.svg";
 import manSvg from "./assets/man.svg";
 import womanSvg from "./assets/woman.svg";
@@ -9,11 +9,40 @@ import phoneSvg from "./assets/phone.svg";
 import padlockSvg from "./assets/padlock.svg";
 import cwSvg from "./assets/cw.svg";
 import Footer from "./components/footer/Footer";
+import axios from 'axios'
 
-const url = "https://randomuser.me/api/";
-const defaultImage = "https://randomuser.me/api/portraits/men/75.jpg";
 
 function App() {
+  
+  const url = "https://randomuser.me/api/";
+  const defaultImage = "https://randomuser.me/api/portraits/men/75.jpg";
+
+  const [userData, setUserData] = useState(null);
+  const [activeIcon, setActiveIcon] = useState(0);
+  const [addedUsers, setAddedUsers] = useState([]); // Yeni durum: eklenen kullanıcıları tutmak için
+  const [loading, setLoading] = useState(false)
+
+  const fetchUserData = () => {
+    setLoading(true)
+    axios.get(url).then((response) => {
+      if (response.data.results.length > 0) {
+        setUserData(response.data.results[0]);
+      }
+      }).finally(()=>{
+        setLoading(false)      
+    })
+  };
+
+  useEffect(() => {
+    fetchUserData();
+  }, []);
+
+  const handleNewUser = () => {
+    setActiveIcon(0);
+    fetchUserData(); 
+  }; 
+
+
   return (
     <main>
       <div className="block bcg-orange">
