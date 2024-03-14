@@ -98,7 +98,7 @@ function App() {
           <div className="btn-group">
             
           {loading ? (
-            <button onClick={handleNewUser} className="btn" type="button">
+            <button className="btn" type="button">
               loading...
             </button>)
             : (<button onClick={handleNewUser} className="btn" type="button">

@@ -19,14 +19,17 @@ function App() {
 
   const [userData, setUserData] = useState(null);
   const [activeIcon, setActiveIcon] = useState(0);
-  const [addedUsers, setAddedUsers] = useState([]); // Yeni durum: eklenen kullanıcıları tutmak için
-  const [loading, setLoading] = useState(false)
+  const [addedUsers, setAddedUsers] = useState([]);
+  const [loading, setLoading] = useState(false);
+  const [disabled, setDisabled] = useState(false);
+
 
   const fetchUserData = () => {
     setLoading(true)
     axios.get(url).then((response) => {
       if (response.data.results.length > 0) {
         setUserData(response.data.results[0]);
+        setDisabled(false);
       }
       }).finally(()=>{
         setLoading(false)      
@@ -40,7 +43,42 @@ function App() {
   const handleNewUser = () => {
     setActiveIcon(0);
     fetchUserData(); 
-  }; 
+  };
+  
+  const handleAddUser = () =>{
+    if (!addedUsers.find((x) => x.name.first === userData.name.first)) {
+      setAddedUsers([...addedUsers, userData])
+    } else {
+      setDisabled(true)
+    }
+  };
+
+  const icons = (data) => [
+    {
+      svg: data.gender === 'male' ? manSvg : womanSvg,
+      key: "name",
+      value: `${data.name.first} ${data.name.last}`,
+    },
+    { svg: mailSvg, key: "mail", value: data.email },
+    { svg:  data.gender === 'male' ? manAgeSvg : womanAgeSvg, key: "age", value: data.dob.age },
+    {
+      svg: mapSvg,
+      key: "street",
+      value: `${data.location.street.number} ${data.location.street.name}`,
+    },
+    { svg: phoneSvg, key: "phone number", value: data.cell },
+    { svg: padlockSvg, key: "password", value: data.login.password },
+  ];
+
+  const IconRenderer = ({svgIcon, iconIndex}) => (
+    <button className="icon" onMouseEnter={()=> setActiveIcon(iconIndex)}>
+    <img src={svgIcon.svg} alt={svgIcon.key} id='iconImg' />
+    </button>
+  )
+
+  if (!userData) return null;
+
+  const iconData = icons(userData)
 
 
   return (
@@ -50,34 +88,38 @@ function App() {
       </div>
       <div className="block">
         <div className="container">
-          <img src={defaultImage} alt="random user" className="user-img" />
-          <p className="user-title">My ... is</p>
-          <p className="user-value"></p>
+          <img 
+          src={userData.picture.large} 
+          alt="random user" 
+          className="user-img" 
+          />
+          
+          <p className="user-title">My {iconData[activeIcon].key} is</p>
+          <p className="user-value">{iconData[activeIcon].value} </p>
+
+
+
+
+
           <div className="values-list">
-            <button className="icon" data-label="name">
-              <img src={womanSvg} alt="user" id="iconImg" />
-            </button>
-            <button className="icon" data-label="email">
-              <img src={mailSvg} alt="mail" id="iconImg" />
-            </button>
-            <button className="icon" data-label="age">
-              <img src={womanAgeSvg} alt="age" id="iconImg" />
-            </button>
-            <button className="icon" data-label="street">
-              <img src={mapSvg} alt="map" id="iconImg" />
-            </button>
-            <button className="icon" data-label="phone">
-              <img src={phoneSvg} alt="phone" id="iconImg" />
-            </button>
-            <button className="icon" data-label="password">
-              <img src={padlockSvg} alt="lock" id="iconImg" />
-            </button>
+            {iconData.map((icon, index) => (
+              <IconRenderer svgIcon={icon} iconIndex={index}/>
+            ))}
           </div>
+
+
           <div className="btn-group">
-            <button className="btn" type="button">
+          {loading ? (
+            <button className="btn" type="button" disabled>
+              Loading...
+            </button>)
+            :
+            (<button onClick={handleNewUser} className="btn" type="button">
               new user
             </button>
-            <button className="btn" type="button">
+            )}
+            
+          <button disabled={disabled} onClick={handleAddUser} className="btn" type="button">
               add user
             </button>
           </div>
@@ -92,7 +134,14 @@ function App() {
               </tr>
             </thead>
             <tbody>
-              <tr className="body-tr"></tr>
+            {addedUsers.map((user)=>(
+              <tr className="body-tr">
+                <td>{user.name.first} {user.name.last}</td>
+                <td>{user.email}</td>
+                <td>{user.cell}</td>
+                <td>{user.dob.age}</td>
+              </tr>
+            ))}
             </tbody>
           </table>
         </div>
