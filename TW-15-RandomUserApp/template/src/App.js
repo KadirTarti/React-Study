@@ -46,7 +46,7 @@ function App() {
   };
   
   const handleAddUser = () =>{
-    if (!addedUsers.find((x) => x.name.first === userData.name.first)) {
+    if (!addedUsers.find((x) => x.login.uuid === userData.login.uuid)) {
       setAddedUsers([...addedUsers, userData])
     } else {
       setDisabled(true)
