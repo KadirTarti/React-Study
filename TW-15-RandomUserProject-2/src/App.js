@@ -18,13 +18,15 @@ function App() {
   const [userData, setUserData] = useState(null);
   const [activeIcon, setActiveIcon] = useState(0);
   const [addedUsers, setAddedUsers] = useState([]); // Yeni durum: eklenen kullanıcıları tutmak için
-  const [loading, setLoading] = useState(false)
+  const [loading, setLoading] = useState(false);
+  const [disabled, setDisabled] = useState(false);
 
   const fetchUserData = () => {
     setLoading(true)
     axios.get(url).then((response) => {
       if (response.data.results.length > 0) {
         setUserData(response.data.results[0]);
+        setDisabled(false);
       }
       }).finally(()=>{
         setLoading(false)      
@@ -40,8 +42,12 @@ function App() {
     fetchUserData(); 
   }; 
 
-  const handleAddUser = () => {
-    setAddedUsers([...addedUsers, userData]);
+  const handleAddUser = () =>{
+    if (!addedUsers.find((x) => x.login.uuid === userData.login.uuid)) {
+      setAddedUsers([...addedUsers, userData])
+    } else {
+      setDisabled(true);
+    }
   };
 
 
@@ -106,7 +112,7 @@ function App() {
             </button>
             )}
 
-            <button onClick={handleAddUser} className="btn" type="button">
+            <button disabled={disabled} onClick={handleAddUser} className="btn" type="button">
               add user
             </button>
           </div>
