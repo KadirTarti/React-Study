@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from 'react'
 import { useLocation, useNavigate, useParams } from 'react-router-dom'
 import spinner from '../img/loading.gif'
+import NotFound from './NotFound'
 
 const TeacherDetails = () => {
 
@@ -11,19 +12,29 @@ const TeacherDetails = () => {
   const {id} = useParams() // bu hook react-router-dom a ait
   const [kisi, setKisi] = useState({});
   const [loading, setLoading] = useState(true)
+  const [error, setError]= useState(false)
 
   useEffect(()=>{
-    fetch(`https://jsonplaceholder.typicode.com/users/${id}`).then((res)=>res.json()).then((veri)=>setKisi(veri)).finally(()=>{setLoading(false)})
-  }, [id])
-//   useEffect te [] içini boş bırakabilirim. çünkü zaten bu sayfaya kisi tıklanınca o kisinin id  si ile geliniyor ve bu sayfa tekrar çalışıyor, ama syntax gereği, id ye bağlı çalıştığı için [] içine id değiştiğinde çalış komutu verirsek herkes mutlu olur, yapmazsakta hata almayız
-//  navigate(-sayı) ile sayı kaçsa o kadar sekme geri döner, yani sayı 2 ise 2 önce ziyaret ettiğimiz sayfaya döner
+    fetch(`https://jsonplaceholder.typicode.com/users/${id}`)
+    .then((res)=>res.json())
+    .then((veri)=>setKisi(veri))
+    .catch((err)=>setError(true))
+    .finally(()=>{setLoading(false)})
+  }, [id]);
 
+  if(error){
+    return <NotFound/>
   
-  if (loading){
+    }  else if (loading) {
     return(<div>
         <img src={spinner} alt="" />
       </div>)
   }
+//   useEffect te [] içini boş bırakabilirim. çünkü zaten bu sayfaya kisi tıklanınca o kisinin id  si ile geliniyor ve bu sayfa tekrar çalışıyor, ama syntax gereği, id ye bağlı çalıştığı için [] içine id değiştiğinde çalış komutu verirsek herkes mutlu olur, yapmazsakta hata almayız
+//  navigate(-sayı) ile sayı kaçsa o kadar sekme geri döner, yani sayı 2 ise 2 önce ziyaret ettiğimiz sayfaya döner
+
+  
+  
 
   // //! 2.yol
   // const {state:{kisi}}=useLocation()
