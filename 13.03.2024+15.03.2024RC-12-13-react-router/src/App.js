@@ -1,21 +1,23 @@
 import React from 'react'
 import "bootstrap/dist/css/bootstrap.min.css";
-import MyNavbar from './components/MyNavbar';
-import Home from './pages/Home';
-import Teacher from './pages/Teacher';
-import Footer from './components/Footer';
-import CourseCard from './pages/CourseCard';
-import CardDetails from './pages/CardDetails';
-import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
-import ContactForm from './pages/ContactForm';
-import Login from './pages/Login';
-import TeacherDetails from './pages/TeacherDetails';
-import NotFound from './pages/NotFound';
+import AppRouter from './router/AppRouter';
+// import MyNavbar from './components/MyNavbar';
+// import Home from './pages/Home';
+// import Teacher from './pages/Teacher';
+// import Footer from './components/Footer';
+// import CourseCard from './pages/CourseCard';
+// import CardDetails from './pages/CardDetails';
+// import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
+// import ContactForm from './pages/ContactForm';
+// import Login from './pages/Login';
+// import TeacherDetails from './pages/TeacherDetails';
+// import NotFound from './pages/NotFound';
 
 
 const App = () => {
   return (
     <div>
+    <AppRouter/>
     
       {/* <Router>
         <MyNavbar/>
