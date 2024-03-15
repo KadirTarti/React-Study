@@ -19,7 +19,9 @@ const AppRouter = () => {
         <Router>
         <MyNavbar/>
           <Routes>
-            <Route path='/' element={<Home/>} />
+            <Route exact path='/' element={<Home/>} />
+    {/*     exact ... path de yer alan / veya /home ifadesinin anasayfa olduğunu daha ziyade developer'lara ifade etmek için kullanılıyor.          "/" (ana yol) tüm yollara dahil edilmiştir, bu nedenle onu "/" ile başlayan diğer yollardan ayırt etmek için exact anahtar kelimesine sahip olması gerekir .
+    "/courses/:name" böyle bir yolda yani  :name belirtilen kısım bir değişkendir, mesela name=HTML gibi. bunun için : kullanılır.        */}
             
             <Route path='/teacher' element={<Teacher/>} />
             <Route path='/teacher/:id' element={<TeacherDetails/>} />
@@ -27,7 +29,17 @@ const AppRouter = () => {
             <Route path='/courses' element={<CourseCard/>} />
             <Route path='/courses/:nameee' element={<CardDetails/>} />
             
-            {/* x form'a bilgi girilmeden direk girilemesin istiyorsak burada ŞİFRE KONTROLÜ devreye giriyor. Kullanıcı adı, şifre olmadan olmasın. */}
+            {/* courses PrivateRouter ile hali :  */}
+
+
+
+            {/* <Route path="/courses" element={<PrivateRouter />}>
+          <Route path="" element={<CourseCard />} />
+          <Route path="/courses/:namee" element={<CardDetails />} />
+        </Route> */}
+
+            
+            {/* x form'a, giriş bilgisi girilmeden direk girilemesin istiyorsak burada ŞİFRE KONTROLÜ devreye giriyor. Kullanıcı adı, şifre olmadan olmasın. */}
             
             <Route path='/contact' element={<PrivateRouter/>}>
                 <Route path='' element={<ContactForm/>}/>
