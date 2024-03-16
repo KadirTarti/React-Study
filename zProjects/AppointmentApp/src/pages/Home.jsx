@@ -44,12 +44,10 @@ const Home = () => {
           <Navbar.Toggle aria-controls="navbarScroll" />
           <Navbar.Collapse id="navbarScroll">
             <Nav
-              className="me-auto my-2 my-lg-0"  style={{ maxHeight: '100px' }} navbarScroll
+              className="navlinks me-auto my-2 my-lg-0"  style={{ maxHeight: '100px'}} navbarScroll
             >
-              <Nav.Link className="fs-4" href="#action1">Home</Nav.Link>
-              <Nav.Link className="fs-4" href="#action2">Link</Nav.Link>
-              
-              <Nav.Link className="fs-4" href="#">Link</Nav.Link>
+              <Nav.Link className="navlink fs-4" href="#action1">Home</Nav.Link>              
+              <Nav.Link className="navlink fs-4" href="#home">Make an Appointment</Nav.Link>
             </Nav>
             <Form className="d-flex">
               <Form.Control
@@ -58,7 +56,6 @@ const Home = () => {
                 className="me-2"
                 aria-label="Search"
               />
-              <Button className="fs-6" variant="outline-dark">Search</Button>
             </Form>
           </Navbar.Collapse>
         </Container>

@@ -132,6 +132,13 @@ body {
   font-size: 1rem;
 }
 
+.navlinks{
+  gap: 10px !important;
+  font-weight: 600;
+}
 
+.navlink:hover{
+  color: rgb(198, 70, 70) !important;
+}
 
 
