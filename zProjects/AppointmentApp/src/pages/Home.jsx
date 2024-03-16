@@ -2,8 +2,8 @@ import React, { useState } from "react";
 import { hastaData, doctorData } from "../helper/Data";
 import PatientList from "../components/PatientList";
 import AddPatient from "../components/AddPatient";
-import bootstrap from '../../node_modules/bootstrap/dist/css/bootstrap.css'
-import { Button, Container, Form, Nav, Navbar } from "react-bootstrap";
+import bootstrap from '../../node_modules/bootstrap/dist/css/bootstrap.min.css'
+import { Button, Card, Container, Form, Nav, Navbar } from "react-bootstrap";
 
 const Home = () => {
   let [doctors, setDoctors] = useState(doctorData);
@@ -63,9 +63,6 @@ const Home = () => {
 
       
 
-    
-
-
       <div style={{ display: show ? "block" : "flex" }}>
         <div>
           <header>
@@ -75,8 +72,8 @@ const Home = () => {
                 <div key={dr.id}>
                   <img
                     src={dr.doctorImg}
-                    width="300px"
-                    height="200px"
+                    width="200px"
+                    height="150px"
                     className="btn"
                     style={{ background: show ? "#55B4B0" : "#98B4D4", borderRadius:'5px' }}
                     alt=""
@@ -103,6 +100,15 @@ const Home = () => {
             />
           )}
         </div>
+        <Card.Body>
+ <Card.Title>Card Title</Card.Title>
+ <Card.Text>
+    Some quick example text to build on the card title and make up the
+    bulk of the card's content.
+ </Card.Text>
+ <img src={doctors.doctorImg} alt="Doctor" style={{ width: '100%', height: 'auto' }} />
+ <Button variant="primary">Go somewhere</Button>
+</Card.Body>   
 
         <PatientList
           hastalar={hastalar}
