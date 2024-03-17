@@ -63,7 +63,7 @@ export const doctorData = [
   },
   {
     id: 4,
-    doctorName: "Air Conditioning Service",
+    doctorName: "Air Conditioning",
     doctorImg:
       "https://www.tire.ae/files/uploads/close-up-hand-auto-mechanic-using-measuring-manifold-gauge-check-refrigerant-filling-car-air-conditioner-fix-checking-repair-service-support-maintenance-car-insurance.jpg",
   },

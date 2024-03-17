@@ -91,18 +91,16 @@ const Home = () => {
                     width="250px"
                     height="200px"
                     className="btn rounded-3"
-                    style={{ background: show ? "white" : "#BCBEFF", borderRadius:'5px', border:'3px solid black' }}
+                    style={{ background: show ? "white" : "black", borderRadius:'5px' }}
                     alt=""
                     onClick={() => doctorClick(dr.id)}
                   />
-                  <h4 className="mt-2"
+                  <h4 className="mt-2 text-center"
                     style={{
-                      background: show ? "white" : "#BCBEFF",
-                      color: show ? "black" : "black",
+                      background: show ? "white" : "black",
+                      color: show ? "black" : "white",
                       borderLeft: `10px solid ${show ? "black" : "white"}`,
-                      borderRight: `10px solid ${show ? "black" : "white"}`,
-                      borderRadius:'5px solid black',
-                      border:'3px solid black'
+                      borderRadius:'5px',
                     }}
                   >
                     {dr.doctorName}{" "}

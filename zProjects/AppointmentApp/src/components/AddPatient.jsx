@@ -26,7 +26,7 @@ console.log(hastalar);
     <div>
       <form onSubmit={handleSubmit}>
         <div className="form-control">
-          <label htmlFor="name"> Patient Information</label>
+          <label htmlFor="name"> Car and Owner Information</label>
           <input
             id="name"
             type="text"
@@ -44,9 +44,9 @@ console.log(hastalar);
           />
         </div>
 
-        <div>
+        <div className='text-center'>
           <button className="doc" type="submit">
-            <span>{doctors[0].doctorName} </span> için kayıt oluştur
+          Register for <span>{doctors[0].doctorName} </span> 
           </button>
         </div>
       </form>
