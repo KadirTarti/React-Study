@@ -66,23 +66,43 @@ const Home = () => {
       <div style={{ display: show ? "block" : "flex" }}>
         <div>
           <header>
-            <h1>SCHAFF YALE HOSPITAL</h1>
-            <div className="dr">
+            <h1 className='mt-4 fw-bold'>MIKE-TEC CAR REPAIR</h1>
+
+            <h3 className='mt-4 fw-bold'> Workshop appointment for your car repair!</h3>
+            
+            <p>
+                Get a 20% discount in the Bosch DIY Shop now!
+                For your next online booking at one of our 1,000 Bosch Car Service workshops, you will receive a 20% online voucher that you can redeem in the Bosch DIY Shop.
+
+                <br /> <br /><b>Browse through the Bosch DIY Shop now</b> <br /><br />
+
+                Simply book the service online, tick the conditions of participation before confirming your booking and, after sending your voucher by email, browse the online range for DIY, gardening and cleaning and save.
+
+                Enter your vehicle details & choose your desired date!
+                </p>
+
+                <h2 className='mt-4 text-center'>Booking</h2>
+                <h5 className='h-info mt-2 text-center'>Please click on the image where you would like to make an appointment!</h5>
+            <div className="dr mt-3">
               {doctors.map((dr) => (
                 <div key={dr.id}>
                   <img
                     src={dr.doctorImg}
-                    width="200px"
-                    height="150px"
-                    className="btn"
-                    style={{ background: show ? "#55B4B0" : "#98B4D4", borderRadius:'5px' }}
+                    width="250px"
+                    height="200px"
+                    className="btn rounded-3"
+                    style={{ background: show ? "white" : "#BCBEFF", borderRadius:'5px', border:'3px solid black' }}
                     alt=""
                     onClick={() => doctorClick(dr.id)}
                   />
-                  <h4
+                  <h4 className="mt-2"
                     style={{
-                      background: show ? "#55B4B0" : "#98B4D4",
-                      borderLeft: `10px solid ${show ? "blue" : "green"}`,
+                      background: show ? "white" : "#BCBEFF",
+                      color: show ? "black" : "black",
+                      borderLeft: `10px solid ${show ? "black" : "white"}`,
+                      borderRight: `10px solid ${show ? "black" : "white"}`,
+                      borderRadius:'5px solid black',
+                      border:'3px solid black'
                     }}
                   >
                     {dr.doctorName}{" "}
@@ -100,15 +120,8 @@ const Home = () => {
             />
           )}
         </div>
-        <Card.Body>
- <Card.Title>Card Title</Card.Title>
- <Card.Text>
-    Some quick example text to build on the card title and make up the
-    bulk of the card's content.
- </Card.Text>
- <img src={doctors.doctorImg} alt="Doctor" style={{ width: '100%', height: 'auto' }} />
- <Button variant="primary">Go somewhere</Button>
-</Card.Body>   
+
+ 
 
         <PatientList
           hastalar={hastalar}
