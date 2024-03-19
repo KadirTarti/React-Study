@@ -36,7 +36,7 @@ if (error) {
     <div className="container mt-3">
       <div className="d-sm-block d-md-flex">
        {loading ? 
-       (<p>Loading....</p>) : 
+       (<p style={{color:'gray', fontWeight:'bold'}}>Loading....</p>) : 
        (
           <>
             <article id="product-panel" className="col-md-6">
@@ -46,8 +46,16 @@ if (error) {
               {/* kolay destructring için product={product} yerine burada product={...product}olarak yazıp Product card'a dest.'i direk parantez içinde image, name, price vs yazarak yapabilirdik */}
             </article>
            
+          <ul class="list-group list-group-flush ms-5 w-75">
+            <li class="list-group-item border-dark ">Subtotal s</li>
+            <li class="list-group-item border-dark">Tax (18%)</li>
+            <li class="list-group-item border-dark">Shipping</li>
+            <li class="list-group-item border-bottom border-dark">Total</li>
+          </ul>
           </>
         )}
+
+           
       </div>
     </div>
   );
