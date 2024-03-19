@@ -70,10 +70,12 @@ body {
 
 .form-control {
   margin: 20px 0;
+  font-size: 1.2rem;
 }
 
 .form-control label {
   display: block;
+  /* font-size: 1.2rem; */
 }
 
 .form-control input {
@@ -83,6 +85,7 @@ body {
   font-size: 1rem;
   border-radius: 5px;
   border: none;
+  font-size: 1.2rem;
 }
 
 /*! data daki isDone kısmı false iken görünecek stil */
@@ -117,7 +120,7 @@ body {
   border-left: 10px solid rgb(215, 148, 148);
   background-color: rgba(95, 133, 133, 0.644);
   padding: 10px 20px;
-  font-size: 12px;
+  font-size: 1.2rem;
 
 }
 
@@ -129,6 +132,7 @@ body {
 }
 .btn + h4 {
   padding: 10px 20px;
+  font-size: 1.4rem;
 /* btn className li img den sonraki h4 */
   
 }

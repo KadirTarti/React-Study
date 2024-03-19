@@ -41,6 +41,7 @@ console.log(hastalar);
             type="datetime-local"
             onChange={(e) => setDate(e.target.value)}
             value={date}
+            style={{fontSize:'1.2rem'}}
           />
         </div>
 
