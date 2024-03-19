@@ -28,9 +28,10 @@ body {
   }
 }
 .nav-link {
+  font-weight: 600 !important;
   color: white !important;
   &:hover {
-    color: red !important;
+    color:#135058 !important;
   }
 }
 .active {

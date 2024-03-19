@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from "react";
 import ProductCard from "../components/ProductCard";
 import axios from "axios";
+import loadPicture from '../assets/loading.gif'
 
 
 const ProductList = () => {
@@ -44,11 +45,13 @@ if (error) {
   return <p>Something went wrong..</p> 
 }
  
+{/* <p style={{color:'gray', fontWeight:'bold'}}>Loading....</p> */}
   return (
     <div className="container mt-3">
       <div className="d-sm-block d-md-flex">
        {loading ? 
-       (<p style={{color:'gray', fontWeight:'bold'}}>Loading....</p>) : 
+       (<img src={loadPicture} width={'500px'} alt="" />) :
+
        (
           <>
             <article id="product-panel" className="col-md-6">
