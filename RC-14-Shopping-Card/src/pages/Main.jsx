@@ -1,4 +1,5 @@
 import React from "react";
+import { Navigate } from "react-router-dom";
 
 const Main = () => {
 
@@ -9,12 +10,13 @@ const Main = () => {
         <div className="main-buttons">
           <button
             className="btn btn-outline-primary px-4"
-          
+            onClick={()=> Navigate('/new-product')}
           >
             Add New Product
           </button>
           <button
             className="btn btn-primary px-4 ms-3"
+            onClick={()=> Navigate('/products')}
            
           >
             See Products
