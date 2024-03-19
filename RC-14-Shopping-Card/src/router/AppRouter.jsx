@@ -1,11 +1,11 @@
 import React from 'react'
 import Navbar from '../components/Navbar'
 import { BrowserRouter, Route, Routes } from 'react-router-dom'
-import Main from "./pages/Main";
-import NewProduct from "./pages/NewProduct";
-import ProductList from "./pages/ProductList";
-import About from "./pages/About";
 import UpdateProduct from '../pages/UpdateProduct';
+import Main from '../pages/Main';
+import About from '../pages/About';
+import NewProduct from '../pages/NewProduct';
+import ProductList from '../pages/ProductList';
 
 
 const AppRouter = () => {
