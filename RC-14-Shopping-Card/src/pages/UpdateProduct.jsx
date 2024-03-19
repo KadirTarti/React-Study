@@ -25,7 +25,7 @@ const UpdateProduct = () => {
       >
         <h1 className="text-center">Update Product</h1>
 
-        <form onSubmit={handleSubmit} className="p-2" >
+        {/* <form onSubmit={handleSubmit} className="p-2" >
           <div className="mb-3">
             <label htmlFor="add-name" className="form-label">
               Product Name
@@ -96,7 +96,7 @@ const UpdateProduct = () => {
               <i className="fa-solid fa-cart-plus me-2"></i>Save To Product
             </button>
           </div>
-        </form>
+        </form> */}
       </article>
     </div>
   );

@@ -33,7 +33,7 @@ const NewProduct = () => {
       >
         <h1 className="text-center"> New Product</h1>
 
-        <form onSubmit={handleSubmit} className="p-2">
+        {/* <form onSubmit={handleSubmit} className="p-2">
           <div className="mb-3">
             <label htmlFor="add-name" className="form-label">
               Product Name
@@ -98,7 +98,7 @@ const NewProduct = () => {
               <i className="fa-solid fa-cart-plus me-2"></i>Save To Product
             </button>
           </div>
-        </form>
+        </form> */}
       </article>
     </div>
   );
