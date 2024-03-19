@@ -62,15 +62,8 @@ const Home = () => {
 
             <h3 className='mt-4 fw-bold'> Workshop appointment for your car repair!</h3>
             
-            <p>
-                Get a 20% discount in the Bosch DIY Shop now!
-                For your next online booking at one of our 1,000 Bosch Car Service workshops, you will receive a 20% online voucher that you can redeem in the Bosch DIY Shop.
-
-                <br /> <br /><b>Browse through the MIKE DIY Shop now</b> <br /><br />
-
+            <p className='fs-5'>
                 Simply book the service online, tick the conditions of participation before confirming your booking and, after sending your voucher by email, browse the online range for DIY, gardening and cleaning and save.
-
-                Enter your vehicle details & choose your desired date!
                 </p>
 
                 <h2 className='mt-4 text-center'>Booking</h2>
