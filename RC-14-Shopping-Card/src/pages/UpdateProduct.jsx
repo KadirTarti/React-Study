@@ -1,6 +1,7 @@
 import axios from "axios";
 import { useState } from "react";
 import { useLocation, useNavigate } from "react-router-dom";
+import ProductForm from "../components/ProductForm";
 
 
 
@@ -97,6 +98,12 @@ const UpdateProduct = () => {
             </button>
           </div>
         </form> */}
+
+        <ProductForm 
+          handleSubmit={handleSubmit}
+          formData={produkt}
+          setFormData={setProdukt}
+        />
       </article>
     </div>
   );

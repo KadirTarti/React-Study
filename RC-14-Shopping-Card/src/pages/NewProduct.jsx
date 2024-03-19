@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import axios from "axios"
+import ProductForm from "../components/ProductForm";
 
 
 
@@ -99,6 +100,14 @@ const NewProduct = () => {
             </button>
           </div>
         </form> */}
+
+        <ProductForm
+          handleSubmit={handleSubmit}
+          formData={formData}
+          setFormData={setFormData}
+
+
+        />
       </article>
     </div>
   );

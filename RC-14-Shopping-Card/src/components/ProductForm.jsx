@@ -1,6 +1,6 @@
 
 
-const ProductForm = ({ handleSubmit, formVeri, setFormVeri }) => {
+const ProductForm = ({handleSubmit}) => {
   return (
     <article
       id="add-product"
