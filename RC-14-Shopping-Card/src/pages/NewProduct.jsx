@@ -4,17 +4,16 @@ import axios from "axios"
 
 
 const NewProduct = () => {
-
-  const [formData, setFormData] = useState(initialValue)
   
   const initialValue =
-    {
+  {
     name  : '',
     price : 0,
     amount: 0,
     image : '',
     dampingRate: 0.8 
   }
+  const [formData, setFormData] = useState(initialValue)
 
   const handleSubmit =async(e)=>{
     e.preventDefault()

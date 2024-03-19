@@ -14,7 +14,7 @@ const Navbar = () => {
                 <ul className="navbar-nav me-auto mb-2 mb-lg-0">
 
                   <li className="nav-item">
-                    <NavLink className="nav-link" aria-current="page" href="#">Home</NavLink>
+                    <NavLink className="nav-link" aria-current="page" to='/main'>Home</NavLink>
                   </li>
                   <li className="nav-item">
                     <NavLink className="nav-link" to='/new-product'>New Product</NavLink>

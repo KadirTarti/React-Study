@@ -17,7 +17,7 @@ const AppRouter = () => {
       <Route path='/about' element={<About/>} />
       <Route path='/new-product' element={<NewProduct/>} />
       <Route path='/products' element={<ProductList/>} />
-      <Route path='/update-product-' element={<UpdateProduct/>} /> {/* Corrected the missing closing tag */}
+      <Route path='/update-product' element={<UpdateProduct/>} />
       <Route path='*' element={<Main/>} />
     </Routes>
   </BrowserRouter>

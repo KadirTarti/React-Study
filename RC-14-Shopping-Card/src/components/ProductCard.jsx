@@ -28,7 +28,7 @@ const ProductCard = ({product, getData}) => {
   }
  
 
-
+const navigate = useNavigate()
 
 
   return (
@@ -47,7 +47,7 @@ const ProductCard = ({product, getData}) => {
             <h5
               className="card-title"
               role="button"
-          
+              onClick={()=>navigate('/update-product', {state:{product}})}
             >
             {name}
             </h5>

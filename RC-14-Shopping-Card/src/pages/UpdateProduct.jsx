@@ -1,9 +1,21 @@
+import axios from "axios";
+import { useState } from "react";
+import { useLocation, useNavigate } from "react-router-dom";
 
 
 
 const UpdateProduct = () => {
+  const {state:{product}} = useLocation()
+  // console.log(product);
+  const [produkt, setProdukt] = useState(product)
+  const navigate = useNavigate()
 
 
+  const handleSubmit=async(e)=>{
+    e.preventDefault()
+    await axios.put(`https://63f4e5583f99f5855db9e941.mockapi.io/products/${produkt.id}`, produkt);
+    navigate(-1)  //database'de update yapıldıktan sonra bir önceki (product lists) sayfaya geri dön
+  }
 
   return (
     <div className="container">
@@ -11,9 +23,9 @@ const UpdateProduct = () => {
         name="add-product"
         className="mb-4 mt-4 col col-lg-6 mx-auto border rounded-2 bg-opacity-50 bg-light"
       >
-        <h1 className="text-center">update Product</h1>
+        <h1 className="text-center">Update Product</h1>
 
-        <form className="p-2" >
+        <form onSubmit={handleSubmit} className="p-2" >
           <div className="mb-3">
             <label htmlFor="add-name" className="form-label">
               Product Name
@@ -22,7 +34,8 @@ const UpdateProduct = () => {
               type="text"
               className="form-control"
               name="name"
-              value={""}
+              value={produkt.name}
+              onChange={(e)=> setProdukt({...produkt, name:e.target.value})}
             
            
               required
@@ -36,7 +49,9 @@ const UpdateProduct = () => {
               type="number"
               className="form-control"
               name="price"
-              value={""}
+              value={produkt.price}
+              onChange={(e)=> setProdukt({...produkt, price:e.target.value})}
+
              
               required
             />
@@ -49,13 +64,15 @@ const UpdateProduct = () => {
               type="number"
               className="form-control"
               name="amount"
-              value={""}
+              value={produkt.amount}
+              onChange={(e)=> setProdukt({...produkt, amount:e.target.value})}
+
              
               required
             />
           </div>
           <label htmlFor="add-image" className="form-label">
-            Product Image
+            Product Image <span style={{fontSize:'14px', color:'brown'}}>(Please copy the image adress of your product!)</span> 
           </label>
           <div className="input-group mb-3">
             <span className="input-group-text" id="basic-addon3">
@@ -65,9 +82,9 @@ const UpdateProduct = () => {
               type="url"
               className="form-control"
               name="image"
-              value={""}
               aria-describedby="basic-addon3"
-             
+              value={produkt.image}
+              onChange={(e)=> setProdukt({...produkt, image:e.target.value})}
               required
             />
           </div>
