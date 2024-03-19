@@ -25,8 +25,8 @@ console.log(hastalar);
   return (
     <div>
       <form onSubmit={handleSubmit}>
-        <div className="form-control">
-          <label htmlFor="name"> Car and Owner Information</label>
+        <div className="form-control w-50 m-auto mt-3">
+          <label className='text-center fs-5' htmlFor="name"> Car and Owner Information</label>
           <input
             id="name"
             type="text"
@@ -35,13 +35,14 @@ console.log(hastalar);
           />
         </div>
 
-        <div className="form-control">
+        <div className="form-control w-25 m-auto  mt-3">
           <label htmlFor=""> Day & Time</label>
           <input
             type="datetime-local"
             onChange={(e) => setDate(e.target.value)}
             value={date}
-            style={{fontSize:'1.2rem'}}
+            className='date-input'
+            id="specific-date-input"
           />
         </div>
 

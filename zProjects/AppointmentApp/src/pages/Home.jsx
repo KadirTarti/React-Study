@@ -49,14 +49,6 @@ const Home = () => {
               <Nav.Link className="navlink fs-4" href="#action1">Home</Nav.Link>              
               <Nav.Link className="navlink fs-4" href="#home">Make an Appointment</Nav.Link>
             </Nav>
-            <Form className="d-flex">
-              <Form.Control
-                type="search"
-                placeholder="Search"
-                className="me-2"
-                aria-label="Search"
-              />
-            </Form>
           </Navbar.Collapse>
         </Container>
       </Navbar>
@@ -65,7 +57,7 @@ const Home = () => {
 
       <div style={{ display: show ? "block" : "flex" }}>
         <div>
-          <header>
+          <header className="header">
             <h1 className='mt-4 fw-bold'>MIKE-TEC CAR REPAIR</h1>
 
             <h3 className='mt-4 fw-bold'> Workshop appointment for your car repair!</h3>
@@ -74,7 +66,7 @@ const Home = () => {
                 Get a 20% discount in the Bosch DIY Shop now!
                 For your next online booking at one of our 1,000 Bosch Car Service workshops, you will receive a 20% online voucher that you can redeem in the Bosch DIY Shop.
 
-                <br /> <br /><b>Browse through the Bosch DIY Shop now</b> <br /><br />
+                <br /> <br /><b>Browse through the MIKE DIY Shop now</b> <br /><br />
 
                 Simply book the service online, tick the conditions of participation before confirming your booking and, after sending your voucher by email, browse the online range for DIY, gardening and cleaning and save.
 
@@ -95,6 +87,7 @@ const Home = () => {
                     alt=""
                     onClick={() => doctorClick(dr.id)}
                   />
+                   
                   <h4 className="mt-2 text-center"
                     style={{
                       background: show ? "white" : "black",
@@ -105,10 +98,20 @@ const Home = () => {
                   >
                     {dr.doctorName}{" "}
                   </h4>
+
+                  
+
+
                 </div>
               ))}
             </div>
           </header>
+
+          <PatientList
+          hastalar={hastalar}
+          setHastalar={setHastalar}
+          doctors={doctors}
+        />
 
           {!show && (
             <AddPatient
@@ -119,13 +122,7 @@ const Home = () => {
           )}
         </div>
 
- 
 
-        <PatientList
-          hastalar={hastalar}
-          setHastalar={setHastalar}
-          doctors={doctors}
-        />
       </div>
     </div>
   );
