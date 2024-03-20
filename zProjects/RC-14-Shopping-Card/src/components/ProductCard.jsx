@@ -4,7 +4,7 @@ import { useNavigate } from "react-router-dom";
 // parseFloat; komutu tam sayıyı virgüllü sayıya çevirir
 const ProductCard = ({product, getData}) => {
   const {image, name, price, dampingRate,id, amount} = product
-  const BASE_URL = 'https://65f99527df1514524612079f.mockapi.io/shop-card';
+  const BASE_URL = 'https://65f99527df1514524612079f.mockapi.io/shop-card/shoppingapp';
 
 
   //bu comp. her data için özel basldığından extra tıklanan id parametresi yollamaya gere kyok

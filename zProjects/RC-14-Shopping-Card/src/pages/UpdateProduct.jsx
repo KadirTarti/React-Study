@@ -14,7 +14,7 @@ const UpdateProduct = () => {
   
   const handleSubmit=async(e)=>{
     e.preventDefault()
-    await axios.put(`https://65f99527df1514524612079f.mockapi.io/shop-card/${produkt.id}`, produkt);
+    await axios.put(`https://65f99527df1514524612079f.mockapi.io/shop-card/shoppingapp/${produkt.id}`, produkt);
     navigate(-1)  //database'de update yapıldıktan sonra bir önceki (product lists) sayfaya geri dön
   }
 

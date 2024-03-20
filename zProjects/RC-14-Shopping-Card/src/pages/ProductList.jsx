@@ -7,7 +7,7 @@ import loadPicture from '../assets/loading.gif'
 const ProductList = () => {
   
 
- const BASE_URL = 'https://65f99527df1514524612079f.mockapi.io/shop-card';
+ const BASE_URL = 'https://65f99527df1514524612079f.mockapi.io/shop-card/shoppingapp';
 
  const  [produkte, setProdukte] = useState([])
  const  [error, setError] = useState(false)

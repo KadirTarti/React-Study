@@ -18,7 +18,7 @@ const NewProduct = () => {
 
   const handleSubmit =async(e)=>{
     e.preventDefault()
-    await axios.post('https://65f99527df1514524612079f.mockapi.io/shop-card', formData)
+    await axios.post('https://65f99527df1514524612079f.mockapi.io/shop-card/shoppingapp', formData)
 
     
     setFormData(initialValue)
