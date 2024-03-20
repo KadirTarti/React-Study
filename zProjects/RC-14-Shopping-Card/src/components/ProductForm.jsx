@@ -52,7 +52,7 @@ const ProductForm = ({handleSubmit, formData, setFormData}) => {
           </label>
           <div className="input-group mb-3">
             <span className="input-group-text" id="basic-addon3">
-              https://example.com/
+              Product Picture Link:
             </span>
             <input
               type="url"
