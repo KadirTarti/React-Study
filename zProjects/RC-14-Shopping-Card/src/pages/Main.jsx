@@ -7,16 +7,16 @@ const Main = () => {
   return (
     <main className="main">
       <div>
-        <h1>Abdulkadir TARTILACI </h1> <br /> <span style={{fontSize:'22px'}}>Shopping Application</span>
+        <h1 style={{textShadow:'2px 2px 2px black'}}>Abdulkadir TARTILACI </h1> <br /> <span style={{fontSize:'26px', fontWeight:'bold', textShadow:'2px 2px 2px black'}}>Shopping Application</span>
         <div className="main-buttons">
           <button
-            className="btn btn-outline-primary px-4"
+            className="btn btn-outline-primary px-4 fw-bold"
             onClick={()=> navigate('/new-product')}
           >
             Add New Product
           </button>
           <button
-            className="btn btn-primary px-4 ms-3"
+            className="btn btn-primary px-4 ms-3 fw-bold"
             onClick={()=> navigate('/products')}
            
           >

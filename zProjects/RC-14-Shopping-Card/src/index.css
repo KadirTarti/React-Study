@@ -5,13 +5,17 @@
 }
 body {
   background: #f1f2b5;
-  background: linear-gradient(90deg, rgba(244,254,255,1) 0%, rgba(177,254,255,0.7428221288515406) 26%, rgba(172,178,255,0.756827731092437) 64%, rgba(189,138,255,0.695203081232493) 100%);
+  background-image: url('assets/shp3-opa.png');
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+  min-height:100vh ;
+  /* background: linear-gradient(90deg, rgba(244,254,255,1) 0%, rgba(177,254,255,0.7428221288515406) 26%, rgba(172,178,255,0.756827731092437) 64%, rgba(189,138,255,0.695203081232493) 100%); */
   /* background: -webkit-linear-gradient(to right, #135058, #f1f2b5);
   background: linear-gradient(to right, #135058, #f1f2b5); */
 }
 
 .main {
-  background: url(./assets/shopping.jpg);
+  background: url(./assets/shp3.png);
   background-repeat: no-repeat;
   background-size: 100% 100%;
   min-height: calc(100vh - 56px);
@@ -55,7 +59,7 @@ body {
   top: 0;
   width: 4px;
   height: 100%;
-  background-color: #94daff;
+  background-color: #a9b0b1;
   transform: scaleY(1);
   transition: all 1.5s;
   transform-origin: bottom;

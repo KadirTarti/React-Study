@@ -30,7 +30,7 @@ const NewProduct = () => {
     <div className="container">
       <article
         id="add-product"
-        className="mb-4 mt-4 col col-lg-6 mx-auto border rounded-2 bg-opacity-50 bg-light"
+        className="mb-4 mt-4 col col-lg-6 mx-auto border rounded-2 bg-opacity-75 bg-light"
       >
         <h1 className="text-center"> New Product</h1>
 
