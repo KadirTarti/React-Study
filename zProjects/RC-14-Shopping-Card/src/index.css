@@ -14,7 +14,7 @@ body {
   background: url(./assets/shopping.jpg);
   background-repeat: no-repeat;
   background-size: 100% 100%;
-  min-height: calc(100vh - 60px);
+  min-height: calc(100vh - 56px);
   position: relative;
   > div {
     text-align: center;

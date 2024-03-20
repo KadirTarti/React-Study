@@ -7,7 +7,7 @@ const Main = () => {
   return (
     <main className="main">
       <div>
-        <h1>Welcome to Shopping Cart Application</h1>
+        <h1>Abdulkadir TARTILACI </h1> <br /> <span style={{fontSize:'22px'}}>Shopping Application</span>
         <div className="main-buttons">
           <button
             className="btn btn-outline-primary px-4"

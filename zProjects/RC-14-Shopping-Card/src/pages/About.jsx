@@ -16,9 +16,6 @@ const About = () => {
               />
             </div>
             <div className="text-center mt-3">
-              <span className="bg-secondary p-1 px-4 rounded text-white">
-                Pro
-              </span>
               <h5 className="mt-2 mb-0">Abdulkadir TARTILACI</h5>
               <span>Fullstack Developer</span>
               <div className="px-4 mt-1">
