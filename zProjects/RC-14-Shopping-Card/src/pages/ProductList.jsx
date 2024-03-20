@@ -60,8 +60,8 @@ if (error) {
               ))}
               {/* kolay destructring için product={product} yerine burada product={...product}olarak yazıp Product card'a dest.'i direk parantez içinde image, name, price vs yazarak yapabilirdik */}
             </article>
-           
-          <ul className="list-group list-group-flush ms-5 w-75">
+            <div>
+          <ul className="subtotal-group list-group list-group-flush ms-5 w-25">
             <li className="list-group-item border-dark d-flex">
             Subtotal 
             <span className='ms-auto'>${subtotal.toFixed(2)}</span></li>
@@ -73,8 +73,9 @@ if (error) {
             Shipping <span className='ms-auto'>${shipping}</span></li>
 
             <li className="list-group-item border-bottom border-dark d-flex  fw-bold">
-            Total <span className='ms-auto'>${total}</span></li>
+            Total <span className='ms-auto'>${total.toFixed(2)}</span></li>
           </ul>
+          </div>
           </>
         )}
 

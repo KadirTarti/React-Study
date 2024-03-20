@@ -138,3 +138,7 @@ body {
   color: #fff;
   height: 40px;
 }
+
+.subtotal-group{
+  position: fixed;
+}
