@@ -27,14 +27,14 @@ export const hastaData = [
     patientName: "Winter Tires will be installed",
     day: "Dec 12th at 2:30pm",
     isDone: false,
-    myDoctor: "Changing wheels",
+    myDoctor: "Changing Wheels",
   },
   {
     id: 5,
     patientName: "Worn Tires will be replaced",
     day: "Dec 13th at 1:30pm",
     isDone: true,
-    myDoctor: "Changing wheels",
+    myDoctor: "Changing Wheels",
   },
   {
     id: 6,
@@ -48,7 +48,7 @@ export const hastaData = [
 export const doctorData = [
   {
     id: 1,
-    doctorName: "Changing wheels",
+    doctorName: "Changing Wheels",
     doctorImg: "https://murraystirebargains.com/wp-content/uploads/2019/10/tires-and-wheels-inspection-YA5UL8T-1024x637.jpg",
     info: "We carry out your seasonal wheel change."
   },
