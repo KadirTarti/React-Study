@@ -1,4 +1,5 @@
 import React from "react";
+import logo from '../assets/logo1.png'
 
 const About = () => {
   return (
@@ -8,9 +9,9 @@ const About = () => {
           <div className="card p-3 py-4">
             <div className="text-center">
               <img
-                src="https://ca.slack-edge.com/TMPTG1GNP-U036J7Z9F0T-47d568f3b26c-512"
-                width={100}
-                className="rounded-circle"
+                src={logo}
+                width={300}
+                className="rounded-2"
                 alt="a"
               />
             </div>
@@ -18,15 +19,11 @@ const About = () => {
               <span className="bg-secondary p-1 px-4 rounded text-white">
                 Pro
               </span>
-              <h5 className="mt-2 mb-0">Ashley Miller</h5>
+              <h5 className="mt-2 mb-0">Abdulkadir TARTILACI</h5>
               <span>Fullstack Developer</span>
               <div className="px-4 mt-1">
-                <p className="fonts">
-                  Lorem ipsum dolor sit amet consectetur adipisicing elit. Nam
-                  voluptatem dolore sint quo assumenda eum voluptate aut, sequi
-                  rem cumque facilis asperiores possimus porro, facere eveniet!
-                  Tempora non cupiditate in quis adipisci. Distinctio, deleniti
-                  dolores?
+                <p className="fonts fs-6 mt-4">
+                  `Always improve yourself!`
                 </p>
               </div>
               <ul className="social-list">
@@ -50,7 +47,7 @@ const About = () => {
                 <button className="btn btn-outline-primary px-4">
                   <a
                     className="text-decoration-none text-black "
-                    href="https://github.com/AshleyMiller79"
+                    href="https://github.com/KadirTarti"
                     target="true"
                   >
                     Message
@@ -59,7 +56,7 @@ const About = () => {
                 <button className="btn btn-primary px-4 ms-3">
                   <a
                     className="text-decoration-none text-white"
-                    href="https://github.com/anthonyharold67"
+                    href="https://github.com/KadirTarti"
                     target="true"
                   >
                     Contact

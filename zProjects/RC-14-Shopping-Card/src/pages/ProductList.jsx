@@ -50,7 +50,7 @@ if (error) {
     <div className="container mt-3">
       <div className="d-sm-block d-md-flex">
        {loading ? 
-       (<img src={loadPicture} width={'500px'} alt="" />) :
+       (<img src={loadPicture} style={{margin:'auto', marginTop:'100px'}} width={'500px'} alt="" />) :
 
        (
           <>
