@@ -4,13 +4,13 @@ const ProductForm = ({handleSubmit, formData, setFormData}) => {
   return (
     <article
       id="add-product"
-      className="mb-4 mt-4 col col-lg-6 mx-auto border rounded-2 bg-opacity-50 bg-light"
+      className="mb-4 mt-4 col col-lg-6 w-75 mx-auto border rounded-2 bg-opacity-50"
     >
 
-<form onSubmit={handleSubmit} className="p-2">
-          <div className="mb-3">
+        <form onSubmit={handleSubmit} className="rounded-2 bg-secondary p-4 bg-opacity-50 fw-bold">
+          <div className="mb-3 mt-2">
             <label htmlFor="add-name" className="form-label">
-              Product Name
+              Product Name:
             </label>
             <input
               type="text"
@@ -23,7 +23,7 @@ const ProductForm = ({handleSubmit, formData, setFormData}) => {
           </div>
           <div className="mb-3">
             <label htmlFor="add-price" className="form-label">
-              Product Price
+              Product Price:
             </label>
             <input
               type="number"
@@ -36,7 +36,7 @@ const ProductForm = ({handleSubmit, formData, setFormData}) => {
           </div>
           <div className="mb-3">
             <label htmlFor="add-quantity" className="form-label">
-              Product Quantity
+              Product Quantity:
             </label>
             <input
               type="number"
@@ -48,7 +48,7 @@ const ProductForm = ({handleSubmit, formData, setFormData}) => {
             />
           </div>
           <label htmlFor="add-image" className="form-label">
-            Product Image
+            Product Image:
           </label>
           <div className="input-group mb-3">
             <span className="input-group-text" id="basic-addon3">

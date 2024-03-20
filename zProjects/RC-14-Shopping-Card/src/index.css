@@ -5,6 +5,7 @@
 }
 body {
   background: #f1f2b5;
+  background: linear-gradient(90deg, rgba(244,254,255,1) 0%, rgba(177,254,255,1) 26%, rgba(172,178,255,1) 64%, rgba(189,138,255,1) 100%);
   /* background: -webkit-linear-gradient(to right, #135058, #f1f2b5);
   background: linear-gradient(to right, #135058, #f1f2b5); */
 }
