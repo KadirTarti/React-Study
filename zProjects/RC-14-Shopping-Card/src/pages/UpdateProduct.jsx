@@ -11,10 +11,10 @@ const UpdateProduct = () => {
   const [produkt, setProdukt] = useState(product)
   const navigate = useNavigate()
 
-
+  
   const handleSubmit=async(e)=>{
     e.preventDefault()
-    await axios.put(`https://63f4e5583f99f5855db9e941.mockapi.io/products/${produkt.id}`, produkt);
+    await axios.put(`https://65f99527df1514524612079f.mockapi.io/shop-card/${produkt.id}`, produkt);
     navigate(-1)  //database'de update yapıldıktan sonra bir önceki (product lists) sayfaya geri dön
   }
 
