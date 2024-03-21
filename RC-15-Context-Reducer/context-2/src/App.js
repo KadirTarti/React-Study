@@ -1,18 +1,32 @@
-import { useEffect } from "react"
+import { useEffect, useState } from "react"
 
 import GosterUsers from "./pages/GosterUsers"
+import { KullaniciContext } from "./context/KullaniciContext";
 
 
 const App = () => {
 
+  const [users, setUsers] = useState([])
+
+  useEffect(() => {
+  
+    fetch ('https://api.github.com/users')
+    .then((res)=>res.json())
+    .then((data)=> setUsers(data));
+
+  }, [])
+
+  const changeWidth =()=>{
+  }
+  
 
 
 
 
   return (
-    <div>
+    <KullaniciContext.Provider value={{users, changeWidth}}>
       <GosterUsers />
-    </div>
+    </KullaniciContext.Provider>
   );
 }
 
