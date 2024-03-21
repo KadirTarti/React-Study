@@ -1,15 +1,18 @@
-import React from 'react'
+import React, { useContext } from 'react'
 
 import AnaUser from './AnaUser'
+import { KullaniciContex } from '../context/KullaniciProvider'
 
 
 const Isimler = () => {
+
+  const {users} = useContext(KullaniciContex)
 
    
   return (
     <div>
         {/* diziden 4 kişinin ismini bastir */}
-        {[].slice(0,4).map((i)=>(<div style={{textAlign:"center",background:"pink"}}>
+        {users.slice(0,4).map((i)=>(<div style={{textAlign:"center",background:"pink"}}>
             {i.login}
         </div>))}
 
