@@ -13,10 +13,11 @@ const App = () => {
     fetch ('https://api.github.com/users')
     .then((res)=>res.json())
     .then((data)=> setUsers(data));
-
   }, [])
 
-  const changeWidth =()=>{
+  const changeWidth =(id, newWidth)=>{
+    setUsers(users.map((a)=> a.id ===id ? {...a, parametreWidth:newWidth}:a ))
+
   }
   
 
