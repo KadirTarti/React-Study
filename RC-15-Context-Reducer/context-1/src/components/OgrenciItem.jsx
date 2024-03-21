@@ -1,15 +1,18 @@
+import { useContext } from "react"
 
 
 const OgrenciItem = () => {
 
+  const {students, changeColor} = useContext()
+
   return (
     <div>
-{[].map((i)=>{
+{[].map(()=>{
 return(
-    <div style={{backgroundColor:i.color}}>
-        <h3>NAME: {i.name}</h3>
-        <h4>EMAİL: {i.email} </h4>
-        <h4> AGE: {i.age}</h4>
+    <div style={{}}>
+        <h3>NAME: {}</h3>
+        <h4>EMAİL: {} </h4>
+        <h4> AGE: {}</h4>
         Color: <input type="text"  
           
         />

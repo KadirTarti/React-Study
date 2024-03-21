@@ -3,7 +3,7 @@ import OgrenciItem from './OgrenciItem';
 
 const OgrenciList = () => {
   return (
-    <div>
+    <div style={{background:'lightgreen'}}>
       <img
         src="https://gelecekegitimde.com/wp-content/uploads/2015/01/fft99_mf3019637.jpeg"
         alt=""
