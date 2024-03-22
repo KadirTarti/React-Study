@@ -1,3 +1,4 @@
+import ButtonSSS, { DetayButon } from "./styles/ButonSSS";
 import DisplaySSS from "./styles/DisplaySSS";
 import ImageSSS, { LogoSSS } from "./styles/ImageSSS";
 
@@ -8,8 +9,8 @@ const Header = () => {
       >
         <LogoSSS src="./images/logo.png" alt="" />
         <div>
-          <button>Apply Courses</button>
-          <button>Talk to Adviser</button>
+          <ButtonSSS kadir='green'>Apply Courses</ButtonSSS>
+          <ButtonSSS omer>Talk to Adviser</ButtonSSS>
         </div>
       </DisplaySSS>
 
@@ -19,8 +20,8 @@ const Header = () => {
           <p>Clarusway is a leading international software Bootcamp. Join a micro
             class online with other trainees and learn coding skills with a
             highly-skilled instructor.</p>
-          <button>Start Your New Career</button>
-          <button>Details</button>
+          <ButtonSSS>Start Your New Career</ButtonSSS>
+          <DetayButon>Details</DetayButon>
         </div>
         <ImageSSS src="./images/hero.jpg" alt="" />
       </DisplaySSS>
