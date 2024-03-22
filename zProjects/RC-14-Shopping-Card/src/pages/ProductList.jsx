@@ -60,7 +60,7 @@ if (error) {
               ))}
               {/* kolay destructring için product={product} yerine burada product={...product}olarak yazıp Product card'a dest.'i direk parantez içinde image, name, price vs yazarak yapabilirdik */}
             </article>
-            <div>
+            <div className="">
           <ul className="subtotal-group list-group list-group-flush ms-5 w-25">
             <li className="list-group-item border-dark d-flex">
             Subtotal 

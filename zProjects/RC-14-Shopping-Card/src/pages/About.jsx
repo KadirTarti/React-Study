@@ -3,9 +3,9 @@ import logo from '../assets/logo1.png'
 
 const About = () => {
   return (
-    <div className="container mt-5">
-      <div className="row d-flex justify-content-center">
-        <div className="col-md-7">
+    <div className="about-comp" style={{height:'calc(100vh - 56px'}}>
+      <div className="row d-flex justify-content-center opacity-75">
+        <div className="col-md-7 mt-5">
           <div className="card p-3 py-4">
             <div className="text-center">
               <img

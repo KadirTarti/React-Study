@@ -5,7 +5,8 @@
 }
 body {
   background: #f1f2b5;
-  background-image: url('assets/shp3-opa.png');
+  /* background-image: url('assets/shp3-opa.png'); */
+  background-image: url('https://epnext.com/wp-content/uploads/2018/01/1514959619_online_alisveris.jpg');
   background-repeat: no-repeat;
   background-size: 100% 100%;
   min-height:100vh ;
@@ -147,4 +148,16 @@ body {
 
 .subtotal-group{
   position: fixed;
+  border-bottom: 12px solid rgba(0, 0, 0, 0.6);
+  border-top: 12px solid rgba(0, 0, 0, 0.6);
+  border-right: 12px solid rgba(128, 128, 128, 0.6);
+  border-left: 12px solid rgba(128, 128, 128, 0.6);
+}
+
+.about-comp{
+  background:  url('./assets/aboutme.png');
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  overflow: hidden;
 }
