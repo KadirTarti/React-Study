@@ -1,8 +1,6 @@
-import './App.css';
-//! burada kullanılacak tüm sayfalar üste import edilmek ZORUNDA!
-
 
 import React from 'react'
+import Home from './components/Home'
 
 
 const App = () => {
@@ -10,7 +8,7 @@ const App = () => {
     <div>
     
     
-    App    
+    <Home/>
     
     
     </div>
