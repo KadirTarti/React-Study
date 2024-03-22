@@ -6,6 +6,13 @@ const DisplaySSS= styled.div`
   display:flex;
   justify-content: space-between;
   align-items: center;
+
+
+  //bazı yerlerde responsivliği aktif etmek için:
+
+  @media screen and (max-width: ${({theme})=> theme.responsivlik}) {
+    flex-direction: column;
+  }
 `;
 
 export default DisplaySSS;

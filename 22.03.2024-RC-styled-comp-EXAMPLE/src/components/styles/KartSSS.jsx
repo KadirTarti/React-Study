@@ -7,8 +7,15 @@ const CardStyle = styled.div`
   gap: 2rem;
   padding: 2rem;
   display: flex;
-  flex-direction: ${({nida})=> nida}
+  flex-direction: ${({nida})=> nida};
 
+  box-shadow: ${({theme})=>theme.golgelendirme};
+
+
+  @media screen and (max-width: ${({theme})=>theme.responsivlik}){
+    flex-direction: column;
+    background-color: lightgoldenrodyellow;
+  }
 
 `;
 

@@ -6,8 +6,8 @@ import { ThemeProvider } from "styled-components";
 
 
 const theme = {
-  responsive: '724px',
-  golgelendirme: '0 0 10px rgba(0,0,0,0.15)'
+  responsivlik: '724px',
+  golgelendirme: '2px 2px 10px rgba(0,0,0,0.15)',
 }
 
 
@@ -18,7 +18,7 @@ const theme = {
 const App = () => {
   return (
 
-<ThemeProvider>
+<ThemeProvider theme={theme}>
     <ContainerSSS>
       <Header />
       <Card />
