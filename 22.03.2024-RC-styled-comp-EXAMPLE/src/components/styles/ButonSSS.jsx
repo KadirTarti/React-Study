@@ -2,14 +2,14 @@ import styled from 'styled-components';
 
 const ButtonSSS = styled.button`
   
-  background-color: #A62440;
+  background-color: ${({omer})=> omer ? '#A62440' : 'wheat'};
   padding: 1rem;
   margin: 2rem 0.5rem;
   border: 1px solid #A62440;
   font-size: 1.2rem;
   cursor: pointer;
   border-radius: 5px;
-  color: white;
+  color: ${({kadir})=> kadir || 'white'};
   font-weight: 600;
 
   &:hover{
