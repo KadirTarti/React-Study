@@ -4,7 +4,7 @@ const ProductForm = ({handleSubmit, formData, setFormData}) => {
   return (
     <article
       id="add-product"
-      className="mb-4 mt-4 col col-lg-6 w-75 mx-auto border rounded-2 bg-opacity-50"
+      className="new-product mb-4 mt-4 col col-lg-6 w-75 mx-auto border rounded-2 bg-opacity-50"
     >
 
         <form onSubmit={handleSubmit} className="rounded-2 bg-secondary p-4 bg-opacity-50 fw-bold">

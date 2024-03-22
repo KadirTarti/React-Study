@@ -36,13 +36,17 @@ body {
 }
 .nav-link {
   font-weight: 600 !important;
+  font-size: 1.1rem !important;
   color: white !important;
   &:hover {
-    color:#135058 !important;
+    color:gold !important;
+    text-shadow: 1px 2px 3px gold;
+    transition: ease 1s;
   }
 }
 .active {
   text-decoration: underline !important;
+  color: gold !important;
 }
 
 .card {
@@ -74,7 +78,7 @@ body {
   top: 0;
   width: 4px;
   height: 100%;
-  background-color: #135058;
+  background-color: #183D64;
   transform: scaleY(0);
   transition: all 1.5s;
   transform-origin: bottom;
@@ -97,21 +101,22 @@ body {
 
 .social-list li {
   padding: 10px;
-  color: #135058;
+  color: #183D64;
   font-size: 19px;
 }
 /* main deki button */
 .main-buttons button:nth-child(1) {
   border: 1px solid white !important;
-  background-color: white;
-  color: #135058;
+  background-color: #183D64;
+  color: white !important;
   height: 40px;
 }
 .main-buttons button:nth-child(1):hover {
-  border: 1px solid #135058 !important;
+  border: 1px solid white !important;
   color: #fff;
   height: 40px;
-  background-color: #135058;
+  padding: 5px;
+  background-color: #183D64 !important;
 }
 
 
@@ -128,7 +133,7 @@ body {
   height: 40px;
   background-color: #135058;
   & a {
-    color: #fff !important;
+    color: white !important;
   }
 }
 
@@ -140,8 +145,8 @@ body {
 }
 
 .main-buttons button:nth-child(2) {
-  border: 1px solid #135058 !important;
-  background-color: #135058;
+  border: 1px solid white !important;
+  background-color: #183D64;
   color: #fff;
   height: 40px;
 }
@@ -156,8 +161,17 @@ body {
 
 .about-comp{
   background:  url('./assets/aboutme.png');
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+  min-height: calc(100vh - 57px);
   overflow: hidden;
+  opacity: 93%;
+}
+
+.enustnav{
+  background: #183D64 !important;
+}
+
+.new-product{
+  background-color:#067cfaa6 !important;
 }
