@@ -1,6 +1,7 @@
 import React from 'react'
 import HeaderSt, { LinkS } from './style/HeaderStyle'
 import DivStyle from './style/ContainerStyle'
+import ButtonStyle, { TomButton } from './style/ButtonStyle'
 
 
 
@@ -9,11 +10,11 @@ const Home = () => {
     <DivStyle>
     <HeaderSt>Styled Component</HeaderSt>
     <LinkS href="">Link</LinkS>
-    <button>First Button</button>
-    <button>Second Button</button>
-    <button>Third Button</button>
-    <button>Forth Button</button>
-    <button>Fifth Button</button>
+    <ButtonStyle saban>First Button</ButtonStyle>
+    <ButtonStyle elif>Second Button</ButtonStyle>
+    <ButtonStyle>Third Button</ButtonStyle>
+    <TomButton>Forth Button</TomButton>
+    <TomButton asiye>Fifth Button</TomButton>
     </DivStyle>
   )
 }
