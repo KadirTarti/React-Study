@@ -1,6 +1,7 @@
 import React from "react";
 import Header from "./components/Header";
 import Card from "./components/Card";
+import ContainerSSS from "./components/styles/ContainerSSS";
 
 
 
@@ -9,10 +10,10 @@ import Card from "./components/Card";
 
 const App = () => {
   return (
-    <div>
+    <ContainerSSS>
       <Header />
       <Card />
-    </div>
+    </ContainerSSS>
   );
 };
 
