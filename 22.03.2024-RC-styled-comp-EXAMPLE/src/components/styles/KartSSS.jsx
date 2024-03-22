@@ -7,7 +7,8 @@ const CardStyle = styled.div`
   gap: 2rem;
   padding: 2rem;
   display: flex;
-  
+  flex-direction: ${({nida})=> nida}
+
 
 `;
 

@@ -6,7 +6,7 @@ const Card = () => {
   return (
     <div>
       {data.map((item)=>(
-        <CardStyle>
+        <CardStyle key={item.id} nida={item.id%2===1 && 'row-reverse'}>
           <div>
             <h2>{item.title}</h2>
             <p>{item.body}</p>
