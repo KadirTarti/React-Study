@@ -1,25 +1,19 @@
 import React from "react";
 import "./Footer.css";
-import designSvg from "../../assets/design.svg";
+import logo from '../../assets/logo1.png'
 
 const Footer = () => {
   return (
     <div className="footer-div">
       <a
-        href="https://github.com/anthonyharold67"
+        href="https://github.com/KadirTarti"
         target="_blank"
         rel="noopener noreferrer"
         style={{ textDecoration: "none" }}
-      >
-        <h5 className="brand">{"Anthony"}</h5>
+      >Click here for my GitHub Profile
       </a>
-      <img
-        src={designSvg}
-        alt="design"
-        style={{ width: "40px", margin: "0  25px 0 10px" }}
-      />
-      <span>Copyright FC</span>
     </div>
+    
   );
 };
 

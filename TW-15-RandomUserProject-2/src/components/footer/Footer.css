@@ -1,20 +1,17 @@
 .footer-div {
-  width: 80vw;
-  min-width: 400px;
-  background-color: White;
-  height: 50px;
-  font-size: 2rem;
-  color: #9d4d8c;
-  border: 0.5px solid #9d4d8c;
-  border-radius: 5px;
+  font-size: 1rem;
   margin: 50px 0px;
-  height: 55px;
-  display: flex;
   justify-content: center;
+  transition: all 2s ease;
+  transform: scale(1.5);
 }
 
-.brand {
-  color: grey;
-  font-weight: bold;
-  margin-right: 1.5rem;
+.footer-div:hover {
+  font-size: 1.2rem;
+  font-weight: 600;
+  margin: 50px 0px;
+  color: darkorange;
+  text-shadow: 1px 1px 5px black;;
+  justify-content: center;
+  transform: scale(1.5);
 }
