@@ -10,7 +10,7 @@ const Footer = () => {
         target="_blank"
         rel="noopener noreferrer"
         style={{ textDecoration: "none" }}
-      >Click here for my GitHub Profile
+      >Go my GitHub Profile
       </a>
     </div>
     

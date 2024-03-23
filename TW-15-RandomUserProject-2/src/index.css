@@ -105,6 +105,8 @@ p {
   color: var(--clr-grey-1);
   background: var(--clr-orange-cw);
   border-color: var(--clr-orange-cw);
+  transition: all 0.5s ease;
+  box-shadow: 2px 2px 10px black;  
 }
 
 /* container */
@@ -178,6 +180,10 @@ p {
 }
 .icon:hover {
   color: var(--clr-primary-5);
+  box-shadow: 2px 2px 50px black;
+  border-radius: 90%;
+  background-color: var(--clr-grey-5);
+  height: 60px;
 }
 
 .btn {
