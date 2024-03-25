@@ -1,5 +1,5 @@
+import { Navbar } from 'react-bootstrap';
 import './App.css';
-//! burada kullanılacak tüm sayfalar üste import edilmek ZORUNDA!
 
 
 import React from 'react'
@@ -9,7 +9,7 @@ const App = () => {
     <div>
     
     
-    App    
+    <Navbar/>    
     
     
     </div>
