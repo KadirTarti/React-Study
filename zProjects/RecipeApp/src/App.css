@@ -1,0 +1,22 @@
+
+.nvbr{
+    height: 100px;
+    background-color: #E1F1DD !important;
+    color: #393E46 !important;
+    font-size: 1.2rem;
+    font-weight: 600;
+}
+
+.nvbr .collapse a:hover{
+    color:#00ADB5;
+}
+
+.search-and-button{
+    align-items: center !important;
+    justify-content: center !important;
+    display: flex;
+    flex-direction: column;
+    transform: translate(-50, -50);
+    padding: 40px;
+    border: 5px solid red;
+}
