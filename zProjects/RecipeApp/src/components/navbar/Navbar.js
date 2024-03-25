@@ -1,10 +1,11 @@
 import React from "react";
-import bootstrap from '../../../node_modules/bootstrap/dist/css/bootstrap.min.css'
+import 'bootstrap/dist/css/bootstrap.min.css';
+import NavbarStyle from "../navbar/NavbarStyle";
 
 const Navbar = () => {
   return (
-    <div>
-      <nav class="navbar nvbr navbar-expand-lg navbar-light bg-light">
+    <NavbarStyle>
+      <nav class="navbar nvbr navbar-expand-lg">
         <a class="navbar-brand ms-5" href="#">
           <img src="https://d1csarkz8obe9u.cloudfront.net/posterpreviews/kitchen-logo-design-template-0e0551e7992a5fb76cdf01e670e55320_screen.jpg?ts=1694746861" 
           alt=""
@@ -46,7 +47,7 @@ const Navbar = () => {
           </ul>
         </div>
       </nav>
-    </div>
+      </NavbarStyle>
   );
 };
 

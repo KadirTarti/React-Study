@@ -1,30 +1,43 @@
 import React from "react";
-import bootstrap from "../../../node_modules/bootstrap/dist/css/bootstrap.min.css";
+import 'bootstrap/dist/css/bootstrap.min.css';
+import { Dropdown, DropdownButton } from "react-bootstrap";
+import HomeStyle from "../home/HomeStyle";
+import homeSvg from '../../assets/home.svg'
 
 const Home = () => {
   return (
-    <div className="">
-      RECIPE APP
+    <HomeStyle>
+      <p className="text-center mt-4 fs-3">RECIPE APP</p>
       <div className="search-and-button">
-      <div class="input-group">
-  <input type="search" class="rounded" placeholder="Search" aria-label="Search" aria-describedby="search-addon" />
-  <button type="button" class="btn btn-outline-primary" data-mdb-ripple-init>search</button>
-</div>
-      
-      <div class="dropdown show">
-  <a class="btn btn-secondary dropdown-toggle" href="#" role="button" id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-    Dropdown link
-  </a>
+        <div class="input-group">
+          <input
+            type="search"
+            class="rounded me-2"
+            placeholder="Search"
+            aria-label="Search"
+            aria-describedby="search-addon"
+          />
+          <button
+            type="button"
+            class="btn btn-warning rounded me-2"
+            data-mdb-ripple-init
+          >
+            search
+          </button>
 
-  <div class="dropdown-menu" aria-labelledby="dropdownMenuLink">
-    <a class="dropdown-item" href="#">Action</a>
-    <a class="dropdown-item" href="#">Another action</a>
-    <a class="dropdown-item" href="#">Something else here</a>
-  </div>
-</div>
-
+          <DropdownButton id="dropdown-basic-button" title="Choose Recipe">
+            <Dropdown.Item href="#/action-1">Breakfast</Dropdown.Item>
+            <Dropdown.Item href="#/action-2">Lunch</Dropdown.Item>
+            <Dropdown.Item href="#/action-3">Dinner</Dropdown.Item>
+            <Dropdown.Item href="#/action-4">Snack</Dropdown.Item>
+            <Dropdown.Item href="#/action-5">Brunch</Dropdown.Item>
+            <Dropdown.Item href="#/action-6">Tea Time</Dropdown.Item>
+          </DropdownButton>
+        </div>
       </div>
-    </div>
+      <img src={homeSvg} alt="" />
+      
+      </HomeStyle>
   );
 };
 
