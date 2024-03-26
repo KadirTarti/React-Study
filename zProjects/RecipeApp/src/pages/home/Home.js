@@ -8,8 +8,10 @@ import axios from "axios";
 const Home = () => {
 
   const [meals, setMeals] = useState([]);
+  const [selectedMealType, setSelectedMealType] = useState("");
+  const [query, setQuery] = useState([]);
 
-  const URL ='https://api.edamam.com/api/recipes/v2/1234?type=public&app_id=430984321&app_key=userappkey';
+  const URL =`https://api.edamam.com/search?q=${query}&app_id=80af08ad&app_key=55627273303e38024def38cb507c8986&mealType=${handleSelect}`;
 
  
   const handleSearch =async(e)=>{
@@ -18,16 +20,22 @@ const Home = () => {
     const searchData = {
       
     }
-    try {
-      const response = await axios.post(URL, searchData)
-    setMeals(response.data.meals);
-    } catch (error) {
-      console.error("Error fetching data", error);
+      try {
+        const response = await axios.post(URL, searchData)
+        setMeals(response.data.meals);
+      } catch (error) {
+        console.error("Error fetching data", error);
+      }
+      
     }
+    
 
-  }
-
-  
+    const handleSelect = (selectedKey) => {
+      // Assuming the eventKey corresponds to the meal type
+      const mealTypes = ["Breakfast", "Lunch", "Dinner", "Snack", "Brunch", "Tea Time"];
+      setSelectedMealType(mealTypes[selectedKey - 1]); // Adjust the index based on your eventKey values
+   };
+    
   
   return (
 
@@ -49,19 +57,20 @@ const Home = () => {
             class="btn btn-warning rounded me-2"
             data-mdb-ripple-init
           >
-            search
+            Search
           </button>
 
-          <DropdownButton id="dropdown-basic-button" title="Choose Recipe">
-            <Dropdown.Item href="#/action-1">Breakfast</Dropdown.Item>
-            <Dropdown.Item href="#/action-2">Lunch</Dropdown.Item>
-            <Dropdown.Item href="#/action-3">Dinner</Dropdown.Item>
-            <Dropdown.Item href="#/action-4">Snack</Dropdown.Item>
-            <Dropdown.Item href="#/action-5">Brunch</Dropdown.Item>
-            <Dropdown.Item href="#/action-6">Tea Time</Dropdown.Item>
+          <DropdownButton id="dropdown-basic-button" title="Choose Recipe" onSelect={handleSelect}>
+            <Dropdown.Item eventKey="1">Breakfast</Dropdown.Item>
+            <Dropdown.Item eventKey="2">Lunch</Dropdown.Item>
+            <Dropdown.Item eventKey="3">Dinner</Dropdown.Item>
+            <Dropdown.Item eventKey="4">Snack</Dropdown.Item>
+            <Dropdown.Item eventKey="5">Brunch</Dropdown.Item>
+            <Dropdown.Item eventKey="6">Tea Time</Dropdown.Item>
           </DropdownButton>
         </div>
       </div>
+      <p>Selected Meal Type: {selectedMealType}</p>
       <img src={homeSvg} alt="" />
       
       </HomeStyle>
