@@ -9,14 +9,14 @@ import {
   StyledInput,
 } from "./LoginStyles";
 
-
+import mealSvg from  '../../assets/meal.svg'
 
 const Login = () => {
 
   return (
     <LoginContainer>
       <FormContainer>
-        <StyledImg  />
+        <StyledImg  src={mealSvg} />
         <Header>{"<Clarusway/>"}Recipe</Header>
 
         <StyledForm >

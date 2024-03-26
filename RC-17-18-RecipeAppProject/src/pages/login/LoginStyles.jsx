@@ -2,11 +2,11 @@ import styled from "styled-components";
 
 export const LoginContainer = styled.div`
   /* resmin olduğu div */
-  background-image: url("https://picsum.photos/1600/900");
+  background-image: url("https://media.istockphoto.com/id/1394452639/vector/coputer-internet-cyber-security-background-cyber-crime-vector-illustration-digital-lock.jpg?s=612x612&w=0&k=20&c=KD48hTGER5qp-nYJ95R1-XkJM67bLtxFgNSfzdzs9iA=");
   background-repeat: no-repeat;
   height: 100vh;
   background-size: cover;
-  background-position: center;
+  /* background-position: center; */
   display: flex;
   justify-content: center;
   align-items: center;
@@ -51,7 +51,7 @@ export const StyledInput = styled.input`
 
 export const StyledForm = styled.form`
   /* 3 kutunun olduğu form */
-  background: pink;
+  background: lightgray;
   display: flex;
   flex-direction: column;
 `;
@@ -61,11 +61,19 @@ export const StyledButton = styled.button`
 /* login butonu */
   font-size: 2rem;
   font-family: "Girassol", sans-serif;
-  background-color: rgba(0, 0, 0, 0.6);
+  background-color: rgba(224, 52, 52, 0.6);
+  border-radius: 5px;
   color: white;
   border: none;
   cursor: pointer;
   margin: 1rem;
+
+  &:hover{
+    background-color: darkred;
+    border: 2px solid white;
+    box-shadow: 2px 2px 10px black;
+    transition: all 1s ease;
+  }
 `;
 
 export const StyledImg = styled.img`
