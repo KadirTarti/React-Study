@@ -17,7 +17,7 @@ export const FormContainer = styled.div`
   width: 600px;
   min-width: 600px;
   height: 600px;
-  background-color: rgba(0, 173, 181, 0.5);
+  background-color: rgba(0, 53, 51, 0.3);
   border-radius: 50%;
   border: 2px solid #e1f1dd;
   padding: 5px;
@@ -42,11 +42,15 @@ export const StyledInput = styled.input`
   border-radius: 5px;
   font-family: "Girassol", sans-serif;
   /* inuta girilen yazıyı büyük harf yapar */
-  background-color: rgba(0, 0, 0, 0.6);
+  background-color: rgba(0, 0, 0, 0.4);
   border: none;
   color: white;
   margin: 1rem;
   text-indent: 20px;
+
+  &::placeholder{
+    color: rgba(222, 222, 222, 0.7);
+  }
 `;
 
 export const StyledForm = styled.form`
