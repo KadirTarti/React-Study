@@ -38,9 +38,9 @@ const Header = () => {
           onChange={(e)=>setMealType(e.target.value)}
 
         >
-          <option value='Breakfast'>Breakfast</option>
-          <option value='Lunch'>Lunch</option>
-          <option value='TeaTime'>TeaTime</option>
+          <option value='breakfast'>Breakfast</option>
+          <option value='lunch'>Lunch</option>
+          <option value='teatime'>TeaTime</option>
         </Select>
       </FormContainer>
     </HeaderContainer>
