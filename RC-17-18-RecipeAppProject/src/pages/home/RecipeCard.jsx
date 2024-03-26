@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useContext } from "react";
 import {
   Button,
   Cards,
@@ -6,15 +6,19 @@ import {
   RecipeHeader,
   RecipeImage,
 } from "./HomeStyles";
+import { RecipeContext } from "../../context/RecipeProvider";
 
 
 const RecipeCard = () => {
+  const {recipes} = useContext(RecipeContext)
+  console.log(recipes[0].recipe);
 
   return (
     <MainContainer>
-      {[].map((a) => (
-        <Cards >
-          <RecipeHeader> </RecipeHeader>
+    
+      {recipes.map((a) => (
+        <Cards key={a.recipe.id}>
+          <RecipeHeader> {a.recipe.label} </RecipeHeader>
 
           <RecipeImage src={a.recipe.image} />
           <Button >

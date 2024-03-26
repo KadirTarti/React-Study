@@ -26,8 +26,9 @@ const RecipeProvider = ({ children }) => {
 
 
   const getData = async()=>{
-    const data = await axios.get(url)
-    console.log(data);
+    const {data} = await axios.get(url)
+    console.log(data.hits);
+    setRecipes(data.hits)
   }
 
   return (
@@ -40,6 +41,7 @@ const RecipeProvider = ({ children }) => {
         recipes,
         setQuery,
         setMealType,
+        getData,
       }}
     >
       {children}

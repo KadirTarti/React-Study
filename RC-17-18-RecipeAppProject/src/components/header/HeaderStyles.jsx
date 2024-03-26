@@ -8,14 +8,14 @@ export const HeaderContainer = styled.div`
   align-items: center;
   justify-content: center;
   /* background: #00adb5; */
-  background: orange;
+  background: lightslategray;
 `;
 
 export const MainHeader = styled.h2`
   /* food app başlık */
   margin-top: 1rem;
   font-size: 3rem;
-  background-color: yellow;
+  background-color: gray;
 `;
 
 export const FormContainer = styled.form`
@@ -28,7 +28,7 @@ export const FormContainer = styled.form`
   border: 2px solid white;
   border-radius: 3px;
   margin: 20px;
-  background-color:blue;
+  background-color:wheat;
 `;
 
 export const FoodInput = styled.input`
@@ -66,7 +66,7 @@ export const Button = styled.button`
 
 export const Select = styled.select`
   /* breakfast yazan select */
-  background-color: pink;
+  background-color: lightskyblue;
 
   border-radius: 3px;
   margin: 5px;
