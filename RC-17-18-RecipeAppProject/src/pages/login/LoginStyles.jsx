@@ -6,7 +6,7 @@ export const LoginContainer = styled.div`
   background-repeat: no-repeat;
   height: 100vh;
   background-size: cover;
-  /* background-position: center; */
+  background-position: center;
   display: flex;
   justify-content: center;
   align-items: center;

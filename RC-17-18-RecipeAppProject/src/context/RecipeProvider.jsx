@@ -1,4 +1,4 @@
-import React from "react";
+import axios from "axios";
 import { createContext } from "react";
 import { useState } from "react";
 
@@ -23,6 +23,12 @@ const RecipeProvider = ({ children }) => {
   const [mealType, setMealType] = useState("");
 
   const url = `https://api.edamam.com/search?q=${query}&app_id=${APP_ID}&app_key=${APP_KEY}&mealType=${mealType}`;
+
+
+  const getData = async()=>{
+    const data = await axios.get(url)
+    console.log(data);
+  }
 
   return (
     <RecipeContext.Provider
