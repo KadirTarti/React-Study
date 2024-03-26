@@ -2,7 +2,7 @@ import styled from "styled-components";
 
 export const LoginContainer = styled.div`
   /* resmin olduğu div */
-  background-image: url("https://media.istockphoto.com/id/1394452639/vector/coputer-internet-cyber-security-background-cyber-crime-vector-illustration-digital-lock.jpg?s=612x612&w=0&k=20&c=KD48hTGER5qp-nYJ95R1-XkJM67bLtxFgNSfzdzs9iA=");
+  background-image: url("https://images.unsplash.com/photo-1432821596592-e2c18b78144f?q=80&w=1000&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NHx8bG9naW58ZW58MHx8MHx8fDA%3D");
   background-repeat: no-repeat;
   height: 100vh;
   background-size: cover;
