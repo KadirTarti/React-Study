@@ -11,6 +11,7 @@ import { RecipeContext } from "../../context/RecipeProvider";
 const Home = () => {
 
 const {recipes} = useContext(RecipeContext)
+console.log(recipes);
 
   return (
     <div>

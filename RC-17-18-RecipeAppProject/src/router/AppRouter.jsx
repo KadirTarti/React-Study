@@ -6,6 +6,7 @@ import Home from '../pages/home/Home'
 import About from '../pages/about/About'
 import PrivateRouter from "./PrivateRouter"
 import { BrowserRouter, Route, Routes } from 'react-router-dom';
+import Details from '../pages/details/Details'
 
 
 const AppRouter = () => {
@@ -20,6 +21,7 @@ const AppRouter = () => {
         </Route>
 
         <Route path="/about" element={<About />} />
+        <Route path="/details" element={<Details />} />
       </Routes>
       <Footer/>
     </BrowserRouter>
