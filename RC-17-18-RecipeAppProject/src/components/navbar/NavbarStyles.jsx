@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 
 export const Nav = styled.div`
   /* SALMON olan navbar */
-  padding: 0 2rem;
+  padding: 0 1rem;
   display: flex;
   justify-content: space-between; //yatayda aralıklı objeler halinde ortala
   align-items: center; // dikeyde ortala

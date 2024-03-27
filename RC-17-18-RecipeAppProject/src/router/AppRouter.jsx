@@ -7,7 +7,7 @@ import About from '../pages/about/About'
 import PrivateRouter from "./PrivateRouter"
 import { BrowserRouter, Route, Routes } from 'react-router-dom';
 import Details from '../pages/details/Details'
-import NotFound from './NotFound'
+import NotFound from '../components/notfound/NotFound'
 
 
 const AppRouter = () => {
