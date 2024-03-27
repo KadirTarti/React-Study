@@ -7,6 +7,7 @@ import About from '../pages/about/About'
 import PrivateRouter from "./PrivateRouter"
 import { BrowserRouter, Route, Routes } from 'react-router-dom';
 import Details from '../pages/details/Details'
+import NotFound from './NotFound'
 
 
 const AppRouter = () => {
@@ -22,6 +23,7 @@ const AppRouter = () => {
 
         <Route path="/about" element={<About />} />
         <Route path="/details" element={<Details />} />
+        <Route path="*" element={<NotFound />} />
       </Routes>
       <Footer/>
     </BrowserRouter>
