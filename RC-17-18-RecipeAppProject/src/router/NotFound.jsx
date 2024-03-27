@@ -4,7 +4,7 @@ import { Navigate } from 'react-router-dom';
 
 const NotFound = () => {
 
-  const [count, setCount] = useState(10)
+  const [count, setCount] = useState(5)
 
   useEffect(() => {
 
@@ -17,7 +17,7 @@ const NotFound = () => {
   }, []);
 
   if (count===0) {
-    <Navigate to='/home'/>
+    return <Navigate to='/home'/>
   }
   
 
