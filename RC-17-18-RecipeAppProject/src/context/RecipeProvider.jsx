@@ -22,7 +22,7 @@ const RecipeProvider = ({ children }) => {
   const [query, setQuery] = useState("");
   const [mealType, setMealType] = useState("");
   const [loading, setLoading] = useState(false);
-  const [error, setError] = (false);
+  const [error, setError] = useState(false);
 
 
   const url = `https://api.edamam.com/search?q=${query}&app_id=${APP_ID}&app_key=${APP_KEY}&mealType=${mealType}`;
