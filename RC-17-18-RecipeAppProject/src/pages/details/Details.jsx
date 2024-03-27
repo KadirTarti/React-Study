@@ -8,18 +8,20 @@ import {
   OtherPart,
 } from "./DetailsStyles";
 import dietsvg from "../../assets/diet.svg";
-import { useLocation } from "react-router-dom";
+import { useLocation, useNavigate } from "react-router-dom";
 
 const Details = () => {
   const {
     state: { recipe },
   } = useLocation();
 
+  const navigate = useNavigate()
+
   return (
     <DetailContainer>
       <HeaderContainer>
         <h1> {recipe.label} </h1>
-        <img src={dietsvg} alt="" />
+        <img style={{cursor:'pointer'}} src={dietsvg} alt="" onClick={()=>navigate(-1)} />
       </HeaderContainer>
 
       <DetailPart>
