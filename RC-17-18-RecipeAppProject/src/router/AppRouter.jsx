@@ -1,5 +1,6 @@
 import React from 'react'
 import Navbar from '../components/navbar/Navbar'
+import Footer from '../components/footer/Footer'
 import Login from '../pages/login/Login'
 import Home from '../pages/home/Home'
 import About from '../pages/about/About'
@@ -20,6 +21,7 @@ const AppRouter = () => {
 
         <Route path="/about" element={<About />} />
       </Routes>
+      <Footer/>
     </BrowserRouter>
   );
 }
