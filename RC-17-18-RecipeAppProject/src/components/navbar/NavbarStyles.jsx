@@ -18,7 +18,7 @@ export const Nav = styled.div`
 
 export const MenuLink = styled(Link)`
   /* navbardaki 3 kelime ... tek tek about vs yazanların özellikleri YEŞİL*/
-  background-color: green;
+  background-color: lightgreen;
 
   padding: 1rem 2rem;
   cursor: pointer;
@@ -38,6 +38,7 @@ export const MenuLink = styled(Link)`
     /* hamburger meydana çıktığında sonrasında tıklanınca linklerde
     /* ekran küçülünce alttaki stiller olsun */
     border: 1px solid #00adb5;
+    overflow: hidden;
     border-radius: 10px;
     width: 91%;
   }
@@ -52,13 +53,12 @@ export const Menu = styled.div`
   /* içinde bulunduğu div in  stillerine göre ayarla kendini, bunu yazmazsak food app in altında kalacak */
   /* 3 kelime  açılınca üstteki özelliklerde olsun*/
   @media (max-width: 768px) {
-     /* overflow: hidden;  */
-   /* display: none; */
-    /* tamamen gizler, hamburger tıklanınca bile açılmaz, o yüzden hidden kullandık */
-    /* uzun yazı olurda taşarsa gizle (hamburgere dönüşünce)*/
+   /* uzun yazı olurda taşarsa gizle (hamburgere dönüşünce)*/
     flex-direction: column;
 
     width: 100%;
+    //hamburgere tıklanınca linkleri göster, açıksa gizle:
+    display: ${({showBurger})=>(showBurger ? 'flex' : 'none')}
   
   }
 /* export const Mlink=styled.a */
@@ -81,6 +81,7 @@ export const Menu = styled.div`
       /* hamburger meydana çıktığında 
     /* ekran küçülünce alttaki stiller olsun */
       border: 1px solid #00adb5;
+      overflow: hidden;
       border-radius: 10px;
       width: 91%;
     }
