@@ -21,34 +21,48 @@ const Register = () => {
               placeholder=" "
               required
             />
-            <label
-              for="floating_email">First Name</label>
+            <label for="floating_email">First Name</label>
           </div>
-            
+
           <div class="relative z-0 w-full mb-5 group">
-            <input type="text"
+            <input
+              type="text"
               name="lastName"
               id="lastName"
               class="peer"
-              placeholder=" " required />
+              placeholder=" "
+              required
+            />
             <label htmlFor="lastName">Last Name</label>
           </div>
           <div class="relative z-0 w-full mb-5 group">
-            <input name="email" id='email' type="email" 
-               class="peer" placeholder=""
+            <input
+              name="email"
+              id="email"
+              type="email"
+              class="peer"
+              placeholder=""
             />
             <label htmlFor="email">Email</label>
           </div>
           <div class="relative z-0 w-full mb-5 group">
-            <input name="password"
+            <input
+              name="password"
               id="password"
               class="peer"
-              placeholder=" " type="password" />
+              placeholder=" "
+              type="password"
+            />
             <label htmlFor="floating_password">Password</label>
           </div>
-          
-          <button type="submit">Register</button>
-          <button type="button">
+
+          <button className="btn-danger" type="submit">
+            Register
+          </button>
+          <button
+            className="btn-danger-bordered flex justify-between"
+            type="button"
+          >
             Continue with Google
             <GoogleIcon color="currentColor" />
           </button>
@@ -58,4 +72,4 @@ const Register = () => {
   );
 };
 
-export default Register                         ;
+export default Register;
