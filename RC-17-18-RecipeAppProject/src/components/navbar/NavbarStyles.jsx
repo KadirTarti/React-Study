@@ -2,23 +2,21 @@ import styled from "styled-components";
 import { Link } from "react-router-dom";
 
 export const Nav = styled.div`
-  /* SALMON olan navbar */
-  padding: 0 1rem;
   display: flex;
   justify-content: space-between; //yatayda aralıklı objeler halinde ortala
   align-items: center; // dikeyde ortala
   flex-wrap: wrap;
   /* Varsayılan olarak esnek öğeler tek bir satıra sığmaya çalışırlar. Gerektiğinde birden fazla satıra yaymak için bu özelliği kullanabilirsiniz */
-  background: salmon;
-  border-radius: 0 0 10px 10px;
   height: 75px;
-  font-size: 2rem;
-  /* background: #e1f1dd; */
+  padding-left: 3rem;
+  font-size: 1.5rem;
+  overflow: hidden;
+  background: #3a0088; 
 `;
 
 export const MenuLink = styled(Link)`
   /* navbardaki 3 kelime ... tek tek about vs yazanların özellikleri YEŞİL*/
-  background-color: lightgreen;
+  background-color: #930077;
 
   padding: 1rem 2rem;
   cursor: pointer;
@@ -45,11 +43,15 @@ export const MenuLink = styled(Link)`
 `;
 export const Menu = styled.div`
   /* navbardaki 3 kelime about ...hepsini içine alan sarmalın (kutunun ) özellikleri*/
-  background: #e1f1dd;
+  background-color: #930077;
   display: flex;
   justify-content: center;
   align-items: center;
   position: relative;
+  &:hover{
+    background-color: white;
+    color: #3a0088;
+  }
   /* içinde bulunduğu div in  stillerine göre ayarla kendini, bunu yazmazsak food app in altında kalacak */
   /* 3 kelime  açılınca üstteki özelliklerde olsun*/
   @media (max-width: 768px) {
@@ -74,7 +76,7 @@ export const Menu = styled.div`
     font-size: 2rem;
     font-family: "Girassol", sans-serif;
     &:hover {
-      color: #00adb5;
+      color: #e1f1dd;
       font-weight: bold;
     }
     @media (max-width: 768px) {

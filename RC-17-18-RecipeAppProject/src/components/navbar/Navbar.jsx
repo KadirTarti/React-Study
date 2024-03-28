@@ -11,7 +11,7 @@ const Navbar = () => {
   return (
     <Nav>
       <Logo to="/home" onClick={()=>setOpen(false)}>
-        <i>{"<Clarusway/>"} </i>
+        <i>{" TARTILACI"} </i>
         <span>recipe</span>
       </Logo>
 
