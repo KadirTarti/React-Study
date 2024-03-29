@@ -12,7 +12,9 @@ export const HeaderContainer = styled.div`
   background:#930077;
 
   h1{
-   color: #3A0088; 
+   color: gold; 
+   font-size: 3rem;
+   text-shadow: 2px -2px 10px #3A0088;
   }
   
 
@@ -31,7 +33,7 @@ export const FormContainer = styled.form`
   justify-content: center;
   border-radius: 5px;
   padding: 0.5rem;
-  margin-bottom: 20px;
+  margin-bottom: 1.5rem;
   background-color:#3A0088;
 `;
 
