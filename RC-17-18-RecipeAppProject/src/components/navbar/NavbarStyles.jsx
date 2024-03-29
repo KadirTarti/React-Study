@@ -37,8 +37,8 @@ export const MenuLink = styled(Link)`
     /* ekran küçülünce alttaki stiller olsun */
     overflow: hidden;
     width: 91%;
-    background-color: lightblue;
-    color: darkblue;
+    background-color: #3A0088;
+    color: white;
   }
 `;
 export const Menu = styled.div`
@@ -49,10 +49,8 @@ export const Menu = styled.div`
   align-items: center;
   position: relative;
   font-weight: 600;
-  &:hover{
-    background-color: lightyellow ;
-    color: darkblue;
-  }
+  
+  
   /* içinde bulunduğu div in  stillerine göre ayarla kendini, bunu yazmazsak food app in altında kalacak */
   /* 3 kelime  açılınca üstteki özelliklerde olsun*/
   @media (max-width: 768px) {
@@ -72,7 +70,7 @@ export const Menu = styled.div`
     text-align: center;
     text-decoration: none;
     /* kelimelerin altı çizili olmasın */
-    color: #02475e;
+    color: white;
 
     transition: all 0.3s ease-in;
     font-size: 1.5rem;
