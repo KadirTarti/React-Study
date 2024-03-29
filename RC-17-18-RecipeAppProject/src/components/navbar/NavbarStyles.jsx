@@ -17,7 +17,7 @@ export const Nav = styled.div`
 
 export const MenuLink = styled(Link)`
   /* navbardaki 3 kelime ... tek tek about vs yazanların özellikleri YEŞİL*/
-  background-color: #930077;
+
   font-optical-sizing: auto;
 
   padding: 1rem 2rem;
@@ -94,7 +94,6 @@ export const Menu = styled.div`
   }
 `;
 export const Logo = styled(MenuLink)`
-  background-color: #930077;
   padding: 1rem 0;
   color: orange;
   text-shadow: 1px -2px 2px white;
@@ -105,7 +104,7 @@ export const Logo = styled(MenuLink)`
   span {
     font-family: "Pacifico", cursive;
     font-weight: 400;
-    color: darkblue;
+    color: #930077;
   }
 `;
 
