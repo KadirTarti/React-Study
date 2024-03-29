@@ -12,7 +12,7 @@ import logo from '../../assets/logo1.webp'
 
 const Header = () => {
 
-  const {setQuery, setMealType, getData} = useContext(RecipeContext)
+  const {setQuery, setMealType, getData, setOpen} = useContext(RecipeContext)
 
   const handleSubmit=(e)=>{
     e.preventDefault()

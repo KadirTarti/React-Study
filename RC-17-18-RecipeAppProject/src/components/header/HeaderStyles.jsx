@@ -14,7 +14,7 @@ export const HeaderContainer = styled.div`
   h1{
    color: gold; 
    font-size: 3rem;
-   text-shadow: 2px -2px 10px #3A0088;
+   text-shadow: 3px -5px 10px #3A0088;
   }
   
 
