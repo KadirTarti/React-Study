@@ -11,11 +11,11 @@ const Navbar = () => {
   return (
     <Nav>
       <Logo to="/home" onClick={()=>setOpen(false)}>
-        <i>{" TARTILACI"} </i>
-        <span>recipe</span>
+        <i>{" AKT"} </i>
+        <span>product</span>
       </Logo>
 
-      <Hamburger onClick={()=>setOpen(!open)} >
+      <Hamburger onClick={()=>setOpen(!open)}>
         <GiHamburgerMenu />
       </Hamburger>
 
