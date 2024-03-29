@@ -7,15 +7,19 @@ export const HeaderContainer = styled.div`
   flex-direction: column;
   align-items: center;
   justify-content: center;
+  
   /* background: #00adb5; */
-  background: lightslategray;
+  background:#930077;
+
+  h1{
+   color: #3A0088; 
+  }
+  
+
 `;
 
 export const MainHeader = styled.h2`
   /* food app başlık */
-  margin-top: 1rem;
-  font-size: 3rem;
-  background-color: gray;
 `;
 
 export const FormContainer = styled.form`
@@ -25,10 +29,10 @@ export const FormContainer = styled.form`
   flex-wrap: wrap;
   /* ekran küçülünce sıkışmasınlar,alta geçsinler */
   justify-content: center;
-  border: 2px solid white;
-  border-radius: 3px;
-  margin: 20px;
-  background-color:wheat;
+  border-radius: 5px;
+  padding: 0.5rem;
+  margin-bottom: 20px;
+  background-color:#3A0088;
 `;
 
 export const FoodInput = styled.input`
@@ -39,41 +43,48 @@ export const FoodInput = styled.input`
   border-radius: 3px;
   text-indent: 10px;
   /* yazı 10px içten başlasın */
-  margin: 5px;
-  font-size: 2rem;
-  background-color: lightblue;
+  margin: 4px;
+  font-size: 1.5rem;
+  background-color: rgb(255, 247, 232);;
 `;
 
 export const Button = styled.button`
   /* search butonu GRİ*/
   /* background-color: #e1f1dd; */
-  background-color: gray;
+  background-color: orange;
 
-  padding: 5px;
+  padding: 0 1rem;
   /* outline: none; */
-  height: 3rem;
-  border: none;
+  height: 3.1rem;
+  border: 3px solid #930077;
   margin: 5px;
   border-radius: 3px;
+  color: #3A0088;
+  font-weight: 600;
+  text-shadow: 1px 2px 5px #930077;
   cursor: pointer;
   font-size: 2rem;
   &:hover {
-    background-color: #00adb5;
-    transition: all 0.3s ease-in;
-    border: 1px solid white;
+    background-color: darkblue;
+    color: orange;
+    transition: all 0.4s ease-in;
+    border: 3px solid #930077;
+    text-shadow: 1px 2px 5px gold;
+    box-shadow: 1px -1px 30px white;
+
   }
 `;
 
 export const Select = styled.select`
   /* breakfast yazan select */
-  background-color: lightskyblue;
-
+  background-color: rgb(255, 247, 232);
+  font-style: italic;
   border-radius: 3px;
   margin: 5px;
   padding: 5px;
   height: 3rem;
   border: none;
-  font-size: 2rem;
+  font-size: 1.5rem;
 
   
   

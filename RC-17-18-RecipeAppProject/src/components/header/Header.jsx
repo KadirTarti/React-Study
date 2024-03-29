@@ -8,6 +8,7 @@ import {
   Select,
 } from "./HeaderStyles";
 import { RecipeContext } from "../../context/RecipeProvider";
+import logo from '../../assets/logo1.webp'
 
 const Header = () => {
 
@@ -21,12 +22,15 @@ const Header = () => {
 
   return (
     <HeaderContainer>
-      <MainHeader>FOOD APP</MainHeader>
+        <h1>Healthy Recipes</h1>
+      <MainHeader>
+        <img src={logo} width={'200px'} alt="" />
+      </MainHeader>
 
       <FormContainer onSubmit={handleSubmit}>
         <FoodInput
           type="text"
-          placeholder="Search"
+          placeholder="Search for recipe"
           onChange={(e)=>setQuery(e.target.value)}
         />
 
@@ -36,8 +40,7 @@ const Header = () => {
           name="ogunTypes"
           id="ogunTypes"
           onChange={(e)=>setMealType(e.target.value)}
-
-        >
+          >
           <option value='breakfast'>Breakfast</option>
           <option value='lunch'>Lunch</option>
           <option value='teatime'>TeaTime</option>
