@@ -13,17 +13,19 @@ export const AboutContainer = styled.div`
   line-height: 2;
   span {
     color: orange;
-    font-family: "Girassol", sans-serif;
-    font-size: 3rem;
+    font-family: "Pacifico", cursive;
+    letter-spacing: 10px;
+    font-size: 2rem;
+    
   }
 `;
 export const StyledImage = styled.img`
-  width: 500px;
+  width: 300px;
   margin-bottom: 2rem;
 `;
 
 export const HeaderContainer = styled.div`
-  background-color: white;
+
 `;
 
 export const InfoContainer = styled.div`

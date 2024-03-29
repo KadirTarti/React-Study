@@ -1,18 +1,20 @@
+
 import React from 'react'
 import { AboutContainer, HeaderContainer, InfoContainer, StyledImage } from './AboutStyles'
-import codingSvg from "../../assets/coding.svg"
+import codingSvg from "../../assets/aboutimg.webp"
+
 
 const About = () => {
   return (
     <div>
 
       <AboutContainer>
-        <StyledImage src={codingSvg} />
+        <StyledImage src={codingSvg}/>
 
         <HeaderContainer>
-          <h1>
+          <h2>
             About Software Developer <span>AKT </span>
-          </h1>
+          </h2>
         </HeaderContainer>
         <InfoContainer>
           <h2>Hi, I'am Abdulkadir TARTILACI</h2>
