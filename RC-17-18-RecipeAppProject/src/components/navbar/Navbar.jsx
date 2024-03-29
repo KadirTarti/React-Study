@@ -22,7 +22,7 @@ const Navbar = () => {
       <Menu showBurger={open} onClick={()=>setOpen(false)}>
         <MenuLink to="/about"> About</MenuLink>
         <a href="https://github.com/KadirTarti" target='blank'>GitHub</a>
-        <MenuLink to="/">Logout</MenuLink>
+        <MenuLink to="/">Login</MenuLink>
       </Menu>
     </Nav>
   );

@@ -13,7 +13,7 @@ export const MainContainer = styled.div`
 export const Cards = styled.div`
   /* search den sonra çıkan herbir yiyecek kart RECİPECARD*/
   height: 300px;
-  background: rgb(255, 247, 232);
+  background:#b5dff8;
   padding: 5px;
   border-radius: 3px;
   width: 300px;

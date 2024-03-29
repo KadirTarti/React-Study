@@ -9,7 +9,7 @@ import {
   StyledInput,
 } from "./LoginStyles";
 
-import mealSvg from  '../../assets/meal.svg'
+import mealSvg from  '../../assets/logo1.webp'
 import { useContext } from "react";
 import { RecipeContext } from "../../context/RecipeProvider";
 import { useNavigate } from "react-router-dom";
@@ -35,7 +35,7 @@ const Login = () => {
     <LoginContainer>
       <FormContainer>
         <StyledImg  src={mealSvg} />
-        <Header>{"<Clarusway/>"}Recipe</Header>
+        <Header>Healthy Recipes</Header>
 
         <StyledForm onSubmit={handleSubmit}>
           <StyledInput

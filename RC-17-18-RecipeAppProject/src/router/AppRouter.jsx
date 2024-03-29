@@ -25,7 +25,6 @@ const AppRouter = () => {
         <Route path="/details" element={<Details />} />
         <Route path="*" element={<NotFound />} />
       </Routes>
-      <Footer/>
     </BrowserRouter>
   );
 }

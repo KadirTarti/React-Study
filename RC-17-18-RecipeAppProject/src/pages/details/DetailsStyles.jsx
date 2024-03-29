@@ -21,7 +21,7 @@ export const DetailPart = styled.div`
   align-items: center;
   margin: 1.5rem;
   border-radius: 15px;
-  background-color: #7da3bb;;;
+  background-color: #b5dff8;
   /* background-color: #e1f1dd; */
   /* height: calc(100vh - 300px); */
   @media (max-width: 1250px) {
