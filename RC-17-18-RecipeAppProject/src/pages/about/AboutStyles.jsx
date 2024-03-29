@@ -12,7 +12,7 @@ export const AboutContainer = styled.div`
   /*  Ekran yüksekliğiniz mesela 1000 piksel ise, öğenizin yüksekliği 900 piksele  eşit olacaktır.(1000 pikselin %100'ü ve eksi 100 piksel) */
   line-height: 2;
   span {
-    color: orange;
+    color: #930077;
     font-family: "Pacifico", cursive;
     letter-spacing: 10px;
     font-size: 2rem;
@@ -20,8 +20,7 @@ export const AboutContainer = styled.div`
   }
 `;
 export const StyledImage = styled.img`
-  width: 300px;
-  margin-bottom: 2rem;
+  width: 200px;
 `;
 
 export const HeaderContainer = styled.div`
@@ -29,13 +28,17 @@ export const HeaderContainer = styled.div`
 `;
 
 export const InfoContainer = styled.div`
-  text-align: right;
-  margin: 0 10px;
+  text-align: justify;
   max-width: 1000px;
-  border: 1px solid white;
+  background-color: #BBCEE1;
+  border: 2px solid #3A0088;
   padding: 25px;
   border-radius: 5px;
   a {
-    color: orange;
+    color: #930077;;
+    text-decoration: none;
+    &:hover{
+      text-shadow: 1px -1px 5px white;
+    }
   }
 `;

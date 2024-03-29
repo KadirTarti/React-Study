@@ -24,7 +24,7 @@ const About = () => {
           </h4>
           <h2>
             <p>Send me a message by : 
-            <a href="https://www.github.com/KadirTarti">GitHub</a></p>
+            <a href="https://www.github.com/KadirTarti"> GitHub</a></p>
           </h2>
           {/* whatsapp://tel:3216541234 */}
         </InfoContainer>
