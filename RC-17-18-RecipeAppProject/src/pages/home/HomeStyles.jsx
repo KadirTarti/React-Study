@@ -64,14 +64,13 @@ export const ImgDiv = styled.div`
 
   display: flex;
   justify-content: center;
-  margin: 50px;
+
   /* background-color: #00adb5; */
-  background-color: red;
+  background-color: #3A0088;;
 `;
 
 export const HomeImg = styled.img`
   /* ana sayfadaki esas resim */
-  width: 80%;
-  max-width: 750px;
-  background-color:pink;
+  width: 20%;
+  max-width: 170px;
 `;

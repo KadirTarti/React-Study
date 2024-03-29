@@ -7,8 +7,8 @@ export const AboutContainer = styled.div`
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  min-height: calc(100vh - 80px);
-  height: calc(100% - 100px);
+  background-color: #ade0ffeb;
+  height: calc(100vh - 93px);
   /*  Ekran yüksekliğiniz mesela 1000 piksel ise, öğenizin yüksekliği 900 piksele  eşit olacaktır.(1000 pikselin %100'ü ve eksi 100 piksel) */
   line-height: 2;
   span {
@@ -24,7 +24,7 @@ export const StyledImage = styled.img`
 `;
 
 export const HeaderContainer = styled.div`
-
+ 
 `;
 
 export const InfoContainer = styled.div`
