@@ -4,11 +4,13 @@ import Main from "../pages/Main";
 import Register from "../pages/Register";
 import Login from "../pages/Login";
 import MovieDetail from "../pages/MovieDetail";
+import Navbar from "../components/Navbar";
 
 const AppRouter = () => {
   return( 
     <BrowserRouter>
     <Routes>
+    <Navbar/> 
     <Route path='/' element={<Main/>} />
     <Route path='/register' element={<Register/>} />
     <Route path='/login' element={<Login/>} />
