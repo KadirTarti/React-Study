@@ -9,8 +9,8 @@ import Navbar from "../components/Navbar";
 const AppRouter = () => {
   return( 
     <BrowserRouter>
-    <Routes>
     <Navbar/> 
+    <Routes>
     <Route path='/' element={<Main/>} />
     <Route path='/register' element={<Register/>} />
     <Route path='/login' element={<Login/>} />
