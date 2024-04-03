@@ -11,14 +11,15 @@ const MovieContextProvider = ({children}) => {
     const [loading, setLoading] = useState(false);
 
     const getMovies = async (apiUrl) => {
-        setLoading(true)
+        setLoading(true);
         try {
-            const {data} = await axios(apiUrl)
+            const {data} = await axios(apiUrl);
             console.log(data);
+            setMovies(data.results);
         } catch (error) {
             console.log(error);
         } finally {
-            setLoading(false)
+            setLoading(false);
         }
     }
 
