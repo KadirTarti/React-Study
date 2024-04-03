@@ -3,13 +3,14 @@ import { getAuth } from "firebase/auth";
 
 // TODO: Replace the following with your app's Firebase project configuration
 // See: https://firebase.google.com/docs/web/learn-more#config-object
+
 // const firebaseConfig = {
-//     apiKey: "AIzaSyDtcdq-Efl6CxzxAUCZvu85wdnzO4R0Vb0",
-//     authDomain: "movie-app-de8.firebaseapp.com",
-//     projectId: "movie-app-de8",
-//     storageBucket: "movie-app-de8.appspot.com",
-//     messagingSenderId: "1097072051272",
-//     appId: "1:1097072051272:web:40ec5e225ea3526abbc47d"
+//   apiKey: "AIzaSyCnd0LtrprC2fRsKWlGC9RwLHuxnEVwiIk",
+//   authDomain: "mymovieapp-5ab4d.firebaseapp.com",
+//   projectId: "mymovieapp-5ab4d",
+//   storageBucket: "mymovieapp-5ab4d.appspot.com",
+//   messagingSenderId: "213261444985",
+//   appId: "1:213261444985:web:41e3a17f9234b9e4af31a8"
 // };
 const firebaseConfig = {
     apiKey: process.env.REACT_APP_apiKey,
