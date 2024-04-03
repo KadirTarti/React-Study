@@ -8,7 +8,7 @@ import Navbar from "../components/Navbar";
 
 const AppRouter = () => {
   return( 
-    <BrowserRouter>
+    <>
     <Navbar/> 
     <Routes>
     <Route path='/' element={<Main/>} />
@@ -17,7 +17,7 @@ const AppRouter = () => {
     <Route path='/details:id' element={<MovieDetail/>} />
 
     </Routes>
-    </BrowserRouter>
+    </>
   )
 };
 
