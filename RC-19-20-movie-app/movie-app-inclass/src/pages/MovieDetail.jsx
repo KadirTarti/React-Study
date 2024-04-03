@@ -10,8 +10,8 @@ const MovieDetail = () => {
   //üstteki id, AppRouter'da detailsin yanına :id yazdığımız yerden geliyor
   console.log(id);
 
-  const movieDetailUrl = `https://api.themoviedb.org/3/movie/${id}?api_key=${process.env.REACT_APP_apiKey}`;
-  const movieVideo = `https://api.themoviedb.org/3/movie/${id}/videos?api_key=${process.env.REACT_APP_apiKey}`
+  const movieDetailUrl = `https://api.themoviedb.org/3/movie/${id}?api_key=${process.env.REACT_APP_TMDB_KEY}`;
+  const movieVideo = `https://api.themoviedb.org/3/movie/${id}/videos?api_key=${process.env.REACT_APP_TMDB_KEY}`
 
 
   
