@@ -12,9 +12,10 @@ function classNames(...classes) {
 export default function Navbar() {
   const {currentUser,logout} = useAuthContext()
   return (
+    <>
     <Disclosure
       as="nav"
-      className="bg-neutral-100 dark:bg-gray-800 py-3 dark:text-white fixed top-0 z-30 w-full"
+      className="bg-neutral-100 dark:bg-gray-800 py-3 h-[85px] dark:text-white fixed top-0 z-30 w-full"
     >
       <div className="mx-auto px-2 sm:px-6 lg:px-8">
         <div className="relative flex h-16 items-center justify-between">
@@ -98,5 +99,9 @@ export default function Navbar() {
         </div>
       </div>
     </Disclosure>
+    <div className='h-[85px]'></div>
+    {/* üstteki div'i navbar'ın altına kayan comp'ları aşağı almak için ekledik */}
+    </>
+    
   );
 }
