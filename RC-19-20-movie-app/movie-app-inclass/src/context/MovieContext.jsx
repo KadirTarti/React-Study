@@ -26,8 +26,10 @@ const MovieContextProvider = ({children}) => {
         getMovies(url);
 
     }, [])
+
+    const values = {getMovies, movies, loading}
     
-    return <MovieContext.Provider value={''}>{children}</MovieContext.Provider>
+    return <MovieContext.Provider value={values}>{children}</MovieContext.Provider>
 }
 
 export const useMovieContext = () =>{
