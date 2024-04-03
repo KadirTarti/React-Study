@@ -1,7 +1,41 @@
-import React from "react";
+import React, { useState } from "react";
 import GoogleIcon from "../assets/icons/GoogleIcon";
+import { useAuthContext } from "../context/AuthContext";
 
 const Register = () => {
+
+  const {register} = useAuthContext();
+
+  // const[email, setEmail] = useState('');
+  // const[password, setPassword] = useState('');
+  // const[firstName, setFirstName] = useState('');
+  // const[lastName, setLastName] = useState('');
+
+  const [info, setInfo] = useState({
+    email:'',
+    password:'',
+    firstName:'',
+    lastName:''
+  })
+
+
+  const handleChange =(e)=>{
+    // console.log(e.target.id);
+    setInfo({...info, [e.target.name]:e.target.value})  //setter metodu her zaman asenkron çalışır
+    // setInfo({...info, "email":e.target.value})
+    // setInfo({...info, "password":e.target.value})
+    // setInfo({...info, "firstName":e.target.value})
+    // setInfo({...info, "lastName":e.target.value})
+  }
+  console.log(info);
+
+  const handleSubmit = (e) =>{
+    e.preventDefault();
+    const {email, password, firstName, lastName} = info;
+    register(email, password, `${firstName} ${lastName}`)
+  }
+
+
   return (
     <div className="overflow-hidden flex-1 h-screen justify-center items-center bg-[#23242a]">
       <div
@@ -18,6 +52,8 @@ const Register = () => {
               name="firstName"
               id="firstName"
               class="peer"
+              value={info.firstName}
+              onChange= {handleChange}
               placeholder=" "
               required
             />
@@ -29,6 +65,8 @@ const Register = () => {
               type="text"
               name="lastName"
               id="lastName"
+              value={info.lastName}
+              onChange= {handleChange}
               class="peer"
               placeholder=" "
               required
@@ -40,6 +78,8 @@ const Register = () => {
               name="email"
               id="email"
               type="email"
+              value={info.email}
+              onChange= {handleChange}
               class="peer"
               placeholder=""
             />
@@ -51,6 +91,8 @@ const Register = () => {
               id="password"
               class="peer"
               placeholder=" "
+              value={info.password}
+              onChange= {handleChange}
               type="password"
             />
             <label htmlFor="floating_password">Password</label>
