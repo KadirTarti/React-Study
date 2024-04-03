@@ -3,12 +3,14 @@ import { Fragment } from "react";
 import { Link } from "react-router-dom";
 import avatar from "../assets/icons/avatar.png";
 import Switch from "./Switch";
+import { useAuthContext } from "../context/AuthContext";
 
 function classNames(...classes) {
   return classes.filter(Boolean).join(" ");
 }
 
 export default function Navbar() {
+  const {currentUser,logout} = useAuthContext()
   return (
     <Disclosure
       as="nav"
@@ -25,7 +27,7 @@ export default function Navbar() {
             </div>
           </div>
           <div className="absolute inset-y-0 right-0 flex items-center pr-2 sm:static sm:inset-auto sm:ml-6 sm:pr-0">
-            <h5>Anthony Harold</h5>
+            {currentUser && <h5>{currentUser.displayName}</h5>}
             <Switch />
 
             {/* Profile dropdown */}
@@ -47,6 +49,21 @@ export default function Navbar() {
                 leaveTo="transform opacity-0 scale-95"
               >
                 <Menu.Items className="absolute right-0 z-10 mt-2 w-48 origin-top-right rounded-md bg-white py-1 shadow-lg ring-1 ring-black ring-opacity-5 focus:outline-none">
+                  {
+                    currentUser ? <Menu.Item>
+                    {({ active }) => (
+                      <Link
+                        to="/"
+                        className={classNames(
+                          active ? "bg-gray-100" : "",
+                          "block px-4 py-2 text-sm text-gray-700"
+                        )}
+                        onClick={logout}
+                      >
+                        Sign out
+                      </Link>
+                    )}
+                  </Menu.Item> : <>
                   <Menu.Item>
                     {({ active }) => (
                       <Link
@@ -72,20 +89,8 @@ export default function Navbar() {
                         Register
                       </Link>
                     )}
-                  </Menu.Item>
-                  <Menu.Item>
-                    {({ active }) => (
-                      <Link
-                        to="/"
-                        className={classNames(
-                          active ? "bg-gray-100" : "",
-                          "block px-4 py-2 text-sm text-gray-700"
-                        )}
-                      >
-                        Sign out
-                      </Link>
-                    )}
-                  </Menu.Item>
+                  </Menu.Item></>
+                  }
                 </Menu.Items>
               </Transition>
             </Menu>
