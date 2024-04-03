@@ -10,8 +10,6 @@ const Main = () => {
   <div className='flex justify-center flex-wrap'>
   {
     loading ? <h2 className='text-2xl text-red-800'>Loading...</h2> : movies?.map((movie) => <MovieCard key={movie.id} {...movie} />)
-
-
   }
   </div>
 
