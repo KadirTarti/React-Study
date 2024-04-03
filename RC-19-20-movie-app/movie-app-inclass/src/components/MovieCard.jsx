@@ -13,9 +13,9 @@ const MovieCard = ({ id, poster_path, overview, vote_average, title }) => {
 
   return (
     <div
-      onClick={() => navigate("/details/" + id)}
       className="movie"
       id="container"
+      onClick={() => navigate("/details/" + id)}
     >
       <img
         loading="lazy"
@@ -32,7 +32,9 @@ const MovieCard = ({ id, poster_path, overview, vote_average, title }) => {
           {" "}
           &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; Vote:{" "}
         </p>
-        {currentUser && <span className={`tag ${tagColor}`}>{vote_average.toFixed(1)}</span>}
+        {currentUser && (
+          <span className={`tag ${tagColor}`}>{vote_average.toFixed(1)}</span>
+          )}
       </div>
       <div className="movie-over">
         <h2>Overview</h2>

@@ -8,7 +8,7 @@ const SearchInput = () => {
     const {currentUser} = useAuthContext();
     const {getMovies} = useMovieContext()
 
-    const searchUrl = `https://api.themoviedb.org/3/search/movie?api_key=${process.env.REACT_APP_apiKey}&query=`
+    const searchUrl = `https://api.themoviedb.org/3/search/movie?api_key=${process.env.REACT_APP_TMDB_KEY}&query=`
 
     const handleSubmit = (e) => {
         e.preventDefault();
