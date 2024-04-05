@@ -1,5 +1,4 @@
-import axios from 'axios';
-import React, { useEffect, useState } from 'react'
+import React, { useState } from 'react'
 import Button from 'react-bootstrap/Button';
 import Form from 'react-bootstrap/Form';
 import InputGroup from 'react-bootstrap/InputGroup';
@@ -8,17 +7,14 @@ import { useUserContext } from './UserContext';
 const SearchUser = () => {
 
     const {fetchUserData} = useUserContext();
-    
-    
+
     const [userInput, setUserInput] = useState('')
     
-  
     const handleInput = (e) =>  {
         setUserInput(e.target.value)        
     }
 
 
-    
     return (
         <div className="row">
             <div className="col-md-4 mx-auto">
