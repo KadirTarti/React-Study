@@ -11,8 +11,11 @@ const SearchUser = () => {
     const [userInput, setUserInput] = useState('')
     
     const handleInput = (e) =>  {
-        setUserInput(e.target.value)        
+        setUserInput(e.target.value)      
     }
+
+
+    //{!userInput.trim()}  
 
 
     return (
@@ -25,7 +28,7 @@ const SearchUser = () => {
                         aria-describedby="basic-addon2"
                         onChange={handleInput}
                     />
-                    <Button onClick={()=>fetchUserData(userInput)} variant="outline-secondary" id="button-addon2">
+                    <Button disabled={!userInput.trim()}  onClick={()=>fetchUserData(userInput)} variant="outline-secondary" id="button-addon2">
                         Search
                     </Button>
                 </InputGroup>

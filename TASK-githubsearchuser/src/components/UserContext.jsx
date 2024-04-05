@@ -11,6 +11,10 @@ export const UserContextProvider = ({ children }) => {
 
     const fetchUserData = async (username) => {
         const url = `https://api.github.com/users/${username}`
+        
+        if (username.trim() === '') {
+            alert ('Please enter an username')
+        } else {
     
         try {
         const {data} = await axios(url);
@@ -24,6 +28,8 @@ export const UserContextProvider = ({ children }) => {
                 setUserExist(false)
             }
         }
+    }
+    
     } 
 
     return <UserContext.Provider value={{userData, fetchUserData, isUserExist}}>{children}</UserContext.Provider>
