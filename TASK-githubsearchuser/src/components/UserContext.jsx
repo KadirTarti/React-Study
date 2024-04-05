@@ -4,19 +4,28 @@ import { createContext, useContext, useState } from "react";
 
 export const UserContext = createContext()
 
-
 export const UserContextProvider = ({ children }) => {
+    const [userData, setUserData] = useState({});
+    const [isUserExist, setUserExist] = useState(true)
 
-    const [userData, setUserData] = useState([]);
-    const fetchUserData = (username) => {
+    const fetchUserData = async (username) => {
         const url = `https://api.github.com/users/${username}`
-        axios(url).then((res) =>{
-            // console.log(res);
-            setUserData(res.data)
-        })
+        
+        try {
+        const {data} = await axios(url);
+        console.log(data);
+        setUserData(data)
+        setUserExist(true)
+        } catch(error) {
+            console.log(error);
+            const {response} = error
+            if (response.status === 404) {
+                setUserExist(false)
+            }
+        }
     } 
 
-    return <UserContext.Provider value={{userData, fetchUserData}}>{children}</UserContext.Provider>
+    return <UserContext.Provider value={{userData, fetchUserData, isUserExist}}>{children}</UserContext.Provider>
 }
 
 

@@ -1,14 +1,27 @@
 
-import { Col, Card, Button, Row } from "react-bootstrap";
+import { Col, Card, Button, Row, Image } from "react-bootstrap";
 import { useUserContext } from "./UserContext";
+import NotFound from '../assets/404.gif'
 
 
 
 const UserInfo = () => {
 
 
-  const {userData} = useUserContext()
+  const {userData, isUserExist} = useUserContext()
+  console.log(userData);
 
+  // viewprofil'i kaldırmak için
+  const isUserDataEmpty = Object.keys(userData).length === 0  
+
+  if (!isUserExist) {
+    return (
+    <Row className="justify-content-center h-25 w-100"><Image src={NotFound} className="h-25 w-50" alt="User not found" /></Row>
+    )
+  }
+
+
+  if (isUserDataEmpty) return null;
 
   return (
     <Row xs={2} md={3} lg={3} className="mt-4 justify-content-center">
@@ -16,22 +29,18 @@ const UserInfo = () => {
         <Card>
           <Card.Img variant="top" src={userData.avatar_url} />
           <Card.Body>
-            <Card.Text>UserName</Card.Text>
+            <Card.Text>{userData.login}</Card.Text>
             <Button
-              href="#"
+              href={userData.html_url}
               target="true"
               style={{ borderRadius: "50px" }}
               variant="primary"
             >
-              VIEW PROFILE
+             VIEW PROFILE
             </Button>
           </Card.Body>
         </Card>
       </Col>
-
-      {/* <Row className="justify-content-center h-25 w-100"><Image src={NotFound} className="h-25 w-50" alt="User not found" /></Row> */}
-
-
     </Row>
   );
 };
