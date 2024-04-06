@@ -20,7 +20,7 @@ const SearchUser = () => {
 
     return (
         <div className="row">
-            <div className="col-md-4 mx-auto">
+            <div className="col-md-4 mx-auto bg-dark">
                 <InputGroup className="mb-3 w-100">
                     <Form.Control
                         placeholder="Github's username"
