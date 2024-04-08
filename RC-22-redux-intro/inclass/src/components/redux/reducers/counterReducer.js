@@ -4,10 +4,10 @@
 
 const initialState = {
     count: 0,
-    title: "",
-
+    // title: "",
 }
 
+//* action bir obje olmak zorunda
 
 //! reducer fonk her zaman MUTLAKA BİR OBJE döndürmek ZORUNDA !!!
 
