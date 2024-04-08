@@ -4,7 +4,9 @@ import "./Counter.css";
 const Counter = () => {
   // useSelector(state => state.reducer)
   // const {count} = useSelector(state => state)
-  const count = useSelector((state) => state.count);
+  // const count = useSelector((state) => state.count);
+  //* store'da eski reducer'ı iptal edip root reducer oluşturduğumuz için burada o counter içinden count'a erişmemiz gerekiyor 
+  const count = useSelector((state) => state.counter.count);
   const dispatch = useDispatch();
   return (
     <div className="app">

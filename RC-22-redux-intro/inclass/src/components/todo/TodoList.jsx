@@ -1,6 +1,12 @@
 import TodoItem from "./TodoItem"
 
 const TodoList = () => {
+
+  // const {todoList} = useSelector(state => state.todo)
+  //? alttaki ifade üstteki ile aynı. sadece todoList'i süslüden kurtardık 
+  const todoList = useSelector ( state => state.todo.todoList)
+
+
   const handleClearList = () => {}
 
   return (
