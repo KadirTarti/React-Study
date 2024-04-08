@@ -6,8 +6,10 @@ const TodoList = () => {
   //? alttaki ifade üstteki ile aynı. sadece todoList'i süslüden kurtardık 
   const todoList = useSelector ( state => state.todo.todoList)
 
-
-  const handleClearList = () => {}
+const dispatch = useDispatch()
+  const handleClearList = () => {
+    dispatch(clearTodo())
+  }
 
   return (
     <div>
