@@ -1,4 +1,7 @@
+import { useDispatch, useSelector } from "react-redux"
 import TodoItem from "./TodoItem"
+import { clearTodo } from "../../store/todoReducer"
+
 
 const TodoList = () => {
 
@@ -8,13 +11,15 @@ const TodoList = () => {
 
 const dispatch = useDispatch()
   const handleClearList = () => {
-    dispatch(clearTodo())
+    if(confirm("Emin misin ?")){
+      dispatch(clearTodo())
+    }
   }
 
   return (
     <div>
       <div>
-        {[1, 2]?.map((todo) => (
+        {todoList?.map((todo) => (
           <TodoItem key={todo.id} {...todo} />
         ))}
       </div>

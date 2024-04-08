@@ -16,11 +16,11 @@ const initialState = {
 export const counterReducer = (state= initialState, action) => {
     switch (action.type) {
         case "INC":
-            return {count: state.count - 1}
-        case "DEC":
             return {count: state.count + 1}
+        case "DEC":
+            return {count: state.count - 1}
         case "RESET":
-            //return initialState
+            //return initialState - tek state böyle döndürülebilir. ama birden fazla state olursa aşağıdaki gibi:
             return {...state, count: 0}
     
         default:

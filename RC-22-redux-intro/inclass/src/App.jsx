@@ -10,7 +10,7 @@ function App() {
     <div className="app">
       <Provider store={store}>
         <ErrorBoundary>
-          {/* <Counter /> */}
+          <Counter />
           <Todo />
         </ErrorBoundary>
       </Provider>
