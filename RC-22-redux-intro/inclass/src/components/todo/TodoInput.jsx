@@ -1,17 +1,17 @@
 import { useState } from "react"
-import { useDispatch } from react-redux;
-import {addTodo} from '../store/todoReducer'
+import { useDispatch } from 'react-redux';
+import {addTodo} from '../../store/todoReducer'
 
 const TodoInput = () => {
 
   const [text, setText] = useState("")
-
   //* handleSUbmit gerçekleştiğinde dispatch'e ihtiyacımız var:
   const dispatch = useDispatch()
 
   const handleSubmit = (e) => {
     e.preventDefault()
     dispatch(addTodo(text))  
+    // dispatch(addTodo({text:text,completed:false,id: crypto.randomUUID()}))
     setText("")
   }
 

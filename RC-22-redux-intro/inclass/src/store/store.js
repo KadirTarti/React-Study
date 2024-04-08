@@ -1,6 +1,5 @@
-import {createStore} from "redux";
 import {legacy_creatStore as createStore} from "redux";
-import { counterReducer } from "../redux/reducers/counterReducer";
+import { counterReducer } from "../components/redux/reducers/counterReducer";
 import { todoReducer } from "./todoReducer";
 
 // export const store = createStore(counterReducer)
