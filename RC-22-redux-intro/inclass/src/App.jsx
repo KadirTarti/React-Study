@@ -7,7 +7,7 @@ import { Provider } from "react-redux";
 function App() {
   return (
     <div className="app">
-      <Provider>
+      <Provider store={store}>
         <ErrorBoundary>
           <Counter />
           {/* <Todo /> */}
