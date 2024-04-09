@@ -22,6 +22,8 @@ const authSlice = createSlice({
 
 })
 
-export const {loginSuccess, logoutSuccess} = authSlice.actions;
+//?Slice yapısı ile Action’lar otomatik olarak oluşturuluyor. olusan action fonksiyonları sliceAdi.actions 'dan destructure edilerek export edilir.
+export const {loginSuccess,logoutSuccess} = authSlice.actions;
 
+//? yazilan slice'in reducer'i sliceAdi.reducer seklinde export edilmelidir.
 export default authSlice.reducer;

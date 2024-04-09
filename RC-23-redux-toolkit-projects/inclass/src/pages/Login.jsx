@@ -7,9 +7,9 @@ import Avatar from "@mui/material/Avatar"
 import Typography from "@mui/material/Typography"
 import Container from "@mui/material/Container"
 import { useState } from "react"
-import { useNavigate } from "react-router-dom"
-import {useDispatch} from 'react-redux'
+import { useDispatch } from "react-redux"
 import { loginSuccess } from "../features/authSlice"
+import { useNavigate } from "react-router-dom"
 
 export default function Login() {
   const [email, setEmail] = useState("")
@@ -19,8 +19,9 @@ export default function Login() {
 
   const handleSubmit = (e) => {
     e.preventDefault()
-    console.log({email, password});
+    console.log({email,password})
     dispatch(loginSuccess({email}))
+    navigate("/")
     setEmail("")
     setPassword("")
   }
