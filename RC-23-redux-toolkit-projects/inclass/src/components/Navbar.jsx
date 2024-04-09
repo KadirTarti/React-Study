@@ -12,6 +12,7 @@ import Typography from "@mui/material/Typography";
 import * as React from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { logoutSuccess } from "../features/authSlice";
+import { clearProductsData } from "../features/productSlice";
 
 function ResponsiveAppBar() {
   const [anchorElUser, setAnchorElUser] = React.useState(null);
@@ -28,6 +29,7 @@ function ResponsiveAppBar() {
 
   const handleLogout =()=> {
     dispatch(logoutSuccess())
+    dispatch(clearProductsData())
   }
 
   return (

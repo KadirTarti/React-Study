@@ -1,17 +1,24 @@
-import React, { useEffect, useState } from 'react'
-import Navbar from "../components/Navbar"
-import { Grid, Typography } from '@mui/material';
-import ProductCard from '../components/ProductCard';
-import { Container } from '@mui/material';
+import { Box, Container, Grid, Typography } from "@mui/material";
+import React, { useEffect } from "react";
+import { useDispatch, useSelector } from "react-redux";
+import loadingImage from "../assets/loading.gif";
+import errorImage from "../assets/error.png";
+import ProductCard from "../components/ProductCard";
+import { getProductsData } from "../features/productSlice";
 
 const Product = () => {
-    const [products, setProducts] = useState([]);
+
+  const dispatch = useDispatch()
+  const { productsData, loading, error } = useSelector(
+    (state) => state.products
+  );
+
 
     useEffect(() => {
-      fetch("https://dummyjson.com/products")
-        .then((res) => res.json())
-        .then((res) => setProducts(res.products));
+      dispatch(getProductsData())
     }, []);
+
+
   return (
     <div>
       <Container>
@@ -24,16 +31,29 @@ const Product = () => {
           Products
         </Typography>
 
-        <Grid
-          container
-          spacing={4}
-          justifyContent="center"
-          alignItems="center"
-          mt={5}>
-          {products.map((product) => (
-            <ProductCard key={product.id} {...product} />
-          ))}
-        </Grid>
+
+        {loading ? (
+          <Box display="flex" alignItems="center" justifyContent="center">
+            <img src={loadingImage} alt="Loading..." />
+          </Box>
+        ) : error ? (
+          <Box display="flex" alignItems="center" justifyContent="center">
+            <img src={errorImage} alt="Error..." />
+          </Box>
+        ) : (
+          <Grid
+            container
+            spacing={4}
+            justifyContent="center"
+            alignItems="center"
+            mt={5}
+          >
+            {productsData.map((product) => (
+              <ProductCard key={product.id} {...product} />
+            ))}
+          </Grid>
+        )}
+        
       </Container>
     </div>
   );
