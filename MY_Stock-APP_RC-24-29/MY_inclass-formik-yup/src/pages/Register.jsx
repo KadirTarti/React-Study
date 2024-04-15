@@ -10,6 +10,7 @@ import * as Yup from "yup";
 import image from "../assets/regi.avif";
 import AuthHeader from "../components/AuthHeader";
 import AuthImage from "../components/AuthImage";
+import useAuthCall from "../hook/useAuthCall";
 
 const SignupSchema = Yup.object().shape({
   username: Yup.string().min(3).max(15).required("Required!"),
@@ -32,6 +33,7 @@ const SignupSchema = Yup.object().shape({
 });
 
 const Register = () => {
+  const {register} = useAuthCall()
   return (
     <Container maxWidth="lg">
       <Grid
@@ -78,6 +80,7 @@ const Register = () => {
             onSubmit={(values) => {
               // same shape as initial values
               console.log(values);
+              register(values)
             }}
           >
             {({
