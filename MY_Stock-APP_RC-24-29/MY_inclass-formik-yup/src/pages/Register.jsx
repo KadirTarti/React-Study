@@ -29,6 +29,7 @@ const SignupSchema = Yup.object().shape({
   .required()
   .matches(/\d+/,'Muss mindestends eine Ziffer enthalten!',)
   .matches(/[A-Z]/, 'Muss mindestends einen Großbuchstaben enthalten')
+  .matches(/[a-z]/, "Muss mindestens einen Kleinbuchstaben enthalten!")
   .matches(/[@$?!.,%&*+-]/, 'Muss mindestens en Sonderzeichen enthalten (@$?!.,%&*+-)')
 });
 
