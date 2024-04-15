@@ -13,6 +13,8 @@ import * as Yup from 'yup';
 import { TextField } from '@mui/material';
 
 const SignupSchema = Yup.object().shape({
+  username: Yup.string().min(4).required(),
+  //üstteki required parantezine mesaj yazarsak kendi defaultm esajı yerine bizim yazdığımızı gösteriyor
   firstName: Yup.string()
     .min(2, "Too Short!")
     .max(50, "Too Long!")
