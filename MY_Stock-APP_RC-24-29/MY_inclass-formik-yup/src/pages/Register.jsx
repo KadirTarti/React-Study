@@ -8,6 +8,21 @@ import { Link } from "react-router-dom";
 import { Box } from "@mui/material";
 import AuthHeader from "../components/AuthHeader";
 import AuthImage from "../components/AuthImage";
+import { Form, Formik } from "formik";
+import * as Yup from 'yup';
+import { TextField } from '@mui/material';
+
+const SignupSchema = Yup.object().shape({
+  firstName: Yup.string()
+    .min(2, "Too Short!")
+    .max(50, "Too Long!")
+    .required("Required"),
+  lastName: Yup.string()
+    .min(2, "Too Short!")
+    .max(50, "Too Long!")
+    .required("Required"),
+  email: Yup.string().email("Invalid email").required("Required"),
+});
 
 const Register = () => {
   return (
@@ -44,12 +59,54 @@ const Register = () => {
             Register
           </Typography>
 
-          <Box sx={{ textAlign: "center", mt: 2, color:"secondary.main" }}>
+
+          <Formik
+            initialValues={{
+              username: "",
+              password: "",
+              email: "",
+              firstName: "",
+              lastName: "",
+            }}
+            validationSchema={SignupSchema}
+            onSubmit={(values) => {
+              // same shape as initial values
+              console.log(values);
+            }}
+          >
+            {({
+              values,
+              errors,
+              touched,
+              handleChange,
+              handleBlur,
+              handleSubmit,
+              isSubmitting,
+              /* and other goodies */
+            }) => (
+              <Form>
+                <TextField
+                  id="username"
+                  name="username"
+                  label="username"
+                  value={values.username} //hemen üstteki formik yapısından gelen values
+                  onChange={handleChange} //hemen üstteki formik yapısından gelen handleChange
+                  onBlur={handleBlur} // üstteki formikten geldi
+                  error={touched.username && Boolean(errors.username)} //touched ve errors formikten geldi
+                  helperText={touched.username && errors.username}
+
+                />
+              </Form>
+            )}
+          </Formik>
+
+
+          <Box sx={{ textAlign: "center", mt: 2, color: "secondary.main" }}>
             <Link to="/">Already have an account? Sign in</Link>
           </Box>
         </Grid>
 
-    <AuthImage image={image} />
+        <AuthImage image={image} />
       </Grid>
     </Container>
   );
