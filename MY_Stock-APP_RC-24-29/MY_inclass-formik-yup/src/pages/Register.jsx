@@ -1,20 +1,18 @@
-import Container from "@mui/material/Container";
-import Typography from "@mui/material/Typography";
-import Avatar from "@mui/material/Avatar";
 import LockIcon from "@mui/icons-material/Lock";
-import image from "../assets/regi.avif";
+import { Box, Button, TextField } from "@mui/material";
+import Avatar from "@mui/material/Avatar";
+import Container from "@mui/material/Container";
 import Grid from "@mui/material/Grid";
+import Typography from "@mui/material/Typography";
+import { Form, Formik } from "formik";
 import { Link } from "react-router-dom";
-import { Box } from "@mui/material";
+import * as Yup from "yup";
+import image from "../assets/regi.avif";
 import AuthHeader from "../components/AuthHeader";
 import AuthImage from "../components/AuthImage";
-import { Form, Formik } from "formik";
-import * as Yup from 'yup';
-import { TextField } from '@mui/material';
 
 const SignupSchema = Yup.object().shape({
-  username: Yup.string().min(4).required(),
-  //üstteki required parantezine mesaj yazarsak kendi defaultm esajı yerine bizim yazdığımızı gösteriyor
+  username: Yup.string().min(3).max(15).required("Required!"),
   firstName: Yup.string()
     .min(2, "Too Short!")
     .max(50, "Too Long!")
@@ -61,7 +59,6 @@ const Register = () => {
             Register
           </Typography>
 
-
           <Formik
             initialValues={{
               username: "",
@@ -87,21 +84,65 @@ const Register = () => {
               /* and other goodies */
             }) => (
               <Form>
-                <TextField
-                  id="username"
-                  name="username"
-                  label="username"
-                  value={values.username} //hemen üstteki formik yapısından gelen values
-                  onChange={handleChange} //hemen üstteki formik yapısından gelen handleChange
-                  onBlur={handleBlur} // üstteki formikten geldi
-                  error={touched.username && Boolean(errors.username)} //touched ve errors formikten geldi
-                  helperText={touched.username && errors.username}
+                <Box sx={{ display:"flex",flexDirection:"column",gap:2}}>
+                  <TextField
+                    id="username"
+                    name="username"
+                    label="Username"
+                    value={values.username}
+                    onChange={handleChange}
+                    onBlur={handleBlur}
+                    error={touched.username && Boolean(errors.username)}
+                    helperText={touched.username && errors.username}
+                  />
+                  <TextField
+                    id="firstName"
+                    name="firstName"
+                    label="FirstName"
+                    value={values.firstName}
+                    onChange={handleChange}
+                    onBlur={handleBlur}
+                    error={touched.firstName && Boolean(errors.firstName)}
+                    helperText={touched.firstName && errors.firstName}
+                  />
+                  <TextField
+                    id="lastName"
+                    name="lastName"
+                    label="LastName"
+                    value={values.lastName}
+                    onChange={handleChange}
+                    onBlur={handleBlur}
+                    error={touched.lastName && Boolean(errors.lastName)}
+                    helperText={touched.lastName && errors.lastName}
+                  />
 
-                />
+                  <TextField
+                    id="email"
+                    name="email"
+                    label="Email"
+                    type="email"
+                    value={values.email}
+                    onChange={handleChange}
+                    onBlur={handleBlur}
+                    error={touched.email && Boolean(errors.email)}
+                    helperText={touched.email && errors.email}
+                  />
+                  <TextField
+                    id="password"
+                    name="password"
+                    type="password"
+                    label="Password"
+                    value={values.password}
+                    onChange={handleChange}
+                    onBlur={handleBlur}
+                    error={touched.password && Boolean(errors.password)}
+                    helperText={touched.password && errors.password}
+                  />
+                  <Button variant="contained" type="submit">Sign Up</Button>
+                </Box>
               </Form>
             )}
           </Formik>
-
 
           <Box sx={{ textAlign: "center", mt: 2, color: "secondary.main" }}>
             <Link to="/">Already have an account? Sign in</Link>
