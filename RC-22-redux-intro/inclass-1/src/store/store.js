@@ -6,7 +6,7 @@ import { todoReducer } from "./todoReducer";
 import { composeWithDevTools } from '@redux-devtools/extension';// dev tools eklentisi için gerekli
 // export const store = createStore(counterReducer)
 
-//! birden fazla reducer olduğunda bunları store birleştirerek verebiliriz
+//! birden fazla reducer olduğunda bunları store'da birleştirerek verebiliriz
 const rootReducer = combineReducers({
     counter:counterReducer,
     todo:todoReducer,
