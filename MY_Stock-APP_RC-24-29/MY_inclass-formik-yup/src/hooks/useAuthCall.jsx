@@ -10,6 +10,9 @@ import {
 import axios from "axios";
 import { useNavigate } from "react-router-dom";
 import { toastErrorNotify, toastSuccessNotify } from "../helper/ToastNotify";
+
+const BASE_URL = import.meta.env.VITE_BASE_URL;
+
 const useAuthCall = () => {
   const dispatch = useDispatch();
   const navigate = useNavigate();
@@ -18,7 +21,7 @@ const useAuthCall = () => {
     dispatch(fetchStart());
     try {
       const { data } = await axios.post(
-        "https://10002.fullstack.clarusway.com/users/",
+        `${BASE_URL}users/`,
         userInfo
       );
       console.log("register", data);
