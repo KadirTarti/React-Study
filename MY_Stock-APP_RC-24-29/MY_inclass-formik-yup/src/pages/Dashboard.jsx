@@ -50,10 +50,15 @@ import MenuIcon from '@mui/icons-material/Menu';
 import Toolbar from '@mui/material/Toolbar';
 import Typography from '@mui/material/Typography';
 import { Outlet } from 'react-router-dom';
+import useAuthCall from "../hooks/useAuthCall";
+import Button from "@mui/material/Button";
+import LogoutIcon from '@mui/icons-material/Logout';
+import MenuListItems from '../components/MenuListItems';
 
 const drawerWidth = 240;
 
 function Dashboard(props) {
+  const {logout} = useAuthCall()
   const { window } = props;
   const [mobileOpen, setMobileOpen] = React.useState(false);
   const [isClosing, setIsClosing] = React.useState(false);
@@ -73,37 +78,23 @@ function Dashboard(props) {
     }
   };
 
-  const drawer = (
-    <div>
-      <Toolbar />
-      <Divider />
-      <List>
-        {['Inbox', 'Starred', 'Send email', 'Drafts'].map((text, index) => (
-          <ListItem key={text} disablePadding>
-            <ListItemButton>
-              <ListItemIcon>
-                {index % 2 === 0 ? <InboxIcon /> : <MailIcon />}
-              </ListItemIcon>
-              <ListItemText primary={text} />
-            </ListItemButton>
-          </ListItem>
-        ))}
-      </List>
-      <Divider />
-      <List>
-        {['All mail', 'Trash', 'Spam'].map((text, index) => (
-          <ListItem key={text} disablePadding>
-            <ListItemButton>
-              <ListItemIcon>
-                {index % 2 === 0 ? <InboxIcon /> : <MailIcon />}
-              </ListItemIcon>
-              <ListItemText primary={text} />
-            </ListItemButton>
-          </ListItem>
-        ))}
-      </List>
-    </div>
-  );
+  // const drawer = (
+  //   <div>
+  //     <Toolbar />
+  //     <List>
+  //       {['Inbox', 'Starred', 'Send email', 'Drafts'].map((text, index) => (
+  //         <ListItem key={text} disablePadding>
+  //           <ListItemButton>
+  //             <ListItemIcon>
+  //               {index % 2 === 0 ? <InboxIcon /> : <MailIcon />}
+  //             </ListItemIcon>
+  //             <ListItemText primary={text} />
+  //           </ListItemButton>
+  //         </ListItem>
+  //       ))}
+  //     </List>
+  //   </div>
+  // );
 
   // Remove this const when copying and pasting into your project.
   const container = window !== undefined ? () => window().document.body : undefined;
@@ -116,6 +107,9 @@ function Dashboard(props) {
         sx={{
           width: { sm: `calc(100% - ${drawerWidth}px)` },
           ml: { sm: `${drawerWidth}px` },
+          backgroundColor: 'white',
+          color: 'secondary.second',
+          borderRadius:'0.5rem',
         }}
       >
         <Toolbar>
@@ -128,9 +122,13 @@ function Dashboard(props) {
           >
             <MenuIcon />
           </IconButton>
-          <Typography variant="h6" noWrap component="div">
-            Responsive drawer
+          <Typography variant="h6" noWrap component="div" sx={{flexGrow:1}}>
+           Stock App
           </Typography>
+          <Button color="inherit" sx={{'&:hover':{
+            backgroundColor: 'secondary.main',
+            color: 'white'
+          }}} onClick={logout}>Logout <LogoutIcon sx={{ml:'0.5rem'}}/> </Button>
         </Toolbar>
       </AppBar>
       <Box
@@ -153,7 +151,7 @@ function Dashboard(props) {
             '& .MuiDrawer-paper': { boxSizing: 'border-box', width: drawerWidth },
           }}
         >
-          {drawer}
+          <MenuListItems/>
         </Drawer>
         <Drawer
           variant="permanent"
@@ -163,7 +161,7 @@ function Dashboard(props) {
           }}
           open
         >
-          {drawer}
+          <MenuListItems/>
         </Drawer>
       </Box>
       <Box
