@@ -8,6 +8,7 @@ import Firms from "../pages/Firms";
 import Brands from "../pages/Brands";
 import Sales from "../pages/Sales";
 import Purchases from "../pages/Purchases";
+import Products from "../pages/Products";
 
 const AppRouter = () => {
   return (
@@ -29,6 +30,7 @@ const AppRouter = () => {
           
           <Route path='sales' element={<Sales/>}/>
           <Route path='purchases' element={<Purchases/>}/>
+          <Route path='products' element={<Products/>}/>
 
 
           </Route>
