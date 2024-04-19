@@ -7,7 +7,7 @@ import womanAgeSvg from "./assets/growing-up-woman.svg";
 import mapSvg from "./assets/map.svg";
 import phoneSvg from "./assets/phone.svg";
 import padlockSvg from "./assets/padlock.svg";
-import cwSvg from "./assets/cw.svg";
+import logo from './assets/logo1.png'
 import Footer from "./components/footer/Footer";
 import axios from "axios";
 
@@ -18,15 +18,13 @@ function App() {
   const [activeIcon, setActiveIcon] = useState(0);
   const [addedUsers, setAddedUsers] = useState([]); // Yeni durum: eklenen kullanıcıları tutmak için
   const [loading, setLoading] = useState(false)
-  
-  const url = "https://randomuser.me/api/";
-  
-  
+
   const fetchUserData = () => {
     setLoading(true)
     axios.get(url).then((response) => {
       if (response.data.results.length > 0) {
         setUserData(response.data.results[0]);
+        setDisabled(false);
       }
       }).finally(()=>{
         // setLoading(false)      
@@ -42,8 +40,12 @@ function App() {
     fetchUserData(); 
   }; 
 
-  const handleAddUser = () => {
-    setAddedUsers([...addedUsers, userData]);
+  const handleAddUser = () =>{
+    if (!addedUsers.find((x) => x.login.uuid === userData.login.uuid)) {
+      setAddedUsers([...addedUsers, userData])
+    } else {
+      setDisabled(true);
+    }
   };
 
 
@@ -79,7 +81,7 @@ function App() {
   return (
     <main>
       <div className="block bcg-orange">
-        <img src={cwSvg} alt="cw" id="cw" />
+        <img src={logo} alt="cw" id="cw" />
       </div>
       <div className="block">
         <div className="container">
@@ -100,7 +102,7 @@ function App() {
           <div className="btn-group">
             
           {loading ? (
-            <button onClick={handleNewUser} className="btn" type="button">
+            <button className="btn" type="button">
               loading...
             </button>)
             : (<button onClick={handleNewUser} className="btn" type="button">
@@ -108,7 +110,7 @@ function App() {
             </button>
             )}
 
-            <button onClick={handleAddUser} className="btn" type="button">
+            <button disabled={disabled} onClick={handleAddUser} className="btn" type="button">
               add user
             </button>
           </div>

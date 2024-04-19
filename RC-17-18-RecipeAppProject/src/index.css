@@ -1,0 +1,32 @@
+@import url('https://fonts.googleapis.com/css2?family=Cairo:wght@200..1000&family=Rubik+Scribble&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Cairo:wght@200..1000&family=Pacifico&family=Rubik+Scribble&display=swap');
+
+
+body {
+  margin: 0;
+  font-family: "Cairo", sans-serif;
+  font-optical-sizing: auto;
+  font-style: normal;
+  font-variation-settings:
+    "slnt" 0;
+
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  background-color:#3A0088;;
+}
+
+code {
+  font-family: "Cairo", sans-serif;
+  font-optical-sizing: auto;
+  font-style: normal;
+  font-variation-settings:
+    "slnt" 0;
+    color: rgb(255, 235, 202);
+    color: #930077;
+    color: #620050;
+    color: #62005075;
+    color: #ade0ffeb;
+    color: #7da3bb;
+    color: #3A0088;
+  
+}
