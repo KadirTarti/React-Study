@@ -9,6 +9,7 @@ import phoneSvg from "./assets/phone.svg";
 import padlockSvg from "./assets/padlock.svg";
 import cwSvg from "./assets/cw.svg";
 import Footer from "./components/footer/Footer";
+import axios from 'axios';
 
 
 function App() {

@@ -29,7 +29,7 @@ function App() {
         setUserData(response.data.results[0]);
       }
       }).finally(()=>{
-        setLoading(false)      
+        // setLoading(false)      
     })
   };
 
