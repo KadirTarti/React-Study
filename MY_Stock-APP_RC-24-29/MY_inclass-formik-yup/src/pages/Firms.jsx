@@ -12,13 +12,6 @@ import FirmCard from "../components/Cards/FirmCard";
 
 const Firms = () => {
 
-  return (
-    <div>
-
-      
-    </div>
-  )
-}
 
   //? firms verileri bana birden fazla yerde lazım olduğu için fonksiyonu burada değil de her yerden erişebileceğim bir noktada tanımlıyorum. İçerisinde react hookları lazım olduğu için de bu ortak nokta en iyi custom hook olmuş oluyor.
   // const dispatch = useDispatch()
@@ -72,5 +65,6 @@ const Firms = () => {
       </Grid>
     </Container>
   );
+}
 
 export default Firms;
