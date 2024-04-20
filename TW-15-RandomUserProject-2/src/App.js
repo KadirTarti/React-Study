@@ -11,15 +11,13 @@ import logo from './assets/logo1.png'
 import Footer from "./components/footer/Footer";
 import axios from "axios";
 
-const url = "https://randomuser.me/api/";
 // const defaultImage = "https://randomuser.me/api/portraits/men/75.jpg";
-console.log(url);
+
 function App() {
   const [userData, setUserData] = useState(null);
   const [activeIcon, setActiveIcon] = useState(0);
   const [addedUsers, setAddedUsers] = useState([]); // Yeni durum: eklenen kullanıcıları tutmak için
-  const [loading, setLoading] = useState(false);
-  const [disabled, setDisabled] = useState(false);
+  const [loading, setLoading] = useState(false)
 
   const fetchUserData = () => {
     setLoading(true)
@@ -29,7 +27,7 @@ function App() {
         setDisabled(false);
       }
       }).finally(()=>{
-        setLoading(false)      
+        // setLoading(false)      
     })
   };
 
