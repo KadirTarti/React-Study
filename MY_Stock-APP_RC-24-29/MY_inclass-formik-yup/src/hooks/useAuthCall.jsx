@@ -35,7 +35,7 @@ const useAuthCall = () => {
     dispatch(fetchStart());
     try {
       const { data } = await axios.post(
-        `https://18103.fullstack.clarusway.com/auth/login/`,
+        `${BASE_URL}auth/login/`,
         userInfo
       );
       dispatch(loginSuccess(data));
