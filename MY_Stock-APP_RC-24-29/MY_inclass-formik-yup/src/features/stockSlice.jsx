@@ -20,7 +20,7 @@ const stockSlice = createSlice({
     },
     // firmsSuccess: (state, {payload}) => {
     //   state.loading = false;
-    //   state.firms = payload;
+    //   state.firms = payload; 
     // },
 
     // brandsSuccess: (state, {payload}) => {
