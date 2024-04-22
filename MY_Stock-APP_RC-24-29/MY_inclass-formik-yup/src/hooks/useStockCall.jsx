@@ -54,12 +54,33 @@ const useStockCall = () => {
         },
       });
       console.log(data);
-      dispatch(getSuccess({data:data.data, url:url}));
+      dispatch(getSuccess({data:data.data, url:url}));//action creatırlar her zaman bir parametre kabul ederler
     } catch (error) {
       console.log(error);
       dispatch(fetchFail());
     }
   };
+
+
+
+  const deleteStockData = async (url, id) => {
+    dispatch(fetchStart());
+    try {
+      await axios(`${BASE_URL}${url}`, {
+        headers: {
+          Authorization: `Token ${token}`,
+          // Authorization: `Bearer ${accesstoken}` //* jwt için
+        },
+      });
+      getStockData(url)
+    } catch (error) {
+      console.log(error);
+      dispatch(fetchFail());
+    }
+  };
+
+
+
 
   return {
     // getFirms, getBrands,
