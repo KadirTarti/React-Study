@@ -43,7 +43,15 @@ const Firms = () => {
   const { firms } = useSelector((state) => state.stock);
   const [open, setOpen] = useState(false);
   const handleOpen = () => setOpen(true);
-  const handleClose = () => setOpen(false);
+  const handleClose = () => {
+    setOpen(false);
+  setInitialState({
+    name:'',
+    phone:'',
+    address:'',
+    image:''
+  })
+}
 
   const [initialState, setInitialState] = useState({
     name:'',
