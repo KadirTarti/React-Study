@@ -40,6 +40,9 @@ const Firms = () => {
     getStockData,
   } = useStockCall();
   const { firms } = useSelector((state) => state.stock);
+  const [open, setOpen] = React.useState(false);
+  const handleOpen = () => setOpen(true);
+  const handleClose = () => setOpen(false);
   console.log("firms:", firms);
   useEffect(() => {
     // getFirms()
