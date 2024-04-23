@@ -4,6 +4,7 @@ import Typography from '@mui/material/Typography';
 import Modal from '@mui/material/Modal';
 import { Button, TextField } from '@mui/material';
 import { useState } from 'react';
+import useStockCall from '../../hooks/useStockCall';
 
 const style = {
   position: 'absolute',
@@ -29,6 +30,8 @@ const [info, setInfo] = useState({
     image: '',
 })
 
+const {postStockData} = useStockCall()
+
 const handleChange = (e) => {
     console.log(e.target.id);
     console.log(e.target.name);
@@ -41,6 +44,7 @@ const handleChange = (e) => {
 const handleSubmit = (e) => {
     e.preventDefault();
     console.log('submit', info);
+    postStockData('firms', info)
     
 }
 
