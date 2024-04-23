@@ -16,7 +16,7 @@ const style = {
   p: 4,
 };
 
-export default function FirmModal() {
+export default function FirmModal(open, handleClose, handleOpen) {
 //   const [open, setOpen] = React.useState(false);
 //   const handleOpen = () => setOpen(true);
 //   const handleClose = () => setOpen(false);
@@ -25,7 +25,7 @@ export default function FirmModal() {
     <div>
       <Modal
         open={open}
-        onClose={handleClose}
+        onClose = {handleClose}  // onClose mui modal'a ait bir fonksiyon
         aria-labelledby="modal-modal-title"
         aria-describedby="modal-modal-description"
       >

@@ -59,15 +59,15 @@ const Firms = () => {
       >
         Firms
       </Typography>
-      <Button variant="contained">New Firm</Button>
+      <Button variant="contained" onClick={handleOpen}>New Firm</Button>
       <Grid container spacing={2} mt={3}>
         {firms.map((firm) => (
           <Grid item xs={12} md={6} lg={4} xl={3} key={firm._id}>
-            <FirmCard {...firm} />
+            <FirmCard {...firm} handleOpen={handleOpen}/>
           </Grid>
         ))}
       </Grid>
-      <FirmModal/>
+      <FirmModal open={open} handleClose={handleClose}/>
     </Container>
   );
 }
