@@ -30,7 +30,8 @@ export default function FirmModal({open, handleClose}) {
         aria-describedby="modal-modal-description"
       >
         <Box sx={style}>
-            <Box component='form'>,
+            <Box component='form'sx={{display:'flex', 
+            flexDirection:'column', gap:2}}>
             <TextField
             label="Firm Name"
             name="name"
@@ -59,7 +60,7 @@ export default function FirmModal({open, handleClose}) {
             type="text"
             variant="outlined"
           />
-          <Button type=''>Submit Firm</Button>
+          <Button type='submit' variant='contained'>Submit Firm</Button>
             </Box>
         </Box>
       </Modal>
