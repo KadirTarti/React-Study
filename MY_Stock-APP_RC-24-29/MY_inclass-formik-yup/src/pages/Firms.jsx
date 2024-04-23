@@ -44,6 +44,16 @@ const Firms = () => {
   const [open, setOpen] = useState(false);
   const handleOpen = () => setOpen(true);
   const handleClose = () => setOpen(false);
+
+  const [initialState, InitialState] = useState({
+    name:'',
+    phone:'',
+    address:'',
+    image:''
+  })
+
+
+
   console.log("firms:", firms);
   useEffect(() => {
     // getFirms()
@@ -68,7 +78,7 @@ const Firms = () => {
           </Grid>
         ))}
       </Grid>
-      <FirmModal open={open} handleClose={handleClose}/>
+      <FirmModal open={open} handleClose={handleClose} initialState={initialState}/>
     </Container>
   );
 }
