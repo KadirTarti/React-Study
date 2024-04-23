@@ -3,6 +3,7 @@ import Box from '@mui/material/Box';
 import Typography from '@mui/material/Typography';
 import Modal from '@mui/material/Modal';
 import { Button, TextField } from '@mui/material';
+import { useState } from 'react';
 
 const style = {
   position: 'absolute',
@@ -21,6 +22,18 @@ export default function FirmModal({open, handleClose}) {
 //   const handleOpen = () => setOpen(true);
 //   const handleClose = () => setOpen(false);
 
+const [info, setInfo] = useState({
+    name: '',
+    phone: '',
+    address:'',
+    image: '',
+})
+
+const handleChange = (e) => {
+    console.log(e.target.id);
+    console.log(e.target.name);
+}
+
   return (
     <div>
       <Modal
@@ -38,6 +51,8 @@ export default function FirmModal({open, handleClose}) {
             id="name"
             type="text"
             variant="outlined"
+            value={info.name}
+            onChange={handleChange}
           />
           <TextField
             label="Firm Address"
@@ -45,6 +60,8 @@ export default function FirmModal({open, handleClose}) {
             id="address"
             type="text"
             variant="outlined"
+            value={info.address}
+            onChange={handleChange}
           />
           <TextField
             label="Firm Phone"
@@ -52,6 +69,8 @@ export default function FirmModal({open, handleClose}) {
             id="phone"
             type="text"
             variant="outlined"
+            value={info.phone}
+            onChange={handleChange}
           />
           <TextField
             label="Firm Logo"
@@ -59,6 +78,8 @@ export default function FirmModal({open, handleClose}) {
             id="image"
             type="text"
             variant="outlined"
+            value={info.image}
+            onChange={handleChange}
           />
           <Button type='submit' variant='contained'>Submit Firm</Button>
             </Box>
