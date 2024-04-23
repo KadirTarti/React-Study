@@ -23,7 +23,6 @@ export default function FirmModal() {
 
   return (
     <div>
-      <Button onClick={handleOpen}>Open modal</Button>
       <Modal
         open={open}
         onClose={handleClose}
