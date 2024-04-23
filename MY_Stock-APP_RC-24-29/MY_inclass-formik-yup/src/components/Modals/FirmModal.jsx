@@ -98,7 +98,7 @@ const handleSubmit = (e) => {
             onChange={handleChange}
           />
           <Button type='submit' variant='contained'>
-          { info._id ? 'Update Firm' : 'Submit Firm'}
+          {info._id ? 'Update Firm' : 'Submit Firm'}
           </Button>
             </Box>
         </Box>
