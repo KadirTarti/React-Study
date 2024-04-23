@@ -10,6 +10,7 @@ import { useSelector } from "react-redux";
 import useStockCall from "../hooks/useStockCall";
 import FirmCard from "../components/Cards/FirmCard";
 import FirmModal from "../components/Modals/FirmModal";
+import { useState } from "react";
 
 const Firms = () => {
 
@@ -40,7 +41,7 @@ const Firms = () => {
     getStockData,
   } = useStockCall();
   const { firms } = useSelector((state) => state.stock);
-  const [open, setOpen] = React.useState(false);
+  const [open, setOpen] = useState(false);
   const handleOpen = () => setOpen(true);
   const handleClose = () => setOpen(false);
   console.log("firms:", firms);
