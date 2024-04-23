@@ -9,6 +9,7 @@ import Typography from "@mui/material/Typography";
 import { useSelector } from "react-redux";
 import useStockCall from "../hooks/useStockCall";
 import FirmCard from "../components/Cards/FirmCard";
+import FirmModal from "../components/Modals/FirmModal";
 
 const Firms = () => {
 
@@ -63,6 +64,7 @@ const Firms = () => {
           </Grid>
         ))}
       </Grid>
+      <FirmModal/>
     </Container>
   );
 }
