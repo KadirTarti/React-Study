@@ -97,7 +97,9 @@ const handleSubmit = (e) => {
             value={info.image}
             onChange={handleChange}
           />
-          <Button type='submit' variant='contained'>Submit Firm</Button>
+          <Button type='submit' variant='contained'>
+          { info._id ? 'Update Firm' : 'Submit Firm'}
+          </Button>
             </Box>
         </Box>
       </Modal>
