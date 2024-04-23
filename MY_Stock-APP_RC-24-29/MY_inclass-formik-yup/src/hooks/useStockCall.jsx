@@ -83,7 +83,9 @@ const useStockCall = () => {
 
   return {
     // getFirms, getBrands,
-     getStockData, getSuccess, deleteStockData};
+     getStockData, 
+    //  getSuccess, 
+     deleteStockData};
 };
 
 export default useStockCall;
