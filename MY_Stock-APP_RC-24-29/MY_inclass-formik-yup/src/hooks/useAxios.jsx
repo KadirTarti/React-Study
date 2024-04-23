@@ -8,10 +8,10 @@ export const axiosWithPublic = axios.create({
 
 const useAxios = () => {
     const {token} = useSelector(state => state.auth)
-    const instance = axios.create({
+    const axiosWithToken = axios.create({
         baseURL: import.meta.env.VITE_BASE_URL,
         headers: {"Authorization": `Token ${token}`},
     }); 
-   return; 
+   return axiosWithToken;
 }
 export default useAxios
