@@ -78,7 +78,7 @@ const Firms = () => {
           </Grid>
         ))}
       </Grid>
-      <FirmModal open={open} handleClose={handleClose} initialState={initialState}/>
+      {open && <FirmModal open={open} handleClose={handleClose} initialState={initialState}/>}
     </Container>
   );
 }
