@@ -71,6 +71,7 @@ const useStockCall = () => {
           Authorization: `Token ${token}`,
         },
       });
+      // getStockData(url)
     } catch (error) {
       console.log(error);
       dispatch(fetchFail());
