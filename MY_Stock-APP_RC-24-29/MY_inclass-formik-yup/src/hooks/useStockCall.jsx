@@ -69,7 +69,6 @@ const useStockCall = () => {
       await axios(`${BASE_URL}${url}`, {
         headers: {
           Authorization: `Token ${token}`,
-          // Authorization: `Bearer ${accesstoken}` //* jwt için
         },
       });
       getStockData(url)
@@ -84,7 +83,7 @@ const useStockCall = () => {
 
   return {
     // getFirms, getBrands,
-     getStockData, getSuccess};
+     getStockData, getSuccess, deleteStockData};
 };
 
 export default useStockCall;
