@@ -25,7 +25,7 @@ export default function FirmModal({open, handleClose, initialState}) {
 
 const [info, setInfo] = useState(initialState);
 
-const {postStockData} = useStockCall()
+const {postStockData, putStockData} = useStockCall()
 
 const handleChange = (e) => {
     console.log(e.target.id);
@@ -39,9 +39,15 @@ const handleChange = (e) => {
 const handleSubmit = (e) => {
     e.preventDefault();
     console.log('submit', info);
-    postStockData('firms', info)
-        
+    postStockData('firms', info);
+    if (info._id) {
+        putStockData ('firms', info)
+    } else {
+        postStockData ('firms', info)
+    }
+    handleClose();     
 }
+
 
   return (
     <div>
