@@ -45,16 +45,16 @@ const Firms = () => {
   const handleOpen = () => setOpen(true);
   const handleClose = () => setOpen(false);
 
-  const [initialState, InitialState] = useState({
+  const [initialState, setInitialState] = useState({
     name:'',
     phone:'',
     address:'',
     image:''
-  })
-
-
-
+  });
   console.log("firms:", firms);
+  console.log('firms', initialState);
+
+
   useEffect(() => {
     // getFirms()
     getStockData("firms");
@@ -74,7 +74,7 @@ const Firms = () => {
       <Grid container spacing={2} mt={3}>
         {firms.map((firm) => (
           <Grid item xs={12} md={6} lg={4} xl={3} key={firm._id}>
-            <FirmCard {...firm} handleOpen={handleOpen}/>
+            <FirmCard {...firm} handleOpen={handleOpen} setInitialState={setInitialState}/>
           </Grid>
         ))}
       </Grid>
