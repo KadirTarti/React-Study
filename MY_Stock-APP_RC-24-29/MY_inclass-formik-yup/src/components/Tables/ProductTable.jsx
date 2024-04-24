@@ -58,7 +58,7 @@ export default function ProductTable() {
             },
           },
         }}
-        pageSizeOptions={[5]}
+        pageSizeOptions={[5,10,25]}
         checkboxSelection
         disableRowSelectionOnClick
       />
