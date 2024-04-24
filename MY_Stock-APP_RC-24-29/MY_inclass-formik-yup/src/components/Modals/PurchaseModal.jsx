@@ -1,79 +1,125 @@
-import * as React from 'react';
-import Box from '@mui/material/Box';
-import Typography from '@mui/material/Typography';
-import Modal from '@mui/material/Modal';
-import { Button, TextField } from '@mui/material';
-import { useState } from 'react';
-import useStockCall from '../../hooks/useStockCall';
+import * as React from "react";
+import Box from "@mui/material/Box";
+import Typography from "@mui/material/Typography";
+import Modal from "@mui/material/Modal";
+import { Button, FormControl, InputLabel, MenuItem, Select, TextField } from "@mui/material";
+import { useState } from "react";
+import useStockCall from "../../hooks/useStockCall";
+import { useSelector } from "react-redux";
+import { modalStyle, flexColumn } from "../../styles/globalStyle";
 
-const style = {
-  position: 'absolute',
-  top: '50%',
-  left: '50%',
-  transform: 'translate(-50%, -50%)',
-  width: 400,
-  bgcolor: 'background.paper',
-  border: '2px solid #000',
-  boxShadow: 24,
-  p: 4,
-};
+export default function PurchaseModal({ open, handleClose, initialState }) {
+  const [info, setInfo] = useState(initialState);
 
-export default function PurchaseModal({open, handleClose, initialState}) {
-//   const [open, setOpen] = React.useState(false);
-//   const handleOpen = () => setOpen(true);
-//   const handleClose = () => setOpen(false);
+  const { postStockData, putStockData } = useStockCall();
+  const { categories, brands } = useSelector((state) => state.stock);
 
-const [info, setInfo] = useState(initialState);
+  const handleChange = (e) => {
+    setInfo({ ...info, [e.target.name]: e.target.value });
+    console.log(info); //! setter asenkron çalışır, o nedenle
+  };
 
-const {postStockData, putStockData} = useStockCall()
-
-const handleChange = (e) => {
-    console.log(e.target.id);
-    console.log(e.target.name);
-    // setInfo({...info, [e.target.id]:e.target.value}) 
-    //id ile de yakalanabilir
-    setInfo({...info, [e.target.name]:e.target.value})
-    console.log(info); //! setter asenkron çalışır, o nedenle güncel çıktıyı yakalayamam!
-}
-
-const handleSubmit = (e) => {
+  const handleSubmit = (e) => {
     e.preventDefault();
-    console.log('submit', info);
-    postStockData('purchases', info);
+    console.log("submit", info);
+    postStockData("purchases", info);
     if (info._id) {
-        putStockData ('purchases', info)
+      putStockData("purchases", info);
     } else {
-        postStockData ('purchases', info)
+      postStockData("purchases", info);
     }
-    handleClose();     
-}
-
+    handleClose();
+  };
 
   return (
     <div>
       <Modal
         open={open}
-        onClose = {handleClose}  // onClose mui modal'a ait bir fonksiyon
+        onClose={handleClose} // onClose mui modal'a ait bir fonksiyon
         aria-labelledby="modal-modal-title"
         aria-describedby="modal-modal-description"
       >
-        <Box sx={style}>
-            <Box component='form'
-            onSubmit={handleSubmit}
-            sx={{display:'flex', flexDirection:'column', gap:2}}>
-          <TextField
-            label="Purchase Logo"
-            name="image"
-            id="image"
-            type="text"
-            variant="outlined"
-            value={info.image}
-            onChange={handleChange}
-          />
-          <Button type='submit' variant='contained'>
-          {info._id ? 'Update Purchase' : 'Submit Purchase'}
-          </Button>
-            </Box>
+        <Box sx={modalStyle}>
+          <Box component="form" onSubmit={handleSubmit} sx={{ flexColumn }}>
+
+            <FormControl fullWidth>
+              <InputLabel id="demo-simple-category-label">Firm</InputLabel>
+              <Select
+                labelId="demo-simple-category-label"
+                id="categoryId"
+                label="Category"
+                name="categoryId"
+                value={info.categoryId}
+                onChange={handleChange}
+              >
+                {categories.map((category) => (
+                  <MenuItem key={category._id} value={category._id}>
+                    {category.name}
+                  </MenuItem>
+                ))}
+              </Select>
+            </FormControl>
+
+            <FormControl fullWidth>
+              <InputLabel id="demo-simple-brand-label">Brand</InputLabel>
+              <Select
+                labelId="demo-simple-brand-label"
+                id="brandId"
+                label="Brand"
+                name="brandId"
+                value={info.brandId}
+                onChange={handleChange}
+              >
+                {brands.map((brand) => (
+                  <MenuItem key={brand._id} value={brand._id}>
+                    {brand.name}
+                  </MenuItem>
+                ))}
+              </Select>
+            </FormControl>
+
+            <FormControl fullWidth>
+              <InputLabel id="demo-simple-category-label">Firm</InputLabel>
+              <Select
+                labelId="demo-simple-category-label"
+                id="categoryId"
+                label="Category"
+                name="categoryId"
+                value={info.categoryId}
+                onChange={handleChange}
+              >
+                {categories.map((category) => (
+                  <MenuItem key={category._id} value={category._id}>
+                    {category.name}
+                  </MenuItem>
+                ))}
+              </Select>
+            </FormControl>
+
+            <TextField
+            fullWidth
+              label="Quantity"
+              name="image"
+              id="image"
+              type="text"
+              variant="outlined"
+              value={info.image}
+              onChange={handleChange}
+            />
+             <TextField
+             fullWidth
+              label="Price"
+              name="image"
+              id="image"
+              type="text"
+              variant="outlined"
+              value={info.image}
+              onChange={handleChange}
+            />
+            <Button type="submit" variant="contained">
+              Submit Purchase
+            </Button>
+          </Box>
         </Box>
       </Modal>
     </div>
