@@ -10,6 +10,10 @@ const columns = [
     headerName: 'Category',
     width: 150,
     editable: true,
+    valueGetter: (value) => {
+        // console.log(value);
+        return value.name
+    }
   },
   {
     field: 'brandId',
