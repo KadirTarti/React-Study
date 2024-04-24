@@ -8,7 +8,7 @@ import useStockCall from "../hooks/useStockCall";
 import ProductTable from "../components/Tables/ProductTable";
 
 const Products = () => {
-  const { getStockData } = useStockCall();
+  const { getStockData, getProCatBrand } = useStockCall();
   const { products } = useSelector((state) => state.stock);
   const [open, setOpen] = useState(false);
   const handleOpen = () => setOpen(true);
