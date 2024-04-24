@@ -1,6 +1,7 @@
 import * as React from 'react';
 import Box from '@mui/material/Box';
 import { DataGrid } from '@mui/x-data-grid';
+import { useSelector } from 'react-redux';
 
 const columns = [
   { field: 'id', headerName: 'ID', width: 90 },
@@ -45,11 +46,17 @@ const rows = [
   { id: 9, lastName: 'Roxie', firstName: 'Harvey', age: 65 },
 ];
 
+function getRowID(row) {
+    console.log(row);
+    return row._id;
+}
+
 export default function ProductTable() {
+    const {products} = useSelector(state => state.stock)
   return (
     <Box sx={{ height: 400, width: '100%' }}>
       <DataGrid
-        rows={rows}
+        rows={products}
         columns={columns}
         initialState={{
           pagination: {
@@ -58,6 +65,7 @@ export default function ProductTable() {
             },
           },
         }}
+        getRowID={getRowID}
         pageSizeOptions={[5,10,25]}
         checkboxSelection
         disableRowSelectionOnClick
