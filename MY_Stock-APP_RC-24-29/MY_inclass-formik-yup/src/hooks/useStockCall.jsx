@@ -1,6 +1,6 @@
 import axios from "axios";
 import { useDispatch, useSelector } from "react-redux";
-import { fetchFail, fetchStart, getSuccess, 
+import { fetchFail, fetchStart, getProCatBrandSuccess, getSuccess, 
     // firmsSuccess 
 } from "../features/stockSlice";
 import useAxios from "./useAxios";

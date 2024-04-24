@@ -59,5 +59,6 @@ export const {
 //   brandsSuccess,
   getSuccess,
   fetchFail,
+  getProCatBrandSuccess,
 } = stockSlice.actions;
 export default stockSlice.reducer;

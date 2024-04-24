@@ -38,8 +38,8 @@ export default function ProductTable() {
           headerName: 'Category',
           headerAlign: 'center',
           align: 'center',
-          width: 150,
-          editable: true,
+          minWidth: 150,
+          editable: true, //tablo üzerinde değişime izin verir
         
           flex: 1,
           valueGetter: (value) => {
@@ -50,7 +50,7 @@ export default function ProductTable() {
         {
           field: 'brandId',
           headerName: 'Brand',
-          width: 150,
+          minWidth: 150,
           editable: true,
           valueGetter: (value) =>  value?.name ?? "**No Brand**",
           headerAlign: 'center',
@@ -61,7 +61,7 @@ export default function ProductTable() {
           field: 'name',
           headerName: 'Name',
           type: 'number',
-          width: 110,
+          minWidth: 110,
           editable: true,
           headerAlign: 'center',
           align: 'center',
