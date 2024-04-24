@@ -29,16 +29,23 @@ export default function ProductTable() {
     const {products} = useSelector(state => state.stock)
     const {deleteStockData} = useStockCall()
 
+    
     const columns = [
-        { field: '_id', headerName: 'ID', width: 90 },
+        { field: '_id', headerName: 'ID',
+        minWidth: 40, maxWidth: 70, headerAlign: 'center', flex: 2},
         {
           field: 'categoryId',
           headerName: 'Category',
+          headerAlign: 'center',
+          align: 'center',
           width: 150,
           editable: true,
+        
+          flex: 1,
           valueGetter: (value) => {
              return value?.name ?? "**No Category**"
         }
+        
     }   ,
         {
           field: 'brandId',
@@ -46,6 +53,9 @@ export default function ProductTable() {
           width: 150,
           editable: true,
           valueGetter: (value) =>  value?.name ?? "**No Brand**",
+          headerAlign: 'center',
+          align: 'center',
+          flex: 2,
         },
         {
           field: 'name',
@@ -53,7 +63,9 @@ export default function ProductTable() {
           type: 'number',
           width: 110,
           editable: true,
-          
+          headerAlign: 'center',
+          align: 'center',
+          flex: 2,
         },
         {
           field: 'quantity',
@@ -61,6 +73,9 @@ export default function ProductTable() {
           type: 'number',
           width: 110,
           editable: true,
+          headerAlign: 'center',
+          align: 'center',
+          flex: 1,
           
         },
         {
@@ -68,7 +83,10 @@ export default function ProductTable() {
           headerName: 'Actions',
           description: 'This column has a value getter and is not sortable.',
           sortable: false,
+          headerAlign: 'center',
+          align: 'center',
           width: 160,
+          flex: 1,
           renderCell: (params) => (
             //   console.log(params);
               <DeleteOutlineIcon
@@ -80,8 +98,9 @@ export default function ProductTable() {
       ];
 
   return (
-    <Box sx={{ height: 400, width: '100%' }}>
+    <Box sx={{width: '100%' }}>
       <DataGrid
+        autoHeight //yüksekliği otomatik ayarlıyor
         rows={products}
         columns={columns}
         initialState={{
