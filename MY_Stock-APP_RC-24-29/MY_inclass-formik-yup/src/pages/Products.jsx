@@ -5,6 +5,7 @@ import React, { useEffect, useState } from "react";
 import { useSelector } from "react-redux";
 import ProductModal from "../components/Modals/ProductModal";
 import useStockCall from "../hooks/useStockCall";
+import ProductTable from "../components/Tables/ProductTable";
 
 const Products = () => {
   const { getStockData } = useStockCall();
@@ -42,6 +43,7 @@ const Products = () => {
           handleClose={handleClose}
         />
       )}
+    <ProductTable/>
     </Container>
   );
 };
