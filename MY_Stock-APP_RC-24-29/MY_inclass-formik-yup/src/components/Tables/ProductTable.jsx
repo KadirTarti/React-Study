@@ -37,19 +37,15 @@ export default function ProductTable() {
           width: 150,
           editable: true,
           valueGetter: (value) => {
-              // console.log(value);
-              return value.name
-          }
-        },
+             return value?.name ?? "**No Category**"
+        }
+    }   ,
         {
           field: 'brandId',
           headerName: 'Brand',
           width: 150,
           editable: true,
-          valueGetter: (value) => {
-            // console.log(value);
-            return value.name
-        }
+          valueGetter: (value) =>  value?.name ?? "**No Brand**",
         },
         {
           field: 'name',
