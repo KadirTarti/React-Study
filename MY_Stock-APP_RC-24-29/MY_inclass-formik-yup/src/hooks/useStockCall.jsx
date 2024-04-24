@@ -114,6 +114,20 @@ const useStockCall = () => {
     }
   };
 
+  const getProCatBrand = async () => {
+    dispatch(fetchStart());
+    try {
+      const [products, categories, brands] = await Promise.all([
+      axiosWithToken('products'),
+      axiosWithToken('categories'),
+      axiosWithToken('brands'),
+    ])
+    dispatch(getProCatBrandSuccess([products, categories, brands]))
+    } catch (error) {
+      dispatch(fetchFail());      
+    }
+  }
+
 
 
   return {
@@ -121,6 +135,7 @@ const useStockCall = () => {
     //  getSuccess, 
      getStockData, 
      deleteStockData,
+     getProCatBrand,
      postStockData,
      putStockData};
 };
