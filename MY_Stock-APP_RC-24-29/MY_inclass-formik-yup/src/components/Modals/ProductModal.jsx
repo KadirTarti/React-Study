@@ -4,7 +4,7 @@ import Button from "@mui/material/Button";
 import Modal from "@mui/material/Modal";
 import * as React from "react";
 import useStockCall from "../../hooks/useStockCall";
-import { flexColumn, modalStyle } from "../../styles/globalStyle";
+import { flexColumn, modalStyle } from "../../styles/globalStyle"
 import InputLabel from '@mui/material/InputLabel';
 import MenuItem from '@mui/material/MenuItem';
 import FormControl from '@mui/material/FormControl';
