@@ -40,7 +40,7 @@ export default function PurchaseModal({ open, handleClose, initialState }) {
         aria-describedby="modal-modal-description"
       >
         <Box sx={modalStyle}>
-          <Box component="form" onSubmit={handleSubmit} sx={{ flexColumn }}>
+          <Box component="form" onSubmit={handleSubmit} sx={flexColumn}>
 
             <FormControl fullWidth>
               <InputLabel id="demo-simple-category-label">Firm</InputLabel>
@@ -79,18 +79,18 @@ export default function PurchaseModal({ open, handleClose, initialState }) {
             </FormControl>
 
             <FormControl fullWidth>
-              <InputLabel id="demo-simple-category-label">Firm</InputLabel>
+              <InputLabel id="demo-simple-product-label">Product</InputLabel>
               <Select
-                labelId="demo-simple-category-label"
-                id="categoryId"
-                label="Category"
-                name="categoryId"
-                value={info.categoryId}
+                labelId="demo-simple-product-label"
+                id="productId"
+                label="Product"
+                name="productId"
+                value={info.productId}
                 onChange={handleChange}
               >
-                {categories.map((category) => (
-                  <MenuItem key={category._id} value={category._id}>
-                    {category.name}
+                {categories.map((product) => (
+                  <MenuItem key={product._id} value={product._id}>
+                    {product.name}
                   </MenuItem>
                 ))}
               </Select>
@@ -99,21 +99,22 @@ export default function PurchaseModal({ open, handleClose, initialState }) {
             <TextField
             fullWidth
               label="Quantity"
-              name="image"
-              id="image"
+              name="quantity"
+              id="quantity"
               type="text"
               variant="outlined"
-              value={info.image}
+              value={info.quantity}
               onChange={handleChange}
             />
+
              <TextField
              fullWidth
               label="Price"
-              name="image"
-              id="image"
+              name="price"
+              id="price"
               type="text"
               variant="outlined"
-              value={info.image}
+              value={info.price}
               onChange={handleChange}
             />
             <Button type="submit" variant="contained">
