@@ -5,34 +5,32 @@ import Grid from "@mui/material/Grid";
 import Typography from "@mui/material/Typography";
 import { useSelector } from "react-redux";
 import useStockCall from "../hooks/useStockCall";
-import PurchaseModal from "../components/Modals/PurchaseModal"
+import PurchaseModal from "../components/Modals/PurchaseModal";
 import { useState } from "react";
 
 const Purchases = () => {
-
-  const {getStockData} = useStockCall();
+  const { getStockData } = useStockCall();
   const { purchases } = useSelector((state) => state.stock);
   const [open, setOpen] = useState(false);
   const handleOpen = () => setOpen(true);
   const handleClose = () => {
     setOpen(false);
-  setInitialState({
-    name:'',
-    phone:'',
-    address:'',
-    image:''
-  })
-}
+    setInitialState({
+      brandId: "",
+      productId: "",
+      quantity: "",
+      price: "",
+    });
+  };
 
   const [initialState, setInitialState] = useState({
-    name:'',
-    phone:'',
-    address:'',
-    image:''
+    brandId: "",
+    productId: "",
+    quantity: "",
+    price: "",
   });
   console.log("purchases:", purchases);
-  console.log('purchases', initialState);
-
+  console.log("purchases", initialState);
 
   useEffect(() => {
     // getPurchases()
@@ -49,11 +47,19 @@ const Purchases = () => {
       >
         Purchases
       </Typography>
-      <Button variant="contained" onClick={handleOpen}>New Purchase</Button>
-   
-      {open && <PurchaseModal open={open} handleClose={handleClose} initialState={initialState}/>}
+      <Button variant="contained" onClick={handleOpen}>
+        New Purchase
+      </Button>
+
+      {open && (
+        <PurchaseModal
+          open={open}
+          handleClose={handleClose}
+          initialState={initialState}
+        />
+      )}
     </Container>
   );
-}
+};
 
 export default Purchases;

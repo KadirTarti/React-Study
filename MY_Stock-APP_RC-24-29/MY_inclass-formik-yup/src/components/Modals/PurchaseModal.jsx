@@ -39,11 +39,11 @@ const handleChange = (e) => {
 const handleSubmit = (e) => {
     e.preventDefault();
     console.log('submit', info);
-    postStockData('Purchases', info);
+    postStockData('purchases', info);
     if (info._id) {
-        putStockData ('Purchases', info)
+        putStockData ('purchases', info)
     } else {
-        postStockData ('Purchases', info)
+        postStockData ('purchases', info)
     }
     handleClose();     
 }
