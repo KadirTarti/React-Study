@@ -5,16 +5,13 @@ import Grid from "@mui/material/Grid";
 import Typography from "@mui/material/Typography";
 import { useSelector } from "react-redux";
 import useStockCall from "../hooks/useStockCall";
-import PurchasesModal from "../components/Modals/PurchasesModal";
+import PurchaseModal from "../components/Modals/PurchaseModal"
 import { useState } from "react";
 
 const Purchases = () => {
 
-
-  const {
-    getStockData,
-  } = useStockCall();
-  const { Purchases } = useSelector((state) => state.stock);
+  const {getStockData} = useStockCall();
+  const { purchases } = useSelector((state) => state.stock);
   const [open, setOpen] = useState(false);
   const handleOpen = () => setOpen(true);
   const handleClose = () => {
@@ -33,13 +30,13 @@ const Purchases = () => {
     address:'',
     image:''
   });
-  console.log("purchases:", Purchases);
+  console.log("purchases:", purchases);
   console.log('purchases', initialState);
 
 
   useEffect(() => {
     // getPurchases()
-    getStockData("purchases");
+    getStockData("purchase");
   }, []);
 
   return (
@@ -52,15 +49,9 @@ const Purchases = () => {
       >
         Purchases
       </Typography>
-      <Button variant="contained" onClick={handleOpen}>New Firm</Button>
-      <Grid container spacing={2} mt={3}>
-        {Purchases.map((firm) => (
-          <Grid item xs={12} md={6} lg={4} xl={3} key={firm._id}>
-            <FirmCard {...firm} handleOpen={handleOpen} setInitialState={setInitialState}/>
-          </Grid>
-        ))}
-      </Grid>
-      {open && <FirmModal open={open} handleClose={handleClose} initialState={initialState}/>}
+      <Button variant="contained" onClick={handleOpen}>New Purchase</Button>
+   
+      {open && <PurchaseModal open={open} handleClose={handleClose} initialState={initialState}/>}
     </Container>
   );
 }
