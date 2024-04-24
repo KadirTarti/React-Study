@@ -46,7 +46,7 @@ const rows = [
   { id: 9, lastName: 'Roxie', firstName: 'Harvey', age: 65 },
 ];
 
-function getRowID(row) {
+function getRowId(row) {
     console.log(row);
     return row._id;
 }
@@ -65,7 +65,7 @@ export default function ProductTable() {
             },
           },
         }}
-        getRowID={getRowID}
+        getRowId={getRowId}
         pageSizeOptions={[5,10,25]}
         checkboxSelection
         disableRowSelectionOnClick
