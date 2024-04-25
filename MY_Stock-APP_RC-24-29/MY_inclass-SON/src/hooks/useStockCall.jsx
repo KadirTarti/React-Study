@@ -180,6 +180,28 @@ const useStockCall = () => {
       dispatch(fetchFail());
     }
   };
+
+
+  const getPurcSales = async () => {
+    dispatch(fetchStart());
+    try {
+      const [sales, purchases] = await Promise.all([
+        axiosWithToken.get(`sales/`),
+        axiosWithToken.get(`purchases/`),
+      ]);
+
+      dispatch(
+        getPurcSalesSuccess([
+          sales?.data,
+          purchases?.data
+        ])
+      );
+    } catch (error) {
+      dispatch(fetchFail());
+    }
+  };
+
+
   return {
     // getFirms,
     // getBrands,
@@ -189,7 +211,8 @@ const useStockCall = () => {
     getStockData,
     getProCatBrand,
     getProSalBrands,
-    getProPurcFirBrands
+    getProPurcFirBrands,
+    getPurcSales,
   };
 };
 

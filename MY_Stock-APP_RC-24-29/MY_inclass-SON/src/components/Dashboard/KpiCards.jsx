@@ -1,51 +1,52 @@
 // 'use client';
 import { Card } from '@tremor/react';
-import { useSelector } from 'react-redux';
-
+import { useSelector } from "react-redux";
 function classNames(...classes) {
   return classes.filter(Boolean).join(' ');
 }
 
 
+
 export default function KpiCards() {
-  const {sales, purchases} = useSelector(state => state.stock)
-  const totalSales = sales?.reduce((acc, item)=> acc + item.amount,0) //toplam sales value
-  console.log(totalSales);
-  const totalPurchases = purchases?.reduce((acc, item)=> acc + item.amount,0) //toplam sales value
-  console.log(totalPurchases);
-
-  const data = [
-    {
-      name: 'Sales',
-      value: `€ ${totalSales}`,
-      change: '+6.5%',
-      changeType: 'positive',
-    },
-    {
-      name: 'Cash',
-      value: `€ ${totalSales - totalPurchases}`,
-      change: '+19.4%',
-      changeType: 'positive',
-    },
-    {
-      name: 'Pruchases',
-      value: `€ ${totalPurchases}`,
-      change: '-1.7%',
-      changeType: 'negative',
-    },
-  ];
-
-  
+    const {sales,purchases} = useSelector(state=> state.stock)
+    const totalSales = sales?.reduce((acc,item) => acc + item.amount,0)
+    console.log(totalSales)
+    const totalPurchases = purchases?.reduce((acc,item) => acc + item.amount,0)
+    console.log(totalPurchases)
+    const data = [
+        {
+          name: 'Sales',
+          value: `€ ${totalSales}`,
+        //   change: '+6.1%',
+        //   changeType: 'positive',
+          color:"indigo"
+        },
+        {
+          name: 'Cash',
+          value: `€ ${totalSales - totalPurchases}`,
+        //   change: '+19.2%',
+        //   changeType: 'positive',
+          color:"amber"
+        },
+        {
+          name: 'Purchases',
+          value: `€ ${totalPurchases}`,
+        //   change: '-1.2%',
+        //   changeType: 'negative',
+          color:"fuchsia"
+        },
+      ];
   return (
     <>
       <div className="grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-3">
         {data.map((item) => (
-          <Card key={item.name}>
+          <Card key={item.name} decoration="top"
+          decorationColor={item.color}>
             <p className="flex items-start justify-between">
               <span className="text-tremor-metric font-semibold text-tremor-content-strong dark:text-dark-tremor-content-strong">
                 {item.value}
               </span>
-              <span
+              {/* <span
                 className={classNames(
                   item.changeType === 'positive'
                     ? 'text-emerald-700 dark:text-emerald-500'
@@ -54,7 +55,7 @@ export default function KpiCards() {
                 )}
               >
                 {item.change}
-              </span>
+              </span> */}
             </p>
             <p className="mt-1 text-tremor-default text-tremor-content dark:text-dark-tremor-content">
               {item.name}
