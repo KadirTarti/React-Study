@@ -1,4 +1,6 @@
+import { Grid } from '@mui/material';
 import { AreaChart } from '@tremor/react';
+import { useSelector } from 'react-redux';
 
 const chartdata = [
   {
@@ -67,16 +69,47 @@ const dataFormatter = (number) =>
   `$${Intl.NumberFormat('us').format(number).toString()}`;
 
 export default function Charts() {
+
+  const {sales, purchases} = useSelector(state=> state.stock)
+  const salesData = sales.map(item => ({
+  date: new Date(item.createdAt).
+  toLocaleDateString(), 
+  sale: item.amount}));
+  
+  const purchasesData = purchases.map(item => ({
+    date: new Date(item.createdAt).
+    toLocaleDateString(), 
+    purchase: item.amount}))
+
+
+
   return (
+    <Grid container>
+    <Grid item xs={12} md={6}>
     <AreaChart
       className="h-80"
-      data={chartdata}
+      data={salesData}
       index="date"
-      categories={['SemiAnalysis', 'The Pragmatic Engineer']}
+      categories={['sale']}
       colors={['indigo', 'rose']}
       valueFormatter={dataFormatter}
       yAxisWidth={60}
       onValueChange={(v) => console.log(v)}
     />
+      </Grid>  
+      <Grid item>
+    <AreaChart
+      className="h-80"
+      data={purchasesData}
+      index="date"
+      categories={['purchase']}
+      colors={['fushia', 'rose']}
+      valueFormatter={dataFormatter}
+      yAxisWidth={60}
+      onValueChange={(v) => console.log(v)}
+    />
+      </Grid>  
+    </Grid>
+    
   );
 }
