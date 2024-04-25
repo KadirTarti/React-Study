@@ -71,12 +71,12 @@ const dataFormatter = (number) =>
 export default function Charts() {
 
   const {sales, purchases} = useSelector(state=> state.stock)
-  const salesData = sales.map(item => ({
+  const salesData = sales.map((item) => ({
   date: new Date(item.createdAt).
   toLocaleDateString(), 
-  sale: item.amount}));
-  
-  const purchasesData = purchases.map(item => ({
+  sale: item.amount}))
+
+  const purchasesData = purchases.map((item) => ({
     date: new Date(item.createdAt).
     toLocaleDateString(), 
     purchase: item.amount}))
@@ -97,18 +97,23 @@ export default function Charts() {
       onValueChange={(v) => console.log(v)}
     />
       </Grid>  
-      <Grid item>
+
+      <Grid item xs={12} md={6}>
     <AreaChart
       className="h-80"
       data={purchasesData}
       index="date"
       categories={['purchase']}
-      colors={['fushia', 'rose']}
+      colors={['fuchsia', 'rose']}
       valueFormatter={dataFormatter}
       yAxisWidth={60}
       onValueChange={(v) => console.log(v)}
     />
-      </Grid>  
+      </Grid>
+
+      
+     
+        
     </Grid>
     
   );
