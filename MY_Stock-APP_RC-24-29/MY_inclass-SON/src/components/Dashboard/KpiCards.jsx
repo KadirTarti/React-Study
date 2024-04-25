@@ -15,7 +15,7 @@ const data = [
   },
   {
     name: 'Cash',
-    value: '500.1 K',
+    value: '€ 29.123',
     change: '+19.4%',
     changeType: 'positive',
   },
@@ -29,7 +29,8 @@ const data = [
 
 export default function KpiCards() {
   const {sales, purchases} = useSelector(state => state.stock)
-  const totalSales = sales?.reduce((acc, item)=> acc + item.amount,0 )
+  const totalSales = sales?.reduce((acc, item)=> acc + item.amount,0) //toplam sales value
+  console.log(totalSales);
   return (
     <>
       <div className="grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-3">
