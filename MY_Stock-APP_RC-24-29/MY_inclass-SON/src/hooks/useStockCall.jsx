@@ -7,6 +7,7 @@ import {
   getProCatBrandSuccess,
   getProPurcFirBrandsSuccess,
   getProSalBrandsSuccess,
+  getPurcSalesSuccess,
   // firmsSuccess,
   getSuccess,
 } from "../features/stockSlice";
@@ -180,8 +181,6 @@ const useStockCall = () => {
       dispatch(fetchFail());
     }
   };
-
-
   const getPurcSales = async () => {
     dispatch(fetchStart());
     try {
@@ -200,8 +199,6 @@ const useStockCall = () => {
       dispatch(fetchFail());
     }
   };
-
-
   return {
     // getFirms,
     // getBrands,
@@ -212,7 +209,7 @@ const useStockCall = () => {
     getProCatBrand,
     getProSalBrands,
     getProPurcFirBrands,
-    getPurcSales,
+    getPurcSales
   };
 };
 
