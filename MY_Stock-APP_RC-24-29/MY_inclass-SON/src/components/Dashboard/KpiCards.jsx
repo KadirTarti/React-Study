@@ -1,5 +1,6 @@
 // 'use client';
 import { Card } from '@tremor/react';
+import { useSelector } from 'react-redux';
 
 function classNames(...classes) {
   return classes.filter(Boolean).join(' ');
@@ -7,26 +8,28 @@ function classNames(...classes) {
 
 const data = [
   {
-    name: 'Recurring revenue',
-    value: '$34.1K',
-    change: '+6.1%',
+    name: 'Sales',
+    value: '€ 34.1K',
+    change: '+6.5%',
     changeType: 'positive',
   },
   {
-    name: 'Total users',
-    value: '500.1K',
-    change: '+19.2%',
+    name: 'Cash',
+    value: '500.1 K',
+    change: '+19.4%',
     changeType: 'positive',
   },
   {
-    name: 'User growth',
-    value: '11.3%',
-    change: '-1.2%',
+    name: 'Pruchases',
+    value: '€ 34.5',
+    change: '-1.7%',
     changeType: 'negative',
   },
 ];
 
 export default function KpiCards() {
+  const {sales, purchases} = useSelector(state => state.stock)
+  const totalSales = sales?.reduce((acc, item)=> acc + item.amount,0 )
   return (
     <>
       <div className="grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-3">
