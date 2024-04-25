@@ -6,31 +6,36 @@ function classNames(...classes) {
   return classes.filter(Boolean).join(' ');
 }
 
-const data = [
-  {
-    name: 'Sales',
-    value: '€ 34.1K',
-    change: '+6.5%',
-    changeType: 'positive',
-  },
-  {
-    name: 'Cash',
-    value: '€ 29.123',
-    change: '+19.4%',
-    changeType: 'positive',
-  },
-  {
-    name: 'Pruchases',
-    value: '€ 34.5',
-    change: '-1.7%',
-    changeType: 'negative',
-  },
-];
 
 export default function KpiCards() {
   const {sales, purchases} = useSelector(state => state.stock)
   const totalSales = sales?.reduce((acc, item)=> acc + item.amount,0) //toplam sales value
   console.log(totalSales);
+  const totalPurchases = purchases?.reduce((acc, item)=> acc + item.amount,0) //toplam sales value
+  console.log(totalPurchases);
+
+  const data = [
+    {
+      name: 'Sales',
+      value: `€ ${totalSales}`,
+      change: '+6.5%',
+      changeType: 'positive',
+    },
+    {
+      name: 'Cash',
+      value: `€ ${totalSales - totalPurchases}`,
+      change: '+19.4%',
+      changeType: 'positive',
+    },
+    {
+      name: 'Pruchases',
+      value: `€ ${totalPurchases}`,
+      change: '-1.7%',
+      changeType: 'negative',
+    },
+  ];
+
+  
   return (
     <>
       <div className="grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-3">
