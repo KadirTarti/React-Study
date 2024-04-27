@@ -108,7 +108,7 @@ function Dashboard(props) {
           width: { sm: `calc(100% - ${drawerWidth}px)` },
           ml: { sm: `${drawerWidth}px` },
           backgroundColor: "white",
-          color: "secondary.second",
+          color: "secondary.main",
           borderRadius: "0.5rem",
         }}
       >
@@ -122,8 +122,8 @@ function Dashboard(props) {
           >
             <MenuIcon />
           </IconButton>
-          <Typography variant="h6" noWrap component="div" sx={{ flexGrow: 1 }}>
-            Stock App
+          <Typography variant="h6" noWrap component="div" sx={{ flexGrow: 1, fontWeight:'bold'}}>
+          Inventory Management System
           </Typography>
           <Button
             color="inherit"
