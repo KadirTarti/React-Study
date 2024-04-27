@@ -9,11 +9,11 @@ function App() {
   const theme = createTheme({
     palette: {
       primary: {
-        main: "#454F5B",
+        main: "#533483",
       },
       secondary: {
-        main: "#454F5B",
-        second: "#161C24",
+        main: "#0F3460",
+        second: "#E94560",
       },
     },
   });
