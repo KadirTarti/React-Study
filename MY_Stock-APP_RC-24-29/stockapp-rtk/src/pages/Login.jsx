@@ -7,7 +7,7 @@ import Grid from "@mui/material/Grid";
 import Typography from "@mui/material/Typography";
 import { Formik } from "formik";
 import { Link } from "react-router-dom";
-import image from "../assets/signin0.jpg";
+import image from "../assets/signin0.webp";
 import AuthHeader from "../components/Commons/AuthHeader";
 import AuthImage from "../components/Commons/AuthImage";
 import LoginForm, { loginScheme } from "../components/Forms/LoginForm";
@@ -31,7 +31,7 @@ const Login = () => {
         <Grid item xs={12} sm={10} md={6}>
           <Avatar
             sx={{
-              backgroundColor: "#E94560",
+              backgroundColor: "secondary.main",
               m: "auto",
               width: 50,
               height: 50,
@@ -40,7 +40,7 @@ const Login = () => {
           >
             <LockPersonIcon size="30" />
           </Avatar>
-          <Typography variant="h4" align="center" mb={4} color="#E94560">
+          <Typography variant="h4" align="center" mb={4} color="secondary.main">
             SIGN IN
           </Typography>
 
@@ -54,7 +54,7 @@ const Login = () => {
             }}
             component={(props) => <LoginForm {...props} />}
           ></Formik>
-          <Box sx={{ textAlign: "center", mt: 2, color: "#E94560", textDecoration:'underline'}}         
+          <Box sx={{ textAlign: "center", mt: 2, color: "secondary.main", textDecoration:'underline'}}         
             >
             <Link to="/register">Don't have an account? Sign Up Here</Link>
           </Box>
