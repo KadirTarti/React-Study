@@ -1,6 +1,6 @@
 export const btnStyle = {
   cursor: "pointer",
-  color: "#7B113A",
+  color: "secondary.second",
   "&:hover": {
     color: "red",
   },

@@ -10,10 +10,12 @@ function App() {
     palette: {
       primary: {
         main: "#0F3460",
+        second: "#AE445A",
       },
       secondary: {
         main: "#533483",
         second: "#E94560",
+        third: "#F39F5A"
       },
     },
   });
