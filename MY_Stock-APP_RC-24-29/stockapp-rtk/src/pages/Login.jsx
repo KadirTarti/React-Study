@@ -33,13 +33,14 @@ const Login = () => {
             sx={{
               backgroundColor: "secondary.main",
               m: "auto",
-              width: 40,
-              height: 40,
+              width: 50,
+              height: 50,
+              mb: '10px'
             }}
           >
             <LockPersonIcon size="30" />
           </Avatar>
-          <Typography variant="h4" align="center" mb={4} color="secondary.main" fontWeight={'bold'}>
+          <Typography variant="h4" align="center" mb={4} color="secondary.main">
             SIGN IN
           </Typography>
 
