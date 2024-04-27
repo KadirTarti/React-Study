@@ -6,7 +6,7 @@ import Grid from "@mui/material/Grid";
 import Typography from "@mui/material/Typography";
 import { Formik } from "formik";
 import { Link } from "react-router-dom";
-import image from "../assets/hero.png";
+import image from "../assets/signin0.webp";
 import AuthHeader from "../components/Commons/AuthHeader";
 import AuthImage from "../components/Commons/AuthImage";
 import LoginForm, { loginScheme } from "../components/Forms/LoginForm";
