@@ -52,8 +52,9 @@ const Login = () => {
             }}
             component={(props) => <LoginForm {...props} />}
           ></Formik>
-          <Box sx={{ textAlign: "center", mt: 2, color: "secondary.main" }}>
-            <Link to="/register">Don't have an account? Sign Up</Link>
+          <Box sx={{ textAlign: "center", mt: 2, color: "secondary.main", textDecoration:'underline'}}         
+            >
+            <Link to="/register">Don't have an account? Sign Up Here</Link>
           </Box>
         </Grid>
 
