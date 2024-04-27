@@ -1,4 +1,5 @@
 import LockIcon from "@mui/icons-material/Lock";
+import LockPersonIcon from '@mui/icons-material/LockPerson';
 import Avatar from "@mui/material/Avatar";
 import Box from "@mui/material/Box";
 import Container from "@mui/material/Container";
@@ -36,9 +37,9 @@ const Login = () => {
               height: 40,
             }}
           >
-            <LockIcon size="30" />
+            <LockPersonIcon size="30" />
           </Avatar>
-          <Typography variant="h4" align="center" mb={4} color="secondary.main">
+          <Typography variant="h4" align="center" mb={4} color="secondary.main" fontWeight={'bold'}>
             SIGN IN
           </Typography>
 
