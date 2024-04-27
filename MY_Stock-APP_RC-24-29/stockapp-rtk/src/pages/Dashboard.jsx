@@ -123,7 +123,7 @@ function Dashboard(props) {
             <MenuIcon />
           </IconButton>
           <Typography variant="h6" noWrap component="div" sx={{ flexGrow: 1, fontWeight:'bold'}}>
-          Inventory Management System
+          Stockify
           </Typography>
           <Button
             color="inherit"
