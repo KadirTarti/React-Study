@@ -7,10 +7,10 @@ import { object, string } from "yup"; //! bu şekilde de direk olarak metodları
 
 export const loginScheme = object({
   email: string()
-    .email("Please enter a valid email")
-    .required("Email is required"),
+    .email("Please enter a valid email!")
+    .required("Email is required!"),
   password: string()
-    .required("password is required")
+    .required("Password is required!")
 })
 
 const LoginForm = ({ values, handleChange, errors, touched, handleBlur }) => {
@@ -43,7 +43,7 @@ const LoginForm = ({ values, handleChange, errors, touched, handleBlur }) => {
           error={touched.password && Boolean(errors.password)}
         />
         {!loading ? (
-          <Button variant="contained" type="submit">
+          <Button variant="contained" type="submit" color='error'>
            Sign In
           </Button>
         ) : (
