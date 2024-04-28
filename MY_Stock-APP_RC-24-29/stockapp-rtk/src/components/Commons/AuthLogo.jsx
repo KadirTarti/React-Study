@@ -1,13 +1,14 @@
 import Container from "@mui/material/Container";
 import Grid from "@mui/material/Grid";
-const AuthImage = ({ image }) => {
+
+const AuthLogo = ({ logo }) => {
   return (
     <Grid item display={{ xs: "none",sm:"block" }} sm={10} md={6}>
       <Container>
-        <img src={image} alt="img" style={{ width: "80%" }} />
+        <img src={logo} alt="img" style={{ width: "50%", margin:'auto' }} />
       </Container>
     </Grid>
   );
 };
 
-export default AuthImage;
+export default AuthLogo;
