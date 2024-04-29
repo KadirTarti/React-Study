@@ -6,6 +6,8 @@ import ListItemText from "@mui/material/ListItemText";
 import Toolbar from "@mui/material/Toolbar";
 import React from "react";
 import { useLocation, useNavigate } from "react-router-dom";
+import logo from "../../assets/inventoryMaster.png";
+
 
 const icon = (name) => `/assets/navbar/${name}.svg`;
 
@@ -67,7 +69,10 @@ const MenuListItems = () => {
   console.log(pathname)
   return (
     <div>
-      <Toolbar />
+      <Box sx={{ display: 'flex', justifyContent: 'center', marginBottom: '1rem' }}>
+        <img src={logo} alt="Logo" width={'60%'} />
+      </Box>
+      {/* <Toolbar /> */}
       <List>
         {links.map((item, index) => (
           <ListItem key={item.title} disablePadding>

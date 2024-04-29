@@ -44,6 +44,7 @@ const Register = () => {
             }}
           >
             <HowToRegIcon size="30" />
+          
           </Avatar>
           <Typography
             variant="h4"
@@ -54,7 +55,7 @@ const Register = () => {
           >
             Register
           </Typography>
-
+          
           <Formik
             initialValues={{
               username: "",
