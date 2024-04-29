@@ -11,8 +11,10 @@ import AuthHeader from "../components/Commons/AuthHeader";
 import AuthImage from "../components/Commons/AuthImage";
 import RegisterForm, { SignupSchema } from "../components/Forms/RegisterForm";
 import useAuthCall from "../hooks/useAuthCall";
-import logo from "../assets/inverntoryMaster2.png";
+import logo from "../assets/inventoryMaster.png";
 import AuthLogo from "../components/Commons/AuthLogo";
+import HowToRegIcon from '@mui/icons-material/HowToReg';
+import { Margin } from "@mui/icons-material";
 
 const Register = () => {
   const { register } = useAuthCall();
@@ -21,14 +23,15 @@ const Register = () => {
       <Grid
         container
         justifyContent="center"
-        direction="row-reverse"
         rowSpacing={{ sm: 3 }}
         sx={{
-          height: "100vh",
+          height: "80vh",
           p: 2,
         }}
       >
         <AuthHeader/>
+
+      <img src={logo} alt="Logo" width={'50%'}/>
 
         <Grid item xs={12} sm={10} md={6}>
           <Avatar
@@ -39,7 +42,7 @@ const Register = () => {
               height: 50,
             }}
           >
-            <LockIcon size="30" />
+            <HowToRegIcon size="30" />
           </Avatar>
           <Typography
             variant="h4"
@@ -71,6 +74,8 @@ const Register = () => {
             <Link to="/" >Already have an account? Sign in</Link>
           </Box>
         </Grid>
+
+      
       </Grid>
     </Container>
   );

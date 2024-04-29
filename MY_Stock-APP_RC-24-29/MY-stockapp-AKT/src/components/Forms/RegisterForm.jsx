@@ -1,3 +1,4 @@
+import { Padding } from "@mui/icons-material";
 import Box from "@mui/material/Box";
 import Button from "@mui/material/Button";
 import TextField from "@mui/material/TextField";
@@ -45,8 +46,8 @@ const SignUpForm = ({
 }) => {
   return (
     <div>
-      <Form>
-        <Box sx={{ display: "flex", flexDirection: "column", gap: 2 }}>
+      <Form sx={{padding:'0'}}>
+        <Box sx={{ display: "flex", flexDirection: "column", gap: 2, width:'60%', margin:'auto'}}>
           <TextField
             id="username"
             name="username" //formik name attributedından eşleştirme yapıyor.
