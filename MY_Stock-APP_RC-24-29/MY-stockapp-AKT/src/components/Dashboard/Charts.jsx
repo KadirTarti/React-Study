@@ -24,7 +24,9 @@ const Charts = () => {
     <Grid container justifyContent="center" mt={2} spacing={3}>
       <Grid item xs={12} md={6}>
         <Card>
-          <Title>Sales</Title>
+          <Title 
+          style={{ color: 'green'}}
+          >Sales</Title>
 
           <AreaChart
             className="h-72 mt-4"
@@ -40,7 +42,9 @@ const Charts = () => {
 
       <Grid item xs={12} md={6}>
         <Card>
-          <Title>Purchases</Title>
+          <Title
+          style={{ color: 'darkOrange'}}
+          >Purchases</Title>
           <AreaChart
             className="h-72 mt-4"
             data={purchasesData}

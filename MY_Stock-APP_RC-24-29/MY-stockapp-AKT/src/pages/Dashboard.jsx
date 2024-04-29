@@ -107,7 +107,8 @@ function Dashboard(props) {
         sx={{
           width: { sm: `calc(100% - ${drawerWidth}px)` },
           ml: { sm: `${drawerWidth}px` },
-          backgroundColor: "white",
+          backgroundColor: "secondary.second",
+          opacity:'80%',
           color: "secondary.main",
           borderRadius: "0.5rem",
         }}
@@ -122,8 +123,8 @@ function Dashboard(props) {
           >
             <MenuIcon />
           </IconButton>
-          <Typography variant="h6" noWrap component="div" sx={{ flexGrow: 1}}>
-          Stockify
+          <Typography variant="h6" noWrap component="div" sx={{ flexGrow: 1, color:'darkOrange', textAlign:'center', fontWeight:'bold', textShadow:'1px 1px 2px black'}}>
+          "Manage all your stock with just one click!"
           </Typography>
           <Button
             color="inherit"
