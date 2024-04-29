@@ -5,7 +5,7 @@ const AuthLogo = ({ logo }) => {
   return (
     <Grid item display={{ xs: "none",sm:"block" }} sm={10} md={6}>
       <Container>
-        <img src={logo} alt="img" style={{ width: "50%", margin:'auto' }} />
+        <img src={logo} alt="img" style={{ width: "25%", margin:'auto' }} />
       </Container>
     </Grid>
   );
