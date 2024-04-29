@@ -18,6 +18,7 @@ const BrandCard = ({ name, image, _id, handleOpen, setInitialState }) => {
         height: "400px",
         display: "flex",
         flexDirection: "column",
+        backgroundColor:'#D9D9D9'
       }}
     >
       <CardHeader title={name} />

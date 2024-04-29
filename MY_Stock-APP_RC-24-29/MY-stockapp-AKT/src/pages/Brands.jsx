@@ -49,7 +49,8 @@ const Brands = () => {
           <img src={loadingGif} alt="loading..." height={500} />
         ) : (
           brands.map((brand) => (
-            <Grid item xs={12} md={6} lg={4} xl={3} key={brand._id}>
+            <Grid item xs={12} md={6} lg={4} xl={3} key={brand._id}
+            >
               <BrandCard
                 {...brand}
                 handleOpen={handleOpen}

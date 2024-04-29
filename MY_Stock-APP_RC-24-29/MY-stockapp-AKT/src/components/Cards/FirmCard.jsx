@@ -26,6 +26,7 @@ export default function FirmCard({
         flexDirection: "column",
         justifyContent: "space-between",
         padding: "0.5rem",
+        backgroundColor:'#D9D9D9'
       }}
     >
       <CardContent>

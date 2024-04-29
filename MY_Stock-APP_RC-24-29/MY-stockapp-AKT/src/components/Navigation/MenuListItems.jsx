@@ -99,11 +99,11 @@ const MenuListItems = () => {
                   height: 24,
                   mask: `url(${item.icon}) no-repeat center / contain`,
                   mr:2,
-                  bgcolor: "black",
+                  bgcolor: "primary.main",
                  
                 }}
               />
-              <ListItemText primary={item.title} sx={{color:'orange',}} />
+              <ListItemText primary={item.title} sx={{color:'',}} />
             </ListItemButton>
           </ListItem>
         ))}
