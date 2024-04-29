@@ -24,7 +24,7 @@ const Login = () => {
         <Grid item xs={12} sm={10} md={6}>
           <Avatar
             sx={{
-              backgroundColor: "secondary.main",
+              backgroundColor: "primary.main",
               m: "auto",
               width: 50,
               height: 50,
@@ -33,7 +33,7 @@ const Login = () => {
           >
             <LockPersonIcon size="30" />
           </Avatar>
-          <Typography variant="h5" align="center" mb={4} color="secondary.main">
+          <Typography variant="h5" align="center" mb={4} color="primary.main">
             SIGN IN
           </Typography>
 
@@ -49,7 +49,9 @@ const Login = () => {
           ></Formik>
           <Box sx={{ textAlign: "center", mt: 2, color: "secondary.main", textDecoration:'underline'}}         
             >
-            <Link to="/register">Don't have an account? Sign Up Here</Link>
+            <Link 
+            to="/register"
+            >Don't have an account? Sign Up Here</Link>
           </Box>
         </Grid>
 
