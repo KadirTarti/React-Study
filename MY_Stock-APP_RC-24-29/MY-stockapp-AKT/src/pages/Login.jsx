@@ -7,7 +7,7 @@ import Grid from "@mui/material/Grid";
 import Typography from "@mui/material/Typography";
 import { Formik } from "formik";
 import { Link } from "react-router-dom";
-import logo from "../assets/inventoryMaster.png";
+import logo from "../assets/inventoryMaster2.png";
 import AuthHeader from "../components/Commons/AuthHeader";
 import AuthImage from "../components/Commons/AuthImage";
 import LoginForm, { loginScheme } from "../components/Forms/LoginForm";

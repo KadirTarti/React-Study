@@ -10,7 +10,7 @@ import AuthHeader from "../components/Commons/AuthHeader";
 import AuthImage from "../components/Commons/AuthImage";
 import RegisterForm, { SignupSchema } from "../components/Forms/RegisterForm";
 import useAuthCall from "../hooks/useAuthCall";
-import logo from "../assets/inventoryMaster.png";
+import logo from "../assets/inventoryMaster2.png";
 import AuthLogo from "../components/Commons/AuthLogo";
 import HowToRegIcon from '@mui/icons-material/HowToReg';
 import { Margin } from "@mui/icons-material";
@@ -29,8 +29,8 @@ const Register = () => {
         }}
         
       >
-        <AuthHeader/>
-      <img src={logo} alt="Logo" width={'50%'}/>
+        <AuthHeader/> 
+      <img src={logo} alt="Logo" width={'40%'}/>
 
         <Grid item xs={12} sm={10} md={6}
         sx={{boxShadow:'1px 1px 10px black', mt:1, p:2}}>
