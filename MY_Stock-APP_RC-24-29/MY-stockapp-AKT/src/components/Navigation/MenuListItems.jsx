@@ -69,7 +69,7 @@ const MenuListItems = () => {
   console.log(pathname)
   return (
     <div>
-      <Box sx={{ display: 'flex', justifyContent: 'center', marginBottom: '1rem' }}>
+      <Box sx={{ display: 'flex', justifyContent: 'center', marginBottom: '1rem'}}>
         <img src={logo} alt="Logo" width={'60%'} />
       </Box>
       {/* <Toolbar /> */}

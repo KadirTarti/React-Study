@@ -2,6 +2,10 @@
 @tailwind components;
 @tailwind utilities;
 
+*{
+  font-family:monospace;
+}
+
 .loader {
   width: 128px;
   height: 128px;
