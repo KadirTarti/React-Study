@@ -58,8 +58,8 @@ const iconStyle = {
     backgroundColor: "secondary.second",
     // borderRadius: "0.5rem",
     "&:hover": {
-      backgroundColor: "secondary.main",
-      color: "secondary.second",
+      backgroundColor: "#680747",
+      color: "gold",
     },
     color: "white",
   };
@@ -99,10 +99,11 @@ const MenuListItems = () => {
                   height: 24,
                   mask: `url(${item.icon}) no-repeat center / contain`,
                   mr:2,
-                  bgcolor: "darkCyan",
+                  bgcolor: "black",
+                 
                 }}
               />
-              <ListItemText primary={item.title} sx={{color:'',}} />
+              <ListItemText primary={item.title} sx={{color:'orange',}} />
             </ListItemButton>
           </ListItem>
         ))}
