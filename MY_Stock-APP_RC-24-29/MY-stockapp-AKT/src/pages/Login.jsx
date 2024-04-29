@@ -13,13 +13,15 @@ import AuthImage from "../components/Commons/AuthImage";
 import LoginForm, { loginScheme } from "../components/Forms/LoginForm";
 import useAuthCall from "../hooks/useAuthCall";
 import AuthLogo from "../components/Commons/AuthLogo";
+import zIndex from "@mui/material/styles/zIndex";
 
 const Login = () => {
   const { login } = useAuthCall();
   return (
     <Container maxWidth="lg">
-      <AuthLogo logo={logo}/>
+      <AuthLogo logo={logo} />
         {/* <AuthHeader /> */}
+        <Box sx={{boxShadow:'1px 1px 6px black', mt:1, p:2}}>
         <Grid item xs={12} sm={10} md={6}>
           <Avatar
             sx={{
@@ -32,7 +34,7 @@ const Login = () => {
           >
             <LockPersonIcon size="30" />
           </Avatar>
-          <Typography variant="h5" align="center" mb={4} color="primary.main">
+          <Typography variant="h5" align="center" mb={4} color="primary.main" >
             SIGN IN
           </Typography>
 
@@ -53,6 +55,7 @@ const Login = () => {
             >Don't have an account? Sign Up Here</Link>
           </Box>
         </Grid>
+        </Box>
 
         {/* <AuthImage image={image} /> */}
       

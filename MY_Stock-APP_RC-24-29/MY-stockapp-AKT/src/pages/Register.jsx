@@ -20,7 +20,7 @@ const Register = () => {
   const { register } = useAuthCall();
   return (
     <Container maxWidth="lg">
-      <Grid
+      <Grid 
         container
         justifyContent="center"
         rowSpacing={{ sm: 3 }}
@@ -30,10 +30,11 @@ const Register = () => {
         }}
       >
         <AuthHeader/>
-
+        
       <img src={logo} alt="Logo" width={'50%'}/>
 
-        <Grid item xs={12} sm={10} md={6}>
+        <Grid item xs={12} sm={10} md={6}
+        sx={{boxShadow:'1px 1px 10px black', mt:1, p:2}}>
           <Avatar
             sx={{
               backgroundColor: "primary.main",
