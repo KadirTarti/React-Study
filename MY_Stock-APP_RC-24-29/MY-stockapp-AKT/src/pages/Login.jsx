@@ -34,7 +34,7 @@ const Login = () => {
           >
             <LockPersonIcon size="30" />
           </Avatar>
-          <Typography variant="h5" align="center" mb={4} color="primary.main" >
+          <Typography variant="h5" align="center" mb={4} color="primary.main" fontFamily={"monospace"} >
             SIGN IN
           </Typography>
 
@@ -48,10 +48,11 @@ const Login = () => {
             }}
             component={(props) => <LoginForm {...props} />}
           ></Formik>
-          <Box sx={{ textAlign: "center", mt: 2, color: "secondary.main", textDecoration:'underline'}}         
+          <Box sx={{ textAlign: "center", mt: 2, color: "secondary.main", textDecoration:'underline', fontSize:'16px'}}         
             >
             <Link 
             to="/register"
+            
             >Don't have an account? Sign Up Here</Link>
           </Box>
         </Grid>

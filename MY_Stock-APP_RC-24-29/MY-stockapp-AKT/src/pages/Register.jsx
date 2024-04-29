@@ -52,6 +52,7 @@ const Register = () => {
             mb={2}
             mt={1}
             color="primary.main"
+            fontFamily={"monospace"}
           >
             Register
           </Typography>
@@ -72,7 +73,7 @@ const Register = () => {
             }}
             component={(props) => <RegisterForm {...props} />}
           ></Formik>
-          <Box sx={{ textAlign: "center", mt: 2, color: "secondary.main", textDecoration:'underLine' }}>
+          <Box sx={{ textAlign: "center", mt: 2, color: "secondary.main", textDecoration:'underLine', fontSize:'16px' }}>
             <Link to="/" >Already have an account? Sign in</Link>
           </Box>
         </Grid>

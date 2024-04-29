@@ -19,6 +19,7 @@ const LoginForm = ({ values, handleChange, errors, touched, handleBlur }) => {
     <Form>
       <Box sx={{ display: "flex", flexDirection: "column", gap: 2, width:'40%', margin:'auto'  }}>
         <TextField
+        style={{fontFamily:'monospace'}}
           label="Email"
           name="email"
           id="email"
