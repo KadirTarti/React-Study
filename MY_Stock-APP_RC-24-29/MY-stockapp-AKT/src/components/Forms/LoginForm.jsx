@@ -29,7 +29,7 @@ const LoginForm = ({ values, handleChange, errors, touched, handleBlur }) => {
 
   return (
     <Form>
-      <Box sx={{ display: "flex", flexDirection: "column", gap: 1, width:'40%', margin:'auto'  }}>
+    <Box sx={{ display: "flex", flexDirection: "column", gap: 1, width:'60%', margin:'auto'  }}>
         <TextField
           label="Email"
           name="email"

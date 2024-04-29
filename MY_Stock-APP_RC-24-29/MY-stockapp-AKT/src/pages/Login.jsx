@@ -1,5 +1,5 @@
 import LockIcon from "@mui/icons-material/Lock";
-import LockPersonIcon from '@mui/icons-material/LockPerson';
+import LockPersonIcon from "@mui/icons-material/LockPerson";
 import Avatar from "@mui/material/Avatar";
 import Box from "@mui/material/Box";
 import Container from "@mui/material/Container";
@@ -19,9 +19,19 @@ const Login = () => {
   const { login } = useAuthCall();
   return (
     <Container maxWidth="lg">
-      <AuthLogo logo={logo} />
-        {/* <AuthHeader /> */}
-        <Box sx={{boxShadow:'1px 1px 6px black', mt:1, p:2}}>
+      <Box sx={{ marginBottom: "16px" }}>
+        <AuthLogo logo={logo} />
+      </Box>
+      {/* <AuthHeader /> */}
+      <Box
+        sx={{
+          boxShadow: "1px 1px 6px black",
+          mt: 2,
+          p: 2,
+          width: "50%",
+          margin: "auto",
+        }}
+      >
         <Grid item xs={12} sm={10} md={6}>
           <Avatar
             sx={{
@@ -29,12 +39,18 @@ const Login = () => {
               m: "auto",
               width: 50,
               height: 50,
-              mb: '10px'
+              mb: "10px",
             }}
           >
             <LockPersonIcon size="30" />
           </Avatar>
-          <Typography variant="h5" align="center" mb={4} color="primary.main" fontFamily={"monospace"} >
+          <Typography
+            variant="h5"
+            align="center"
+            mb={4}
+            color="primary.main"
+            fontFamily={"monospace"}
+          >
             SIGN IN
           </Typography>
 
@@ -48,18 +64,21 @@ const Login = () => {
             }}
             component={(props) => <LoginForm {...props} />}
           ></Formik>
-          <Box sx={{ textAlign: "center", mt: 2, color: "secondary.main", textDecoration:'underline', fontSize:'16px'}}         
-            >
-            <Link 
-            to="/register"
-            
-            >Don't have an account? Sign Up Here</Link>
+          <Box
+            sx={{
+              textAlign: "center",
+              mt: 2,
+              color: "secondary.main",
+              textDecoration: "underline",
+              fontSize: "16px",
+            }}
+          >
+            <Link to="/register">Don't have an account? Sign Up Here</Link>
           </Box>
         </Grid>
-        </Box>
+      </Box>
 
-        {/* <AuthImage image={image} /> */}
-      
+      {/* <AuthImage image={image} /> */}
     </Container>
   );
 };

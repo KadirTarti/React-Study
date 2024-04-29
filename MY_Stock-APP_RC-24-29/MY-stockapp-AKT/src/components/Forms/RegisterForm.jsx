@@ -64,7 +64,7 @@ const SignUpForm = ({
 
   return (
     <div>
-      <Form sx={{padding:'0'}}>
+      <Form>
         <Box sx={{ display: "flex", flexDirection: "column", gap: 1, width:'100%', margin:'auto'}}>
           <TextField
             id="username"
