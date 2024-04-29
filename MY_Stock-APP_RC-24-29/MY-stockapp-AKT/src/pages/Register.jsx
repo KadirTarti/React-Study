@@ -27,9 +27,9 @@ const Register = () => {
           height: "80vh",
           p: 2,
         }}
+        
       >
         <AuthHeader/>
-        
       <img src={logo} alt="Logo" width={'50%'}/>
 
         <Grid item xs={12} sm={10} md={6}
@@ -63,6 +63,7 @@ const Register = () => {
               lastName: "",
               email: "",
               password: "",
+              confirmPassword:""
             }}
             validationSchema={SignupSchema}
             onSubmit={(values, actions) => {

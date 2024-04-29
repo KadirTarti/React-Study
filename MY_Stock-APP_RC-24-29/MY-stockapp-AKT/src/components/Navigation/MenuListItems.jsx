@@ -47,15 +47,15 @@ const links = [
 
 const iconStyle = {
     color: "secondary.main",
-    borderRadius: "1rem",
+    // borderRadius: "1rem",
     "&:hover": {
-      backgroundColor: "secondary.main",
-      color: "white",
+      backgroundColor: "lightBlue",
+      color: "black",
     },
   };
   const selectedStyle = {
     backgroundColor: "secondary.second",
-    borderRadius: "1rem",
+    // borderRadius: "0.5rem",
     "&:hover": {
       backgroundColor: "secondary.main",
       color: "secondary.second",

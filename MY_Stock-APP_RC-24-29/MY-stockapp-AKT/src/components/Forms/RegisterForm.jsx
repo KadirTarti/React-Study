@@ -4,6 +4,10 @@ import Button from "@mui/material/Button";
 import TextField from "@mui/material/TextField";
 import { Form } from "formik";
 import * as Yup from "yup";
+import Visibility from '@mui/icons-material/Visibility';
+import VisibilityOff from '@mui/icons-material/VisibilityOff';
+import { useState } from "react";
+import { IconButton, InputAdornment } from "@mui/material";
 
 //! Yup ile istediğimiz alanlara istediğimiz validasyon koşullarını
 //  oluşturuyoruz. Sonra oluşturduğumuz bu şemayı formike tanımlayarak
@@ -24,16 +28,19 @@ export const SignupSchema = Yup.object().shape({
     .required("Required"),
   email: Yup.string().email("Invalid email").required("Required"),
   password: Yup.string()
-    .min(8, "Er muss mindestens 8 Zeichen lang sein!")
-    .max(50, "Er darf maximal 50 Zeichen lang sein!")
-    .matches(/\d+/, "Muss mindestens eine Ziffer enthalten!")
-    .matches(/[a-z]/, "Muss mindestens einen Kleinbuchstaben enthalten!")
-    .matches(/[A-Z]/, "Muss mindestens einen Großbuchstaben enthalten!")
+    .min(8, "It must be at least 8 characters long!")
+    .max(50, "It can be a maximum of 50 characters long!")
+    .matches(/\d+/, "Must contain at least one digit!")
+    .matches(/[a-z]/, "Must contain at least one lowercase letter!")
+    .matches(/[A-Z]/, "Must contain at least one uppercase letter!")
     .matches(
       /[@$?!%&*]+/,
-      "Muss mindestens ein Sonderzeichen (@$!%*?&) enthalten!"
+      "Must contain at least one special character (@$!%*?&)!"
     )
     .required(),
+    confirmPassword: Yup.string()
+    .oneOf([Yup.ref('password'), null], 'Passwords must match')
+    .required("It must be at least 8 characters long!")
 });
 
 const SignUpForm = ({
@@ -44,10 +51,21 @@ const SignUpForm = ({
   handleBlur,
   isSubmitting,
 }) => {
+  const [showPassword, setShowPassword] = useState(false);
+  const [showConfirmPassword, setShowConfirmPassword] = useState(false);
+
+  const handleClickShowPassword = () => {
+    setShowPassword(!showPassword);
+  };
+
+  const handleClickShowConfirmPassword = () => {
+    setShowConfirmPassword(!showConfirmPassword);
+ };
+
   return (
     <div>
       <Form sx={{padding:'0'}}>
-        <Box sx={{ display: "flex", flexDirection: "column", gap: 2, width:'60%', margin:'auto'}}>
+        <Box sx={{ display: "flex", flexDirection: "column", gap: 1, width:'60%', margin:'auto'}}>
           <TextField
             id="username"
             name="username" //formik name attributedından eşleştirme yapıyor.
@@ -109,7 +127,7 @@ const SignUpForm = ({
             label="Password"
             name="password"
             id="password"
-            type="password"
+            type={showPassword ? 'text' : 'password'}
             variant="outlined"
             style={{fontFamily:'monospace'}}
             value={values.password}
@@ -117,6 +135,46 @@ const SignUpForm = ({
             onBlur={handleBlur}
             helperText={touched.password && errors.password}
             error={touched.password && Boolean(errors.password)}
+            InputProps={{
+              endAdornment: (
+                <InputAdornment position="end">
+                 <IconButton
+                    aria-label="toggle password visibility"
+                    onClick={handleClickShowPassword}
+                 >
+                    {showPassword ? <VisibilityOff /> : <Visibility />}
+                 </IconButton>
+                </InputAdornment>),
+            }}      
+          /> 
+          
+           {/* <IconButton onClick={handleClickShowPassword}>
+              {showPassword ? <VisibilityOff /> : <Visibility />}
+            </IconButton> */}
+
+          <TextField
+            label="Confirm Password"
+            name="confirmPassword"
+            id="confirmPassword"
+            type={showConfirmPassword ? 'text' : 'password'}
+            variant="outlined"
+            style={{fontFamily:'monospace'}}
+            value={values.confrimPassword}
+            onChange={handleChange}
+            onBlur={handleBlur}
+            helperText={touched.confirmPassword && errors.confirmPassword}
+            error={touched.confirmPassword && Boolean(errors.confirmPassword)}
+            InputProps={{
+              endAdornment: (
+                <InputAdornment position="end">
+                 <IconButton
+                    aria-label="toggle password visibility"
+                    onClick={handleClickShowConfirmPassword}
+                 >
+                    {showConfirmPassword ? <VisibilityOff /> : <Visibility />}
+                 </IconButton>
+                </InputAdornment>),
+            }}  
           />
 
           <Button
