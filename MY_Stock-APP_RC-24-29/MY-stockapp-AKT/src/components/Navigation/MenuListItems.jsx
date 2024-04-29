@@ -7,6 +7,7 @@ import Toolbar from "@mui/material/Toolbar";
 import React from "react";
 import { useLocation, useNavigate } from "react-router-dom";
 import logo from "../../assets/inventoryMaster.png";
+import { DarkmodeSwitch } from "../../features/DarkMode";
 
 
 const icon = (name) => `/assets/navbar/${name}.svg`;
@@ -68,7 +69,7 @@ const MenuListItems = () => {
   const {pathname} = useLocation() 
   console.log(pathname)
   return (
-    <div>
+    <div className="dark">
       <Box sx={{ display: 'flex', justifyContent: 'center', marginBottom: '1rem'}}>
         <img src={logo} alt="Logo" width={'60%'} />
       </Box>

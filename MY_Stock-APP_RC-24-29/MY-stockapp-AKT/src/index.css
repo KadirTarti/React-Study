@@ -36,3 +36,8 @@
     transform: rotate(360deg);
   }
 }
+
+.dark body {
+  background-color: #595c64;
+  color: white; /* Light gray background for dark mode */
+}

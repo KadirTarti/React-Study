@@ -53,6 +53,7 @@ import * as React from "react";
 import { Outlet } from "react-router-dom";
 import useAuthCall from "../hooks/useAuthCall";
 import MenuListItems from "../components/Navigation/MenuListItems";
+import { DarkmodeSwitch } from "../features/DarkMode";
 
 const drawerWidth = 240;
 
@@ -126,6 +127,7 @@ function Dashboard(props) {
           <Typography variant="h6" noWrap component="div" sx={{ flexGrow: 1, color:'red', textAlign:'center', fontWeight:'bold', textShadow:'1px 1px 2px black', fontFamily:'monospace'}}>
           "Manage all your stock with just one click!"
           </Typography>
+          <DarkmodeSwitch/>
           <Button
             color="inherit"
             sx={{

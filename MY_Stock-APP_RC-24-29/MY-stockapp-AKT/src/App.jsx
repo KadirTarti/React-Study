@@ -6,6 +6,9 @@ import store, { persistor } from "./app/store";
 import AppRouter from "./router/AppRouter";
 
 function App() {
+
+
+  
   const theme = createTheme({
     palette: {
       primary: {
@@ -19,6 +22,10 @@ function App() {
       },
     },
   });
+
+ 
+
+
   return (
     <>
       <ThemeProvider theme={theme}>
