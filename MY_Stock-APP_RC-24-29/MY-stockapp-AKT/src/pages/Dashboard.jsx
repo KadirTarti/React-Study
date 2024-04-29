@@ -123,7 +123,7 @@ function Dashboard(props) {
           >
             <MenuIcon />
           </IconButton>
-          <Typography variant="h6" noWrap component="div" sx={{ flexGrow: 1, color:'darkOrange', textAlign:'center', fontWeight:'bold', textShadow:'1px 1px 2px black', fontFamily:'monospace'}}>
+          <Typography variant="h6" noWrap component="div" sx={{ flexGrow: 1, color:'red', textAlign:'center', fontWeight:'bold', textShadow:'1px 1px 2px black', fontFamily:'monospace'}}>
           "Manage all your stock with just one click!"
           </Typography>
           <Button

@@ -2,7 +2,7 @@ import Container from "@mui/material/Container";
 import Grid from "@mui/material/Grid";
 import React, { useEffect, useState } from "react";
 import { useSelector } from "react-redux";
-import loadingGif from "../assets/loading.gif";
+import loadingGif from "../assets/loading1.gif";
 import BrandCard from "../components/Cards/BrandCard";
 import MyButton from "../components/Commons/MyButton";
 import PageHeader from "../components/Commons/PageHeader";
