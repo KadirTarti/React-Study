@@ -65,7 +65,7 @@ const SignUpForm = ({
   return (
     <div>
       <Form sx={{padding:'0'}}>
-        <Box sx={{ display: "flex", flexDirection: "column", gap: 1, width:'60%', margin:'auto'}}>
+        <Box sx={{ display: "flex", flexDirection: "column", gap: 1, width:'100%', margin:'auto'}}>
           <TextField
             id="username"
             name="username" //formik name attributedından eşleştirme yapıyor.

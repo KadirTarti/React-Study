@@ -26,14 +26,22 @@ const Register = () => {
         sx={{
           height: "80vh",
           p: 2,
+          columnGap: 4,
         }}
         
       >
         <AuthHeader/> 
-      <img src={logo} alt="Logo" width={'40%'}/>
+      <img src={logo} alt="Logo" style={{ width: '30%', height: 'auto', objectFit: 'contain'}}/>
 
         <Grid item xs={12} sm={10} md={6}
-        sx={{boxShadow:'1px 1px 10px black', mt:1, p:2}}>
+        sx={{boxShadow:'1px 1px 10px black', mt:1, p:2,
+        display: 'flex',
+    flexDirection: 'column',
+    justifyContent: 'center',
+    alignItems: 'center',
+        }}>
+
+
           <Avatar
             sx={{
               backgroundColor: "primary.main",
@@ -43,7 +51,7 @@ const Register = () => {
             }}
           >
             <HowToRegIcon size="30" />
-          
+        
           </Avatar>
           <Typography
             variant="h4"
