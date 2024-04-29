@@ -11,6 +11,8 @@ import AuthHeader from "../components/Commons/AuthHeader";
 import AuthImage from "../components/Commons/AuthImage";
 import RegisterForm, { SignupSchema } from "../components/Forms/RegisterForm";
 import useAuthCall from "../hooks/useAuthCall";
+import logo from "../assets/inverntoryMaster2.png";
+import AuthLogo from "../components/Commons/AuthLogo";
 
 const Register = () => {
   const { register } = useAuthCall();
@@ -65,12 +67,10 @@ const Register = () => {
             }}
             component={(props) => <RegisterForm {...props} />}
           ></Formik>
-          <Box sx={{ textAlign: "center", mt: 2, color: "secondary.main" }}>
-            <Link to="/">Already have an account? Sign in</Link>
+          <Box sx={{ textAlign: "center", mt: 2, color: "secondary.main", textDecoration:'underLine' }}>
+            <Link to="/" >Already have an account? Sign in</Link>
           </Box>
         </Grid>
-
-        <AuthImage image={image} />
       </Grid>
     </Container>
   );
