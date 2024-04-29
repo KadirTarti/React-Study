@@ -30,7 +30,6 @@ export default function BrandForm({ open, handleClose, initialState }) {
     <Box component="form" onSubmit={handleSubmit} sx={flexColumn}>
       {brandFields.map((item) => (
         <MyTextField
-        
           onChange={handleChange}
           key={item.id}
           value={info[item.id]}
