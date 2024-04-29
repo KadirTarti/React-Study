@@ -19,12 +19,12 @@ const LoginForm = ({ values, handleChange, errors, touched, handleBlur }) => {
     <Form>
       <Box sx={{ display: "flex", flexDirection: "column", gap: 2, width:'40%', margin:'auto'  }}>
         <TextField
-        style={{fontFamily:'monospace'}}
           label="Email"
           name="email"
           id="email"
           type="email"
           variant="outlined"
+          style={{fontFamily:'monospace'}}
           value={values.email}
           onChange={handleChange}
           onBlur={handleBlur}
@@ -32,11 +32,12 @@ const LoginForm = ({ values, handleChange, errors, touched, handleBlur }) => {
           error={touched.email && Boolean(errors.email)}
         />
         <TextField
-          label="password"
+          label="Password"
           name="password"
           id="password"
           type="password"
           variant="outlined"
+          style={{fontFamily:'monospace'}}
           value={values.password}
           onChange={handleChange}
           onBlur={handleBlur}
@@ -44,7 +45,7 @@ const LoginForm = ({ values, handleChange, errors, touched, handleBlur }) => {
           error={touched.password && Boolean(errors.password)}
         />
         {!loading ? (
-          <Button variant="contained" type="submit">
+          <Button variant="contained" type="submit" style={{fontFamily:'monospace'}}>
            Sign In
           </Button>
         ) : (

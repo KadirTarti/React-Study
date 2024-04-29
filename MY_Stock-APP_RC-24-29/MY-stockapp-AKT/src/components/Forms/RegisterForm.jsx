@@ -55,6 +55,7 @@ const SignUpForm = ({
             inputProps={{
               autoComplete: "off"  // Burada "autoComplete" kullanılmalıdır.
             }}
+            style={{fontFamily:'monospace'}}
             value={values.username}
             onChange={handleChange}
             onBlur={handleBlur} // kullanıcının input alanından ayrıldığını yaklayan event
@@ -71,6 +72,7 @@ const SignUpForm = ({
             }}
             type="text"
             variant="outlined"
+            style={{fontFamily:'monospace'}}
             value={values.firstName}
             onChange={handleChange}
             onBlur={handleBlur}
@@ -83,6 +85,7 @@ const SignUpForm = ({
             id="lastName"
             type="text"
             variant="outlined"
+            style={{fontFamily:'monospace'}}
             value={values.lastName}
             onChange={handleChange}
             onBlur={handleBlur}
@@ -95,6 +98,7 @@ const SignUpForm = ({
             id="email"
             type="email"
             variant="outlined"
+            style={{fontFamily:'monospace'}}
             value={values.email}
             onChange={handleChange}
             onBlur={handleBlur}
@@ -107,6 +111,7 @@ const SignUpForm = ({
             id="password"
             type="password"
             variant="outlined"
+            style={{fontFamily:'monospace'}}
             value={values.password}
             onChange={handleChange}
             onBlur={handleBlur}
@@ -118,6 +123,7 @@ const SignUpForm = ({
             type="submit"
             variant="contained"
             size="large"
+            style={{fontFamily:'monospace'}}
             disabled={isSubmitting}
           >
             {isSubmitting ? "Loading..." : "Sign Up"}

@@ -107,7 +107,7 @@ function Dashboard(props) {
         sx={{
           width: { sm: `calc(100% - ${drawerWidth}px)` },
           ml: { sm: `${drawerWidth}px` },
-          backgroundColor: "secondary.second",
+          backgroundColor: "lightGray",
           opacity:'80%',
           color: "secondary.main",
           borderRadius: "0.5rem",
@@ -123,7 +123,7 @@ function Dashboard(props) {
           >
             <MenuIcon />
           </IconButton>
-          <Typography variant="h6" noWrap component="div" sx={{ flexGrow: 1, color:'darkOrange', textAlign:'center', fontWeight:'bold', textShadow:'1px 1px 2px black'}}>
+          <Typography variant="h6" noWrap component="div" sx={{ flexGrow: 1, color:'darkOrange', textAlign:'center', fontWeight:'bold', textShadow:'1px 1px 2px black', fontFamily:'monospace'}}>
           "Manage all your stock with just one click!"
           </Typography>
           <Button
