@@ -17,7 +17,7 @@ const LoginForm = ({ values, handleChange, errors, touched, handleBlur }) => {
   const { loading } = useSelector(state => state.auth);// storeda yaptığımız fetchStart işlemini kullanmış olduk.
   return (
     <Form>
-      <Box sx={{ display: "flex", flexDirection: "column", gap: 2 }}>
+      <Box sx={{ display: "flex", flexDirection: "column", gap: 2, width:'80%' }}>
         <TextField
           label="Email"
           name="email"
