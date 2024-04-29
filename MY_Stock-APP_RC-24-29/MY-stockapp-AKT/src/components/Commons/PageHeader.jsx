@@ -5,9 +5,11 @@ const PageHeader = ({ text }) => {
   return (
     <Typography
       align="center"
-      variant="h4"
+      variant="h5"
+      fontFamily={'monospace'}
+      fontWeight={'bold'}
       component={"h1"}
-      color={"secondary.second"}
+      color={"darkCyan"}
     >
       {text}
     </Typography>

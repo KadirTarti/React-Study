@@ -6,7 +6,7 @@ import ListItemText from "@mui/material/ListItemText";
 import Toolbar from "@mui/material/Toolbar";
 import React from "react";
 import { useLocation, useNavigate } from "react-router-dom";
-import logo from "../../assets/inventoryMaster.png";
+import logo from "../../assets/LogoDashboard.png";
 import { DarkmodeSwitch } from "../../features/DarkMode";
 
 
@@ -69,7 +69,7 @@ const MenuListItems = () => {
   const {pathname} = useLocation() 
   console.log(pathname)
   return (
-    <div className="dark">
+    <div className="MenuList">
       <Box sx={{ display: 'flex', justifyContent: 'center', marginBottom: '1rem'}}>
         <img src={logo} alt="Logo" width={'60%'} />
       </Box>
@@ -99,10 +99,10 @@ const MenuListItems = () => {
                   height: 24,
                   mask: `url(${item.icon}) no-repeat center / contain`,
                   mr:2,
-                  bgcolor: "currentColor",
+                  bgcolor: "darkCyan",
                 }}
               />
-              <ListItemText primary={item.title} />
+              <ListItemText primary={item.title} sx={{color:'',}} />
             </ListItemButton>
           </ListItem>
         ))}
