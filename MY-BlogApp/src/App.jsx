@@ -1,18 +1,24 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
-import './App.css'
-import Login from './pages/Login'
+import { Provider } from "react-redux";
+import { ToastContainer } from "react-toastify";
+import store, { persistor } from "./app/store";
+import AppRouter from "./router/AppRouter";
+import { PersistGate } from 'redux-persist/es/integration/react';
+import { PersistGate } from 'redux-persist/integration/react'
+ 
 
 function App() {
-  const [count, setCount] = useState(0)
+  
 
   return (
     <>
-      <Login/>
-
+        <Provider store={store}>
+          <PersistGate loading={null} persistor={persistor}>
+            <AppRouter />
+          </PersistGate>
+        </Provider>
+        <ToastContainer />
     </>
-  )
+  );
 }
 
 export default App
