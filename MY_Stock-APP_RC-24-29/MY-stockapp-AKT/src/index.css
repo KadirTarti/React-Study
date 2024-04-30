@@ -37,10 +37,6 @@
   }
 }
 
-.dark body {
-  background-color: #D9D9D9;
-  color: white; /* Light gray background for dark mode */
-}
 
 .MenuList {
   background-color: #D9D9D9;
