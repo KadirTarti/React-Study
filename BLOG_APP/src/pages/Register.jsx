@@ -24,6 +24,14 @@ const SignupSchema = Yup.object().shape({
     .max(50, "Too Long!")
     .required("Required"),
   email: Yup.string().email("Invalid email").required("Required"),
+  password: Yup.string()
+  .min(8)
+  .max(20)
+  .matches(/\d/, "Must contain a number")
+  .matches(/[A-Z]/, "Must contain a digit character")
+  .matches(/[@+&?!*%-]/, "Must contain a symbol (@+&?!*%-)")
+  .required()
+  
 });
 
 const Register = () => {
@@ -88,7 +96,7 @@ const Register = () => {
               isSubmitting,
             }) => (
               <Form>
-              <Box sx={{display: flex, flexDirection:column, gap:1}}>
+              <Box sx={{display: "flex", flexDirection:"column", gap:1}}>
 
               <TextField
               id='username'
