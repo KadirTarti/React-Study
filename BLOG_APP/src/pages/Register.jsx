@@ -5,7 +5,7 @@ import LockIcon from "@mui/icons-material/Lock";
 import image from "../assets/regi.avif";
 import Grid from "@mui/material/Grid";
 import { Link } from "react-router-dom";
-import { Box, TextField } from "@mui/material";
+import { Box, Button, TextField } from "@mui/material";
 import AuthHeader from "../components/AuthHeader";
 import AuthImage from "../components/AuthImage";
 import { Formik, Form } from "formik";
@@ -168,6 +168,9 @@ const Register = () => {
               error={touched.bio && Boolean(errors.bio)}
               helperText={touched.bio && errors.bio}
               />
+              <Button type='submit'>
+              Sign Up
+              </Button>
             </Form>
             )
             }
