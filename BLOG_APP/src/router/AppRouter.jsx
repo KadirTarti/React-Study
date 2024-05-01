@@ -5,6 +5,7 @@ import Register from "../pages/Register";
 import PrivateRouter from "./PrivateRouter";
 import Dashboard from "../pages/Dashboard";
 import Home from "../pages/Home";
+import Header from "../components/Header";
 
 const AppRouter = () => {
   return (
