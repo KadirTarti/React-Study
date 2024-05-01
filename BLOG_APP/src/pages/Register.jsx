@@ -88,6 +88,8 @@ const Register = () => {
               isSubmitting,
             }) => (
               <Form>
+              <Box sx={{display: flex, flexDirection:column, gap:1}}>
+
               <TextField
               id='username'
               name='username'
@@ -168,9 +170,10 @@ const Register = () => {
               error={touched.bio && Boolean(errors.bio)}
               helperText={touched.bio && errors.bio}
               />
-              <Button type='submit'>
+              <Button variant="contained"              type='submit'>
               Sign Up
               </Button>
+              </Box>
             </Form>
             )
             }
