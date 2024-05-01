@@ -30,8 +30,16 @@ const SignupSchema = Yup.object().shape({
   .matches(/\d/, "Must contain a number")
   .matches(/[A-Z]/, "Must contain a digit character")
   .matches(/[@+&?!*%-]/, "Must contain a symbol (@+&?!*%-)")
-  .required()
-  
+  .required(),
+  image: Yup.string()
+  .min(3)
+  .required(),
+  city: Yup.string()
+  .min(3)
+  .required(),
+  bio: Yup.string()
+  .min(10)
+  .required(),
 });
 
 const Register = () => {
