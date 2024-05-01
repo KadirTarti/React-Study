@@ -98,6 +98,76 @@ const Register = () => {
               error={touched.username && Boolean(errors.username)}
               helperText={touched.username && errors.username}
               />
+                <TextField
+              id='password'
+              name='password'
+              label='Password'
+              value={values.password}
+              onChange={handleChange}
+              onBlur={handleBlur}
+              error={touched.password && Boolean(errors.password)}
+              helperText={touched.password && errors.password}
+              />
+                <TextField
+              id='email'
+              name='email'
+              label='Email'
+              value={values.email}
+              onChange={handleChange}
+              onBlur={handleBlur}
+              error={touched.email && Boolean(errors.email)}
+              helperText={touched.email && errors.email}
+              />
+                <TextField
+              id='firstName'
+              name='firstName'
+              label='FirstName'
+              value={values.firstName}
+              onChange={handleChange}
+              onBlur={handleBlur}
+              error={touched.firstName && Boolean(errors.firstName)}
+              helperText={touched.firstName && errors.firstName}
+              />
+                <TextField
+              id='lastName'
+              name='lastName'
+              label='LastName'
+              value={values.lastName}
+              onChange={handleChange}
+              onBlur={handleBlur}
+              error={touched.lastName && Boolean(errors.lastName)}
+              helperText={touched.lastName && errors.lastName}
+              />
+                <TextField
+              id='image'
+              name='image'
+              label='Image'
+              value={values.image}
+              onChange={handleChange}
+              onBlur={handleBlur}
+              error={touched.image && Boolean(errors.image)}
+              helperText={touched.image && errors.image}
+              />
+                <TextField
+              id='city'
+              name='city'
+              label='City'
+              value={values.city}
+              onChange={handleChange}
+              onBlur={handleBlur}
+              error={touched.city && Boolean(errors.city)}
+              helperText={touched.city && errors.city}
+              />
+                <TextField
+              id='bio'
+              name='bio'
+              label='Bio'
+              value={values.bio}
+              onChange={handleChange}
+              onBlur={handleBlur}
+              error={touched.bio && Boolean(errors.bio)}
+              helperText={touched.bio && errors.bio}
+              />
             </Form>
             )
             }
