@@ -12,6 +12,9 @@ import { Formik, Form } from "formik";
 import * as Yup from 'yup'
 
 const SignupSchema = Yup.object().shape({
+  username: Yup.string()
+    .min(3)
+    .required("Required"),
   firstName: Yup.string()
     .min(2, "Too Short!")
     .max(50, "Too Long!")
@@ -92,7 +95,8 @@ const Register = () => {
               value={values.username}
               onChange={handleChange}
               onBlur={handleBlur}
-              onSubmit={handleSubmit}
+              error={touched.username && Boolean(errors.username)}
+              helperText={touched.username && errors.username}
               />
             </Form>
             )
