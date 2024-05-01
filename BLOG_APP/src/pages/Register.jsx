@@ -28,7 +28,8 @@ const SignupSchema = Yup.object().shape({
   .min(8)
   .max(20)
   .matches(/\d/, "Must contain a number")
-  .matches(/[A-Z]/, "Must contain a digit character")
+  .matches(/[a-z]/, "Must contain a lowercase character")
+  .matches(/[A-Z]/, "Must contain a uppercase")
   .matches(/[@+&?!*%-]/, "Must contain a symbol (@+&?!*%-)")
   .required(),
   image: Yup.string()
