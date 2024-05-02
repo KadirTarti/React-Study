@@ -131,9 +131,14 @@ export const SignupSchema = Yup.object().shape({
         error={touched.bio && Boolean(errors.bio)}
         helperText={touched.bio && errors.bio}
         />
-        <Button variant="contained"              type='submit'>
-        Sign Up
-        </Button>
+         <Button
+            type="submit"
+            variant="contained"
+            size="large"
+            disabled={isSubmitting}
+          >
+            {isSubmitting ? "Loading..." : "Sign Up"}
+          </Button>
         </Box>
       </Form>
     )
