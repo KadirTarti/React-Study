@@ -20,8 +20,7 @@ const useAuthCall = () => {
   const register = async (userInfo) => {
     dispatch(fetchStart());
     try {
-      const { data } = await axios.post(
-        `${BASE_URL}users/`,
+      const { data } = await axios.post(`${BASE_URL}users/`,
         userInfo
       );
       console.log("register", data);
