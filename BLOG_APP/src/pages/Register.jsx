@@ -5,10 +5,10 @@ import LockIcon from "@mui/icons-material/Lock";
 import image from "../assets/regi.avif";
 import Grid from "@mui/material/Grid";
 import { Link } from "react-router-dom";
-import { Box, Button, TextField } from "@mui/material";
+import { Box} from "@mui/material";
 import AuthHeader from "../components/AuthHeader";
 import AuthImage from "../components/AuthImage";
-import { Formik, Form } from "formik";
+import { Formik } from "formik";
 import useAuthCall from "../hooks/useAuthCall";
 import RegisterForm from "../components/forms/RegisterForm";
 
@@ -30,8 +30,6 @@ const Register = () => {
           p: 2,
         }}
       >
-        <AuthHeader />
-
         <Grid item xs={12} sm={10} md={6}>
           <Avatar
             sx={{

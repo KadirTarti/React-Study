@@ -7,22 +7,14 @@ import Grid from "@mui/material/Grid";
 import Typography from "@mui/material/Typography";
 import { Formik } from "formik";
 import { Link } from "react-router-dom";
-import logo from "../assets/inventoryMaster2.png";
-import AuthHeader from "../components/Commons/AuthHeader";
-import AuthImage from "../components/Commons/AuthImage";
 import LoginForm, { loginScheme } from "../components/forms/LoginForm";
 import useAuthCall from "../hooks/useAuthCall";
-import AuthLogo from "../components/Commons/AuthLogo";
-import zIndex from "@mui/material/styles/zIndex";
 
 const Login = () => {
   const { login } = useAuthCall();
   return (
     <Container maxWidth="lg">
-      <Box sx={{ marginBottom: "16px" }}>
-        <AuthLogo logo={logo} />
-      </Box>
-      {/* <AuthHeader /> */}
+      
       <Box
         sx={{
           boxShadow: "1px 1px 6px black",
