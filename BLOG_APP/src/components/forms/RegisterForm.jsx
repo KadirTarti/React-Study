@@ -1,4 +1,3 @@
-import { Padding } from "@mui/icons-material";
 import Box from "@mui/material/Box";
 import Button from "@mui/material/Button";
 import TextField from "@mui/material/TextField";
@@ -48,7 +47,6 @@ export const SignupSchema = Yup.object().shape({
     touched,
     handleChange,
     handleBlur,
-    handleSubmit,
     isSubmitting,
   }) => {
 
@@ -64,6 +62,7 @@ export const SignupSchema = Yup.object().shape({
  };
 
     return (
+      <div>
         <Form>
         <Box sx={{display: "flex", flexDirection:"column", gap:1}}>
 
@@ -198,6 +197,7 @@ export const SignupSchema = Yup.object().shape({
           </Button>
         </Box>
       </Form>
+      </div>
     )
   }
 

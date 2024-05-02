@@ -7,7 +7,8 @@ import { Link } from "react-router-dom";
 import { Box} from "@mui/material";
 import { Formik } from "formik";
 import useAuthCall from "../hooks/useAuthCall";
-import RegisterForm from "../components/forms/RegisterForm";
+import RegisterForm, { SignupSchema } from "../components/forms/RegisterForm";
+import { Outlet } from "react-router-dom";
 
 
 
@@ -62,22 +63,24 @@ const Register = () => {
             onSubmit={(values, actions) => {
               // same shape as initial values
               console.log(values);
-              register(values)
+              register(values);
               actions.resetForm();
               actions.setSubmitting(false);
             }}
-            component= {(props) =>
-            <RegisterForm {...props}/>}>
+            component= {(props) => <RegisterForm {...props}/>}>
           </Formik>
 
           <Box sx={{ textAlign: "center", mt: 2, color: "secondary.main" }}>
             <Link to="/">Already have an account? Sign in</Link>
           </Box>
         </Grid>
+        <AuthImage image={image} />
 
       </Grid>
+      <Outlet/>
     </Container>
-  );
+);
+  
 };
 
 export default Register;

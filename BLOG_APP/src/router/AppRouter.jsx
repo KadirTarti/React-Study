@@ -5,18 +5,21 @@ import Register from "../pages/Register";
 import PrivateRouter from "./PrivateRouter";
 import Dashboard from "../pages/Dashboard";
 import Home from "../pages/Home";
-import Header from "../components/Header";
-import ErrorBoundary from "../components/Error/ErrorBoundary";
 
 const AppRouter = () => {
   return (
     <Router>
       <Routes>
-      <Route path="/" element={<Home/>} />
-        <Route path="/login" element={<Login />} />
-        <Route path="/register" element={<Register />} />
-        <Route path="/home" element={<PrivateRouter />}>
-          <Route path="" element={<Dashboard />} />
+        <Route path="/" element={<Home />} />
+
+        <Route path="" element={<PrivateRouter />}>
+          {/* <Route path="details" element={<Details />} /> */}
+          {/* <Route path="myblog" element={<MyBlog />} /> */}
+          <Route path="/home" element={<Home />} />
+        <Route path="register" element={<Register />} />
+        <Route path="login" element={<Login />} />
+
+
         </Route>
       </Routes>
     </Router>

@@ -9,6 +9,7 @@ import { Formik } from "formik";
 import { Link } from "react-router-dom";
 import LoginForm, { loginScheme } from "../components/forms/LoginForm";
 import useAuthCall from "../hooks/useAuthCall";
+import { Outlet } from "react-router-dom";
 
 const Login = () => {
   const { login } = useAuthCall();
@@ -69,6 +70,7 @@ const Login = () => {
           </Box>
         </Grid>
       </Box>
+      <Outlet/>
 
       {/* <AuthImage image={image} /> */}
     </Container>

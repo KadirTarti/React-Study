@@ -14,11 +14,12 @@ function Dashboard() {
       <AppBar position="fixed">
         <Toolbar>
           <Typography variant="h6" component="div" sx={{ flexGrow: 1 }}>
-            STOCK APP
+            BLOG APP
           </Typography>
           <Button color="inherit">Logout</Button>
         </Toolbar>
       </AppBar>
+      <Outlet/>
     </Box>
   );
 }
