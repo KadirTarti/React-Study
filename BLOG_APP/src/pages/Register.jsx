@@ -13,6 +13,7 @@ import useAuthCall from "../hooks/useAuthCall";
 import RegisterForm from "../components/forms/RegisterForm";
 
 
+
 const Register = () => {
   
   const {register} = useAuthCall()
