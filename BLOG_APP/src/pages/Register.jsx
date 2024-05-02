@@ -9,7 +9,6 @@ import { Box, Button, TextField } from "@mui/material";
 import AuthHeader from "../components/AuthHeader";
 import AuthImage from "../components/AuthImage";
 import { Formik, Form } from "formik";
-import * as Yup from 'yup'
 import useAuthCall from "../hooks/useAuthCall";
 import RegisterForm from "../components/forms/RegisterForm";
 
