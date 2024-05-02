@@ -6,6 +6,7 @@ import PrivateRouter from "./PrivateRouter";
 import Dashboard from "../pages/Dashboard";
 import Home from "../pages/Home";
 import Header from "../components/Header";
+import ErrorBoundary from "../components/Error/ErrorBoundary";
 
 const AppRouter = () => {
   return (
