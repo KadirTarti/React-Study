@@ -46,6 +46,18 @@ export const SignupSchema = Yup.object().shape({
     handleSubmit,
     isSubmitting,
   }) => {
+
+    const [showPassword, setShowPassword] = useState(false);
+  const [showConfirmPassword, setShowConfirmPassword] = useState(false);
+
+  const handleClickShowPassword = () => {
+    setShowPassword(!showPassword);
+  };
+
+  const handleClickShowConfirmPassword = () => {
+    setShowConfirmPassword(!showConfirmPassword);
+ };
+
     return (
         <Form>
         <Box sx={{display: "flex", flexDirection:"column", gap:1}}>
@@ -64,13 +76,53 @@ export const SignupSchema = Yup.object().shape({
         id='password'
         name='password'
         label='Password'
-        type="password"
+        type={showPassword ? 'text' : 'password'}
+            variant="outlined"
         value={values.password}
         onChange={handleChange}
         onBlur={handleBlur}
         error={touched.password && Boolean(errors.password)}
         helperText={touched.password && errors.password}
+        InputProps={{
+              endAdornment: (
+                <InputAdornment position="end">
+                 <IconButton
+                    aria-label="toggle password visibility"
+                    onClick={handleClickShowPassword}
+                 >
+                    {showPassword ? <VisibilityOff /> : <Visibility />}
+                 </IconButton>
+                </InputAdornment>),
+            }}      
         />
+
+<TextField
+            label="Confirm Password"
+            name="confirmPassword"
+            id="confirmPassword"
+            type={showConfirmPassword ? 'text' : 'password'}
+            variant="outlined"
+            style={{fontFamily:'monospace'}}
+            value={values.confrimPassword}
+            onChange={handleChange}
+            onBlur={handleBlur}
+            helperText={touched.confirmPassword && errors.confirmPassword}
+            error={touched.confirmPassword && Boolean(errors.confirmPassword)}
+            InputProps={{
+              endAdornment: (
+                <InputAdornment position="end">
+                 <IconButton
+                    aria-label="toggle password visibility"
+                    onClick={handleClickShowConfirmPassword}
+                 >
+                    {showConfirmPassword ? <VisibilityOff /> : <Visibility />}
+                 </IconButton>
+                </InputAdornment>),
+            }}  
+          />
+
+
+
           <TextField
         id='email'
         name='email'
