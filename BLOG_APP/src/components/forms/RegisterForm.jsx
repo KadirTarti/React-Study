@@ -41,7 +41,7 @@ export const SignupSchema = Yup.object().shape({
   });
 
   
-  const SignUpForm = ({
+  const RegisterForm = ({
     values,
     errors,
     touched,
@@ -201,4 +201,4 @@ export const SignupSchema = Yup.object().shape({
     )
   }
 
-  export default SignUpForm;
+  export default RegisterForm;

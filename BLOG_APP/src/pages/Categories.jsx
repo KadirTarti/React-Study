@@ -6,7 +6,7 @@ import Toolbar from "@mui/material/Toolbar";
 import Button from "@mui/material/Button";
 import Typography from "@mui/material/Typography";
 
-function Dashboard() {
+function Categories() {
 
   return (
     <Box sx={{ display: "flex" }}>
@@ -19,9 +19,8 @@ function Dashboard() {
           <Button color="inherit">Logout</Button>
         </Toolbar>
       </AppBar>
-      <Outlet/>
     </Box>
   );
 }
 
-export default Dashboard;
+export default Categories;
