@@ -1,8 +1,13 @@
+import { Padding } from "@mui/icons-material";
 import Box from "@mui/material/Box";
 import Button from "@mui/material/Button";
 import TextField from "@mui/material/TextField";
 import { Form } from "formik";
 import * as Yup from "yup";
+import Visibility from '@mui/icons-material/Visibility';
+import VisibilityOff from '@mui/icons-material/VisibilityOff';
+import { useState } from "react";
+import { IconButton, InputAdornment } from "@mui/material";
 
 export const SignupSchema = Yup.object().shape({
     username: Yup.string()
@@ -37,7 +42,7 @@ export const SignupSchema = Yup.object().shape({
   });
 
   
-  const RegisterForm = ({
+  const SignUpForm = ({
     values,
     errors,
     touched,
@@ -196,4 +201,4 @@ export const SignupSchema = Yup.object().shape({
     )
   }
 
-  export default RegisterForm;
+  export default SignUpForm;

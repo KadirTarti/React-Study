@@ -26,7 +26,7 @@ const useAuthCall = () => {
       );
       console.log("register", data);
       dispatch(registerSuccess(data));
-      navigate("/stock");
+      navigate("/register");
     } catch (error) {
       dispatch(fetchFail());
     }
@@ -40,7 +40,7 @@ const useAuthCall = () => {
       );
       dispatch(loginSuccess(data));
       toastSuccessNotify("Login performed");
-      navigate("/stock");
+      navigate("/login");
       console.log(data);
     } catch (error) {
       dispatch(fetchFail());
