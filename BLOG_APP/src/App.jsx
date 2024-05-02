@@ -1,7 +1,6 @@
 import { createTheme, ThemeProvider } from "@mui/material/styles";
 import AppRouter from "./router/AppRouter";
 import { Provider } from "react-redux";
-import store from "./app/store";
 import { ToastContainer } from "react-toastify";
 import { PersistGate } from "redux-persist/integration/react";
 import store, { persistor } from "./app/store";
