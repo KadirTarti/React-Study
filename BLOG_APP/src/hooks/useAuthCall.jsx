@@ -1,4 +1,3 @@
-import React from "react";
 import { useDispatch, useSelector } from "react-redux";
 import {
   fetchFail,
@@ -17,6 +16,8 @@ const useAuthCall = () => {
   const dispatch = useDispatch();
   const navigate = useNavigate();
   const { token } = useSelector((store) => store.auth);
+
+  
   const register = async (userInfo) => {
     dispatch(fetchStart());
     try {
@@ -25,11 +26,13 @@ const useAuthCall = () => {
       );
       console.log("register", data);
       dispatch(registerSuccess(data));
-      navigate("/register");
+      navigate("/home");
     } catch (error) {
       dispatch(fetchFail());
     }
   };
+
+
   const login = async (userInfo) => {
     dispatch(fetchStart());
     try {
@@ -39,7 +42,7 @@ const useAuthCall = () => {
       );
       dispatch(loginSuccess(data));
       toastSuccessNotify("Login performed");
-      navigate("/login");
+      navigate("/home");
       console.log(data);
     } catch (error) {
       dispatch(fetchFail());

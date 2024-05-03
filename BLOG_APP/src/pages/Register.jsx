@@ -9,6 +9,7 @@ import { Formik } from "formik";
 import useAuthCall from "../hooks/useAuthCall";
 import RegisterForm, { SignupSchema } from "../components/forms/RegisterForm";
 import { Outlet } from "react-router-dom";
+import AuthHeader from "../components/AuthHeader";
 
 
 
@@ -28,6 +29,7 @@ const Register = () => {
           p: 2,
         }}
       >
+
         <Grid item xs={12} sm={10} md={6}>
           <Avatar
             sx={{
