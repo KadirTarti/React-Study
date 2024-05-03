@@ -9,7 +9,6 @@ import { Formik } from "formik";
 import useAuthCall from "../hooks/useAuthCall";
 import RegisterForm, { SignupSchema } from "../components/forms/RegisterForm";
 import { Outlet } from "react-router-dom";
-import AuthHeader from "../components/AuthHeader";
 
 
 
@@ -76,7 +75,6 @@ const Register = () => {
             <Link to="/">Already have an account? Sign in</Link>
           </Box>
         </Grid>
-        <AuthImage image={image} />
 
       </Grid>
       <Outlet/>

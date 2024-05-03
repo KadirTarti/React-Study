@@ -4,6 +4,7 @@ import { Provider } from "react-redux";
 import { ToastContainer } from "react-toastify";
 import { PersistGate } from "redux-persist/integration/react";
 import store, { persistor } from "./app/store";
+import ErrorBoundary from "./components/Error/ErrorBoundary";
 
 function App() {
   const theme = createTheme({
@@ -22,7 +23,9 @@ function App() {
       <ThemeProvider theme={theme}>
         <Provider store={store}>
         <PersistGate loading={null} persistor={persistor}>
+        <ErrorBoundary>
           <AppRouter />
+          </ErrorBoundary>
         </PersistGate>
         </Provider>
         <ToastContainer />

@@ -1,29 +1,31 @@
 import React, { Component } from 'react';
+class ErrorBoundary extends React.Component {
+   constructor(props) {
+       super(props);
+       this.state = {
+           error: false
+       };
+   }
 
-class ErrorBoundary extends Component {
- constructor(props) {
-    super(props);
-    this.state = { hasError: false };
- }
+   componentDidCatch(error, info) {
+       this.setState({
+           error: error
+       });
+   }
 
- static getDerivedStateFromError(error) {
-    // Hata durumunda, state'i güncelleyerek hata durumunu yakalayın.
-    return { hasError: true };
- }
+   render() {
+       // Eğer bir hata olduysa istediğimiz bir UI döndürelim
+       if (this.state.error) {
+           return (
+               <div>
+                   Bir hata oluştu:
+                   <pre>{this.state.error.stack}</pre>
+               </div>
+           );
+       }
 
- componentDidCatch(error, errorInfo) {
-    // Hata durumunda, hata detaylarını loglayabilirsiniz.
-    console.error("Error caught by ErrorBoundary:", error, errorInfo);
- }
-
- render() {
-    if (this.state.hasError) {
-      // Hata durumunda, kullanıcıya bir hata mesajı gösterin.
-      return <h1>Something went wrong.</h1>;
-    }
-
-    return this.props.children; 
- }
+       return this.props.children;
+   }
 }
 
 export default ErrorBoundary;

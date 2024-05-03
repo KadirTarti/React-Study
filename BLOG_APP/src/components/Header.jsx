@@ -36,12 +36,12 @@ function Header() {
   };
 
   return (
-    <AppBar position="fixed">
+    <AppBar position="static">
       <Container maxWidth="xl">
-        <Toolbar >
+        <Toolbar disableGutters>
           <AdbIcon sx={{ display: { xs: 'none', md: 'flex' }, mr: 1  }} />
           <Typography
-            variant="h5"
+            variant="h6"
             noWrap
             component="a"
             href="#app-bar-with-responsive-menu"
@@ -58,7 +58,7 @@ function Header() {
             MY BLOG
           </Typography>
 
-          <Box sx={{flexGrow: 1, display: { xs: 'flex', md: 'none' } }}>
+          <Box sx={{ flexGrow: 1, display: { xs: 'flex', md: 'none' } }}>
             <IconButton
               size="large"
               aria-label="account of current user"
@@ -72,7 +72,6 @@ function Header() {
             <Menu
               id="menu-appbar"
               anchorEl={anchorElNav}
-              
               anchorOrigin={{
                 vertical: 'bottom',
                 horizontal: 'left',
