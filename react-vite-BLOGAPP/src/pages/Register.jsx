@@ -20,6 +20,7 @@ const Field = ({label, id, name, type, required}) => {
         </div>
     )
 }
+
 const Register = () => {
 
     const dispatch = useDispatch();
