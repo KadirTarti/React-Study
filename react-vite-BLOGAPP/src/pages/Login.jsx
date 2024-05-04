@@ -1,6 +1,7 @@
 import axios from 'axios';
-import React, { useContext } from 'react'
+import Input from "@/components/Input.jsx";
 import { useDispatch } from 'react-redux';
+import {setToken} from "@/features/authSlice.js";
 
 
 const Field = ({label, id, name, type, required}) => {
@@ -23,6 +24,7 @@ const Field = ({label, id, name, type, required}) => {
 
 
 const Login = () => {
+    
 
     const dispatch = useDispatch();
 
@@ -36,7 +38,7 @@ const Login = () => {
 
         console.log('loginData', loginData);
 
-        const response = await axios.post('/auth/login', registerData).catch(err => {
+        const response = await axios.post('/auth/login', loginData).catch(err => {
             console.log('err', err);
         });
         console.log('response', response);
