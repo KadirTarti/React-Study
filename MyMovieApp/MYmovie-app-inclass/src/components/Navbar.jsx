@@ -15,15 +15,15 @@ export default function Navbar() {
     <>
     <Disclosure
       as="nav"
-      className="bg-neutral-100 dark:bg-gray-800 py-3 h-[85px] dark:text-white fixed top-0 z-30 w-full"
+      className="bg-neutral-100 dark:bg-red-800 py-3 h-[85px] dark:text-white fixed top-0 z-30 w-full"
     >
       <div className="mx-auto px-2 sm:px-6 lg:px-8">
         <div className="relative flex h-16 items-center justify-between">
           <div className="flex flex-1 items-center justify-center sm:items-stretch sm:justify-start">
             <div className="flex flex-shrink-0 items-center">
-              <Link to="/" className="text-2xl font-semibold">
+              <Link to="/" className="text-3xl font-semibold ">
                 {" "}
-                React Movie App{" "}
+                Movie Paradise {" "}
               </Link>
             </div>
           </div>
