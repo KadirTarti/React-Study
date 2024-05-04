@@ -1,11 +1,13 @@
 import React, { useState } from "react";
-import { useParams } from "react-router-dom";
+import { useLocation, useParams } from "react-router-dom";
 
 const MovieDetail = () => {
   const {id} = useParams();
 
   const [movieDetail, setMovieDetail] = useState({});
   const [videoKey, setVideoKey] = useState('')
+
+
   
   //üstteki id, AppRouter'da detailsin yanına :id yazdığımız yerden geliyor
   console.log(id);
@@ -17,7 +19,10 @@ const MovieDetail = () => {
   
 
 
-  return <div>MovieDetail</div>;
+  return <div> <div>
+  <h1>{movieDetailUrl}</h1>
+  <p>Film Video: {movieVideo}</p>
+</div></div>;
 };
 
 export default MovieDetail;

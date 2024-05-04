@@ -11,6 +11,7 @@ const MovieCard = ({ id, poster_path, overview, vote_average, title }) => {
   const tagColor =
     vote_average >= 8 ? "green" : vote_average >= 6 ? "orange" : "red";
 
+
   return (
     <div
       className="movie"
