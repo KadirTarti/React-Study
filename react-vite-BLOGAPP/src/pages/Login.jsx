@@ -1,8 +1,8 @@
-import axios from 'axios';
+import axios from '../helper/axios';
 import Input from "@/components/Input.jsx";
 import { useDispatch } from 'react-redux';
-import {setToken} from "@/features/authSlice.js";
-
+import {setToken, setCurrentUser} from "@/features/authSlice.js";
+import { useNavigate } from 'react-router-dom';
 
 const Field = ({label, id, name, type, required}) => {
     return (
@@ -25,6 +25,7 @@ const Field = ({label, id, name, type, required}) => {
 
 const Login = () => {
     
+    const navigate = useNavigate()
 
     const dispatch = useDispatch();
 
@@ -38,12 +39,23 @@ const Login = () => {
 
         console.log('loginData', loginData);
 
-        const response = await axios.post('/auth/login', loginData).catch(err => {
-            console.log('err', err);
-        });
-        console.log('response',response);
-        dispatch(setToken(response.token));
+        try {
+            const response = await axios.post('/auth/login', loginData);
+            console.log('response', response);
+            // Yanıtın data özelliğinden token'i alıyoruz
+            if (response.data && response.data.token) {
+                dispatch(setToken(response.data.token));
+                dispatch(setCurrentUser(response.data.user));
+                navigate('/dashboard')
+            } else {
+                console.error('Token bulunamadı:', response);
+            }
+        } catch (err) {
+            console.error('API İsteği Sırasında Hata:', err);
+        }
     }
+
+    
 
     return (
         <>
