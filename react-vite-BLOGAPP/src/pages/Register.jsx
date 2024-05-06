@@ -43,9 +43,9 @@ const Register = () => {
         console.log('registerData', registerData);
 
         const response = await axios.post('/users', registerData).catch(err => {
-            console.log('err', err);
+            // console.log('err', err);
         });
-        console.log('response', response);
+        // console.log('response', response);
         dispatch(setToken(response.data.token));
     }
 
