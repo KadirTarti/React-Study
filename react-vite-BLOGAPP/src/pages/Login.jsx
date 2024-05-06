@@ -41,8 +41,8 @@ const Login = () => {
         const response = await axios.post('/auth/login', loginData).catch(err => {
             console.log('err', err);
         });
-        console.log('response', response);
-        dispatch(setToken(response.data.token));
+        console.log('response',response);
+        dispatch(setToken(response.token));
     }
 
     return (
