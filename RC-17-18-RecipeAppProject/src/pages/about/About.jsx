@@ -1,7 +1,7 @@
 
 import React from 'react'
 import { AboutContainer, HeaderContainer, InfoContainer, StyledImage } from './AboutStyles'
-import codingSvg from "../../assets/aboutimg.webp"
+import logo from "../../assets/Logo.png"
 
 
 const About = () => {
@@ -9,7 +9,7 @@ const About = () => {
     <div>
 
       <AboutContainer>
-        <StyledImage src={codingSvg}/>
+        <StyledImage src={logo}/>
 
         <HeaderContainer>
           <h2>

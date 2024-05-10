@@ -21,9 +21,11 @@ export const AboutContainer = styled.div`
 `;
 export const StyledImage = styled.img`
   width: 200px;
+  border-radius: 10%;
 `;
 
 export const HeaderContainer = styled.div`
+
  
 `;
 

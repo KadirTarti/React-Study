@@ -1,6 +1,6 @@
 import styled from 'styled-components';
 
-const Main = styled.main`
+export const Main = styled.main`
 background-color: coral;
 padding: 5rem;
 margin: 8rem 10rem;
@@ -11,4 +11,11 @@ font-size: 2rem;
 font-weight: 400;
 `;
 
-export default Main;
+
+
+// export const WrongText = styled.div`
+// margin:auto;
+// font-size: 1.5 rem;
+// text-align: center;
+// color: gold;
+// `;

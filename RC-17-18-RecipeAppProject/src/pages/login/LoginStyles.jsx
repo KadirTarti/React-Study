@@ -41,7 +41,7 @@ export const Header = styled.h1`
 export const StyledText = styled.h6`
   /* clarusway başlığı yazan yer */
   color: gold;
-  text-shadow: 1px -1px 5px #3A0088;
+  text-shadow: 1px 1px 3px black;
   font-family: "Girassol", sans-serif;
   font-size: 14px;
 `;
