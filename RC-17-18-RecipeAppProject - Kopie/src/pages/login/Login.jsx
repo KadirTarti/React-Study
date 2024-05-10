@@ -28,6 +28,8 @@ const Login = () => {
     
     //login'de bilgiler doğru girilirse home'a yönlendir: 
     navigate('/home')
+    setName('')
+    setPassword(' ')
 
   }
 
