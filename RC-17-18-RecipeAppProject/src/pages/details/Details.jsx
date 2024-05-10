@@ -17,6 +17,7 @@ const Details = () => {
   } = useLocation();
 
   const navigate = useNavigate();
+  
 
   return (
     <DetailContainer>

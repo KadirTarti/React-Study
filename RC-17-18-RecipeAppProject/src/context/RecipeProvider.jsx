@@ -7,7 +7,6 @@ import { useNavigate } from "react-router-dom";
 //context alanı create etme:
 export const RecipeContext = createContext();
 
-navigate = useNavigate();
 
 //context'i yeni yolla -best2- app dışında bir sayfada açıyoruz. bu sayfa o işi görüyor.
 
@@ -20,19 +19,16 @@ const RecipeProvider = ({ children }) => {
   const [password, setPassword] = useState(
     localStorage.getItem("password") || ""
   );
-
+  
   //^*home header ve recipeCard sayfaları için:
   const [recipes, setRecipes] = useState([]);
   const [query, setQuery] = useState("");
   const [mealType, setMealType] = useState("");
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState(false);
-
-
+  
   const url = `https://api.edamam.com/search?q=${query}&app_id=${APP_ID}&app_key=${APP_KEY}&mealType=${mealType}`;
   
-  const url2 = `https://api.edamam.com/search?q=${query}&app_id=80af08ad&app_key=55627273303e38024def38cb507c8986&mealType=breakfast`;
-
   const getData = async()=>{
     setLoading(true)
     try{
@@ -51,7 +47,15 @@ const RecipeProvider = ({ children }) => {
   if (error) {
     return <StyledPar>
     Something went wrong... <br />
-    <WrongButton onClick={() => navigate(-1)}>GO HOME</WrongButton>
+    <button style={{
+      padding: '13px',
+borderRadius: '10px',
+fontSize: '1.2rem',
+marginTop: '1rem',
+fontWeight: 600,
+backgroundColor: '#620050',
+color: 'gold',
+    }} onClick={() => window.location.href = '/home'}>GO HOME</button>
     </StyledPar>;
   }
   if(loading)
