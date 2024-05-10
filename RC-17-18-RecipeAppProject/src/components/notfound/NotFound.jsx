@@ -4,7 +4,7 @@ import { Navigate } from 'react-router-dom';
 
 const NotFound = () => {
 
-  const [count, setCount] = useState(5)
+  const [count, setCount] = useState(8)
 
   useEffect(() => {
 
