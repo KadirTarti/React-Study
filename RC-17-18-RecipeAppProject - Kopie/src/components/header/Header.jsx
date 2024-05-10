@@ -12,7 +12,7 @@ import logo from '../../assets/logo1.webp'
 
 const Header = () => {
 
-  const {setQuery, setMealType, getData, setDishType, setOpen} = useContext(RecipeContext)
+  const {setQuery, setMealType, getData, setOpen} = useContext(RecipeContext)
 
   const handleSubmit=(e)=>{
     e.preventDefault()
@@ -45,6 +45,8 @@ const Header = () => {
           <option value='lunch'>Lunch</option>
           <option value='teatime'>TeaTime</option>
         </Select>
+
+   
       </FormContainer>
     </HeaderContainer>
   );

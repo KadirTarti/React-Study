@@ -7,11 +7,7 @@ const PrivateRouter = () => {
 
     const {name, password} = useContext(RecipeContext)
 
-    if (name && password) {
-        return <Navigate to="/home" />;
-      }
-    
-    return <Navigate to='/login'/>
+    return name === 'ipek' && password==='1234' ? <Outlet/> : <Navigate to='/'/>
     // outlet istenen yere gönderiyor. Navigate...giriş başarısız olursa yönlendirilecek sayfayı gösteriyor. Yanlış girişte login'de kalınması gerektiği ve login'e / verdiğimiz için Navigate to'ya '/' verdik.
 
 
