@@ -1,9 +1,10 @@
 import styled from "styled-components";
+import loginBG from '../../assets/loginBG.png'
 
 export const LoginContainer = styled.div`
   /* resmin olduğu div */
-  background-image: url("https://img.freepik.com/premium-vector/gradient-dots-background_23-2148884063.jpg");
-  background-image: url("https://img.freepik.com/free-photo/3d-render-network-communications-background-with-low-poly-plexus-design_1048-15687.jpg");
+  /* background-image: url("https://img.freepik.com/free-photo/3d-render-network-communications-background-with-low-poly-plexus-design_1048-15687.jpg"); */
+  /* background-image: url({loginBG}); */
   background-repeat: no-repeat;
   height: calc(100vh - 93px);
   background-size: cover;
