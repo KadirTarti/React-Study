@@ -13,6 +13,7 @@ const Home = () => {
 const {recipes} = useContext(RecipeContext)
 console.log(recipes);
 
+
   return (
     <div>
       <Header />

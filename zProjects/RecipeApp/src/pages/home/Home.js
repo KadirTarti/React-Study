@@ -11,6 +11,12 @@ const Home = () => {
   const [selectedMealType, setSelectedMealType] = useState("");
   const [query, setQuery] = useState([]);
 
+  const handleSelect = (selectedKey) => {
+    // Assuming the eventKey corresponds to the meal type
+    const mealTypes = ["Breakfast", "Lunch", "Dinner", "Snack", "Brunch", "Tea Time"];
+    setSelectedMealType(mealTypes[selectedKey - 1]); // Adjust the index based on your eventKey values
+ };
+
   const URL =`https://api.edamam.com/search?q=${query}&app_id=80af08ad&app_key=55627273303e38024def38cb507c8986&mealType=${handleSelect}`;
 
  
@@ -30,11 +36,7 @@ const Home = () => {
     }
     
 
-    const handleSelect = (selectedKey) => {
-      // Assuming the eventKey corresponds to the meal type
-      const mealTypes = ["Breakfast", "Lunch", "Dinner", "Snack", "Brunch", "Tea Time"];
-      setSelectedMealType(mealTypes[selectedKey - 1]); // Adjust the index based on your eventKey values
-   };
+
     
   
   return (

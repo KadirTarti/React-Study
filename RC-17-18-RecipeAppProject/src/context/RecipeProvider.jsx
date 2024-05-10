@@ -21,12 +21,14 @@ const RecipeProvider = ({ children }) => {
   const [recipes, setRecipes] = useState([]);
   const [query, setQuery] = useState("");
   const [mealType, setMealType] = useState("");
+  const [dishType, setDishType] = useState("");
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState(false);
 
 
   const url = `https://api.edamam.com/search?q=${query}&app_id=${APP_ID}&app_key=${APP_KEY}&mealType=${mealType}`;
-
+  
+  const url2 = `https://api.edamam.com/search?q=${query}&app_id=80af08ad&app_key=55627273303e38024def38cb507c8986&mealType=breakfast`;
 
   const getData = async()=>{
     setLoading(true)
@@ -60,6 +62,7 @@ const RecipeProvider = ({ children }) => {
         recipes,
         setQuery,
         setMealType,
+        setDishType,
         getData,
       }}
     >
