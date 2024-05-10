@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useState } from 'react'
 import Navbar from '../components/navbar/Navbar'
 import Footer from '../components/footer/Footer'
 import Login from '../pages/login/Login'
@@ -11,14 +11,25 @@ import NotFound from '../components/notfound/NotFound'
 
 
 const AppRouter = () => {
+  const [loggedIn, setLoggedIn] = useState(false)
+  const [email, setEmail] = useState('')
+
+
+
   return (
     <BrowserRouter>
     <Navbar/>
       <Routes>
-        <Route path="/" element={<Login />} />
+
+          <Route path="/" element={<Login setLoggedIn={setLoggedIn} setEmail={setEmail} />} />
+
+
+
+        {/* <Route path="/" element={<Login />} /> */}
 
         <Route path="/home" element={<PrivateRouter />}>
-          <Route path="" element={<Home />} />
+      <Route path="" element={<Home email={email} loggedIn={loggedIn} setLoggedIn={setLoggedIn} />} />
+          {/* <Route path="" element={<Home />} /> */}
         </Route>
 
         <Route path="/about" element={<About />} />

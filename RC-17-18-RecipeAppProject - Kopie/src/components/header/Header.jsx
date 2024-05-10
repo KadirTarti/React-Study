@@ -45,16 +45,6 @@ const Header = () => {
           <option value='lunch'>Lunch</option>
           <option value='teatime'>TeaTime</option>
         </Select>
-
-        <Select
-          name="dishTypes"
-          id="dishTypes"
-          onChange={(e)=>setDishType(e.target.value)}
-          >
-          <option value='desserts'>Desserts</option>
-          <option value='main course'>Main Course</option>
-          <option value='drinks'>Drinks</option>
-        </Select>
       </FormContainer>
     </HeaderContainer>
   );
