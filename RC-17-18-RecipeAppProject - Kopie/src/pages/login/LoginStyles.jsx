@@ -14,6 +14,7 @@ export const LoginContainer = styled.div`
   align-items: center;
 `;
 
+
 export const FormContainer = styled.div`
   /* yuvarlak yer */
   width: 500px;
@@ -37,6 +38,16 @@ export const Header = styled.h1`
   font-size: 2rem;
 `;
 
+export const StyledText = styled.h6`
+  /* resmin olduğu div */
+  /* background-image: url("https://img.freepik.com/free-photo/3d-render-network-communications-background-with-low-poly-plexus-design_1048-15687.jpg"); */
+  /* background-image: url({loginBG}); */
+  color: gold;
+  text-shadow: 1px -1px 5px #3A0088;
+  font-family: "Girassol", sans-serif;
+  font-size: 14px;
+`;
+
 export const StyledInput = styled.input`
   /* username giriş inputları */
   height: 50px;
@@ -48,7 +59,7 @@ export const StyledInput = styled.input`
   background-color: rgba(0, 0, 0, 0.4);
   border: none;
   color: white;
-  margin: 1rem;
+  margin: 0.5rem;
   text-indent: 20px;
 
   &::placeholder{
@@ -75,7 +86,7 @@ export const StyledButton = styled.button`
   color: white;
   border: none;
   cursor: pointer;
-  margin: 1rem;
+  margin: 0.5rem;
 
   &:hover{
     background-color: #3A0088;
