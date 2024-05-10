@@ -1,7 +1,6 @@
 import axios from "axios";
 import { createContext } from "react";
 import { useState } from "react";
-import { useNavigate } from "react-router-dom";
 
 //context alanı create etme:
 export const RecipeContext = createContext();
@@ -20,9 +19,29 @@ const RecipeProvider = ({ children }) => {
   const [nameError, setNameError] = useState('')
   const [passwordError, setPasswordError] = useState('')
 
-  const navigate = useNavigate()
 
   const onButtonClick = () => {
+
+    setNameError('')
+    setPasswordError('')
+    if ('' === name) {
+      setNameError('Please enter your username')
+      return
+    }
+    if (!/^[\w-\.]+@([\w-]+\.)+[\w-]{2,4}$/.test(name)) {
+      setNameError('Please enter a valid name')
+      return
+    }
+    if ('' === password) {
+      setPasswordError('Please enter a password')
+      return
+    }
+      if (password.length < 7) {
+    setPasswordError('The password must be 8 characters or longer')
+    return
+  }
+
+
     // You'll update this function later...
   }
 

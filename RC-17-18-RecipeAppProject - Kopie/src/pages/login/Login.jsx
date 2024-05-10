@@ -31,11 +31,14 @@ const Login = () => {
   const handleSubmit = (e) => {
     e.preventDefault();
 
-    localStorage.setItem("username", name);
-    localStorage.setItem("password", password);
-
-    //login'de bilgiler doğru girilirse home'a yönlendir:
-    navigate("/home");
+    if (name && password) {
+      localStorage.setItem("username", name);
+      localStorage.setItem("password", password);
+      navigate("/home");
+    } else {
+      // Kullanıcı girişi başarısızsa, hata mesajı göster
+      console.error("Giriş bilgileri yanlış.");
+    }
   };
 
   return (
@@ -61,14 +64,6 @@ const Login = () => {
           <label className="errorLabel">{passwordError}</label>
 
           <StyledButton type="submit">Login</StyledButton>
-          <div className={"inputContainer"}>
-            <input
-              className={"inputButton"}
-              type="button"
-              onClick={onButtonClick}
-              value={"Log in"}
-            />
-          </div>
         </StyledForm>
       </FormContainer>
     </LoginContainer>
