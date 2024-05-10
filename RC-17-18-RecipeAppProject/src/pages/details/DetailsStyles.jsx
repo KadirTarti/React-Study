@@ -73,6 +73,29 @@ export const IngredContainer = styled.div`
   color: #620050;
 `;
 
+export const StyledButton = styled.button`
+
+margin: auto;
+margin-bottom: 40px;
+font-size: 1.2rem;
+  padding: 10px;
+  font-family: "Girassol", sans-serif;
+  background-color: #620050;
+  border-radius: 5px;
+  color: gold;
+  border: none;
+  cursor: pointer;
+  font-weight: bold;
+
+  &:hover{
+    background-color: gold;
+    color: #620050;;
+    /* border: 2px solid white; */
+    text-shadow: 2px 2px 10px white;
+  }
+
+`
+
 export const OtherPart = styled.div`
   /* üstteki bilgiler */
   display: flex;

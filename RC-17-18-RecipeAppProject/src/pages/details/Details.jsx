@@ -6,6 +6,7 @@ import {
   ImgContainer,
   IngredContainer,
   OtherPart,
+  StyledButton,
 } from "./DetailsStyles";
 import detailsimg from "../../assets/details.webp";
 import { useLocation, useNavigate } from "react-router-dom";
@@ -83,6 +84,8 @@ const Details = () => {
           ))}
         </IngredContainer>
       </DetailPart>
+    <StyledButton onClick={() => navigate("/home")}>GO BACK</StyledButton>
+
     </DetailContainer>
   );
 };
