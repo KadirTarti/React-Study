@@ -1,9 +1,13 @@
 import axios from "axios";
 import { createContext } from "react";
 import { useState } from "react";
+import { StyledPar, WrongButton } from "./RecipeProStyle";
+import { useNavigate } from "react-router-dom";
 
 //context alanı create etme:
 export const RecipeContext = createContext();
+
+navigate = useNavigate();
 
 //context'i yeni yolla -best2- app dışında bir sayfada açıyoruz. bu sayfa o işi görüyor.
 
@@ -45,7 +49,10 @@ const RecipeProvider = ({ children }) => {
   }
 
   if (error) {
-    return <p>Something went wrong.....</p>;
+    return <StyledPar>
+    Something went wrong... <br />
+    <WrongButton onClick={() => navigate(-1)}>GO HOME</WrongButton>
+    </StyledPar>;
   }
   if(loading)
   {return <p>loading...</p>}
