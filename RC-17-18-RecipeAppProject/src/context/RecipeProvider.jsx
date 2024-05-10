@@ -21,7 +21,6 @@ const RecipeProvider = ({ children }) => {
   const [recipes, setRecipes] = useState([]);
   const [query, setQuery] = useState("");
   const [mealType, setMealType] = useState("");
-  const [dishType, setDishType] = useState("");
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState(false);
 
@@ -62,7 +61,6 @@ const RecipeProvider = ({ children }) => {
         recipes,
         setQuery,
         setMealType,
-        setDishType,
         getData,
       }}
     >

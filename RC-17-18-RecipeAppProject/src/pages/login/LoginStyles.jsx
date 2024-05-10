@@ -29,6 +29,7 @@ export const FormContainer = styled.div`
   flex-direction: column;
 `;
 
+
 export const Header = styled.h1`
   /* clarusway başlığı yazan yer */
   color: gold;
@@ -37,10 +38,19 @@ export const Header = styled.h1`
   font-size: 2rem;
 `;
 
+export const StyledText = styled.h6`
+  /* clarusway başlığı yazan yer */
+  color: gold;
+  text-shadow: 1px -1px 5px #3A0088;
+  font-family: "Girassol", sans-serif;
+  font-size: 14px;
+`;
+
+
 export const StyledInput = styled.input`
   /* username giriş inputları */
   height: 50px;
-  font-size: 1.5rem;
+  font-size: 1.2rem;
   width: 250px;
   border-radius: 5px;
   font-family: "Girassol", sans-serif;
@@ -48,7 +58,7 @@ export const StyledInput = styled.input`
   background-color: rgba(0, 0, 0, 0.4);
   border: none;
   color: white;
-  margin: 1rem;
+  margin: 0.5rem;
   text-indent: 20px;
 
   &::placeholder{
@@ -67,7 +77,7 @@ export const StyledForm = styled.form`
 export const StyledButton = styled.button`
 
 /* login butonu */
-  font-size: 1.5rem;
+  font-size: 1.2rem;
   padding: 10px;
   font-family: "Girassol", sans-serif;
   background-color: #620050;
@@ -75,7 +85,7 @@ export const StyledButton = styled.button`
   color: white;
   border: none;
   cursor: pointer;
-  margin: 1rem;
+  margin: 0.5rem;
 
   &:hover{
     background-color: #3A0088;

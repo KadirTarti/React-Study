@@ -7,6 +7,7 @@ import {
   StyledForm,
   StyledImg,
   StyledInput,
+  StyledText,
 } from "./LoginStyles";
 
 import mealSvg from  '../../assets/logo1.webp'
@@ -36,6 +37,9 @@ const Login = () => {
       <FormContainer>
         <StyledImg  src={mealSvg} />
         <Header>Healthy Recipes</Header>
+        <StyledText>
+        To log in, enter "abdulkadir" as username and "1234" as password
+        </StyledText>
 
         <StyledForm onSubmit={handleSubmit}>
           <StyledInput
