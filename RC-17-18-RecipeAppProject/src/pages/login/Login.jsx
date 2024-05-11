@@ -36,13 +36,14 @@ const Login = () => {
     <LoginContainer>
       <FormContainer>
         <StyledImg  src={mealSvg} />
-        <Header>Healthy Recipes</Header>
+        <Header data-test='loginHeader'>Healthy Recipes</Header>
         <StyledText>
         To log in, enter "abdulkadir" as username and "1234" as password
         </StyledText>
 
         <StyledForm onSubmit={handleSubmit}>
           <StyledInput
+          data-test='loginName'
             type="text"
             placeholder="username"
             required
@@ -50,6 +51,7 @@ const Login = () => {
           />
 
           <StyledInput
+          data-test='loginPassword'
             type="password"
             placeholder="password"
             required
@@ -57,7 +59,7 @@ const Login = () => {
 
           />
 
-          <StyledButton type="submit">Login</StyledButton>
+          <StyledButton data-test='loginSbmt'  type="submit">Login</StyledButton>
         </StyledForm>
       </FormContainer>
     </LoginContainer>
