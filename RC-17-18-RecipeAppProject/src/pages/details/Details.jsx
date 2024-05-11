@@ -38,36 +38,36 @@ const Details = () => {
 
         <OtherPart>
           <div>
-          <p>
+          <p data-test="contentParag">
             {recipe.totalNutrients.CA.label}:&nbsp;
             {Math.round(recipe.totalNutrients.CA.quantity)}
             {recipe.totalNutrients.CA.unit}{" "}
           </p>
 
-          <p>
+          <p data-test="contentParag">
             {recipe.totalNutrients.CHOCDF.label}:&nbsp;
             {Math.round(recipe.totalNutrients.CHOCDF.quantity)}
             {recipe.totalNutrients.CHOCDF.unit}{" "}
           </p>
 
-          <p>
+          <p data-test="contentParag">
             {recipe.totalNutrients.CHOLE.label}:&nbsp;
             {Math.round(recipe.totalNutrients.CHOLE.quantity)}
             {recipe.totalNutrients.CHOLE.unit}{" "}
           </p>
 
-          <p>
+          <p data-test="contentParag">
             {recipe.totalNutrients.ENERC_KCAL.label}:&nbsp;
             {Math.round(recipe.totalNutrients.ENERC_KCAL.quantity)}
             {recipe.totalNutrients.ENERC_KCAL.unit}{" "}
           </p>
 
-          <p>{Math.round(recipe.totalWeight)} </p>
+          <p data-test="contentCal">{Math.round(recipe.totalWeight)} </p>
           <p>Calories: {Math.round(recipe.calories)} </p>
           {/* digest key i ile bize 29 elemanlı bir dizi geliyor, biz onun 4 elemanını bastırmak için slice kullandık */}
           <p>
             {recipe.digest.slice(0, 4).map((item, index) => (
-              <p key={index} style={{ color: "darkblue", fontWeight:'400', fontStyle:'italic' }}>
+              <p data-test={item.label + "test"}  key={index} style={{ color: "darkblue", fontWeight:'400', fontStyle:'italic' }}>
                 {item.label} : {Math.round(item.total)}
               </p>
             ))}
@@ -78,7 +78,7 @@ const Details = () => {
         <IngredContainer>
           {recipe.ingredientLines.map((item, index) => (
             <div>
-              <p>
+              <p data-test={item + "test"} key={index}>
                 {index + 1}-) {item}
               </p>
             </div>
