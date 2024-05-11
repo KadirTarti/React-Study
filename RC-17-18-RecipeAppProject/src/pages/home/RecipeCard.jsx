@@ -21,10 +21,10 @@ const RecipeCard = () => {
     
       {recipes.map(({recipe}) => (
         <Cards key={recipe.calories}>
-          <RecipeHeader> {recipe.label} </RecipeHeader>
+          <RecipeHeader data-test='cardHeader'> {recipe.label} </RecipeHeader>
 
-          <RecipeImage src={recipe.image} />
-          <Button onClick={()=>navigate('/details', {state:{recipe}})}>
+          <RecipeImage data-test='cardImage'  src={recipe.image} />
+          <Button data-test='cardBtn' onClick={()=>navigate('/details', {state:{recipe}})}>
             Details
           </Button>
         </Cards>
