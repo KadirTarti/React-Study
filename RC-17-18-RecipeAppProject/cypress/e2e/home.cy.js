@@ -10,7 +10,8 @@ describe('home', () => {
         cy.get("[data-test='homeLogo']").contains("AKT").should("be.visible").click({ force: true });
         cy.url().should("include", "/home");
         cy.get("[data-test='recipeHeader']").contains("Healthy").should("be.visible")
-        cy.get("[data-test='recipeSubHeader']").contains("Food App").should("be.visible")
+        
+        cy.get("[data-test='selectType']").contains("lunch").should("be.visible").click({force: true})
         cy.get("[data-test='homeSearch']").type("r")
         cy.get("[data-test='homeSearchBtn']").click({ force: true });
         cy.get("[data-test='cardHeader']").should("be.visible")

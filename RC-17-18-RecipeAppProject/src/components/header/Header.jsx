@@ -34,9 +34,9 @@ const Header = () => {
           onChange={(e)=>setQuery(e.target.value)}
         />
 
-        <Button type="submit">Search</Button>
+        <Button data-test='homeSearch' type="submit">Search</Button>
 
-        <Select
+        <Select data-test='selectType'
           name="ogunTypes"
           id="ogunTypes"
           onChange={(e)=>setMealType(e.target.value)}
