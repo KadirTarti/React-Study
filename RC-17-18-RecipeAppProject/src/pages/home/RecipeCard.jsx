@@ -17,7 +17,7 @@ const RecipeCard = () => {
   const navigate = useNavigate()
 
   return (
-    <MainContainer>
+    <MainContainer >
     
       {recipes.map(({recipe}) => (
         <Cards key={recipe.calories}>

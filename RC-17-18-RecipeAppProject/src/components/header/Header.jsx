@@ -22,7 +22,7 @@ const Header = () => {
 
   return (
     <HeaderContainer>
-        <h1>Healthy Recipes</h1>
+        <h1 data-test='recipeHeader'>Healthy Recipes</h1>
       <MainHeader>
         <img src={logo} width={'200px'} alt="" />
       </MainHeader>

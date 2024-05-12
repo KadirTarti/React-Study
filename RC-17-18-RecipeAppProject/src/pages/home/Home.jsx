@@ -16,7 +16,7 @@ console.log(recipes);
 
   return (
     <div>
-      <Header />
+      <Header  />
 
       {recipes.length > 0 ? (
         <div>

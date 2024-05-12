@@ -7,9 +7,9 @@ describe('home', () => {
         cy.login()
         cy.get("[data-test='homeAbout']").contains("About").should("be.visible").click({ force: true });
         cy.url().should("include", "/about");
-        cy.get("[data-test='homeLogo']").contains("<Clarusway/>").should("be.visible").click({ force: true });
+        cy.get("[data-test='homeLogo']").contains("AKT").should("be.visible").click({ force: true });
         cy.url().should("include", "/home");
-        cy.get("[data-test='recipeHeader']").contains("Welcome to my").should("be.visible")
+        cy.get("[data-test='recipeHeader']").contains("Healthy").should("be.visible")
         cy.get("[data-test='recipeSubHeader']").contains("Food App").should("be.visible")
         cy.get("[data-test='homeSearch']").type("r")
         cy.get("[data-test='homeSearchBtn']").click({ force: true });
