@@ -32,7 +32,7 @@ const Details = () => {
       </HeaderContainer>
 
       <DetailPart>
-        <ImgContainer>
+        <ImgContainer data-test='contentImage'>
           <img src={recipe.image} alt="" />
         </ImgContainer>
 
