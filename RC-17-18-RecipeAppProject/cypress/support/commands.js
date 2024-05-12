@@ -32,6 +32,7 @@ Cypress.Commands.add("login", () => {
     cy.url().should('include', '/home')
 });
 Cypress.Commands.add("home", () => {
+    cy.get("[data-test='menuOpenButton']").select("lunch");
     cy.get("[data-test='homeSearch']").type("r")
     cy.get("[data-test='homeSearchBtn']").click({ force: true });
     cy.get("[data-test='cardHeader']").should("be.visible")
