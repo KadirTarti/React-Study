@@ -28,21 +28,21 @@ const Header = () => {
       </MainHeader>
 
       <FormContainer onSubmit={handleSubmit}>
-        <FoodInput
+        <FoodInput data-test='homeSearch'
           type="text"
           placeholder="Search for recipe"
           onChange={(e)=>setQuery(e.target.value)}
         />
 
-        <Button data-test='homeSearch' type="submit">Search</Button>
+        <Button data-test='homeSearchBtn' type="submit">Search</Button>
 
-        <Select data-test='selectType'
+        <Select data-test='menuOpenButton'
           name="ogunTypes"
           id="ogunTypes"
           onChange={(e)=>setMealType(e.target.value)}
           >
           <option value='teatime'>TeaTime</option>
-          <option value='lunch'>Lunch</option>
+          <option data-test='selectType' value='lunch'>Lunch</option>
           <option value='breakfast'>Breakfast</option>
         </Select>
 
