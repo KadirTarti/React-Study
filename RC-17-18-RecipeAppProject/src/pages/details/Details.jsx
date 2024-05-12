@@ -21,7 +21,7 @@ const Details = () => {
 
   return (
     <DetailContainer>
-      <HeaderContainer>
+      <HeaderContainer data-test='contentHeader'>
         <h1> {recipe.label} </h1>
         <img
           style={{ cursor: "pointer" }}
