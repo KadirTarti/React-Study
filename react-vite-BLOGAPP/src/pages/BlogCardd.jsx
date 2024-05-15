@@ -14,7 +14,8 @@ import FavoriteIcon from '@mui/icons-material/Favorite';
 import ShareIcon from '@mui/icons-material/Share';
 import ExpandMoreIcon from '@mui/icons-material/ExpandMore';
 import MoreVertIcon from '@mui/icons-material/MoreVert';
-import { Box,Grid } from '@mui/material';
+import { Box,Container,Grid } from '@mui/material';
+import { useState } from 'react';
 
 const ExpandMore = styled((props) => {
     const { expand, ...other } = props;
@@ -35,8 +36,9 @@ const ExpandMore = styled((props) => {
     };
 
     return (
+        <Container sx={{ display: 'flex', flexDirection: 'row', flexWrap: 'wrap' }}>
         <Box sx={{ display: 'flex', flexDirection: 'row', flexWrap: 'wrap' }}>
-         <Grid item xs={12} sm={6} md={4} lg={3}>
+         <Grid item xs={12} sm={6} md={4} lg={3} sx={{display: 'flex'}}>
         <Card sx={{ maxWidth: 345 }}>
           <CardHeader
             avatar={
@@ -101,6 +103,7 @@ const ExpandMore = styled((props) => {
         </Card>
         </Grid>
         </Box>
+      </Container>
       );
 
 
