@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from "react";
 import BlogCardd from "./BlogCardd";
+import { Container, Grid } from "@mui/material";
 
 const Dashboard = () => {
   const [blogs, setBlogs] = useState([]);
@@ -12,11 +13,13 @@ const Dashboard = () => {
   }, []);
 
   return (
-    <div>
+    <Container maxWidth={"xl"}>
+     <Grid container spacing={2} sx={{margin: 'auto'}}>
       {blogs.map((blog) => (
         <BlogCardd key={blog._id} blog={blog} /> // Her blogu bir Card bileşenine dönüştürün
       ))}
-    </div>
+      </Grid>
+    </Container>
   );
 };
 

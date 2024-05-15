@@ -12,7 +12,7 @@ import Typography from '@mui/material/Typography';
 import { red } from '@mui/material/colors';
 import FavoriteIcon from '@mui/icons-material/Favorite';
 import ShareIcon from '@mui/icons-material/Share';
-import ExpandMoreIcon from '@mui/icons-material/ExpandMore';
+import ArticleIcon  from '@mui/icons-material/Article';
 import MoreVertIcon from '@mui/icons-material/MoreVert';
 import { Box,Container,Grid } from '@mui/material';
 import { useState } from 'react';
@@ -36,9 +36,7 @@ const ExpandMore = styled((props) => {
     };
 
     return (
-        <Container sx={{ display: 'flex', flexDirection: 'row', flexWrap: 'wrap' }}>
-        <Box sx={{ display: 'flex', flexDirection: 'row', flexWrap: 'wrap' }}>
-         <Grid item xs={12} sm={6} md={4} lg={3} sx={{display: 'flex'}}>
+         <Grid item xs={12} sm={6} md={4} lg={3}>
         <Card sx={{ maxWidth: 345 }}>
           <CardHeader
             avatar={
@@ -74,12 +72,12 @@ const ExpandMore = styled((props) => {
             </IconButton>
 
             <ExpandMore
-              expand={expanded}
-              onClick={handleExpandClick}
-              aria-expanded={expanded}
-              aria-label="show more"
+            //   expand={expanded}
+            //   onClick={handleExpandClick}
+            //   aria-expanded={expanded}
+            //   aria-label="show more"
             >
-              <ExpandMoreIcon /> Read More 
+              <ArticleIcon  /> Open Blog 
             </ExpandMore>
           </CardActions>
 
@@ -102,8 +100,6 @@ const ExpandMore = styled((props) => {
           </Collapse>
         </Card>
         </Grid>
-        </Box>
-      </Container>
       );
 
 
