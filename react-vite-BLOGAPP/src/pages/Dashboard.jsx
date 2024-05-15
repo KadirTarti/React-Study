@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import { Card } from '@material-tailwind/react';
-import BlogCard from './BlogCard';
+import BlogCardd from './BlogCardd';
 
 const Dashboard = () => {
   const [blogs, setBlogs] = useState([]);
@@ -15,7 +15,7 @@ const Dashboard = () => {
   return (
     <div className="dashboard">
         {blogs.map(blog => (
-          <BlogCard key={blog._id} blog={blog} /> // Her blogu bir Card bileşenine dönüştürün
+          <BlogCardd key={blog._id} blog={blog} /> // Her blogu bir Card bileşenine dönüştürün
         ))}
       </div>)
 

@@ -6,7 +6,7 @@ const About = () => {
     <div>
     
     
-    <BlogCardd/>
+    about
     </div>
   )
 }
