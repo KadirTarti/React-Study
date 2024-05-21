@@ -1,11 +1,8 @@
 import React from 'react'
-import BlogCardd from './BlogCardd'
 
 const NewBlog = () => {
   return (
-    <div>
-aloasaosa
-    </div>
+    <div>NewBlog</div>
   )
 }
 

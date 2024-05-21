@@ -21,3 +21,4 @@ const Card = ({ blog }) => {
   );
 };
 
+export default Card;
