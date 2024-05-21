@@ -1,0 +1,88 @@
+*{
+    margin: 0; 
+    padding: 0;
+    box-sizing: border-box; 
+}
+
+.App{
+    background: rgb(255, 202, 29);
+    display: flex;
+    flex-direction: column;
+    /* justify-content: center; */
+    align-items: center;
+    background-color: #f4f4f4;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+}
+
+button {
+    margin: 20px auto;
+    color: white;
+    background-color: lightslategray;
+    padding: 15px 30px;
+    border-radius: 10px;
+    font-size: 1.1rem;
+    font-weight: 700;
+    border: 3px solid darkslategrey;
+    outline: none;
+}
+
+
+.app-user{
+    background-color: rgba(210, 218, 220, 0.491);
+    margin: 4rem;
+    margin-bottom: 5rem;
+    width: auto;
+    height: auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    
+}
+
+.app-user-top{
+    background-color: rgb(196, 195, 195);
+    padding: 3rem;
+    width: 100%;
+    border-bottom: 2x solid gray;
+    
+}
+
+.logo{
+    width: 100px;
+    margin: 5rem;
+}
+
+.app-user img{
+    width: 150px;
+    height: 150px;
+    margin: 0.5rem 0;
+    border-radius: 50%;
+    border: 5px solid white;
+    box-shadow:1px 1px 20px 6px black;
+}
+
+.app-icons{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.app-icons .fas {
+    margin: 0 2rem;
+    transition: all 0.5s ease;
+    color: rgb(14, 70, 105);
+}
+
+.app-icons .fas:hover{
+    transform: scale(1.1);
+    cursor: pointer;
+}
+
+.phrases{
+    margin: 20px 0px;
+}
+
+table{
+    border: 2px solid red;
+}
