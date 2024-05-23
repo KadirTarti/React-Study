@@ -7,8 +7,11 @@ import {
 import { btnStyle } from "../../styles/globalStyle";
 import DataTable from "../Commons/DataTable";
 import Loading from "../Commons/Loading";
+import EditIcon from "@mui/icons-material/Edit"; 
+import { GridActionsCellItem } from "@mui/x-data-grid";
 
-export default function ProductTable() {
+
+export default function ProductTable({ handleOpen, setInitialState }) {
   const { data: products, isLoading } = useGetProductsQuery();
   const [deleteProduct] = useDeleteProductMutation();
   const columns = [
@@ -69,12 +72,30 @@ export default function ProductTable() {
       sortable: false,
       minWidth: 40,
       flex: 1,
-      renderCell: (params) => (
-        // console.log(params)
-        <DeleteOutlineIcon
-          onClick={() => deleteProduct(params.id)}
+      renderCell: ({row: {_id,categoryId,brandId,name,quantity,actions}}) => (
+        <>
+        <GridActionsCellItem
+        key={'edit'}
+          icon={<EditIcon />}
+          label="Edit"
+          onClick={() => {
+            handleOpen();
+            setInitialState({_id, categoryId, brandId, name,quantity, actions}); 
+          }}
           sx={btnStyle}
         />
+        <GridActionsCellItem
+          icon={<DeleteOutlineIcon />}
+          label="Delete"
+          onClick={() => deleteProduct(_id)} // Make sure to pass params.id correctly
+          sx={btnStyle}
+        />
+      </>
+        // console.log(params)
+        // <DeleteOutlineIcon
+        //   onClick={() => deleteProduct(params.id)}
+        //   sx={btnStyle}
+        // />
       ),
     },
   ];
