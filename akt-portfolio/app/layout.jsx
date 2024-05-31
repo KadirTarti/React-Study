@@ -3,6 +3,8 @@ import "./globals.css";
 
 //components
 import Header from "@/components/Header";
+import PageTransition from "@/components/PageTransition";
+import TransitionEffect from "@/components/TransitionEffect";
 
 const victorMono =  Victor_Mono({
   subsets: ["latin"],
@@ -20,7 +22,11 @@ export default function RootLayout({ children }) {
     <html lang="en">
       <body className={victorMono.variable}>
       <Header/>
-      {children}</body>
+      <TransitionEffect/>
+      <PageTransition>
+      {children}
+      </PageTransition>
+      </body>
     </html>
   );
 }
