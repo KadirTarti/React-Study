@@ -14,7 +14,7 @@ const pageAnimation = {
 };
 
 const reverseIndex = (index) => {
-  const totalSteps = 3;
+  const totalSteps = 12;
   return totalSteps - index - 1;
 };
 
@@ -22,7 +22,7 @@ const PageEffect = () => {
   return (
     <>
       {/* render motion divs to show the pageanimationeffect */}
-      {[...Array(3)].map((_, index) => {
+      {[...Array(12)].map((_, index) => {
         return (
           <motion.div
             key={index}
@@ -35,7 +35,7 @@ const PageEffect = () => {
               ease: "easeInOut",
               delay: reverseIndex(index) * 0.1,
             }}
-            className="h-full w-full bg-white relative"
+            className="h-full w-full bg-slate-500 relative"
           />
         );
       })}
