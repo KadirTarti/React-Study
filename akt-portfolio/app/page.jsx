@@ -1,6 +1,9 @@
 import { Button } from '@/components/ui/button';
 import { FiDownload} from 'react-icons/fi';
 
+//components
+import Social from '@/components/Social';
+
 const Home = () => {
   return (
     <section>
@@ -14,11 +17,13 @@ const Home = () => {
       <p className='max-w-[500px] mb-9 text-white/80'>I am a Software Developer working mainly on frontend.
       </p>
       <div className='flex flex-col xl:flex-row items-center gap-8'>
-        <Button variant='outline' size='lg' className='uppercase flex items-center gap-2 text-amber-300 bg-transparent'>
+        <Button variant='outline' size='lg' className='uppercase flex items-center gap-2 text-amber-300 bg-transparent hover:text-white hover:bg-pink-900'>
           <span className=''>Download CV</span>
           <FiDownload className='text-xl'/>
         </Button>
-        <div>Socials</div>
+        <div className='mb-8 xl:mb-0'>
+        <Social/>
+        </div>
       </div>
       </div>
 
