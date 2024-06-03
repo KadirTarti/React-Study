@@ -13,8 +13,12 @@ const Home = () => {
       </h1>
       <p className='max-w-[500px] mb-9 text-white/80'>I am a Software Developer working mainly on frontend.
       </p>
-      <div>
-        <Button></Button>
+      <div className='flex flex-col xl:flex-row items-center gap-8'>
+        <Button variant='outline' size='lg' className='uppercase flex items-center gap-2 text-amber-300 bg-transparent'>
+          <span className=''>Download CV</span>
+          <FiDownload className='text-xl'/>
+        </Button>
+        <div>Socials</div>
       </div>
       </div>
 
