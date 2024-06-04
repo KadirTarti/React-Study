@@ -6,8 +6,8 @@ import Social from '@/components/Social';
 
 const Home = () => {
   return (
-    <section>
-    <div className="container mx-auto h-full">Homepage</div>
+    <section className='h-full'>
+    <div className="container mx-auto h-full">
     <div className='flex flex-col xl:flex-row items-center justify-between xl:pt-8 xl:pb-24'>
       <div className='text-center xl:text-left'>
       <span className='text-xl'>Software Developer</span>
@@ -22,13 +22,14 @@ const Home = () => {
           <FiDownload className='text-xl'/>
         </Button>
         <div className='mb-8 xl:mb-0'>
-        <Social/>
+        <Social containerStyles='flex gap-6' iconStyles='w-9 h-9 border border-white rounded-full flex justify-center items-center text-amber-300 text-base hover:bg-amber-300 hover:text-primary hover:transition-all duration:500'/>
         </div>
       </div>
       </div>
 
 
       <div>photo</div>
+    </div>
     </div>
     </section>
   )
