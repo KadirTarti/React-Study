@@ -10,9 +10,9 @@ const Home = () => {
     <section className='h-full'>
     <div className="container mx-auto h-full">
     <div className='flex flex-col xl:flex-row items-center justify-between xl:pt-8 xl:pb-24'>
-      <div className='text-center xl:text-left order-2 xl:order-none'>
+      <div className='text-center xl:text-left order-2 xl:order-none mt-5'>
       <span className='text-xl'>Software Developer</span>
-      <h1 className='h1'>
+      <h1 className='h2 mt-6 mb-6'>
         Hello! I'm <br/> <span className='text-amber-400'>Abdulkadir TARTILACI</span>
       </h1>
       <p className='max-w-[500px] mb-9 text-white/80'>I am a Software Developer and working mainly on frontend. I love design!
@@ -29,7 +29,7 @@ const Home = () => {
       </div>
 
 
-      <div className='order-1 xl:order-none mb-8 xl:mb-0'>
+      <div className='order-1 xl:order-none mb-8 xl:mb-0 mt-10'>
       <Photo/>
       </div>
     </div>
