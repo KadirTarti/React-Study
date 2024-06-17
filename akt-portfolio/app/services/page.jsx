@@ -2,7 +2,6 @@
 
 import {BsArrowDownRight} from 'react-icons/bs'
 import Link from 'next/link'
-import { Description } from '@radix-ui/react-dialog'
 import { motion } from 'framer-motion'
 
 

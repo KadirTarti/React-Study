@@ -2,9 +2,9 @@ import { Victor_Mono } from "next/font/google";
 import "./globals.css";
 
 //components
-import Header from "@/components/pages/Header";
-import PageTransition from "@/components/PageTransition";
-import TransitionEffect from "@/components/TransitionEffect";
+import Header from "@/components/header/Header";
+import PageTransition from "@/components/helpers/PageTransition";
+import TransitionEffect from "@/components/helpers/TransitionEffect";
 
 const victorMono =  Victor_Mono({
   subsets: ["latin"],

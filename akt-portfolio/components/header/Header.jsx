@@ -2,8 +2,8 @@ import Link from 'next/link'
 import {Button} from '../ui/button'
 
 //components
-import Navbar from './Navbar'
-import MobileNav from '../MobileNav'
+import Navbar from '../navbar/Navbar'
+import MobileNav from '../helpers/MobileNav'
 
 
 const Header = () => {

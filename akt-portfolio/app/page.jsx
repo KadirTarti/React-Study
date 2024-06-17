@@ -3,9 +3,9 @@ import { FiDownload} from 'react-icons/fi';
 import Link from 'next/link';
 
 //components
-import Social from '@/components/pages/Social';
-import Photo from '@/components/Photo';
-import Stats from '@/components/Stats';
+import Social from '@/components/social/Social';
+import Photo from '@/components/helpers/Photo';
+import Stats from '@/components/helpers/Stats';
 
 const Home = () => {
   return (
