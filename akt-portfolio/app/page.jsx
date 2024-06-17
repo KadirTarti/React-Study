@@ -1,5 +1,6 @@
 import { Button } from '@/components/ui/button';
 import { FiDownload} from 'react-icons/fi';
+import Link from 'next/link';
 
 //components
 import Social from '@/components/Social';
@@ -32,10 +33,19 @@ const Home = () => {
     </div>
     </div>
     <Stats/>
-        <Button variant='outline' size='lg' className=' container w-1/6 mt-20 uppercase flex items-center gap-2 text-amber-300 bg-transparent hover:text-white hover:bg-pink-900'>
+
+    <Link target='_blank' href="https://github.com/KadirTarti" passHref>
+        <Button variant='outline' size='lg' className='container w-1/6 mt-4 uppercase flex items-center gap-2 text-amber-300 bg-transparent hover:text-white hover:bg-pink-900'>
+          <span className={'tracking-extra-wide'}>Visit My GitHub Page</span>
+          <FiDownload className='text-xl'/>
+        </Button>
+      </Link>
+
+        <Button variant='outline' size='lg' className=' container w-1/6 mt-4 uppercase flex items-center gap-2 text-amber-300 bg-transparent hover:text-white hover:bg-pink-900'>
           <span className={'tracking-extra-wide'}>Download CV</span>
           <FiDownload className='text-xl'/>
         </Button>
+        
     </section>
   )
 }
