@@ -29,13 +29,7 @@ const services = [
     title: 'Web Development',
     description: 'lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem ',
     href: '',
-  },
-  {
-    num: '05',
-    title: 'Web Development',
-    description: 'lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem ',
-    href: '',
-  },
+  }
 ]
 
 
