@@ -5,7 +5,7 @@ import {SiTypescript, SiBootstrap, SiTailwindcss, SiMui, SiNextdotjs, SiRedux,  
 import {Tabs, TabsContent, TabsList, TabsTrigger} from '@/components/ui/tabs'
 import {Tooltip, TooltipContent, TooltipProvider, TooltipTrigger} from '@/components/ui/tooltip'
 import {ScrollArea} from '@/components/ui/scroll-area'
-import {Motion, easeIn} from 'framer-motion'
+import {motion, easeIn} from 'framer-motion'
 
 const about = {
   title: 'About Me',
@@ -93,12 +93,12 @@ const education = {
     },
     {
       institution: 'Pamukkale University',
-      degree:  'Master\'n\s Degree',
+      degree:  'Master\'s\s+Degree',
       duration: 'October 2012 - August 2016'
     },
     {
       institution: 'Suleyman Demirel University',
-      degree:  'Bachelor\'n\s Degree',
+      degree:  'Bachelor\'s\s+Degree',
       duration: 'September 2006 - August 2010'
     },
   ]
@@ -170,7 +170,7 @@ const skills = {
 
 const Resume = () => {
   return (
-    <Motion.div initial={{opacity: 0}} animate={{opacity:1, transition: {delay:2.4, duration:0.4, ease:'easeIn'}}}
+    <motion.div initial={{opacity: 0}} animate={{opacity:1, transition: {delay:2.4, duration:0.4, ease:'easeIn'}}}
     className='min-h-[80vh] flex items-center justify-center py-12 xl:py:0'
     >
     <div className="container mx-auto">
@@ -186,7 +186,7 @@ const Resume = () => {
     </div>
 
 
-    </Motion.div>
+    </motion.div>
   )
 }
 
