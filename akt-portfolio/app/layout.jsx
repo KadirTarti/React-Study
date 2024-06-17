@@ -2,7 +2,7 @@ import { Victor_Mono } from "next/font/google";
 import "./globals.css";
 
 //components
-import Header from "@/components/Header";
+import Header from "@/components/pages/Header";
 import PageTransition from "@/components/PageTransition";
 import TransitionEffect from "@/components/TransitionEffect";
 
