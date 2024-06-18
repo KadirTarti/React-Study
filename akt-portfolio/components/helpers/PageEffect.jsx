@@ -31,7 +31,7 @@ const PageEffect = () => {
             animate="animate"
             exit="exit"
             transition={{
-              duration: 0.3,
+              duration: 0.2,
               ease: "easeInOut",
               delay: reverseIndex(index) * 0.1,
             }}

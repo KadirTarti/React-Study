@@ -38,36 +38,36 @@ const about = {
   description: "desc is here",
   info: [
     {
-      fieldName: "Name",
+      fieldName: "Name:",
       fieldValue: "Abdulkadir Tartilaci",
     },
     {
-      fieldName: "GitHub",
-      fieldValue: "https://github.com/KadirTarti",
+      fieldName: "GitHub:",
+      fieldValue: "/KadirTarti",
     },
     {
-      fieldName: "Email",
+      fieldName: "Email:",
       fieldValue: "tartilaci@gmail.com",
     },
     {
-      fieldName: "LinkedIn",
-      fieldValue: "https://www.linkedin.com/in/tartilaci/",
+      fieldName: "LinkedIn:",
+      fieldValue: "/in/tartilaci/",
     },
     
     {
-      fieldName: "Work Experience",
+      fieldName: "Work Experience:",
       fieldValue: "9+ Years",
     },
     {
-      fieldName: "Xing",
-      fieldValue: "https://www.xing.com/profile/Abdulkadir_Tartilaci/",
+      fieldName: "Xing:",
+      fieldValue: "/profile/Abdulkadir_Tartilaci/",
     },
     {
-      fieldName: "Languages",
+      fieldName: "Languages:",
       fieldValue: "TR, DE, EN",
     },
     {
-      fieldName: "Hobbies",
+      fieldName: "Hobbies:",
       fieldValue: "Cooking,Hiking,Volleyball,Basketball",
     },
    
@@ -293,20 +293,20 @@ const Resume = () => {
             </TabsContent>
 
             <TabsContent value="skills" className="w-full h-full">
-              <div className="flex flex-col gap-[30px]">
+              <div className="flex flex-col gap-[20px]">
                 <div className="flex flex-col gap-[20px] text-center xl:text-left">
                   <h3 className="text-4xl font-bold">{skills.title}</h3>
                   <p className="max-w-[600px] text-white/50 mx-auto xl:mx-0">
                     {skills.description}
                   </p>
                 </div>
-                <ul className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 xl:gap-[30px]">
+                <ul className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 xl:gap-[10px]">
                   {skills.skillList.map((skill, index) => {
                     return (
                       <li key={index}>
                         <TooltipProvider delayDuration={100}>
                           <Tooltip>
-                            <TooltipTrigger className="w-full h-[100px] bg-[#232329]  border-2 mb-4 rounded-xl rounded-xl flex justify-center items-center gorup">
+                            <TooltipTrigger className="w-full h-[100px] bg-[#232329]  border-2 mb-1 rounded-xl rounded-xl flex justify-center items-center gorup">
                               <div className="text-6xl text-amber-300">
                                 {skill.icon}
                               </div>
@@ -332,12 +332,12 @@ const Resume = () => {
                 <p className="max-w-[600px] text-white/50 mx-auto xl:mx-0">
                   {about.description}
                 </p>
-                <ul className="grid grid-cols-2 xl:grid-cols-2 gap-y-6 max-w-[620px] mx-auto xl:mx-0">
+                <ul className="grid grid-cols-2 xl:grid-cols-2 gap-y-2 max-w-[620px] mx-auto xl:mx-0">
                   {about.info.map((item, index) => {
                     return (
                       <li
                         key={index}
-                        className="flex items-center justify-center xl:justify-start gap-4 mt-10"
+                        className="flex items-center justify-center xl:justify-start gap-3 mt-8"
                       >
                         <span className="text-amber-300 font-bold">{item.fieldName}</span>
                         <span className="text-xl">{item.fieldValue}</span>
