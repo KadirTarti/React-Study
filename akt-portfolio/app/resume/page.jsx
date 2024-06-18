@@ -6,6 +6,7 @@ import {Tabs, TabsContent, TabsList, TabsTrigger} from '@/components/ui/tabs'
 import {Tooltip, TooltipContent, TooltipProvider, TooltipTrigger} from '@/components/ui/tooltip'
 import {ScrollArea} from '@/components/ui/scroll-area'
 import {motion, easeIn} from 'framer-motion'
+import { Scroll } from "lucide-react";
 
 const about = {
   title: 'About Me',
@@ -42,10 +43,9 @@ const about = {
     }
   ]
 }
-
 const experience = {
   icon: {SiOpenbadges},
-  title: 'My Exprerience',
+  title: 'My Experience',
   description: 'desc is here',
   items: [
     {
@@ -54,22 +54,24 @@ const experience = {
       duration: 'August 2019 - August 2020'
     },
     {
-    company: 'Cigli District Government',
-    position: 'Officer',
-    duration: 'September 2011 - September 2012'
-  },
+      company: 'Self-Employed',
+      position: 'Research Mentor and Academic Advisor',
+      duration: 'January 2017 - March 2019'
+    },
   {
     company: 'Manisa Celal Bayar University',
     position: 'Research Assistent',
     duration: 'September 2012 - September 2016'
   },
   {
-    company: 'Self-Employed',
-    position: 'Research Mentor or Academic Advisor',
-    duration: 'January 2017 - March 2019'
+    company: 'Cigli District Government',
+    position: 'Officer',
+    duration: 'September 2011 - September 2012'
   },
+
 ]
 }
+
 
 const education = {
   icon: {FaGraduationCap},
@@ -93,12 +95,12 @@ const education = {
     },
     {
       institution: 'Pamukkale University',
-      degree:  'Master\'s\s+Degree',
+      degree:  'Master\'s\ Degree',
       duration: 'October 2012 - August 2016'
     },
     {
       institution: 'Suleyman Demirel University',
-      degree:  'Bachelor\'s\s+Degree',
+      degree:  'Bachelor\'s\ Degree',
       duration: 'September 2006 - August 2010'
     },
   ]
@@ -187,18 +189,60 @@ const Resume = () => {
       <div className="flex flex-col gap-[32px] text-center xl:text-left">
         <h3 className="text-4xl font-bold">{experience.title}</h3>
         <p className="max-w-[600px] text-white/50 mx-auto xl:mx-0">{experience.description}</p>
+        <ScrollArea className='h-[400px]'>
+        <ul className="grip grid-cols-1 lg:grid-cols-2 gap-[30px]">
+          {experience.items.map((item, index)=>{
+            return <li key={index} className="bg-[#232329] h-[184px] py-6 px-5 border-s-2 p-2 mb-2 border-y-2 rounded-xl flex flex-col justify-center items-center lg:items-start">
+              <span className="text-amber-300">{item.duration}</span>
+              <h3 className="text-xl max-w-[260px] min-h-[60px] text-center lg:text-left">{item.position}</h3>
+              <div className="flex items-center gap-3">
+                <span className="w-[6px] h-[6px] rounded-full bg-amber-300"></span>
+                <p className="text-white/50 ">{item.company}</p>
+              </div>
+            </li>
+          
+          })}
+        </ul>
+        </ScrollArea>
       </div>
       </TabsContent>
 
-
-
-
       <TabsContent value='education' className='w-full'>
-      education
+      <div className="flex flex-col gap-[32px] text-center xl:text-left">
+        <h3 className="text-4xl font-bold">{education.title}</h3>
+        <p className="max-w-[600px] text-white/50 mx-auto xl:mx-0">{education.description}</p>
+        <ScrollArea className='h-[400px]'>
+        <ul className="grip grid-cols-1 lg:grid-cols-2 gap-[30px]">
+          {education.items.map((item, index)=>{
+            return <li key={index} className="bg-[#232329] h-[184px] py-6 px-5 border-s-2 p-2 mb-2 border-y-2 rounded-xl flex flex-col justify-center items-center lg:items-start">
+              <span className="text-amber-300">{item.duration}</span>
+              <h3 className="text-xl max-w-[260px] min-h-[60px] text-center lg:text-left">{item.degree}</h3>
+              <div className="flex items-center gap-3">
+                <span className="w-[6px] h-[6px] rounded-full bg-amber-300"></span>
+                <p className="text-white/50 ">{item.institution}</p>
+              </div>
+            </li>
+          
+          })}
+        </ul>
+        </ScrollArea>
+      </div>
       </TabsContent>
-      <TabsContent value='skills' className='w-full'>
-      skills
+
+      <TabsContent value='skills' className='w-full h-full'>
+      <div className="flex flex-col gap-[30px]">
+        <div className="flex flex-col gap-[30px] text-center xl:text-left">
+          <h3 className="text-4xl font-bold">{skills.title}</h3>
+          <p className="max-w-[600px] text-white/50 mx-auto xl:mx-0">{skills.description}</p>
+        </div>
+        <ul className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 xl:gap-[30px]">
+          {skills.skillList.map((skill, index)=>{
+            return <li key={index}>{skill.name}</li>
+          })}
+        </ul>
+      </div>
       </TabsContent>
+      
       <TabsContent value='about' className='w-full'>
       about
       </TabsContent>
