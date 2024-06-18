@@ -1,7 +1,7 @@
 "use client";
 
-import {FaHtml5, FaCss3, FaJs, FaReact, FaBootstrap, FaNodeJs, FaSass, FaGraduationCap} from "react-icons/fa"
-import {SiTypescript, SiBootstrap, SiTailwindcss, SiMui, SiNextdotjs, SiRedux,  SiPostman,  SiMongodb, SiOpenbadges} from 'react-icons/si'
+import {FaHtml5, FaCss3, FaJs, FaReact, FaBootstrap, FaNodeJs, FaSass, FaGraduationCap, FaGithub } from "react-icons/fa"
+import {SiTypescript, SiTailwindcss, SiMui, SiNextdotjs, SiRedux,  SiPostman,  SiMongodb, SiOpenbadges, SiPostgresql } from 'react-icons/si'
 import {Tabs, TabsContent, TabsList, TabsTrigger} from '@/components/ui/tabs'
 import {Tooltip, TooltipContent, TooltipProvider, TooltipTrigger} from '@/components/ui/tooltip'
 import {ScrollArea} from '@/components/ui/scroll-area'
@@ -123,24 +123,32 @@ const skills = {
       name: 'Javascript'
     },
     {
+      icon: <SiNextdotjs/>,
+      name: 'NextJS'
+    },
+    {
+      icon: <SiTypescript/>,
+      name: 'Typescript'
+    },
+    {
       icon: <FaReact/>,
       name: 'React'
+    },
+    {
+      icon: <SiRedux/>,
+      name: 'Redux'
+    },
+    {
+      icon: <FaGithub/>,
+      name: 'GitHub'
     },
     {
       icon: <FaBootstrap/>,
       name: 'Bootstrap'
     },
     {
-      icon: <FaNodeJs/>,
-      name: 'NodeJS'
-    },
-    {
       icon: <FaSass/>,
       name: 'SASS'
-    },
-    {
-      icon: <SiTypescript/>,
-      name: 'Typescript'
     },
     {
       icon: <SiTailwindcss/>,
@@ -151,12 +159,8 @@ const skills = {
       name: 'MUI'
     },
     {
-      icon: <SiNextdotjs/>,
-      name: 'NextJS'
-    },
-    {
-      icon: <SiRedux/>,
-      name: 'Redux'
+      icon: <FaNodeJs/>,
+      name: 'NodeJS'
     },
     {
       icon: <SiPostman/>,
@@ -166,6 +170,11 @@ const skills = {
       icon: <SiMongodb/>,
       name: 'MongoDB'
     },
+    {
+      icon: <SiPostgresql/>,
+      name: 'PostgreSQL'
+    },
+     
   ]
 }
 
@@ -192,7 +201,7 @@ const Resume = () => {
         <ScrollArea className='h-[400px]'>
         <ul className="grip grid-cols-1 lg:grid-cols-2 gap-[30px]">
           {experience.items.map((item, index)=>{
-            return <li key={index} className="bg-[#232329] h-[184px] py-6 px-5 border-s-2 p-2 mb-2 border-y-2 rounded-xl flex flex-col justify-center items-center lg:items-start">
+            return <li key={index} className="bg-[#232329] h-[184px] py-6 px-5 border-s-2 p-2 mb-4 border-y-2 rounded-xl flex flex-col justify-center items-center lg:items-start">
               <span className="text-amber-300">{item.duration}</span>
               <h3 className="text-xl max-w-[260px] min-h-[60px] text-center lg:text-left">{item.position}</h3>
               <div className="flex items-center gap-3">
@@ -214,7 +223,7 @@ const Resume = () => {
         <ScrollArea className='h-[400px]'>
         <ul className="grip grid-cols-1 lg:grid-cols-2 gap-[30px]">
           {education.items.map((item, index)=>{
-            return <li key={index} className="bg-[#232329] h-[184px] py-6 px-5 border-s-2 p-2 mb-2 border-y-2 rounded-xl flex flex-col justify-center items-center lg:items-start">
+            return <li key={index} className="bg-[#232329] h-[184px] py-6 px-5 border-s-2 p-2 mb-4 border-y-2 rounded-xl flex flex-col justify-center items-center lg:items-start">
               <span className="text-amber-300">{item.duration}</span>
               <h3 className="text-xl max-w-[260px] min-h-[60px] text-center lg:text-left">{item.degree}</h3>
               <div className="flex items-center gap-3">
@@ -237,7 +246,18 @@ const Resume = () => {
         </div>
         <ul className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 xl:gap-[30px]">
           {skills.skillList.map((skill, index)=>{
-            return <li key={index}>{skill.name}</li>
+            return <li key={index}>
+              <TooltipProvider delayDuration={100}>
+                <Tooltip>
+                  <TooltipTrigger className="w-full h-[100px] bg-[#232329] rounded-xl flex justify-center items-center gorup">
+                    <div className="text-6xl transition-all duration-300 text-amber-300">{skill.icon}</div>
+                  </TooltipTrigger>
+                  <TooltipContent>
+                    <p>{skill.name}</p>
+                  </TooltipContent>
+                </Tooltip>
+              </TooltipProvider>
+            </li>
           })}
         </ul>
       </div>
