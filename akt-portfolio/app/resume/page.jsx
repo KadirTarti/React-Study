@@ -195,13 +195,13 @@ const Resume = () => {
 
       <div className="min-h-[70vh] w-full">
       <TabsContent value='experience' className='w-full'>
-      <div className="flex flex-col gap-[32px] text-center xl:text-left">
+      <div className="flex flex-col gap-[20px] text-center xl:text-left">
         <h3 className="text-4xl font-bold">{experience.title}</h3>
         <p className="max-w-[600px] text-white/50 mx-auto xl:mx-0">{experience.description}</p>
-        <ScrollArea className='h-[400px]'>
+        <ScrollArea className='h-[500px]'>
         <ul className="grip grid-cols-1 lg:grid-cols-2 gap-[30px]">
           {experience.items.map((item, index)=>{
-            return <li key={index} className="bg-[#232329] h-[184px] py-6 px-5 border-s-2 p-2 mb-4 border-y-2 rounded-xl flex flex-col justify-center items-center lg:items-start">
+            return <li key={index} className="bg-[#232329] h-[184px] py-6 px-5 border-2 mb-4 rounded-xl flex flex-col justify-center items-center lg:items-start w-4/5">
               <span className="text-amber-300">{item.duration}</span>
               <h3 className="text-xl max-w-[260px] min-h-[60px] text-center lg:text-left">{item.position}</h3>
               <div className="flex items-center gap-3">
@@ -217,13 +217,13 @@ const Resume = () => {
       </TabsContent>
 
       <TabsContent value='education' className='w-full'>
-      <div className="flex flex-col gap-[32px] text-center xl:text-left">
+      <div className="flex flex-col gap-[20px] text-center xl:text-left">
         <h3 className="text-4xl font-bold">{education.title}</h3>
         <p className="max-w-[600px] text-white/50 mx-auto xl:mx-0">{education.description}</p>
-        <ScrollArea className='h-[400px]'>
+        <ScrollArea className='h-[500px]'>
         <ul className="grip grid-cols-1 lg:grid-cols-2 gap-[30px]">
           {education.items.map((item, index)=>{
-            return <li key={index} className="bg-[#232329] h-[184px] py-6 px-5 border-s-2 p-2 mb-4 border-y-2 rounded-xl flex flex-col justify-center items-center lg:items-start">
+            return <li key={index} className="bg-[#232329] h-[184px] py-6 px-5 border-2 mb-4 rounded-xl flex flex-col justify-center items-center lg:items-start w-4/5">
               <span className="text-amber-300">{item.duration}</span>
               <h3 className="text-xl max-w-[260px] min-h-[60px] text-center lg:text-left">{item.degree}</h3>
               <div className="flex items-center gap-3">
@@ -250,10 +250,10 @@ const Resume = () => {
               <TooltipProvider delayDuration={100}>
                 <Tooltip>
                   <TooltipTrigger className="w-full h-[100px] bg-[#232329] rounded-xl flex justify-center items-center gorup">
-                    <div className="text-6xl transition-all duration-300 text-amber-300">{skill.icon}</div>
+                    <div className="text-6xl text-amber-300">{skill.icon}</div>
                   </TooltipTrigger>
                   <TooltipContent>
-                    <p>{skill.name}</p>
+                    <p className="capitalize">{skill.name}</p>
                   </TooltipContent>
                 </Tooltip>
               </TooltipProvider>
@@ -263,8 +263,23 @@ const Resume = () => {
       </div>
       </TabsContent>
       
-      <TabsContent value='about' className='w-full'>
-      about
+      <TabsContent value='about' className='w-full text-center xl:text-left'>
+      <div>
+        <h3 className="text-4xl font-bold">{about.title}</h3>
+        <p className="max-w-[600px] text-white/50 mx-auto xl:mx-0">
+        {about.description}
+        </p>
+        <ul className="grip grip-cols-1 xl:grid-cols-2 gap-y-6 max-w-[620px] mx-auto xl:mx-0">
+          {about.info.map((item,index)=>{
+            return <li key={index} className="flex items-center justify-center xl:justify-start gap-4">
+            <span className="text-white/50">{item.fieldName}</span>
+            <span className="text-xl">{item.fieldValue}</span>
+            </li>
+          })}
+        </ul>
+      </div>
+      
+      
       </TabsContent>
       </div>
     </Tabs>
