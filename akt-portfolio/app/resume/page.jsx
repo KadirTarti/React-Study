@@ -70,6 +70,12 @@ const about = {
       fieldName: "Hobbies:",
       fieldValue: "Cooking,Hiking,Volleyball,Basketball",
     },
+    {
+      fieldName: "Skills:",
+      fieldValue: "Javascript,NextJS,React,NodeJS,ExpressJS,MongoDB,Agile,Jira,Git",
+    },
+
+
    
   ],
 };
