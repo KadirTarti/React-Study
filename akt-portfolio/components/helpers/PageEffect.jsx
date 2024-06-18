@@ -3,13 +3,13 @@ import { animate, motion } from "framer-motion";
 // variants
 const pageAnimation = {
   initial: {
-    top: "50%",
+    top: "15%",
   },
   animate: {
     top: "100%",
   },
   exit: {
-    top: ["100%", "50%"],
+    top: ["100%", "15%"],
   },
 };
 
