@@ -46,26 +46,31 @@ const about = {
       fieldValue: "https://github.com/KadirTarti",
     },
     {
+      fieldName: "Email",
+      fieldValue: "tartilaci@gmail.com",
+    },
+    {
       fieldName: "LinkedIn",
       fieldValue: "https://www.linkedin.com/in/tartilaci/",
+    },
+    
+    {
+      fieldName: "Work Experience",
+      fieldValue: "9+ Years",
     },
     {
       fieldName: "Xing",
       fieldValue: "https://www.xing.com/profile/Abdulkadir_Tartilaci/",
     },
     {
-      fieldName: "Work Experience",
-      fieldValue: "7+ Years",
-    },
-    {
-      fieldName: "Email",
-      fieldValue: "tartilaci@gmail.com",
-    },
-
-    {
       fieldName: "Languages",
-      fieldValue: "Türkish, German, English",
+      fieldValue: "TR, DE, EN",
     },
+    {
+      fieldName: "Hobbies",
+      fieldValue: "Cooking,Hiking,Volleyball,Basketball",
+    },
+   
   ],
 };
 const experience = {
@@ -230,12 +235,12 @@ const Resume = () => {
                   {experience.description}
                 </p>
                 <ScrollArea className="h-[500px]">
-                  <ul className="grip grid-cols-1 lg:grid-cols-2 gap-[30px]">
+                  <ul className="grid grid-cols-1 lg:grid-cols-2 gap-[30px]">
                     {experience.items.map((item, index) => {
                       return (
                         <li
                           key={index}
-                          className="bg-[#232329] h-[184px] py-6 px-5 border-2 mb-4 rounded-xl flex flex-col justify-center items-center lg:items-start w-4/5"
+                          className="bg-[#232329] h-[184px] py-6 px-5 border-2 mb-4 rounded-xl flex flex-col justify-center items-center lg:items-start"
                         >
                           <span className="text-amber-300">
                             {item.duration}
@@ -262,12 +267,12 @@ const Resume = () => {
                   {education.description}
                 </p>
                 <ScrollArea className="h-[500px]">
-                  <ul className="grip grid-cols-1 lg:grid-cols-2 gap-[30px]">
+                  <ul className="grid grid-cols-1 lg:grid-cols-2 gap-[30px]">
                     {education.items.map((item, index) => {
                       return (
                         <li
                           key={index}
-                          className="bg-[#232329] h-[184px] py-6 px-5 border-2 mb-4 rounded-xl flex flex-col justify-center items-center lg:items-start w-4/5"
+                          className="bg-[#232329] h-[184px] py-6 px-5 border-2 mb-4 rounded-xl flex flex-col justify-center items-center lg:items-start"
                         >
                           <span className="text-amber-300">
                             {item.duration}
@@ -327,12 +332,12 @@ const Resume = () => {
                 <p className="max-w-[600px] text-white/50 mx-auto xl:mx-0">
                   {about.description}
                 </p>
-                <ul className="grip grip-cols-1 xl:grid-cols-2 gap-y-6 max-w-[620px] mx-auto xl:mx-0">
+                <ul className="grid grid-cols-2 xl:grid-cols-2 gap-y-6 max-w-[620px] mx-auto xl:mx-0">
                   {about.info.map((item, index) => {
                     return (
                       <li
                         key={index}
-                        className="flex items-center justify-center xl:justify-start gap-4"
+                        className="flex items-center justify-center xl:justify-start gap-4 mt-10"
                       >
                         <span className="text-white/50">{item.fieldName}</span>
                         <span className="text-xl">{item.fieldValue}</span>
