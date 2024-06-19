@@ -14,7 +14,7 @@ const pageAnimation = {
 };
 
 const reverseIndex = (index) => {
-  const totalSteps = 15;
+  const totalSteps = 8;
   return totalSteps - index - 1;
 };
 
@@ -22,7 +22,7 @@ const PageEffect = () => {
   return (
     <>
       {/* render motion divs to show the pageanimationeffect */}
-      {[...Array(15)].map((_, index) => {
+      {[...Array(8)].map((_, index) => {
         return (
           <motion.div
             key={index}
