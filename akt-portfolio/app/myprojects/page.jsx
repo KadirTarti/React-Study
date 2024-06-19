@@ -1,73 +1,188 @@
-'use client';
+"use client";
 
-import {motion} from 'framer-motion'
-import React, { useState } from 'react';
+import { motion } from "framer-motion";
+import React, { useState } from "react";
 
-import {Swiper, SwiperSlide} from 'swiper/react'
-import 'swiper/css'
+import { Swiper, SwiperSlide } from "swiper/react";
+import "swiper/css";
+import { MdLiveTv } from "react-icons/md";
 
-import { BsArrowUpRight, BsGithub } from 'react-icons/bs';
+import {  BsGithub } from "react-icons/bs";
 
-import { Tooltip, TooltipContent, TooltipProvider, TooltipTrigger } from '@radix-ui/react-tooltip';
+import {
+  Tooltip,
+  TooltipContent,
+  TooltipProvider,
+  TooltipTrigger,
+} from "@radix-ui/react-tooltip";
 
-import Link from 'next/link'
-import Image from 'next/image'
+import Link from "next/link";
+import Image from "next/image";
 
-import gifOne from '../../public/assets/Inventorymaster.gif'
-import gifTwo from '../../public/assets/ShoppingApp.gif'
+import gifOne from "../../public/assets/Inventorymaster.gif";
+import gifTwo from "../../public/assets/ShoppingApp.gif";
+import gifThree from "../../public/assets/ShoppingApp.gif";
+import gifFour from "../../public/assets/ShoppingApp.gif";
 
 
 const projects = [
   {
-    num: '01',
-    category: 'Fullstack',
-    title: 'Inventory Master',
-    description: 'desc is here',
-    stack: [{name: 'React.js'}, {name: 'Redux'}, {name: 'MUI'}, {name: 'Tailwind'}, {name: 'Formik & Yup'}],
-    image:  {gifOne},
-    live: 'https://akt-inventory-master.netlify.app/',
-    github: 'https://github.com/KadirTarti/inventory-master',    
+    num: "01",
+    category: "Fullstack Project",
+    title: "Inventory Master",
+    description:
+      "Inventory Master is a comprehensive inventory management system designed to streamline the tracking, management, and organization of inventory for both business and personal use.",
+    stack: [
+      { name: "React.js" },
+      { name: "Redux" },
+      { name: "MUI" },
+      { name: "Tailwind" },
+      { name: "Formik & Yup" },
+    ],
+    image: { gifOne },
+    live: "https://akt-inventory-master.netlify.app/",
+    github: "https://github.com/KadirTarti/inventory-master",
   },
   {
-    num: '02',
-    category: 'Fullstack',
-    title: 'C-link E-Markt',
-    description: 'desc is here',
-    stack: [{name: 'React.js'}, {name: 'Bootstrap'}, {name: 'MockAPI'}, {name: 'Navigation'}],
-    image:  {gifTwo},
-    live: 'https://shopping-app-akt.netlify.app/',
-    github: 'https://github.com/KadirTarti/ShoppingApp',    
+    num: "02",
+    category: "Fullstack Project",
+    title: "C-link E-Markt",
+    description:
+      'In this project, a single-page web application is designed where users can add new products to their shopping lists, store these products on a mock API and update them in their shopping carts.',
+    stack: [
+      { name: "React.js" },
+      { name: "Bootstrap" },
+      { name: "MockAPI" },
+      { name: "Navigation" },
+    ],
+    image: { gifTwo },
+    live: "https://shopping-app-akt.netlify.app/",
+    github: "https://github.com/KadirTarti/ShoppingApp",
   },
-]
-
+  {
+    num: "03",
+    category: "Frontend Project",
+    title: "The Best Movies of Recent Times",
+    description:
+      'In this project, some of the movies on the list of the best movies of recent times on the imdb website were shot from a specific database and printed on the screen.',
+    stack: [
+      { name: "React.js" },
+      { name: "Javascript" },
+      { name: "HTML5" },
+      { name: "CSS3" },
+    ],
+    image: { gifTwo },
+    live: "https://best-movie-of-recent-times.netlify.app/",
+    github: "https://github.com/KadirTarti/Best-Movies-Website",
+  },
+  {
+    num: "04",
+    category: "Frontend Project",
+    title: "MT Car Repair Appointment",
+    description:
+      "In this project, an interactive Appointment Application was developed. On the home page, under the Booking heading, there is the name and image of the repair operation for which an appointment will be made.",
+    stack: [
+      { name: "React.js" },
+      { name: "Javascript" },
+      { name: "HTML5" },
+      { name: "CSS3" },
+    ],
+    image: { gifTwo },
+    live: "https://anappointmentapp.netlify.app//",
+    github: "https://github.com/KadirTarti/ApointmentApp",
+  },
+];
 
 const MyProjects = () => {
-
   const [project, setProject] = useState(projects[0]);
 
+  const handleSlideChange = (swipper) => {
+    const currentIndex = swipper.activeIndex;
+    setProject(projects[currentIndex]);
+  };
 
   return (
-    <motion.section initial={{opacity: 0}} animate={{opacity: 1}} className='min-h-[80vh] flex flex-col justify-center py-12 xl:px-0'>
-    <div className="container mx-auto">
-    <div className="flex flex-col xl:flex-row xl:gap-[30px]">
-      <div className="w-full xl:-w-[50%] xl:h-[460px] flex flex-col xl:justify-between order-2 xl:order-none">
-        <div>
-          <div className="text-8xl leading-none font-extrabold text-transparent text-outline">
-            {project.num}
-          </div>
+    <motion.section
+      initial={{ opacity: 0 }}
+      animate={{ opacity: 1 }}
+      className="min-h-[80vh] flex flex-col justify-center py-12 xl:px-0"
+    >
+      <div className="container mx-auto">
+        <div className="flex flex-col xl:flex-row xl:gap-[30px]">
+          <div className="w-full xl:-w-[50%] xl:h-[460px] flex flex-col xl:justify-between order-2 xl:order-none">
+            <div className="flex flex-col gap-[30px] h-[50%]">
+              
+              <div className="text-6xl leading-none font-extrabold text-white text-outline">
+                {project.num}
+              </div>
 
-          <h2 className='text-[42px] font-bold leading-none text-white group-hover:text-amber-300 transition-all duration-500 capitalize'>
-            {project.category}
-          </h2>
+              <h2 className="text-[42px] font-bold leading-none text-white group-hover:text-amber-300 transition-all duration-500 capitalize">
+                {project.category}
+              </h2>
+              <p className="text-white/50">{project.description}</p>
+
+              <ul className="flex gap-4">
+                {project.stack.map((item, index) => {
+                  return (
+                    <li key={index} className="text-xl text-amber-300 ">
+                      {item.name}
+                      {index !== project.stack.length - 1 && ","}
+                    </li>
+                  );
+                })}
+              </ul>
+
+              <div className="border border-white/20"></div>
+              <div className="flex items-center gap-4 mt-5">
+                <Link href={project.live}>
+                  <TooltipProvider delayDuration={100}>
+                    <Tooltip>
+                      <TooltipTrigger className="w-[70px] h-[70px] rounded-full bg-white/5 flex justify-center items-center group">
+                        <MdLiveTv className="text-white text-3xl group-hover:text-amber-300" />
+                      </TooltipTrigger>
+                      <TooltipContent>
+                        <p>Live Project</p>
+                      </TooltipContent>
+                    </Tooltip>
+                  </TooltipProvider>
+                </Link>
+
+                <Link href={project.github}>
+                  <TooltipProvider delayDuration={100}>
+                    <Tooltip>
+                      <TooltipTrigger className="w-[70px] h-[70px] rounded-full bg-white/5 flex justify-center items-center group">
+                        <BsGithub className="text-white text-3xl group-hover:text-amber-300" />
+                      </TooltipTrigger>
+                      <TooltipContent>
+                        <p>Github Repository</p>
+                      </TooltipContent>
+                    </Tooltip>
+                  </TooltipProvider>
+                </Link>
+              </div>
+            </div>
+          </div>
+          <div className="w-full xl:w-[50%]">
+          <Swiper
+                spaceBetween={30}
+                slidesPerView={1}
+                className="xl:h-[520px] mb-12"
+                onSlideChange={handleSlideChange}
+              >
+                {projects.map((project, index) => {
+                  return <SwiperSlide key={index} className="w-full">
+                  <div className="h-[460px] relative group  flex justify-center items-center bg-gray-500">
+
+
+                  </div>
+                  </SwiperSlide>;
+                })}
+              </Swiper>
+              </div>
         </div>
       </div>
-    </div>
-
-
-    </div>
-
     </motion.section>
-  )
-}
+  );
+};
 
-export default MyProjects
+export default MyProjects;
