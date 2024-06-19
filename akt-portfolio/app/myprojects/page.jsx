@@ -1,6 +1,6 @@
 "use client";
 
-import { motion } from "framer-motion";
+import { easeIn, motion } from "framer-motion";
 import React, { useState } from "react";
 
 import { Swiper, SwiperSlide } from "swiper/react";
@@ -21,8 +21,9 @@ import Image from "next/image";
 
 import gifOne from "../../public/assets/Inventorymaster.gif";
 import gifTwo from "../../public/assets/ShoppingApp.gif";
-import gifThree from "../../public/assets/ShoppingApp.gif";
-import gifFour from "../../public/assets/ShoppingApp.gif";
+import gifThree from "../../public/assets/bestmovies.gif";
+import gifFour from "../../public/assets/ApointmentApp.gif";
+import SliderButtons from "@/components/helpers/SliderButtons";
 
 
 const projects = [
@@ -39,7 +40,7 @@ const projects = [
       { name: "Tailwind" },
       { name: "Formik & Yup" },
     ],
-    image: { gifOne },
+    image: gifOne,
     live: "https://akt-inventory-master.netlify.app/",
     github: "https://github.com/KadirTarti/inventory-master",
   },
@@ -55,7 +56,7 @@ const projects = [
       { name: "MockAPI" },
       { name: "Navigation" },
     ],
-    image: { gifTwo },
+    image: gifTwo,
     live: "https://shopping-app-akt.netlify.app/",
     github: "https://github.com/KadirTarti/ShoppingApp",
   },
@@ -71,7 +72,7 @@ const projects = [
       { name: "HTML5" },
       { name: "CSS3" },
     ],
-    image: { gifTwo },
+    image: gifThree,
     live: "https://best-movie-of-recent-times.netlify.app/",
     github: "https://github.com/KadirTarti/Best-Movies-Website",
   },
@@ -87,7 +88,7 @@ const projects = [
       { name: "HTML5" },
       { name: "CSS3" },
     ],
-    image: { gifTwo },
+    image: gifFour,
     live: "https://anappointmentapp.netlify.app//",
     github: "https://github.com/KadirTarti/ApointmentApp",
   },
@@ -104,7 +105,7 @@ const MyProjects = () => {
   return (
     <motion.section
       initial={{ opacity: 0 }}
-      animate={{ opacity: 1 }}
+      animate={{ opacity: 1, transition: {delay: 2.4, duration:0.4, ease:easeIn} }}
       className="min-h-[80vh] flex flex-col justify-center py-12 xl:px-0"
     >
       <div className="container mx-auto">
@@ -133,7 +134,7 @@ const MyProjects = () => {
               </ul>
 
               <div className="border border-white/20"></div>
-              <div className="flex items-center gap-4 mt-5">
+              <div className="flex items-center gap-4">
                 <Link href={project.live}>
                   <TooltipProvider delayDuration={100}>
                     <Tooltip>
@@ -170,13 +171,19 @@ const MyProjects = () => {
                 onSlideChange={handleSlideChange}
               >
                 {projects.map((project, index) => {
-                  return <SwiperSlide key={index} className="w-full">
-                  <div className="h-[460px] relative group  flex justify-center items-center bg-gray-500">
-
+                  return ( 
+                  <SwiperSlide key={index} className="w-full">
+                  <div className="h-[460px] relative group  flex justify-center items-center bg-white">
+                  <div className="absolute top-0 bottom-0 w-full h-full bg-black/10 z-10"></div>
+                  <div className="relative w-[98%] h-[98%]">
+                    <Image src={project.image} fill className="object-cover"/>
+                  </div>
 
                   </div>
-                  </SwiperSlide>;
-                })}
+                  </SwiperSlide>
+                  );
+                  })}
+                  <SliderButtons/>
               </Swiper>
               </div>
         </div>
