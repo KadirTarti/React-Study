@@ -2,6 +2,7 @@
 
 import { useSwiper} from 'swiper/react'
 import {PiCaretDoubleLeftBold, PiCaretDoubleRightBold} from 'react-icons/pi'
+import { icons } from 'lucide-react';
 
 const SliderButtons = (containerStyles, buttonStyles, iconsStyles) => {
     const swiper = useSwiper();
@@ -9,10 +10,10 @@ const SliderButtons = (containerStyles, buttonStyles, iconsStyles) => {
   return (
     <div className={containerStyles}>
     <button className={buttonStyles}>
-        <PiCaretDoubleLeftBold/>
+        <PiCaretDoubleLeftBold className={iconsStyles}/>
     </button>
     <button className={buttonStyles}>
-        <PiCaretDoubleRightBold/>
+        <PiCaretDoubleRightBold className={iconsStyles}/>
     </button>
     
     </div>
