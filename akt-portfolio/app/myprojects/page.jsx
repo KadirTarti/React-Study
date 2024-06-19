@@ -183,7 +183,9 @@ const MyProjects = () => {
                   </SwiperSlide>
                   );
                   })}
-                  <SliderButtons containerStyles='flex gap-2 absolute right-0 bottom-[calc(%0%_-_22px)] xl:bottom-0 z-20 w-full justify-between xl:W-max xl:justify-none' buttonStyles='bg-amber-300 hover:bg-amber-300-hover text-primary text-[22px] w-[44px] h-[44px] flex justify-center items-center transition-all '/>
+                  <SliderButtons 
+                  containerStyles='flex gap-2 absolute left-0 bottom-0 xl:bottom-0 z-20 justify-between xl:W-max xl:justify-none' 
+                  buttonStyles='bg-amber-300 hover:bg-amber-300-hover text-primary text-[22px] w-[44px] h-[44px] flex justify-center items-center transition-all '/>
               </Swiper>
               </div>
         </div>
