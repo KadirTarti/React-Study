@@ -63,6 +63,8 @@ const Contact = () => {
         </SelectContent>
       </Select>
 
+      <Textarea className='h-[200px]' placeholder='Type your message here'/>
+
       </form>
     <div className="flex-1 flex items-center xl:justify-end order-1 xl:order-none mb-8 xl:mb-0">
     </div>
