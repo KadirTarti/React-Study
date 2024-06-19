@@ -35,9 +35,9 @@ const Contact = () => {
     className="py-6">
     <div className="container mx-auto">
     <div className="flex flex-col xl:flex-row gap-[30px]">
-    <div className="xl:w-[54%] order-2 xl:order-none">
+    <div className="xl:w-[74%] order-2 xl:order-none">
       <form className='flex flex-col gap-6 p-10 bg-[#27272c] rounded-xl'>
-      <h3 className='text-4xl text-amber-300'>Lets work together!</h3>
+      <h3 className='text-4xl text-amber-300'>"<span className='text-pink-900 text-5xl font-extrabold'>L</span>et's <span className='text-pink-900 text-5xl font-extrabold'>M</span>ake <span className='text-pink-900 text-5xl font-extrabold'>W</span>aves <span className='text-pink-900 text-5xl font-extrabold'>T</span>ogether"!</h3>
       <p className='text-white/50'>
       All contributions from different perspectives greatly enrich my projects! Whether you have new project ideas or contributions to improve my current projects, all contributions are invaluable. Feel free to open a topic or submit a pull request with your suggested changes to start a dialogue about your thoughts. Every contribution plays a vital role in my progress. so thank you for being an integral part of my community!
       </p>
@@ -67,6 +67,7 @@ const Contact = () => {
       <Button size='md' className='max-w-40 bg-amber-300 text-primary hover:text-amber-300 border border-amber-300 '>Send Message</Button>
 
       </form>
+    </div>
     <div className="flex-1 flex items-center xl:justify-end order-1 xl:order-none mb-8 xl:mb-0">
     <ul className='flex flex-col gap-10'>
       {info.map((item, index)=>{
@@ -81,7 +82,6 @@ const Contact = () => {
         </li>
       })}
     </ul>
-    </div>
     </div>
 
 
