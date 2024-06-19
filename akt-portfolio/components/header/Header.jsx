@@ -19,7 +19,7 @@ const Header = () => {
     <div className="hidden xl:flex items-center gap-8">
     <Navbar/>
     <Link href='/contact'>
-    <Button>Why me?</Button>
+    <Button className='text-xl bg-gray-700 text-amber-300'>L M W T</Button>
     </Link>
     </div>
 
