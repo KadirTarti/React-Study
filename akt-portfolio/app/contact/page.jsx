@@ -21,7 +21,7 @@ const info = [
   {
     icon: <FaEnvelope />,
     title: "E-Mail",
-    description: "tartilaci@gmail.com",
+    description: "tartilaci.a@gmail.com",
   },
   {
     icon: <FaLinkedinIn />,
@@ -67,7 +67,7 @@ const Contact = () => {
               <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                 <Input type="firstname" placeholder="Firstname" className="" />
                 <Input type="lastname" placeholder="Lastname" className="" />
-                <Input type="email" placeholder="Email Address" className="" />
+                <Input type="" placeholder="Email Address" className="" />
                 <Input type="phone" placeholder="Phone Number" className="" />
               </div>
 
