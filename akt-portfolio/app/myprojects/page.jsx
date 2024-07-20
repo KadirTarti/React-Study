@@ -176,7 +176,7 @@ const MyProjects = () => {
                   <div className="h-[460px] relative group  flex justify-center items-center bg-white">
                   <div className="absolute top-0 bottom-0 w-full h-full bg-black/10 z-10"></div>
                   <div className="relative w-[98%] h-[98%]">
-                    <Image src={project.image} alt={projectImage} fill className="object-cover"/>
+                    <Image src={project.image} alt="projectImage" fill className="object-cover"/>
                   </div>
 
                   </div>
