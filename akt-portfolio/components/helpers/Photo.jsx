@@ -26,7 +26,7 @@ const Photo = () => {
         >
           <Image
             src={photo}
-            alt={andulkadirsPhoto}
+            alt="abdulkadirsPhoto"
             width={'30%'}
             priority
             quality={100}
