@@ -155,7 +155,7 @@ const MyProjects = () => {
                         <BsGithub className="text-white text-3xl group-hover:text-amber-300" />
                       </TooltipTrigger>
                       <TooltipContent>
-                        <p>Github Repository</p>
+                        <p>Source Code</p>
                       </TooltipContent>
                     </Tooltip>
                   </TooltipProvider>
