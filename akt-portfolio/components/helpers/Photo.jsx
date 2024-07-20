@@ -26,11 +26,11 @@ const Photo = () => {
         >
           <Image
             src={photo}
+            alt={andulkadirsPhoto}
             width={'30%'}
             priority
             quality={100}
             // fill
-            alt="Abdulkadir TARTILACI"
             className="object-contain"
           />
         </motion.div>
