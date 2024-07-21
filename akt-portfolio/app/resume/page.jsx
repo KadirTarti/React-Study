@@ -115,7 +115,7 @@ const experience = {
 const education = {
   icon: { FaGraduationCap },
   title: "My Education",
-  description: "desc is here",
+  description: "A skilled Fullstack Web Developer, I specialize in MERN stack technologies, including JavaScript, React.js, Node.js, and MongoDB, with a strong foundation in database management. My journey in web development was preceded by achievements in foreign language instruction, particularly in German, showcasing my ability to master complex systems efficiently.",
   items: [
     {
       institution: "Clarusway",
@@ -134,12 +134,12 @@ const education = {
     },
     {
       institution: "Pamukkale University",
-      degree: "Master's Degree",
+      degree: "Master's Degree | Political Science",
       duration: "October 2012 - August 2016",
     },
     {
       institution: "Suleyman Demirel University",
-      degree: "Bachelor's Degree",
+      degree: "Bachelor's Degree | Public Administration",
       duration: "September 2006 - August 2010",
     },
   ],
