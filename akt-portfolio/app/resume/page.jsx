@@ -82,12 +82,17 @@ const about = {
 const experience = {
   icon: { SiOpenbadges },
   title: "My Experience",
-  description: "desc is here",
+  description: "A versatile web developer with a background in social sciences, I hold degrees in Public Administration and Political Science, complemented by technical expertise gained through a Fullstack Web Developer program at Clarusway. My skill set includes JavaScript, React.js, Node.js, MongoDB, TypeScript, Python, Django, and proficiency in German language. ",
   items: [
     {
-      company: "Deutsches Rotes Kreuz",
+      company: "Deutsches Rotes Kreuz Euskirchen",
       position: "Employer(Volunteer)",
       duration: "August 2019 - August 2020",
+    },
+    {
+      company: "Caritasverband Eifel",
+      position: "Employer(Volunteer)",
+      duration: "March 2019 - May 2019",
     },
     {
       company: "Self-Employed",
@@ -237,11 +242,11 @@ const Resume = () => {
             <TabsContent value="experience" className="w-full">
               <div className="flex flex-col gap-[20px] text-center xl:text-left">
                 <h3 className="text-4xl font-bold">{experience.title}</h3>
-                <p className="max-w-[600px] text-white/50 mx-auto xl:mx-0">
+                <p className="max-w-[700px] text-white/50 mx-auto xl:mx-0 text-justify">
                   {experience.description}
                 </p>
                 <ScrollArea className="h-[450px]">
-                  <ul className="grid grid-cols-1 lg:grid-cols-2 gap-[30px]">
+                  <ul className="grid grid-cols-1 lg:grid-cols-2 gap-[30px] ">
                     {experience.items.map((item, index) => {
                       return (
                         <li
@@ -269,7 +274,7 @@ const Resume = () => {
             <TabsContent value="education" className="w-full">
               <div className="flex flex-col gap-[20px] text-center xl:text-left">
                 <h3 className="text-4xl font-bold">{education.title}</h3>
-                <p className="max-w-[600px] text-white/50 mx-auto xl:mx-0">
+                <p className="max-w-[700px] text-white/50 mx-auto xl:mx-0 text-justify">
                   {education.description}
                 </p>
                 <ScrollArea className="h-[450px]">
@@ -302,7 +307,7 @@ const Resume = () => {
               <div className="flex flex-col gap-[20px]">
                 <div className="flex flex-col gap-[20px] text-center xl:text-left">
                   <h3 className="text-4xl font-bold">{skills.title}</h3>
-                  <p className="max-w-[600px] text-white/50 mx-auto xl:mx-0">
+                  <p className="max-w-[700px] text-white/50 mx-auto xl:mx-0 text-justify">
                     {skills.description}
                   </p>
                 </div>
@@ -335,7 +340,7 @@ const Resume = () => {
             >
               <div className="flex flex-col gap-[20px] text-center xl:text-left">
                 <h3 className="text-4xl font-bold">{about.title}</h3>
-                <p className="max-w-[600px] text-white/50 mx-auto xl:mx-0">
+                <p className="max-w-[700px] text-white/50 mx-auto xl:mx-0 text-justify">
                   {about.description}
                 </p>
                 <ul className="grid grid-cols-2 xl:grid-cols-2 gap-y-2 max-w-[620px] mx-auto xl:mx-0">
