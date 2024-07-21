@@ -71,7 +71,7 @@ const Contact = () => {
                 <Input type="phone" placeholder="Phone Number" className="" />
               </div>
 
-              <Select>
+              {/* <Select>
                 <SelectTrigger className="w-full">
                   <SelectValue placeholder="Select a service" />
                 </SelectTrigger>
@@ -83,7 +83,7 @@ const Contact = () => {
                     <SelectItem value="mst">Backend Development</SelectItem>
                   </SelectGroup>
                 </SelectContent>
-              </Select>
+              </Select> */}
 
               <Textarea
                 className="h-[200px]"
