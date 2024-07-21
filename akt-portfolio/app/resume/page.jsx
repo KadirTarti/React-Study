@@ -21,6 +21,11 @@ import {
   SiMongodb,
   SiOpenbadges,
   SiPostgresql,
+  SiVercel,
+  SiNetlify,
+  SiRender,
+  SiJirasoftware,
+  
 } from "react-icons/si";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 import {
@@ -147,7 +152,7 @@ const education = {
 
 const skills = {
   title: "My Skills",
-  description: "desc is here",
+  description: "My Fullstack Web Developer training has equipped me with a comprehensive skill set, including HTML5, CSS3, JavaScript, React, Redux, and design frameworks such as Bootstrap, SASS, Tailwind, and MUI, allowing me to create engaging and responsive user interfaces. On the server side, I'm proficient in NodeJS, ExpressJS, and database management with MongoDB and PostgreSQL, ensuring robust backend operations. My development process is streamlined by GitHub and Postman, enhancing collaboration and API testing. Experience in deploying web applications on Vercel, Netlify, and Render, along with proficiency in Jira Software for project management, further demonstrates my capability to handle full-stack projects effectively, especially those utilizing React and ExpressJS.",
   skillList: [
     {
       icon: <FaHtml5 />,
@@ -213,6 +218,26 @@ const skills = {
       icon: <SiPostgresql />,
       name: "PostgreSQL",
     },
+    {
+      icon: <SiVercel />,
+      name: "Vercel",
+    },
+    {
+      icon: <SiNetlify />,
+      name: "Netlify",
+    },
+    {
+      icon: <SiRender/>,
+      name: "Render",
+    },
+    {
+      icon: <SiJirasoftware />,
+      name: "Jirasoftware ",
+    },
+
+
+
+    
   ],
 };
 
