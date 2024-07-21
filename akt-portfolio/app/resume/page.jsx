@@ -40,7 +40,7 @@ import { Scroll } from "lucide-react";
 
 const about = {
   title: "About Me",
-  description: "desc is here",
+  description: '`${Always improve yourself!}`',
   info: [
     {
       fieldName: "Name:",
@@ -152,7 +152,7 @@ const education = {
 
 const skills = {
   title: "My Skills",
-  description: "My Fullstack Web Developer training has equipped me with a comprehensive skill set, including HTML5, CSS3, JavaScript, React, Redux, and design frameworks such as Bootstrap, SASS, Tailwind, and MUI, allowing me to create engaging and responsive user interfaces. On the server side, I'm proficient in NodeJS, ExpressJS, and database management with MongoDB and PostgreSQL, ensuring robust backend operations. My development process is streamlined by GitHub and Postman, enhancing collaboration and API testing. Experience in deploying web applications on Vercel, Netlify, and Render, along with proficiency in Jira Software for project management, further demonstrates my capability to handle full-stack projects effectively, especially those utilizing React and ExpressJS.",
+  description: "My Fullstack Web Developer training has equipped me with a comprehensive skill set, including HTML5, CSS3, JavaScript, React, Redux, and design frameworks such as Bootstrap, SASS, Tailwind, and MUI, allowing me to create engaging and responsive user interfaces. On the server side, I'm proficient in NodeJS, ExpressJS, and database management with MongoDB and PostgreSQL. I have expertise in Jira Software for project management as well as experience deploying web applications in Vercel, Netlify and Render.",
   skillList: [
     {
       icon: <FaHtml5 />,
