@@ -1,5 +1,7 @@
 import { Button } from "@/components/ui/button";
 import { FiDownload } from "react-icons/fi";
+import { PiCursorClickBold   } from "react-icons/pi";
+
 import Link from "next/link";
 
 //components
@@ -38,23 +40,25 @@ const Home = () => {
         </div>
       </div>
       <Stats />
-
-      <Link target="_blank" href="https://github.com/KadirTarti" passHref>
+<div className="text-center">
+      <Link href="https://github.com/KadirTarti"  target="_blank" passHref >
         <Button
           variant="outline"
           size="lg"
-          className="container w-1/6 mt-4 uppercase flex items-center gap-2 text-amber-300 bg-transparent hover:text-white hover:bg-pink-900"
+          className="container w-1/6 mt-4 uppercase  items-center gap-2 text-amber-300 bg-transparent hover:text-white hover:bg-pink-900"
         >
-          <span className={"tracking-extra-wide"}>Visit My GitHub Page</span>
-          <FiDownload className="text-xl" />
+          <span className={"tracking-extra-wide text-lg m:text-md sm:text-sm"}>Visit My GitHub</span>
+          <PiCursorClickBold    className="text-xl" />
         </Button>
       </Link>
+</div>
 
+<div className="text-center">
       <Link href="/assets/aktResume.pdf" target="_blank" passHref>
         <Button
           variant="outline"
           size="lg"
-          className=" container w-1/6 mt-4 uppercase flex items-center gap-2 text-amber-300 bg-transparent hover:text-white hover:bg-pink-900"
+          className=" container w-1/6 mt-4 uppercase items-center gap-2 text-amber-300 bg-transparent hover:text-white hover:bg-pink-900 focus:outline-none"
         >
           <a rel="noopener noreferrer" className={"tracking-extra-wide"}>
             Download CV{" "}
@@ -62,6 +66,7 @@ const Home = () => {
           <FiDownload className="text-xl" />
         </Button>
       </Link>
+      </div>
     </section>
   );
 };
