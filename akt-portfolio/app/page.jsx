@@ -42,7 +42,7 @@ const Home = () => {
       </Link>
 
         <Button variant='outline' size='lg' className=' container w-1/6 mt-4 uppercase flex items-center gap-2 text-amber-300 bg-transparent hover:text-white hover:bg-pink-900'>
-          <a href="./AbdulkadirTartilaciResumeV2.pdf" className={'tracking-extra-wide'} download='app'>Download CV </a>
+          <a href="../public/assets/aktResume.pdf" className={'tracking-extra-wide'} download='public'>Download CV </a>
           
           <FiDownload className='text-xl'/>
         </Button>
