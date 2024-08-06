@@ -7,14 +7,16 @@ const Dashboard = () => {
 
   useEffect(() => {
     fetch('https://38103.fullstack.clarusway.com/blogs/')
-     .then(response => response.json())
+     .then(res => res.json())
      .then(data => setBlogs(data.data))
      .catch(error => console.error('Error:', error));
-  }, []);
-
+    }, []);
+    
   return (
     <div className="dashboard">
+    
         {blogs.map(blog => (
+
           <BlogCard key={blog._id} blog={blog} /> // Her blogu bir Card bileşenine dönüştürün
         ))}
       </div>)
