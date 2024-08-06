@@ -3,7 +3,7 @@ import Typography from "@mui/material/Typography";
 import Avatar from "@mui/material/Avatar";
 import LockIcon from "@mui/icons-material/Lock";
 import Grid from "@mui/material/Grid";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import { Box} from "@mui/material";
 import { Formik } from "formik";
 import useAuthCall from "../hooks/useAuthCall";
@@ -15,6 +15,13 @@ import { Outlet } from "react-router-dom";
 const Register = () => {
   
   const {register} = useAuthCall()
+  const navigate = useNavigate()
+
+    // Kayıt işlemi tamamlandıktan sonra yönlendirme
+    const handleRegister = async (values) => {
+      await register(values);
+      navigate('/'); // Kullanıcıyı giriş sayfasına yönlendir
+    };
 
   return (
     <Container maxWidth="lg">
@@ -64,7 +71,7 @@ const Register = () => {
             onSubmit={(values, actions) => {
               // same shape as initial values
               console.log(values);
-              register(values);
+              handleRegister(values);
               actions.resetForm();
               actions.setSubmitting(false);
             }}

@@ -26,10 +26,10 @@ export const SignupSchema = Yup.object().shape({
     .matches(/[a-z]/, "Must contain a lowercase character")
     .matches(/[A-Z]/, "Must contain a uppercase")
     .matches(/[@+&?!*%-]/, "Must contain a symbol (@+&?!*%-)")
-    .required(),
-  image: Yup.string().min(3).required(),
-  city: Yup.string().min(3).required(),
-  bio: Yup.string().min(10).required(),
+    .required('You can not continue without your password :( '),
+  image: Yup.string(),
+  city: Yup.string(),
+  bio: Yup.string(),
 });
 
 const RegisterForm = ({
