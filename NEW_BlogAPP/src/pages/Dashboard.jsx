@@ -11,14 +11,15 @@ const Dashboard = () => {
      .then(data => setBlogs(data.data))
      .catch(error => console.error('Error:', error));
     }, []);
-    
-  return (
-    <div className="dashboard">
-    
-        {blogs.map(blog => (
 
+  return (
+    <div className="dashboard container mx-auto px-4">
+<div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
+
+        {blogs.map(blog => (
           <BlogCard key={blog._id} blog={blog} /> // Her blogu bir Card bileşenine dönüştürün
         ))}
+</div>
       </div>)
 
 };
