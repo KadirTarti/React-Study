@@ -25,7 +25,7 @@ const AppRouter = () => (
                     <Route path='' element={<NewBlog/>}/>
                 </Route>
             </Routes>
-        </main>
+        </main>     
         <Footer/>
     </BrowserRouter>)
 
