@@ -1,4 +1,9 @@
+import { Link } from "react-router-dom";
+
 const BlogCard = ({ blog }) => {
+  
+    console.log(blog)
+  
   return (
     <div className="
     max-w-sm w-full lg:max-w-full lg:flex
@@ -17,7 +22,10 @@ const BlogCard = ({ blog }) => {
             </svg>
             Members only
           </p>
-          <img src={blog.image} className="max-w-s lg:max-w-lg xl:max-w-xl w-80" alt="" />
+          <Link to={`/dashboard/${blog._id}`}>
+          <img src={blog.image} className="max-w-s lg:max-w-lg xl:max-w-xl w-80" alt="Blog Image" />
+        </Link>
+          
           <div className="text-gray-900 font-bold text-xl mb-2">{blog.title}</div>
           <p className="text-gray-700 text-base max-w-s lg:max-w-lg xl:max-w-xl w-80">{blog.content.substring(0, 100)}...</p>
         </div>
