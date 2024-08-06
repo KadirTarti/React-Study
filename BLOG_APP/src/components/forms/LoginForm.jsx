@@ -31,11 +31,12 @@ const LoginForm = ({ values, handleChange, errors, touched, handleBlur }) => {
     <Form>
     <Box sx={{ display: "flex", flexDirection: "column", gap: 1, width:'60%', margin:'auto'  }}>
         <TextField
-          label="Username"
+          label="USERname"
           name="username"
           id="username"
           type="username"
           variant="outlined"
+          style={{fontFamily:'monospace'}}
           value={values.username}
           onChange={handleChange}
           onBlur={handleBlur}
@@ -67,7 +68,7 @@ const LoginForm = ({ values, handleChange, errors, touched, handleBlur }) => {
             }}   
         />
         {!loading ? (
-          <Button variant="contained" type="submit" >
+          <Button variant="contained" type="submit" style={{fontFamily:'monospace'}}>
            Sign In
           </Button>
         ) : (

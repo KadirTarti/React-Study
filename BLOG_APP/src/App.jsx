@@ -22,11 +22,11 @@ function App() {
     <>
       <ThemeProvider theme={theme}>
         <Provider store={store}>
-        <PersistGate loading={null} persistor={persistor}>
+        {/* <PersistGate loading={null} persistor={persistor}> */}
         <ErrorBoundary>
           <AppRouter />
           </ErrorBoundary>
-        </PersistGate>
+        {/* </PersistGate> */}
         </Provider>
         <ToastContainer />
       </ThemeProvider>
