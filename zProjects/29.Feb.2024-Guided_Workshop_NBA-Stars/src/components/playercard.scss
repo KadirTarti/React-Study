@@ -1,0 +1,77 @@
+.card-img-top {
+  object-fit: cover;
+  width: 300px;
+  height: 340px;
+  border-radius: 5px;
+}
+
+.player-card {
+  display: inline-block;
+  border-radius: 5px;
+  overflow: hidden;
+}
+
+.card {
+    text-align: center;
+  background-image: url(../assets/NBA-Logo-cardback.webp);
+  background-size: cover;
+  border-radius: 5px;
+
+  width: 300px;
+  height: 400px;
+  perspective: 1000px;
+  position: relative;
+  cursor: pointer;
+  transition: transform 0.8s;
+}
+
+.card-inner {
+  transition: transform 0.8s;
+  transform-style: preserve-3d;
+  border-radius: 5px;
+
+}
+
+.card.flipped .card-inner {
+  transform: rotateY(180deg);
+}
+
+.card-front,
+.card-back {
+  position: absolute;
+  backface-visibility: hidden;
+}
+.card-front {
+  background-color: #fff;
+}
+
+.card-back {
+    // padding: 4.4rem;
+    // margin-top: 6rem;
+    font-size: 1rem;
+    font-weight: 600;
+    background-color: #ffffff;
+    color: black;
+    transform: rotateY(180deg);
+}
+
+.list-group{
+    align-items: center;
+    background-color: white !important;
+    outline: none!important;
+}
+
+.list-name{
+  margin-top: 5.3rem!important;
+  width: 100% !important;
+  padding: 1.2rem;
+  padding-bottom: 2rem;
+  
+}
+
+.list-group-flush{
+  align-items: center!important;
+  text-align: center !important;
+  width: 300px!important;
+  padding-top: 5.6rem;
+}

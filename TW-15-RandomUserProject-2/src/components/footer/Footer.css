@@ -1,0 +1,17 @@
+.footer-div {
+  font-size: 1rem;
+  margin: 50px 0px;
+  justify-content: center;
+  transition: all 2s ease;
+  transform: scale(1.5);
+}
+
+.footer-div:hover {
+  font-size: 1.2rem;
+  font-weight: 600;
+  margin: 50px 0px;
+  color: darkorange;
+  text-shadow: 1px 1px 5px black;;
+  justify-content: center;
+  transform: scale(1.5);
+}
