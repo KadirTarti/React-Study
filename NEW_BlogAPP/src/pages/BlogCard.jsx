@@ -9,7 +9,7 @@ const BlogCard = ({ blog }) => {
       "
       style={{ backgroundImage: "url('/img/card-left.jpg')", title: "Woman holding a mug" }}>
       </div>
-      <div className="border-r border-b border-l border-gray-400 lg:border-l-0 lg:border-t lg:border-gray-400 bg-white rounded-b lg:rounded-b-none lg:rounded-r p-4 flex flex-col justify-between leading-normal m-2 bg-orange-100 bg-opacity-80">
+      <div className="border-r border-b border-l border-gray-400 lg:border-l-0 lg:border-t lg:border-gray-400 rounded lg:rounded-b-none lg:rounded-r p-4 flex flex-col justify-between leading-normal m-2 bg-orange-100 bg-opacity-80">
         <div className="mb-8">
           <p className="text-sm text-gray-600 flex items-center">
             <svg className="fill-current text-gray-500 w-3 h-3 mr-2" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20">
