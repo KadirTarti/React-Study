@@ -9,9 +9,9 @@ import Visibility from '@mui/icons-material/Visibility';
 import VisibilityOff from '@mui/icons-material/VisibilityOff';
 
 export const loginScheme = object({
-  email: string()
-    .email("Please enter a valid email!")
-    .required("Email is required!"),
+  username: string()
+    .username("Please enter a valid username!")
+    .required("username is required!"),
   password: string()
     .required("Password is required!")
 })
@@ -31,17 +31,16 @@ const LoginForm = ({ values, handleChange, errors, touched, handleBlur }) => {
     <Form>
     <Box sx={{ display: "flex", flexDirection: "column", gap: 1, width:'60%', margin:'auto'  }}>
         <TextField
-          label="Email"
-          name="email"
-          id="email"
-          type="email"
+          label="Username"
+          name="username"
+          id="username"
+          type="username"
           variant="outlined"
-          style={{fontFamily:'monospace'}}
-          value={values.email}
+          value={values.username}
           onChange={handleChange}
           onBlur={handleBlur}
-          helperText={touched.email && errors.email}
-          error={touched.email && Boolean(errors.email)}
+          helperText={touched.username && errors.username}
+          error={touched.username && Boolean(errors.username)}
         />
         <TextField
           label="Password"
@@ -68,7 +67,7 @@ const LoginForm = ({ values, handleChange, errors, touched, handleBlur }) => {
             }}   
         />
         {!loading ? (
-          <Button variant="contained" type="submit" style={{fontFamily:'monospace'}}>
+          <Button variant="contained" type="submit" >
            Sign In
           </Button>
         ) : (

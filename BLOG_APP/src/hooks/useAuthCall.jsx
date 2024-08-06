@@ -37,7 +37,7 @@ const useAuthCall = () => {
     dispatch(fetchStart());
     try {
       const { data } = await axios.post(
-        `${BASE_URL}auth/login/`,
+        `${BASE_URL}auth/login`,
         userInfo
       );
       dispatch(loginSuccess(data));
