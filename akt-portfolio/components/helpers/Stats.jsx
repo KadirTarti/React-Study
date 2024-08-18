@@ -41,7 +41,7 @@ const Stats = () => {
 
 	<div className="text-center mt-5 mb-5">
 
-  <h1 id="github-chart-api"><a href="https://github.com/KadirTarti/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">Github Chart API</a></h1>
+  <h1 id="github-chart-api"><a href="https://github.com/KadirTarti/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">My Github Activities</a></h1>
 
 		<img className="m-auto figure" src="http://ghchart.rshah.org/KadirTarti" alt="Abdulkadir's Github Chart" />
 
