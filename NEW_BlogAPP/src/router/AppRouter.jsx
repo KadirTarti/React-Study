@@ -9,6 +9,7 @@ import Login from "../pages/Login";
 import PrivateRouter from "./PrivateRouter";
 import Dashboard from "../pages/Dashboard";
 import NewBlog from "../components/NewBlog";
+import BlogDetails from "../pages/BlogDetails";
 
 const AppRouter = () => (
     <BrowserRouter>
@@ -19,13 +20,13 @@ const AppRouter = () => (
                 <Route path='/register' element={<Register/>}/>
                 <Route path='/login' element={<Login/>}/>
                 <Route path='/dashboard' element={<Dashboard/>}/>
-
+                <Route path="/dashboard/:id" element={<BlogDetails />} />
 
                 <Route path='/newblog' element={<PrivateRouter/>}>
                     <Route path='' element={<NewBlog/>}/>
                 </Route>
             </Routes>
-        </main>
+        </main>     
         <Footer/>
     </BrowserRouter>)
 
