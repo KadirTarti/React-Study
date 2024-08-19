@@ -9,25 +9,25 @@ const services = [
   {
     num: '01',
     title: 'Frontend Development',
-    description: 'lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem ',
+    description: '',
     href: '',
   },
   {
     num: '02',
     title: 'Backend Development',
-    description: 'lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem ',
+    description: '',
     href: '',
   },
   {
     num: '03',
     title: '',
-    description: 'lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem ',
+    description: '',
     href: '',
   },
   {
     num: '04',
     title: 'Web Development',
-    description: 'lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem ',
+    description: '',
     href: '',
   }
 ]
