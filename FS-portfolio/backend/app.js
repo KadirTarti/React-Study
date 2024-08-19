@@ -22,7 +22,7 @@ app.post('/sendEmail', async (req, res) => {
 
   let info = await transporter.sendMail({
     from: '"Your Name" <your-email@gmail.com>',
-    to: "receiver@example.com",
+    to: "tartilaci@gmail.com",
     subject: "New Form Submission",
     text: `Name: ${name}\nEmail: ${email}`,
   });
