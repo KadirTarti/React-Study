@@ -20,7 +20,7 @@ const services = [
   },
   {
     num: '03',
-    title: '',
+    title: 'Fullstack Development',
     description: '',
     href: '',
   },
