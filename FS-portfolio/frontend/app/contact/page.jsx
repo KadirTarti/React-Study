@@ -3,19 +3,10 @@
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
-import {
-  Select,
-  SelectContent,
-  SelectGroup,
-  SelectItem,
-  SelectLabel,
-  SelectTrigger,
-  SelectValue,
-} from "@/components/ui/select";
-
 import { FaLinkedinIn, FaEnvelope, FaMapMarkedAlt } from "react-icons/fa";
 
 import { easeIn, motion } from "framer-motion";
+import { response } from "express";
 
 const info = [
   {
@@ -38,13 +29,26 @@ const info = [
 const handleSubmit = async (event) => {
   event.preventDefault();
   const formData = new FormData(event.target);
-  
-  await fetch('http://localhost:3001/sendEmail', { // Backend sunucunuzun adresine istek gönder
-    method: 'POST',
-    body: JSON.stringify(Object.fromEntries(formData)),
-    headers: { 'Content-Type': 'application/json' },
-  });
+  try {
+    await fetch('http://localhost:3001/sendEmail'), { // Backend sunucunuzun adresine istek gönder
+      method: 'POST',
+      body: JSON.stringify(Object.fromEntries(formData)),
+      headers: { 'Content-Type': 'application/json' },
+  }
+  ;
+  if(!response.ok) {
+    console.log("falling over!")
+    throw new Error(`Response status: ${response.status}`)
+  }
+  const responseData = await response.json();
+  console.log(responseData['MESSAGE']);
+
+  alert('Message succesfully sent! :)')
+} catch(err) {
+console.log(err)
+alert('Error, please try resubmitting the form')
 };
+}
 
 const Contact = () => {
   return (
@@ -82,20 +86,6 @@ const Contact = () => {
                 <Input type="phone" placeholder="Phone Number" className="" />
               </div>
 
-              {/* <Select>
-                <SelectTrigger className="w-full">
-                  <SelectValue placeholder="Select a service" />
-                </SelectTrigger>
-                <SelectContent>
-                  <SelectGroup>
-                    <SelectLabel>Select a service</SelectLabel>
-                    <SelectItem value="est">Fullstack Development</SelectItem>
-                    <SelectItem value="cst">Frontend Development</SelectItem>
-                    <SelectItem value="mst">Backend Development</SelectItem>
-                  </SelectGroup>
-                </SelectContent>
-              </Select> */}
-
               <Textarea
                 className="h-[200px]"
                 placeholder="Type your message here"
@@ -103,8 +93,7 @@ const Contact = () => {
               <Button
                 size="md"
                 className="max-w-40 bg-amber-300 text-primary hover:text-amber-300 border border-amber-300 "
-                onClick = {()=> handleSubmit()} >
-                Send Message
+                onSubmit={handleSubmit} >
               </Button>
             </form>
           </div>
