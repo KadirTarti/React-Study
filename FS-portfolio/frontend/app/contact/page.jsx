@@ -38,6 +38,7 @@ const info = [
 const handleSubmit = async (event) => {
   event.preventDefault();
   const formData = new FormData(event.target);
+  
   await fetch('http://localhost:3001/sendEmail', { // Backend sunucunuzun adresine istek gönder
     method: 'POST',
     body: JSON.stringify(Object.fromEntries(formData)),
@@ -102,7 +103,7 @@ const Contact = () => {
               <Button
                 size="md"
                 className="max-w-40 bg-amber-300 text-primary hover:text-amber-300 border border-amber-300 "
-                onclick = {()=> handleSubmit()} >
+                onClick = {()=> handleSubmit()} >
                 Send Message
               </Button>
             </form>
