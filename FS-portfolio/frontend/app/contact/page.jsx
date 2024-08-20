@@ -28,13 +28,6 @@ const info = [
 ];
 
 
-
-
-
-
-
-
-
 const Contact = () => {
   const form = useRef();
   const sendEmail = (e) => {
@@ -66,7 +59,8 @@ const Contact = () => {
       <div className="container mx-auto">
         <div className="flex flex-col xl:flex-row gap-[30px]">
           <div className="xl:w-[74%] order-2 xl:order-none">
-            <form ref={form} onSubmit={sendEmail}
+            <form id="contact-form"
+            ref={form} onSubmit={sendEmail}
             className="flex flex-col gap-6 p-10 bg-[#27272c] rounded-xl">
               <h3 className="text-3xl text-amber-300">
                 "
@@ -85,9 +79,9 @@ const Contact = () => {
 
 
               <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-                <Input type="text" placeholder="Firstname" name="firstname" />
+                <Input type="text" placeholder="Firstname" name="user_name" />
                 <Input type="text" placeholder="Lastname" name="lastname" />
-                <Input type="email" placeholder="Email Address" name="email" />
+                <Input type="email" placeholder="Email Address" name="user_email" />
                 <Input type="tel" placeholder="Phone Number" name="phone" />
               </div>
 

@@ -3,19 +3,9 @@
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
-import {
-  Select,
-  SelectContent,
-  SelectGroup,
-  SelectItem,
-  SelectLabel,
-  SelectTrigger,
-  SelectValue,
-} from "@/components/ui/select";
-
 import { FaLinkedinIn, FaEnvelope, FaMapMarkedAlt } from "react-icons/fa";
-
 import { easeIn, motion } from "framer-motion";
+import emailjs from '@emailjs/browser';
 
 const info = [
   {
@@ -36,6 +26,11 @@ const info = [
 ];
 
 const Contact = () => {
+  useEffect(() => {
+    emailjs.init("service_wbocv2p");
+  }, []);
+
+
   return (
     <motion.section
       initial={{ opacity: 0 }}
@@ -70,20 +65,6 @@ const Contact = () => {
                 <Input type="" placeholder="Email Address" className="" />
                 <Input type="phone" placeholder="Phone Number" className="" />
               </div>
-
-              {/* <Select>
-                <SelectTrigger className="w-full">
-                  <SelectValue placeholder="Select a service" />
-                </SelectTrigger>
-                <SelectContent>
-                  <SelectGroup>
-                    <SelectLabel>Select a service</SelectLabel>
-                    <SelectItem value="est">Fullstack Development</SelectItem>
-                    <SelectItem value="cst">Frontend Development</SelectItem>
-                    <SelectItem value="mst">Backend Development</SelectItem>
-                  </SelectGroup>
-                </SelectContent>
-              </Select> */}
 
               <Textarea
                 className="h-[200px]"
