@@ -6,7 +6,8 @@ import { Textarea } from "@/components/ui/textarea";
 import { FaLinkedinIn, FaEnvelope, FaMapMarkedAlt } from "react-icons/fa";
 
 import { easeIn, motion } from "framer-motion";
-import { response } from "express";
+import React, { useRef } from 'react';
+import emailjs from '@emailjs/browser';
 
 const info = [
   {
@@ -26,31 +27,33 @@ const info = [
   },
 ];
 
-const handleSubmit = async (event) => {
-  event.preventDefault();
-  const formData = new FormData(event.target);
-  try {
-    await fetch('http://localhost:3001/sendEmail'), { // Backend sunucunuzun adresine istek gönder
-      method: 'POST',
-      body: JSON.stringify(Object.fromEntries(formData)),
-      headers: { 'Content-Type': 'application/json' },
-  }
-  ;
-  if(!response.ok) {
-    console.log("falling over!")
-    throw new Error(`Response status: ${response.status}`)
-  }
-  const responseData = await response.json();
-  console.log(responseData['MESSAGE']);
 
-  alert('Message succesfully sent! :)')
-} catch(err) {
-console.log(err)
-alert('Error, please try resubmitting the form')
-};
-}
+
+
+
+
+
+
 
 const Contact = () => {
+  const form = useRef();
+  const sendEmail = (e) => {
+  e.preventDefault();
+
+  emailjs
+  .sendForm('YOUR_SERVICE_ID', 'YOUR_TEMPLATE_ID', form.current, {
+    publicKey: 'YOUR_PUBLIC_KEY',
+  })
+  .then(
+    () => {
+      console.log('SUCCESS!');
+    },
+    (error) => {
+      console.log('FAILED...', error.text);
+    },
+  );
+  
+
   return (
     <motion.section
       initial={{ opacity: 0 }}
@@ -63,7 +66,8 @@ const Contact = () => {
       <div className="container mx-auto">
         <div className="flex flex-col xl:flex-row gap-[30px]">
           <div className="xl:w-[74%] order-2 xl:order-none">
-            <form className="flex flex-col gap-6 p-10 bg-[#27272c] rounded-xl">
+            <form ref={form} onSubmit={sendEmail}
+            className="flex flex-col gap-6 p-10 bg-[#27272c] rounded-xl">
               <h3 className="text-3xl text-amber-300">
                 "
                 <span className="text-pink-900 text-5xl font-extrabold">L</span>
@@ -79,21 +83,23 @@ const Contact = () => {
               Are you looking for a versatile partner who can seamlessly integrate Fullstack Development, Frontend Development, and UI Design? Look no further! With my expertise, we can create innovative and user-friendly solutions that stand out. Whether it's building robust backend systems, crafting stunning front-end interfaces, or designing intuitive user experiences, I am here to collaborate and bring your vision to life. Let's join forces and make waves in the digital world together!
               </p>
 
+
               <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-                <Input type="firstname" placeholder="Firstname" className="" />
-                <Input type="lastname" placeholder="Lastname" className="" />
-                <Input type="" placeholder="Email Address" className="" />
-                <Input type="phone" placeholder="Phone Number" className="" />
+                <Input type="text" placeholder="Firstname" name="firstname" />
+                <Input type="text" placeholder="Lastname" name="lastname" />
+                <Input type="email" placeholder="Email Address" name="email" />
+                <Input type="tel" placeholder="Phone Number" name="phone" />
               </div>
 
               <Textarea
                 className="h-[200px]"
                 placeholder="Type your message here"
+                name='message'
               />
               <Button
                 size="md"
                 className="max-w-40 bg-amber-300 text-primary hover:text-amber-300 border border-amber-300 "
-                onSubmit={handleSubmit} >
+                type="submit" >
               </Button>
             </form>
           </div>
@@ -119,5 +125,6 @@ const Contact = () => {
     </motion.section>
   );
 };
+}
 
 export default Contact;
