@@ -21,8 +21,8 @@ const info = [
   },
   {
     icon: <FaMapMarkedAlt />,
-    title: "Address",
-    description: "Remscheid, Nord-Rhein Westfallen, Germany",
+    title: "Location",
+    description: "Nord-Rhein Westfallen, Germany",
   },
 ];
 
