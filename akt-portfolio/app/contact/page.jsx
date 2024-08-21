@@ -6,6 +6,7 @@ import { Textarea } from "@/components/ui/textarea";
 import { FaLinkedinIn, FaEnvelope, FaMapMarkedAlt } from "react-icons/fa";
 import { easeIn, motion } from "framer-motion";
 import emailjs from '@emailjs/browser';
+import { useEffect, useRef } from "react";
 
 const info = [
   {
@@ -25,9 +26,13 @@ const info = [
   },
 ];
 
+
+
+
+
 const Contact = () => {
   useEffect(() => {
-    emailjs.init("service_wbocv2p");
+    emailjs.init("K_XR5ndLCoqNuaD53");
   }, []);
 
   const sendEmail = async (e) => {
@@ -39,7 +44,7 @@ const Contact = () => {
       message: e.target.message.value,
     };
     try {
-      const result = await emailjs.send('YOUR_SERVICE_ID', 'YOUR_TEMPLATE_ID', formData);
+      const result = await emailjs.send('service_wbocv2p', 'template_aonrjbk', formData);
       console.log(result.text);
       alert("E-posta başarıyla gönderildi!");
     } catch (error) {
@@ -49,8 +54,11 @@ const Contact = () => {
   };
 
 
-
-
+  const userNameRef = useRef(null);
+  const userSurnameRef = useRef(null);
+  const userEmailRef = useRef(null);
+  const messageRef = useRef(null);
+  const userPhoneRef = useRef(null);
 
   return (
     <motion.section
@@ -81,15 +89,15 @@ const Contact = () => {
               </p>
 
               <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-                <Input type="text" name='user_name' placeholder="Firstname" className="" />
-                <Input type="text" name='user_surname' placeholder="Lastname" className="" />
-                <Input type="email" name='user_email' placeholder="Email Address" className="" />
-                <Input type="phone" placeholder="Phone Number" className="" />
+                <Input type="text" name='user_name' placeholder="Firstname" ref={userNameRef}  className="" />
+                <Input type="text" name='user_surname' placeholder="Lastname" ref={userSurnameRef}  className="" />
+                <Input type="email" name='user_email' placeholder="Email Address" ref={userEmailRef}  className="" />
+                <Input type="phone" name='user_phone' placeholder="Phone Number" ref={userPhoneRef}  className="" />
               </div>
 
               <Textarea
                 className="h-[200px]"
-                name="message"
+                name="message"  ref={messageRef} 
                 required
                 placeholder="Type your message here"
               />
