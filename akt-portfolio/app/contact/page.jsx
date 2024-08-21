@@ -5,8 +5,8 @@ import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
 import { FaLinkedinIn, FaEnvelope, FaMapMarkedAlt } from "react-icons/fa";
 import { easeIn, motion } from "framer-motion";
-import emailjs from '@emailjs/browser';
-import { useEffect, useRef } from "react";
+import emailjs from "@emailjs/browser";
+import { useEffect, useRef, useState } from "react";
 
 const info = [
   {
@@ -26,10 +26,6 @@ const info = [
   },
 ];
 
-
-
-
-
 const Contact = () => {
   useEffect(() => {
     emailjs.init("K_XR5ndLCoqNuaD53");
@@ -44,21 +40,26 @@ const Contact = () => {
       message: e.target.message.value,
     };
     try {
-      const result = await emailjs.send('service_wbocv2p', 'template_aonrjbk', formData);
+      const result = await emailjs.send(
+        "service_wbocv2p",
+        "template_aonrjbk",
+        formData
+      );
       console.log(result.text);
       alert("E-posta başarıyla gönderildi!");
+setUserName('');
+setUserEmail('');
+setMessage('');
+
     } catch (error) {
       console.error(error);
       alert("E-posta gönderilirken bir hata oluştu.");
     }
   };
 
-
-  const userNameRef = useRef(null);
-  const userSurnameRef = useRef(null);
-  const userEmailRef = useRef(null);
-  const messageRef = useRef(null);
-  const userPhoneRef = useRef(null);
+  const [userName, setUserName] = useState("");
+  const [userEmail, setUserEmail] = useState("");
+  const [message, setMessage] = useState("");
 
   return (
     <motion.section
@@ -72,7 +73,10 @@ const Contact = () => {
       <div className="container mx-auto">
         <div className="flex flex-col xl:flex-row gap-[30px]">
           <div className="xl:w-[74%] order-2 xl:order-none">
-            <form className="flex flex-col gap-6 p-10 bg-[#27272c] rounded-xl" onSubmit={sendEmail}>
+            <form
+              className="flex flex-col gap-6 p-10 bg-[#27272c] rounded-xl"
+              onSubmit={sendEmail}
+            >
               <h3 className="text-3xl text-amber-300">
                 "
                 <span className="text-pink-900 text-5xl font-extrabold">L</span>
@@ -85,24 +89,48 @@ const Contact = () => {
                 ogether"!
               </h3>
               <p className="text-white/50">
-              Are you looking for a versatile partner who can seamlessly integrate Fullstack Development, Frontend Development, and UI Design? Look no further! With my expertise, we can create innovative and user-friendly solutions that stand out. Whether it's building robust backend systems, crafting stunning front-end interfaces, or designing intuitive user experiences, I am here to collaborate and bring your vision to life. Let's join forces and make waves in the digital world together!
+                Are you looking for a versatile partner who can seamlessly
+                integrate Fullstack Development, Frontend Development, and UI
+                Design? Look no further! With my expertise, we can create
+                innovative and user-friendly solutions that stand out. Whether
+                it's building robust backend systems, crafting stunning
+                front-end interfaces, or designing intuitive user experiences, I
+                am here to collaborate and bring your vision to life. Let's join
+                forces and make waves in the digital world together!
               </p>
 
               <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-                <Input type="text" name='user_name' placeholder="Firstname" ref={userNameRef}  className="" required />
-                <Input type="text" name='' placeholder="Lastname" ref={userSurnameRef}  className=""  required/>
-                <Input type="email" name='user_email' placeholder="Email Address" ref={userEmailRef}  className="" required />
-                <Input type="phone" name='user_phone' placeholder="Phone Number" ref={userPhoneRef}  className="" />
+                <Input
+                  type="text"
+                  name="user_name"
+                  placeholder="Name"
+                  value={userName}
+                  onChange={(e) => setUserName(e.target.value)}
+                  className=""
+                  required
+                />
+
+                <Input
+                  type="email"
+                  name="user_email"
+                  placeholder="Email Address"
+                  value={userEmail}
+                  onChange={(e) => setUserEmail(e.target.value)}
+                  className=""
+                  required
+                />
               </div>
 
               <Textarea
                 className="h-[200px]"
-                name="message"  ref={messageRef} 
+                name="message"
+                value={message}
+                onChange={(e) => setMessage(e.target.value)}
                 required
                 placeholder="Type your message here"
               />
               <Button
-              type="submit"
+                type="submit"
                 size="md"
                 className="max-w-40 bg-amber-300 text-primary hover:text-amber-300 border border-amber-300 "
               >
