@@ -30,6 +30,27 @@ const Contact = () => {
     emailjs.init("service_wbocv2p");
   }, []);
 
+  const sendEmail = async (e) => {
+    e.preventDefault();
+
+    const formData = {
+      user_name: e.target.user_name.value,
+      user_email: e.target.user_email.value,
+      message: e.target.message.value,
+    };
+    try {
+      const result = await emailjs.send('YOUR_SERVICE_ID', 'YOUR_TEMPLATE_ID', formData);
+      console.log(result.text);
+      alert("E-posta başarıyla gönderildi!");
+    } catch (error) {
+      console.error(error);
+      alert("E-posta gönderilirken bir hata oluştu.");
+    }
+  };
+
+
+
+
 
   return (
     <motion.section
@@ -43,7 +64,7 @@ const Contact = () => {
       <div className="container mx-auto">
         <div className="flex flex-col xl:flex-row gap-[30px]">
           <div className="xl:w-[74%] order-2 xl:order-none">
-            <form className="flex flex-col gap-6 p-10 bg-[#27272c] rounded-xl">
+            <form className="flex flex-col gap-6 p-10 bg-[#27272c] rounded-xl" onSubmit={sendEmail}>
               <h3 className="text-3xl text-amber-300">
                 "
                 <span className="text-pink-900 text-5xl font-extrabold">L</span>
@@ -60,17 +81,20 @@ const Contact = () => {
               </p>
 
               <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-                <Input type="firstname" placeholder="Firstname" className="" />
-                <Input type="lastname" placeholder="Lastname" className="" />
-                <Input type="" placeholder="Email Address" className="" />
+                <Input type="text" name='user_name' placeholder="Firstname" className="" />
+                <Input type="text" name='user_surname' placeholder="Lastname" className="" />
+                <Input type="email" name='user_email' placeholder="Email Address" className="" />
                 <Input type="phone" placeholder="Phone Number" className="" />
               </div>
 
               <Textarea
                 className="h-[200px]"
+                name="message"
+                required
                 placeholder="Type your message here"
               />
               <Button
+              type="submit"
                 size="md"
                 className="max-w-40 bg-amber-300 text-primary hover:text-amber-300 border border-amber-300 "
               >
