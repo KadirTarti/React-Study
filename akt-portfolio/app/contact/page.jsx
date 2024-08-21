@@ -89,9 +89,9 @@ const Contact = () => {
               </p>
 
               <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-                <Input type="text" name='user_name' placeholder="Firstname" ref={userNameRef}  className="" />
-                <Input type="text" name='user_surname' placeholder="Lastname" ref={userSurnameRef}  className="" />
-                <Input type="email" name='user_email' placeholder="Email Address" ref={userEmailRef}  className="" />
+                <Input type="text" name='user_name' placeholder="Firstname" ref={userNameRef}  className="" required />
+                <Input type="text" name='' placeholder="Lastname" ref={userSurnameRef}  className=""  required/>
+                <Input type="email" name='user_email' placeholder="Email Address" ref={userEmailRef}  className="" required />
                 <Input type="phone" name='user_phone' placeholder="Phone Number" ref={userPhoneRef}  className="" />
               </div>
 
