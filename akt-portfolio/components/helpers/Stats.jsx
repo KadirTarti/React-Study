@@ -6,7 +6,7 @@ import '../styling/stats.css'
 const stats = [
   { num: 9, text: "Years of work experience" },
   { num: 21, text: "Projects completed" },
-  { num: 1892, text: "Contributions in 2024" },
+  { num: 2725, text: "Contributions in 2024" },
 ];
 
 const Stats = () => {
