@@ -14,16 +14,16 @@ const APP_ID = "80af08ad";
 const APP_KEY = "55627273303e38024def38cb507c8986";
 
 const RecipeProvider = ({ children }) => {
-  //^*login ve privateRouter sayfaları için:
+  //*login ve privateRouter sayfaları için:
   const [name, setName] = useState(localStorage.getItem("username") || "");
   const [password, setPassword] = useState(
     localStorage.getItem("password") || ""
   );
   
-  //^*home header ve recipeCard sayfaları için:
+  //*home header ve recipeCard sayfaları için:
   const [recipes, setRecipes] = useState([]);
   const [query, setQuery] = useState("");
-  const [mealType, setMealType] = useState("");
+  const [mealType, setMealType] = useState("Breakfast");
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState(false);
   
