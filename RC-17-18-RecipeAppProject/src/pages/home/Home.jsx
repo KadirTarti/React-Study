@@ -1,6 +1,7 @@
 import React, { useContext } from "react";
 import axios from "axios";
 import Header from "../../components/header/Header";
+import Footer from "../../components/footer/Footer";
 import RecipeCard from "./RecipeCard";
 import { HomeImg, ImgDiv } from "./HomeStyles";
 import homeSvg from "../../assets/home.svg";
@@ -27,6 +28,7 @@ console.log(recipes);
           <HomeImg src={homeSvg} alt="" />
         </ImgDiv>
       )}
+      <Footer />
     </div>
   );
 };
