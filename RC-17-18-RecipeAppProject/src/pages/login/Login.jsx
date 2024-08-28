@@ -10,7 +10,7 @@ import {
   StyledText,
 } from "./LoginStyles";
 
-import mealSvg from  '../../assets/logo1.webp'
+import mealSvg from  '../../assets/RecipeAppLogo.png'
 import { useContext } from "react";
 import { RecipeContext } from "../../context/RecipeProvider";
 import { useNavigate } from "react-router-dom";
@@ -35,8 +35,7 @@ const Login = () => {
   return (
     <LoginContainer>
       <FormContainer>
-        <StyledImg  src={mealSvg} />
-        <Header data-test='loginHeader'>Healthy Recipes</Header>
+        <StyledImg  src={mealSvg} style={{width:'300px'}}/>
         <StyledText>
         To log in, enter "abdulkadir" as username and "1234" as password
         </StyledText>
