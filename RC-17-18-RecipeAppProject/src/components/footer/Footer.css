@@ -1,5 +1,5 @@
 .footer-div {
-  width: 30vw;
+  width: 100vw;
   padding: 5px 0 5px 0;
   min-width: 400px;
   background-color: rgb(239, 249, 255);
@@ -7,7 +7,7 @@
   font-size: 1.5rem;
   color: #8d1e74;
   border: 0.5px solid #9d4d8c;
-  border-radius: 5px;
+  /* border-radius: 15px; */
   margin: 40px auto ;
   /* height: 55px; */
   display: flex;

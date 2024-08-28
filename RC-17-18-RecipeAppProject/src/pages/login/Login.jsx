@@ -23,14 +23,21 @@ const Login = () => {
 
   const handleSubmit =(e)=>{
     e.preventDefault();
-    
-    localStorage.setItem('username', name)
-    localStorage.setItem('password', password)
-    
-    //login'de bilgiler doğru girilirse home'a yönlendir: 
-    navigate('/home')
+    const storedUsername = localStorage.getItem('username');
+    const storedPassword = localStorage.getItem('password');
+    const username = e.target.username.value;
+    const password = e.target.password.value;
 
-  }
+        if (storedUsername === username && storedPassword === password) {
+      setName(username);
+      setPassword(password);
+      navigate('/home');
+    } else {
+      alert('Hatalı kullanıcı adı veya şifre');
+    }
+    navigate('/home')
+  };
+    //login'de bilgiler doğru girilirse home'a yönlendir: 
 
   return (
     <LoginContainer>
