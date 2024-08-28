@@ -1,9 +1,10 @@
 import styled from 'styled-components';
 
 export const Main = styled.main`
-background-color: #f76b8a;
-padding: 5rem;
-margin: 8rem 10rem;
+background-color: purple;
+padding: 3rem;
+margin: 8rem 20rem;
+border: 3px solid wheat;
 text-align: center;
 color: white;
 text-shadow: 1px -2px 3px black;

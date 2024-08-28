@@ -16,11 +16,15 @@ const Footer = () => {
         <code>{"< AKT Development !/> "}</code>
         {/* <></> işaretleriyle kod formatında yazabilmek  için code */}
       </a>
+      
+      <a  href="https://github.com/KadirTarti">
+
       <img
         src={Logo}
         alt="design"
         style={{ width: "50px", borderRadius:"50%",  margin: "0  25px 0 10px" }}
       />
+      </a>
       <span>Copyright {new Date().getFullYear()}</span>
     </div>
   );
