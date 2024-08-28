@@ -1,5 +1,5 @@
 import "./Footer.css";
-import Logo from "../../assets/AKTfooter.png"
+import AktLogo from "../../assets/AKTfooter.png"
 
 const Footer = () => {
   return (
@@ -20,7 +20,7 @@ const Footer = () => {
       <a  href="https://github.com/KadirTarti">
 
       <img
-        src={Logo}
+        src={AktLogo}
         alt="design"
         style={{ width: "50px", borderRadius:"50%",  margin: "0  25px 0 10px" }}
       />

@@ -8,7 +8,7 @@ import {
   Select,
 } from "./HeaderStyles";
 import { RecipeContext } from "../../context/RecipeProvider";
-import logo from '../../assets/logo1.webp'
+import Logo from '../../assets/RecipeAppLogo.png'
 
 const Header = () => {
 
@@ -22,9 +22,8 @@ const Header = () => {
 
   return (
     <HeaderContainer>
-        <h1 data-test='recipeHeader'>Healthy Recipes</h1>
       <MainHeader>
-        <img src={logo} width={'200px'} alt="" />
+        <img src={Logo} width={'400px'} alt="" />
       </MainHeader>
 
       <FormContainer onSubmit={handleSubmit}>
