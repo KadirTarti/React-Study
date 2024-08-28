@@ -1,5 +1,5 @@
 import "./Footer.css";
-import designSvg from "../../assets/design.svg";
+import Logo from "../../assets/AKTfooter.png"
 
 const Footer = () => {
   return (
@@ -17,9 +17,9 @@ const Footer = () => {
         {/* <></> işaretleriyle kod formatında yazabilmek  için code */}
       </a>
       <img
-        src={designSvg}
+        src={Logo}
         alt="design"
-        style={{ width: "40px", margin: "0  25px 0 10px" }}
+        style={{ width: "50px", borderRadius:"50%",  margin: "0  25px 0 10px" }}
       />
       <span>Copyright {new Date().getFullYear()}</span>
     </div>
