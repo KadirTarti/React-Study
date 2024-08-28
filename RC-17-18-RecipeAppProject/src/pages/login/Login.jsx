@@ -11,33 +11,25 @@ import {
 } from "./LoginStyles";
 
 import mealSvg from  '../../assets/RecipeAppLogo.png'
-import { useContext } from "react";
+import { useContext, useState } from "react";
 import { RecipeContext } from "../../context/RecipeProvider";
 import { useNavigate } from "react-router-dom";
 
 const Login = () => {
 
-  const {name, setName, password, setPassword } = useContext(RecipeContext)
+  const{name,setName,password,setPassword}=useContext(RecipeContext)
 
-  const navigate = useNavigate() 
+  const navigate=useNavigate()
+const handleSubmit=(e)=>{
+e.preventDefault()
 
-  const handleSubmit =(e)=>{
-    e.preventDefault();
-    const storedUsername = localStorage.getItem('username');
-    const storedPassword = localStorage.getItem('password');
-    const username = e.target.username.value;
-    const password = e.target.password.value;
+localStorage.setItem("username",name)
+localStorage.setItem("password",password)
 
-        if (storedUsername === username && storedPassword === password) {
-      setName(username);
-      setPassword(password);
-      navigate('/home');
-    } else {
-      alert('Hatalı kullanıcı adı veya şifre');
-    }
-    navigate('/home')
-  };
-    //login'de bilgiler doğru girilirse home'a yönlendir: 
+navigate("/home")
+
+}
+
 
   return (
     <LoginContainer>

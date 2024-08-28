@@ -58,7 +58,12 @@ color: 'gold',
     </StyledPar>;
   }
   if(loading)
-  {return <p>loading...</p>}
+  {return <h1 style={{
+    marginLeft: '40%',
+    marginTop: '200px',
+    fontSize: '5rem',
+    color: 'white'
+  }}>Loading...</h1>}
 
 
   return (
