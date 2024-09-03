@@ -1,7 +1,7 @@
 
 import React from 'react'
 import { AboutContainer, HeaderContainer, InfoContainer, StyledImage } from './AboutStyles'
-import logo from "../../assets/Logo.png"
+import logo from "../../assets/LogoWOB.png"
 
 
 const About = () => {
@@ -9,7 +9,7 @@ const About = () => {
     <div>
 
       <AboutContainer>
-        <StyledImage src={logo}/>
+        <StyledImage src={logo} style={{background:'black', borderRadius:'50%'}}/>
 
         <HeaderContainer>
           <h2>
